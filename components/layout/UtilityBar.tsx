@@ -30,11 +30,11 @@ export default function UtilityBar() {
           {/* Left: Phone */}
           <a
             href={`tel:${company.phone}`}
-            className="flex items-center gap-2 shrink-0 font-semibold text-sm sm:text-base hover:text-maven-gold transition-colors duration-200 group"
+            className="flex items-center gap-4 shrink-0 font-semibold text-sm sm:text-base hover:text-maven-gold transition-colors duration-200 group"
             aria-label={`Call us at ${company.phone}`}
           >
-            <span className="flex items-center justify-center size-7 rounded-full bg-white/15 group-hover:bg-white/25 transition-colors duration-200 shrink-0">
-              <Phone className="size-3.5" aria-hidden />
+            <span className="flex items-center justify-center size-9 rounded-full bg-white/15 group-hover:bg-white/25 transition-colors duration-200 shrink-0">
+              <Phone className="size-4" aria-hidden />
             </span>
             <span className="hidden xs:inline truncate">{company.phone}</span>
           </a>
