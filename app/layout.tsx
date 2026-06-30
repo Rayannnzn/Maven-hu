@@ -41,10 +41,10 @@ export default function RootLayout({
         >
           Skip to content
         </a>
-        <UtilityBar />
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
+        <UtilityBar />
       </body>
     </html>
   );
