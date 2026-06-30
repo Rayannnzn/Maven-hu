@@ -15,7 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const SERVICE_HREFS = new Set(serviceCategories.map((c) => c.href));
+const SERVICE_HREFS = new Set<string>(serviceCategories.map((c) => c.href));
 const generalLinks = navLinks.filter((link) => !SERVICE_HREFS.has(link.href));
 
 function isActiveLink(pathname: string, href: string) {
