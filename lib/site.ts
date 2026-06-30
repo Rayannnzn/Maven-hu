@@ -74,6 +74,39 @@ export const navLinks = [
   { href: "/contact", label: "Contact" },
 ] as const;
 
+export const serviceCategories = [
+  {
+    href: "/hvac",
+    label: "HVAC",
+    subcategories: [
+      { href: "/hvac/residential-commercial", label: "Residential & Commercial" },
+      { href: "/hvac/air-conditioners", label: "Air Conditioners" },
+      { href: "/hvac/refrigerators", label: "Refrigerators" },
+      { href: "/hvac/ice-makers", label: "Ice Makers" },
+      { href: "/hvac/furnace-heating", label: "Furnace / Heating" },
+      { href: "/hvac/walk-in-coolers-freezers", label: "Walk-in Coolers & Freezers" },
+    ],
+  },
+  {
+    href: "/plumbing",
+    label: "Plumbing",
+    subcategories: [
+      { href: "/plumbing/service-repair-installation", label: "Service / Repair / Installation" },
+      { href: "/plumbing/water-heaters", label: "Water Heaters" },
+      { href: "/plumbing/sinks-basins", label: "Sinks & Basins" },
+      { href: "/plumbing/residential-commercial", label: "Residential & Commercial" },
+    ],
+  },
+  {
+    href: "/electrical",
+    label: "Electrical Services",
+    subcategories: [
+      { href: "/electrical/repair-installation", label: "Repair & Installation" },
+      { href: "/electrical/commercial-residential", label: "Commercial & Residential" },
+    ],
+  },
+] as const;
+
 export const footerServiceLinks = [
   { href: "/hvac", label: "HVAC" },
   { href: "/plumbing", label: "Plumbing" },
