@@ -373,7 +373,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Sink & Basin Services",
     metaDescription:
       "Sink and basin installation, repair, and drain service in Maryland and Virginia. Kitchen, bathroom, and utility sink plumbing from licensed plumbers.",
-    heroImage: "/images/sink.png",
+    heroImage: "/images/plumbing-sinks-basins.jpg",
     heroTitle: "Sink & Basin Repair & Installation",
     heroDescription:
       "Leaky faucet, slow drain, or new sink installation — Maven's licensed plumbers handle all sink and basin plumbing for homes and businesses in Maryland and Virginia.",
