@@ -143,7 +143,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Ice Maker Services",
     metaDescription:
       "Ice maker repair and installation in Maryland and Virginia. Commercial and residential ice machine service from certified technicians.",
-    heroImage: "/images/hvac-ice-makers.jpg",
+    heroImage: "/images/icemaker.png",
     heroTitle: "Ice Maker Repair & Installation",
     heroDescription:
       "Fast ice maker repair for homes and commercial operations across Maryland and Virginia. We service all brands of built-in, undercounter, and commercial ice machines.",
@@ -187,7 +187,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Furnace & Heating Services",
     metaDescription:
       "Furnace repair, heating system installation, and maintenance in Maryland and Virginia. Emergency heating service available 24/7.",
-    heroImage: "/images/hvac-furnace-heating.jpg",
+    heroImage: "/images/heatfurnace.jpg",
     heroTitle: "Furnace & Heating System Service",
     heroDescription:
       "Don't let a heating failure leave your home cold. Maven's technicians repair and install furnaces, heat pumps, and boilers across Maryland and Virginia — with 24/7 emergency service.",
@@ -328,7 +328,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Water Heater Services",
     metaDescription:
       "Water heater repair and replacement in Maryland and Virginia. Tank and tankless water heater service from licensed plumbers.",
-    heroImage: "/images/plumbing-water-heaters.jpg",
+    heroImage: "/images/heaterwater.jpg",
     heroTitle: "Water Heater Repair & Replacement",
     heroDescription:
       "No hot water? Maven's licensed plumbers repair and replace tank and tankless water heaters across Maryland and Virginia — often same-day.",
@@ -419,7 +419,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Residential & Commercial Plumbing",
     metaDescription:
       "Plumbing services for homes and businesses in Maryland and Virginia. Licensed plumbers for residential and light-commercial plumbing projects.",
-    heroImage: "/images/plumbing-residential-commercial.jpg",
+    heroImage: "/images/plumbingcom.jpg",
     heroTitle: "Residential & Commercial Plumbing",
     heroDescription:
       "Maven provides licensed plumbing services for homeowners, property managers, and business owners across Maryland and Virginia — from routine repairs to major commercial projects.",
