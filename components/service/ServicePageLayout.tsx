@@ -23,7 +23,6 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             priority
             sizes="(min-width: 1024px) 1024px, 100vw"
           />
-          <div className="absolute inset-0 bg-primary/40" />
         </div>
       </div>
 
