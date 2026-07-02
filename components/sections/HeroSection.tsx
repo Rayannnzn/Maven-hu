@@ -74,12 +74,12 @@ export default function HeroSection() {
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/3.5] overflow-hidden rounded-2xl bg-maven-deep sm:aspect-[460/420]">
             <Image
-              src="/images/hero-technician.jpg"
-              alt="Maven HVAC technicians servicing rooftop units"
+              src="/images/w.jpg"
+              alt="Team of Maven Services technicians on the job"
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 460px"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 

@@ -13,16 +13,18 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
     <>
       <Breadcrumbs items={[{ label: data.title }]} />
 
-      <div className="relative h-48 w-full md:h-64 lg:h-72">
-        <Image
-          src={data.heroImage}
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-primary/40" />
+      <div className="relative w-full bg-primary">
+        <div className="relative h-64 w-full md:h-80 lg:mx-auto lg:h-[34rem] lg:max-w-5xl">
+          <Image
+            src={data.heroImage}
+            alt=""
+            fill
+            className="object-contain"
+            priority
+            sizes="(min-width: 1024px) 1024px, 100vw"
+          />
+          <div className="absolute inset-0 bg-primary/40" />
+        </div>
       </div>
 
       <PageHero title={data.heroTitle} description={data.heroDescription} />

@@ -5,7 +5,7 @@ export const plumbingData: ServicePageData = {
   title: "Plumbing Services",
   metaDescription:
     "Licensed plumbers in Maryland and Virginia for leaks, drain cleaning, water heaters, and pipe repair. Emergency plumbing service available 24/7 with upfront pricing.",
-  heroImage: "/images/hero-technician.jpg",
+  heroImage: "/images/plumbing-hero.jpg",
   heroTitle: "Expert Plumbing Services You Can Count On",
   heroDescription:
     "From dripping faucets to burst pipes, Maven's licensed plumbers solve problems fast with clean workmanship and transparent pricing. Serving Maryland and Northern Virginia homeowners since 2008.",
