@@ -52,7 +52,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Air Conditioner Services",
     metaDescription:
       "AC repair, installation, and maintenance in Maryland and Virginia. Same-day air conditioner service from NATE-certified technicians.",
-    heroImage: "/images/hvac-air-conditioners.jpg",
+    heroImage: "/images/ac2.jpg",
     heroTitle: "Air Conditioner Repair & Installation",
     heroDescription:
       "Fast, reliable air conditioning service for homes and businesses across the DMV. From emergency repairs to new system installs, Maven keeps you cool.",
@@ -99,7 +99,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Refrigerator Services",
     metaDescription:
       "Professional refrigerator repair and installation in Maryland and Virginia. Commercial and residential refrigeration service from licensed technicians.",
-    heroImage: "/images/hvac-refrigerators.jpg",
+    heroImage: "/images/refig.png",
     heroTitle: "Refrigerator Repair & Service",
     heroDescription:
       "Reliable refrigerator repair for homes and commercial kitchens across Maryland and Virginia. Fast diagnostics, quality parts, and lasting repairs.",
@@ -234,7 +234,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Walk-in Cooler & Freezer Services",
     metaDescription:
       "Walk-in cooler and freezer repair, installation, and maintenance in Maryland and Virginia. Commercial refrigeration service with fast emergency response.",
-    heroImage: "/images/hvac-walk-in-coolers.jpg",
+    heroImage: "/images/walkin.jpg",
     heroTitle: "Walk-in Cooler & Freezer Service",
     heroDescription:
       "Expert walk-in cooler and freezer repair for restaurants, grocery stores, and food service operations across Maryland and Virginia. Fast response to protect your inventory.",
@@ -465,7 +465,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Electrical Repair & Installation",
     metaDescription:
       "Licensed electrical repair and installation in Maryland and Virginia. From outlets to panel upgrades — safe, code-compliant electrical work.",
-    heroImage: "/images/electrical-repair-installation.jpg",
+    heroImage: "/images/electric.jpg",
     heroTitle: "Electrical Repair & Installation",
     heroDescription:
       "Safe, licensed electrical repair and installation for homes and businesses across Maryland and Virginia. From tripped breakers to full panel upgrades.",
