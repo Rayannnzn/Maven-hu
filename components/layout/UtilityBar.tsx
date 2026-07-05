@@ -33,10 +33,9 @@ export default function UtilityBar() {
             className="flex items-center gap-4 shrink-0 font-semibold text-sm sm:text-base hover:text-maven-gold transition-colors duration-200 group"
             aria-label={`Call us at ${company.phone}`}
           >
-            <span className="flex items-center justify-center size-9 rounded-full bg-white/15 group-hover:bg-white/25 transition-colors duration-200 shrink-0">
-              <Phone className="size-4" aria-hidden />
-            </span>
-            <span className="hidden xs:inline truncate">{company.phone}</span>
+            <span className="flex items-center justify-center size-9 rounded-full bg-maven-gold text-primary group-hover:bg-[#e6a800] transition-colors duration-200 shrink-0">
+  <Phone className="size-4" aria-hidden />
+</span>
           </a>
 
           {/* Divider */}
