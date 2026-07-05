@@ -34,8 +34,9 @@ function mobileMainCategoryButtonClass(isActive: boolean) {
 
 function mobileSubcategoryButtonClass(isActive: boolean) {
   return cn(
-    "inline-flex min-h-[40px] shrink-0 items-center rounded-md border px-3 py-2",
-    "text-xs font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:text-sm",
+    "inline-flex min-h-[36px] items-center rounded-md border px-2 py-1.5",
+    "text-[11px] font-medium leading-tight transition-colors sm:text-xs",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
     isActive
       ? "border-maven-gold bg-maven-gold/15 font-semibold text-maven-gold"
       : "border-white/25 text-white/85 hover:border-white/40 hover:bg-white/5",
@@ -122,8 +123,6 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const subNavScrollRef = useRef<HTMLDivElement>(null);
-  const [subNavScroll, setSubNavScroll] = useState({ canScrollLeft: false, canScrollRight: false });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -132,51 +131,10 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const updateSubNavScrollState = () => {
-    const container = subNavScrollRef.current;
-    if (!container) return;
-    const { scrollLeft, scrollWidth, clientWidth } = container;
-    setSubNavScroll({
-      canScrollLeft: scrollLeft > 4,
-      canScrollRight: scrollLeft + clientWidth < scrollWidth - 4,
-    });
-  };
-
   // Determine active service category for the sub-nav bar
   const activeCategory = serviceCategories.find((c) =>
     pathname.startsWith(c.href),
   );
-
-  useEffect(() => {
-    const container = subNavScrollRef.current;
-    if (!container || !activeCategory) return;
-
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const activeEl = container.querySelector<HTMLElement>('[data-subnav-active="true"]');
-    activeEl?.scrollIntoView({
-      inline: "center",
-      block: "nearest",
-      behavior: reducedMotion ? "auto" : "smooth",
-    });
-
-    // Update fade state after scrollIntoView completes
-    const t = setTimeout(updateSubNavScrollState, reducedMotion ? 0 : 350);
-    return () => clearTimeout(t);
-  }, [pathname, activeCategory]);
-
-  useEffect(() => {
-    const container = subNavScrollRef.current;
-    if (!container || !activeCategory) return;
-
-    updateSubNavScrollState();
-    container.addEventListener("scroll", updateSubNavScrollState, { passive: true });
-    window.addEventListener("resize", updateSubNavScrollState);
-
-    return () => {
-      container.removeEventListener("scroll", updateSubNavScrollState);
-      window.removeEventListener("resize", updateSubNavScrollState);
-    };
-  }, [activeCategory]);
 
   return (
     <header
@@ -366,16 +324,13 @@ export default function SiteHeader() {
           </div>
         </nav>
 
-        {/* ── Mobile subcategory bar (button-style, horizontal scroll) ── */}
+        {/* ── Mobile subcategory bar (button-style, all visible via wrap) ── */}
         {activeCategory && (
           <nav
-            className="relative min-h-[48px] w-full min-w-0 overflow-hidden border-t border-white/10 pb-2 lg:hidden"
+            className="border-t border-white/10 pb-2 lg:hidden"
             aria-label={`${activeCategory.label} subcategories`}
           >
-            <div
-              ref={subNavScrollRef}
-              className="-mx-4 flex w-full min-w-0 max-w-full flex-nowrap touch-pan-x items-center gap-1.5 overflow-x-auto overscroll-x-contain scroll-smooth px-4 py-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-            >
+            <div className="flex flex-wrap items-center gap-1.5 py-1.5">
               <Link
                 href={activeCategory.href}
                 className={mobileSubcategoryButtonClass(
@@ -383,9 +338,6 @@ export default function SiteHeader() {
                 )}
                 aria-current={
                   pathname === activeCategory.href ? "page" : undefined
-                }
-                data-subnav-active={
-                  pathname === activeCategory.href ? "true" : undefined
                 }
               >
                 All {activeCategory.label}
@@ -398,25 +350,12 @@ export default function SiteHeader() {
                     href={sub.href}
                     className={mobileSubcategoryButtonClass(isActive)}
                     aria-current={isActive ? "page" : undefined}
-                    data-subnav-active={isActive ? "true" : undefined}
                   >
                     {sub.label}
                   </Link>
                 );
               })}
             </div>
-            {subNavScroll.canScrollLeft && (
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 bg-gradient-to-r from-primary to-transparent"
-              />
-            )}
-            {subNavScroll.canScrollRight && (
-              <div
-                aria-hidden
-                className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 bg-gradient-to-l from-primary to-transparent"
-              />
-            )}
           </nav>
         )}
 
