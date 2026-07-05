@@ -22,6 +22,38 @@ function isActiveLink(pathname: string, href: string) {
   return pathname === href || (href !== "/" && pathname.startsWith(href));
 }
 
+function mobileMainCategoryButtonClass(isActive: boolean) {
+  return cn(
+    "flex min-h-[44px] flex-1 items-center justify-center rounded-md border px-2 py-2.5 text-center",
+    "text-sm font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:text-base",
+    isActive
+      ? "border-maven-gold bg-maven-gold/15 text-maven-gold"
+      : "border-white/25 text-white hover:border-white/40 hover:bg-white/5",
+  );
+}
+
+function mobileSubcategoryButtonClass(isActive: boolean) {
+  return cn(
+    "inline-flex min-h-[40px] shrink-0 items-center rounded-md border px-3 py-2",
+    "text-xs font-medium whitespace-nowrap transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:text-sm",
+    isActive
+      ? "border-maven-gold bg-maven-gold/15 font-semibold text-maven-gold"
+      : "border-white/25 text-white/85 hover:border-white/40 hover:bg-white/5",
+  );
+}
+
+function categoryShortLabel(href: string, label: string) {
+  if (href === "/electrical") {
+    return (
+      <>
+        <span className="sm:hidden">Electrical</span>
+        <span className="hidden sm:inline">{label}</span>
+      </>
+    );
+  }
+  return label;
+}
+
 function DesktopDropdown({
   category,
   pathname,
@@ -90,6 +122,8 @@ export default function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const subNavScrollRef = useRef<HTMLDivElement>(null);
+  const [subNavScroll, setSubNavScroll] = useState({ canScrollLeft: false, canScrollRight: false });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -98,10 +132,51 @@ export default function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const updateSubNavScrollState = () => {
+    const container = subNavScrollRef.current;
+    if (!container) return;
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+    setSubNavScroll({
+      canScrollLeft: scrollLeft > 4,
+      canScrollRight: scrollLeft + clientWidth < scrollWidth - 4,
+    });
+  };
+
   // Determine active service category for the sub-nav bar
   const activeCategory = serviceCategories.find((c) =>
     pathname.startsWith(c.href),
   );
+
+  useEffect(() => {
+    const container = subNavScrollRef.current;
+    if (!container || !activeCategory) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const activeEl = container.querySelector<HTMLElement>('[data-subnav-active="true"]');
+    activeEl?.scrollIntoView({
+      inline: "center",
+      block: "nearest",
+      behavior: reducedMotion ? "auto" : "smooth",
+    });
+
+    // Update fade state after scrollIntoView completes
+    const t = setTimeout(updateSubNavScrollState, reducedMotion ? 0 : 350);
+    return () => clearTimeout(t);
+  }, [pathname, activeCategory]);
+
+  useEffect(() => {
+    const container = subNavScrollRef.current;
+    if (!container || !activeCategory) return;
+
+    updateSubNavScrollState();
+    container.addEventListener("scroll", updateSubNavScrollState, { passive: true });
+    window.addEventListener("resize", updateSubNavScrollState);
+
+    return () => {
+      container.removeEventListener("scroll", updateSubNavScrollState);
+      window.removeEventListener("resize", updateSubNavScrollState);
+    };
+  }, [activeCategory]);
 
   return (
     <header
@@ -110,7 +185,7 @@ export default function SiteHeader() {
         scrolled && "shadow-[0_4px_24px_rgba(0,0,0,0.2)]",
       )}
     >
-      <div className={`${containerClass} flex flex-col`}>
+      <div className={`${containerClass} flex w-full min-w-0 flex-col`}>
         {/* ── Main bar ── */}
         <div className="flex h-16 items-center justify-between gap-4 lg:h-[72px] lg:gap-8">
           <Link href="/" className="flex shrink-0 items-center gap-2.5">
@@ -269,44 +344,89 @@ export default function SiteHeader() {
           </Sheet>
         </div>
 
-        {/* ── Mobile category bar (top-level, shown when NOT inside a category) ── */}
-        {!activeCategory && (
-          <nav
-            className="border-t border-white/10 pb-2 lg:hidden"
-            aria-label="Service categories"
-          >
-            <div className="flex items-center justify-between gap-1">
-              {serviceCategories.map((link) => (
+        {/* ── Mobile main category bar (always visible below lg) ── */}
+        <nav
+          className="min-h-[52px] border-t border-white/10 pb-2 lg:hidden"
+          aria-label="Service categories"
+        >
+          <div className="flex items-center justify-between gap-1.5 pt-1">
+            {serviceCategories.map((link) => {
+              const isActive = isActiveLink(pathname, link.href);
+              return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={cn(
-                    "flex min-h-[44px] flex-1 items-center justify-center px-1 py-2.5 text-center text-sm font-bold text-white transition-colors hover:text-white/90 sm:text-base",
-                    isActiveLink(pathname, link.href) && "text-maven-gold",
-                  )}
+                  className={mobileMainCategoryButtonClass(isActive)}
+                  aria-current={isActive ? "page" : undefined}
                 >
-                  {link.href === "/electrical" ? (
-                    <>
-                      <span className="sm:hidden">Electrical</span>
-                      <span className="hidden sm:inline">{link.label}</span>
-                    </>
-                  ) : (
-                    link.label
-                  )}
+                  {categoryShortLabel(link.href, link.label)}
                 </Link>
-              ))}
+              );
+            })}
+          </div>
+        </nav>
+
+        {/* ── Mobile subcategory bar (button-style, horizontal scroll) ── */}
+        {activeCategory && (
+          <nav
+            className="relative min-h-[48px] w-full min-w-0 overflow-hidden border-t border-white/10 pb-2 lg:hidden"
+            aria-label={`${activeCategory.label} subcategories`}
+          >
+            <div
+              ref={subNavScrollRef}
+              className="-mx-4 flex w-full min-w-0 max-w-full flex-nowrap touch-pan-x items-center gap-1.5 overflow-x-auto overscroll-x-contain scroll-smooth px-4 py-1.5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <Link
+                href={activeCategory.href}
+                className={mobileSubcategoryButtonClass(
+                  pathname === activeCategory.href,
+                )}
+                aria-current={
+                  pathname === activeCategory.href ? "page" : undefined
+                }
+                data-subnav-active={
+                  pathname === activeCategory.href ? "true" : undefined
+                }
+              >
+                All {activeCategory.label}
+              </Link>
+              {activeCategory.subcategories.map((sub) => {
+                const isActive = isActiveLink(pathname, sub.href);
+                return (
+                  <Link
+                    key={sub.href}
+                    href={sub.href}
+                    className={mobileSubcategoryButtonClass(isActive)}
+                    aria-current={isActive ? "page" : undefined}
+                    data-subnav-active={isActive ? "true" : undefined}
+                  >
+                    {sub.label}
+                  </Link>
+                );
+              })}
             </div>
+            {subNavScroll.canScrollLeft && (
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 left-0 z-10 w-6 bg-gradient-to-r from-primary to-transparent"
+              />
+            )}
+            {subNavScroll.canScrollRight && (
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-y-0 right-0 z-10 w-6 bg-gradient-to-l from-primary to-transparent"
+              />
+            )}
           </nav>
         )}
 
-        {/* ── Subcategory bar (desktop + mobile, shown when inside a category) ── */}
+        {/* ── Desktop subcategory bar (unchanged) ── */}
         {activeCategory && (
           <nav
-            className="border-t border-white/10 pb-2"
+            className="hidden border-t border-white/10 pb-2 lg:block"
             aria-label={`${activeCategory.label} subcategories`}
           >
             <div className="flex flex-wrap items-center gap-x-1 gap-y-1 py-1.5 lg:gap-x-2">
-              {/* Back link to parent on mobile */}
               <Link
                 href={activeCategory.href}
                 className={cn(

@@ -26,6 +26,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      authors: [post.author.name],
+      images: [{ url: post.featuredImage, alt: post.title }],
+    },
   };
 }
 
@@ -81,7 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className={`${containerClass} relative -mt-4 mb-8 aspect-[21/9] max-w-4xl overflow-hidden rounded-2xl shadow-lg md:-mt-8`}>
           <Image
             src={post.featuredImage}
-            alt=""
+            alt={post.title}
             fill
             className="object-cover"
             priority
