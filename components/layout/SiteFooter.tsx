@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Wrench } from "lucide-react";
+import SiteLogo from "@/components/layout/SiteLogo";
 import {
   addressLines,
   company,
@@ -14,17 +14,9 @@ export default function SiteFooter() {
       <div className={`${containerClass} border-b border-white/10 py-12 md:py-16`}>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="mb-5 flex items-center gap-2.5">
-              <div className="flex size-9 items-center justify-center rounded-md bg-maven-red">
-                <Wrench className="size-5" aria-hidden />
-              </div>
-              <div>
-                <div className="text-lg font-extrabold tracking-wider">MAVEN</div>
-                <div className="text-[10px] uppercase tracking-[0.16em] text-white/40">
-                  {company.tagline}
-                </div>
-              </div>
-            </div>
+            <Link href="/" className="mb-5 inline-block">
+              <SiteLogo className="h-10" />
+            </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/52">
               Licensed and insured home service professionals based in Rockville,
               Maryland — serving Maryland and Northern Virginia within a 30-mile

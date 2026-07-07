@@ -2,6 +2,7 @@ export const company = {
   name: "Maven Home Services",
   shortName: "Maven",
   tagline: "Home Services",
+  logo: "/images/logo.png",
   phone: "(888) 628-3629",
   phoneHref: "tel:8886283629",
   email: "service@mavenhomeservices.com",

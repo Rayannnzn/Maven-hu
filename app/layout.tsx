@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import UtilityBar from "@/components/layout/UtilityBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import { company } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,6 +20,11 @@ export const metadata: Metadata = {
   },
   description:
     "Licensed and insured HVAC, plumbing, and electrical professionals based in Rockville, MD — serving Maryland and Northern Virginia within a 30-mile radius. Available 24/7 for emergency service.",
+  icons: {
+    icon: company.logo,
+    shortcut: company.logo,
+    apple: company.logo,
+  },
 };
 
 export default function RootLayout({

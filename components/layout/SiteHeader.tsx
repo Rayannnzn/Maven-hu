@@ -3,9 +3,10 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, Phone, Wrench, ChevronDown } from "lucide-react";
+import { Menu, Phone, ChevronDown } from "lucide-react";
 import { company, containerClass, navLinks, serviceCategories } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import SiteLogo from "@/components/layout/SiteLogo";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -146,18 +147,8 @@ export default function SiteHeader() {
       <div className={`${containerClass} flex w-full min-w-0 flex-col`}>
         {/* ── Main bar ── */}
         <div className="flex h-16 items-center justify-between gap-4 lg:h-[72px] lg:gap-8">
-          <Link href="/" className="flex shrink-0 items-center gap-2.5">
-            <div className="flex size-9 items-center justify-center rounded-md bg-maven-red lg:size-[38px]">
-              <Wrench className="size-5 text-white" aria-hidden />
-            </div>
-            <div>
-              <div className="text-lg font-extrabold leading-tight tracking-wider lg:text-xl">
-                MAVEN
-              </div>
-              <div className="text-[10px] uppercase tracking-[0.16em] text-white/45">
-                {company.tagline}
-              </div>
-            </div>
+          <Link href="/" className="flex shrink-0 items-center">
+            <SiteLogo className="h-11 lg:h-12" priority />
           </Link>
 
           {/* Desktop nav */}
