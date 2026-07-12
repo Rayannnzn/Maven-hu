@@ -1,3 +1,13 @@
+export type ServiceDetailSection = {
+  id: string;
+  heading: string;
+  description: string;
+  benefits?: string[];
+  commonProblems?: string[];
+  group?: string;
+  ctaText?: string;
+};
+
 export type ServicePageData = {
   slug: string;
   title: string;
@@ -12,4 +22,5 @@ export type ServicePageData = {
   steps: { num: string; icon: string; title: string; desc: string }[];
   faqs: { q: string; a: string }[];
   ctaTitle: string;
+  detailSections?: ServiceDetailSection[];
 };

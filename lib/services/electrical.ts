@@ -1,4 +1,5 @@
 import type { ServicePageData } from "./types";
+import { electricalDetailSections } from "./electrical-sections";
 
 export const electricalData: ServicePageData = {
   slug: "electrical",
@@ -141,4 +142,5 @@ export const electricalData: ServicePageData = {
     },
   ],
   ctaTitle: "Power Your Home Safely & Reliably",
+  detailSections: electricalDetailSections,
 };

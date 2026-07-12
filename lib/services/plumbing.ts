@@ -1,4 +1,5 @@
 import type { ServicePageData } from "./types";
+import { plumbingDetailSections } from "./plumbing-sections";
 
 export const plumbingData: ServicePageData = {
   slug: "plumbing",
@@ -141,4 +142,5 @@ export const plumbingData: ServicePageData = {
     },
   ],
   ctaTitle: "Don't Let Plumbing Problems Get Worse",
+  detailSections: plumbingDetailSections,
 };

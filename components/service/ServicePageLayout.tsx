@@ -4,6 +4,8 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { PageHero, SectionHeader } from "@/components/shared/PageHero";
 import FaqSection from "@/components/sections/FaqSection";
 import ScheduleForm from "@/components/shared/ScheduleForm";
+import ServiceDetailSections from "@/components/service/ServiceDetailSections";
+import HashScrollHandler from "@/components/service/HashScrollHandler";
 import { Button } from "@/components/ui/button";
 import { company, containerClass, sectionClass } from "@/lib/site";
 import type { ServicePageData } from "@/lib/services/types";
@@ -11,6 +13,7 @@ import type { ServicePageData } from "@/lib/services/types";
 export default function ServicePageLayout({ data }: { data: ServicePageData }) {
   return (
     <>
+      <HashScrollHandler />
       <Breadcrumbs items={[{ label: data.title }]} />
 
       <div className="relative w-full bg-primary">
@@ -43,6 +46,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           </div>
         </div>
       </section>
+
+      {data.detailSections && data.detailSections.length > 0 && (
+        <ServiceDetailSections sections={data.detailSections} />
+      )}
 
       <section className={`${sectionClass} bg-muted`}>
         <div className={containerClass}>

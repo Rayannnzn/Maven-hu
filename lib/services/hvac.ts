@@ -1,4 +1,5 @@
 import type { ServicePageData } from "./types";
+import { hvacDetailSections } from "./hvac-sections";
 
 export const hvacData: ServicePageData = {
   slug: "hvac",
@@ -141,4 +142,5 @@ export const hvacData: ServicePageData = {
     },
   ],
   ctaTitle: "Ready for Reliable Heating & Cooling?",
+  detailSections: hvacDetailSections,
 };
