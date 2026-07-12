@@ -2,10 +2,10 @@ import Image from "next/image";
 import { company, containerClass, sectionClass } from "@/lib/site";
 
 const stats = [
-  { value: "15+", label: "Years Experience", highlight: false },
-  { value: "5,000+", label: "Jobs Completed", highlight: false },
-  { value: "4,800+", label: "Happy Customers", highlight: false },
-  { value: "24/7", label: "Emergency Support", highlight: true },
+  { value: "Experienced", label: "Professional field experience", highlight: false },
+  { value: "Local", label: "Serving Maryland & Northern Virginia", highlight: false },
+  { value: "Trusted", label: "By homeowners throughout Maryland", highlight: false },
+  { value: "Responsive", label: "Emergency service available", highlight: true },
 ];
 
 export default function AboutPreview() {
@@ -18,15 +18,15 @@ export default function AboutPreview() {
             Built on Skill, Integrity, and Results
           </h2>
           <p className="mb-4 text-base leading-relaxed text-[#4a5568]">
-            {company.name} was founded in {company.founded} by licensed tradespeople
-            who believed homeowners deserved better. We built a company where every
-            technician is background-checked, every quote is written, and every job
-            is done right — the first time.
+            {company.name} was built by experienced tradespeople who believed
+            homeowners deserved better. We built a company where every technician
+            is background-checked, every quote is written, and there&apos;s
+            quality workmanship on every visit.
           </p>
           <p className="mb-8 text-base leading-relaxed text-[#4a5568] md:mb-10">
-            Today, Maven serves thousands of homeowners, property managers, and
-            businesses across {company.serviceRegion} with a full team of certified
-            HVAC, plumbing, and electrical professionals.
+            Today, Maven serves homeowners, property managers, and businesses
+            across {company.serviceRegion} with an experienced team of HVAC,
+            plumbing, and electrical professionals.
           </p>
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             {stats.map((stat) => (
@@ -37,7 +37,7 @@ export default function AboutPreview() {
                 }`}
               >
                 <div
-                  className={`text-3xl font-black leading-none tracking-tight md:text-[2.375rem] ${
+                  className={`text-xl font-black leading-tight tracking-tight md:text-2xl ${
                     stat.highlight ? "text-white" : "text-primary"
                   }`}
                 >

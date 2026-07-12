@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Maven Home Services in Rockville, MD for HVAC, plumbing, and electrical service across Maryland and Northern Virginia. Schedule online or call our 24/7 emergency line.",
+    "Contact Maven Home Services in Rockville, MD for HVAC, plumbing, and electrical service across Maryland and Northern Virginia. Schedule online or call our emergency line for urgent issues.",
 };
 
 const contactFaqs = faqs.slice(0, 3);
@@ -29,7 +29,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Get in Touch"
         title="Contact Maven Home Services"
-        description="Schedule a service appointment, request an estimate, or reach our 24/7 emergency dispatch line. We respond to all inquiries within 15 minutes during business hours."
+        description="Schedule a service appointment, request an estimate, or reach our emergency dispatch line for urgent issues. We will contact you promptly regarding your request."
         dark={false}
       />
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
                       {company.phone}
                     </a>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      24/7 emergency line available
+                      Emergency line available for urgent issues
                     </p>
                   </div>
                 </div>

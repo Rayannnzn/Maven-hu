@@ -18,10 +18,9 @@ export default function SiteFooter() {
               <SiteLogo className="h-10" />
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/52">
-              Licensed and insured home service professionals based in Rockville,
-              Maryland — serving Maryland and Northern Virginia within a 30-mile
-              radius since {company.founded}. Available 24/7 for emergency
-              service.
+              Insured home service professionals based in Rockville, Maryland —
+              serving homeowners and businesses across Maryland and Northern
+              Virginia. Emergency service is available for urgent issues.
             </p>
             <a
               href={company.phoneHref}
@@ -94,7 +93,7 @@ export default function SiteFooter() {
               </div>
               <div className="mt-2 rounded-lg border border-maven-red/30 bg-maven-red/15 p-3.5">
                 <p className="text-xs font-bold text-maven-red">Emergency Service</p>
-                <p className="text-sm text-white/65">24 Hours / 7 Days</p>
+                <p className="text-sm text-white/65">Available for urgent issues</p>
                 <a
                   href={company.phoneHref}
                   className="mt-1.5 block font-bold hover:text-white/90"
@@ -110,7 +109,7 @@ export default function SiteFooter() {
       <div
         className={`${containerClass} flex flex-col items-start justify-between gap-3 py-5 text-sm text-white/30 sm:flex-row sm:items-center`}
       >
-        <p>© 2024 {company.name}, Inc. All rights reserved.</p>
+        <p>© 2026 {company.name}. All rights reserved.</p>
         <div className="flex gap-5">
           {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
             <Link key={item} href="#" className="hover:text-white/65">

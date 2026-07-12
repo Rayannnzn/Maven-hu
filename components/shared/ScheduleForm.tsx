@@ -18,7 +18,7 @@ const serviceOptions = [
   "Electrical",
   "Air Conditioning",
   "Cooling Systems",
-  "Residential Maintenance",
+  "Preventive Maintenance Plans",
   "Emergency Service",
 ];
 
@@ -42,16 +42,16 @@ export default function ScheduleForm({
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="flex flex-col gap-1.5">
             <Label htmlFor="firstName">First Name</Label>
-            <Input id="firstName" placeholder="John" />
+            <Input id="firstName" placeholder="Enter your first name" autoComplete="given-name" />
           </div>
           <div className="flex flex-col gap-1.5">
             <Label htmlFor="lastName">Last Name</Label>
-            <Input id="lastName" placeholder="Smith" />
+            <Input id="lastName" placeholder="Enter your last name" autoComplete="family-name" />
           </div>
         </div>
         <div className="flex flex-col gap-1.5">
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" type="tel" placeholder="(555) 000-0000" />
+          <Input id="phone" type="tel" placeholder="Enter your phone number" autoComplete="tel" />
         </div>
         <div className="flex flex-col gap-1.5">
           <Label htmlFor="service">Service Needed</Label>
@@ -83,7 +83,7 @@ export default function ScheduleForm({
           Request Service Appointment →
         </Button>
         <p className="text-center text-xs text-muted-foreground">
-          We respond to all inquiries within 15 minutes during business hours.
+          We will contact you promptly regarding your request.
         </p>
       </form>
     </div>

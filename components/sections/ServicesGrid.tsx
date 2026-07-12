@@ -20,7 +20,7 @@ export default function ServicesGrid() {
         <SectionHeader
           eyebrow="Our Services"
           title="Complete Home Service Solutions"
-          subtitle="Expert installation, repair, and maintenance for every system in your home — delivered by licensed professionals."
+          subtitle="Expert installation, repair, and maintenance for every system in your home delivered by experienced professionals."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
           {services.map((svc) => (

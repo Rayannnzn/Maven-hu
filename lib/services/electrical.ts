@@ -4,14 +4,14 @@ export const electricalData: ServicePageData = {
   slug: "electrical",
   title: "Electrical Services",
   metaDescription:
-    "Licensed electricians in Maryland and Virginia for panel upgrades, wiring, outlets, and safety inspections. Code-compliant electrical work with upfront estimates.",
+    "Experienced electricians in Maryland and Virginia for panel upgrades, wiring, outlets, and safety inspections. Code-compliant electrical work with upfront estimates.",
   heroImage: "/images/electrical-hero.jpg",
-  heroTitle: "Licensed Electrical Services for Maryland & Virginia Homes",
+  heroTitle: "Professional Electrical Services for Maryland & Virginia Homes",
   heroDescription:
-    "Electrical work demands precision and code compliance. Maven's licensed electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",
+    "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",
   overview: [
     "Faulty wiring isn't just inconvenient — it's a serious safety hazard. Flickering lights, warm outlets, and tripping breakers are warning signs that deserve immediate professional attention.",
-    "Maven Home Services provides full-service residential electrical work across Maryland and Northern Virginia. Our licensed electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland and Virginia amendments.",
+    "Maven Home Services provides full-service residential electrical work across Maryland and Northern Virginia. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland and Virginia amendments.",
     "Whether you're renovating, adding circuits for new appliances, or upgrading an outdated electrical panel, we deliver work that passes inspection and protects your family for years to come.",
   ],
   offeredServices: [
@@ -53,12 +53,12 @@ export const electricalData: ServicePageData = {
     {
       icon: "emergency",
       name: "Emergency Electrical Repair",
-      desc: "24/7 response for power outages, sparking outlets, burning smells, and other urgent electrical hazards.",
+      desc: "Emergency response for power outages, sparking outlets, burning smells, and other urgent electrical hazards. Response times depend on technician availability and your location.",
     },
   ],
   benefits: [
     {
-      title: "Licensed & Code-Compliant",
+      title: "Code-Compliant Work",
       desc: "All work meets National Electrical Code standards and local Maryland and Virginia amendments. Permits pulled and inspections scheduled when required.",
     },
     {
@@ -93,7 +93,7 @@ export const electricalData: ServicePageData = {
       num: "01",
       icon: "event_available",
       title: "Request an Estimate",
-      desc: "Describe your project online or by phone. We schedule a convenient time for an on-site evaluation with a licensed electrician.",
+      desc: "Describe your project online or by phone. We schedule a convenient time for an on-site evaluation with an experienced electrician.",
     },
     {
       num: "02",

@@ -4,9 +4,9 @@ import { company, containerClass, sectionClass } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 const trustPills = [
-  { icon: "verified", label: "Licensed & Insured" },
-  { icon: "star", label: "4.9-Star Rated" },
-  { icon: "bolt", label: "Same-Day Service" },
+  { icon: "verified", label: "Insured Professionals" },
+  { icon: "receipt_long", label: "Upfront Pricing" },
+  { icon: "bolt", label: "Same-Day Appointments" },
 ];
 
 export default function HeroSection() {
@@ -17,22 +17,21 @@ export default function HeroSection() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-maven-red/35 bg-maven-red/18 px-4 py-1.5">
             <span className="material-icons-round text-sm text-maven-red">emergency</span>
             <span className="text-xs font-semibold tracking-wide text-white/90 sm:text-sm">
-              24/7 Emergency Service Available
+              Emergency Service Available
             </span>
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-            Professional HVAC, Plumbing
+            Reliable HVAC, Plumbing{" "}
+            <span className="text-maven-gold">&amp; Electrical Services</span>
             <br />
-            &amp; Electrical Services
-            <br />
-            <span className="text-maven-gold">You Can Trust</span>
+            for Maryland &amp; Northern Virginia
           </h1>
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/72 md:text-lg">
-            Serving homeowners and businesses across Maryland and Northern
-            Virginia with licensed professionals, transparent pricing, and
-            guaranteed workmanship since {company.founded}.
+            Fast, dependable service from experienced professionals. Upfront
+            pricing, quality workmanship, and responsive support when you need
+            it.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -51,7 +50,7 @@ export default function HeroSection() {
             >
               <a href={company.phoneHref}>
                 <span className="material-icons-round text-xl">phone</span>
-                Call Now (888)-628-3629
+                Call Now {company.phone}
               </a>
             </Button>
           </div>
@@ -84,29 +83,30 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-4 flex flex-col gap-3 sm:absolute sm:mt-0 sm:flex-row sm:gap-0">
-            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:top-4 sm:mt-0">
-              <div className="text-2xl font-black leading-none tracking-tight text-primary sm:text-[1.75rem]">
-                4.9 ★
+            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:top-4 sm:mt-0 sm:max-w-52">
+              <div className="flex items-center gap-2">
+                <span className="material-icons-round text-lg text-maven-gold">
+                  home
+                </span>
+                <div className="text-sm font-bold leading-tight text-primary">
+                  Trusted by homeowners throughout Maryland.
+                </div>
               </div>
-              <div className="mt-1 text-[11px] font-semibold text-muted-foreground">
-                Google Rating
-              </div>
-              <div className="text-[10px] text-muted-foreground/80">1,200+ reviews</div>
             </div>
 
-            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:bottom-12 sm:min-w-48">
+            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:bottom-12 sm:min-w-52 sm:max-w-56">
               <div className="flex items-center gap-3">
                 <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary sm:size-10">
                   <span className="material-icons-round text-lg text-maven-gold sm:text-xl">
-                    check_circle
+                    schedule
                   </span>
                 </div>
                 <div>
                   <div className="text-xs font-bold leading-tight text-primary sm:text-sm">
-                    Technician En Route
+                    Estimated Arrival
                   </div>
                   <div className="mt-0.5 text-[11px] text-muted-foreground">
-                    Estimated arrival: 45 min
+                    Times vary by location and technician availability.
                   </div>
                 </div>
               </div>

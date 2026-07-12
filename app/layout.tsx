@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Maven Home Services",
   },
   description:
-    "Licensed and insured HVAC, plumbing, and electrical professionals based in Rockville, MD — serving Maryland and Northern Virginia within a 30-mile radius. Available 24/7 for emergency service.",
+    "Insured HVAC, plumbing, and electrical professionals based in Rockville, MD — serving Maryland and Northern Virginia. Emergency service available for urgent issues.",
   icons: {
     icon: company.logo,
     shortcut: company.logo,

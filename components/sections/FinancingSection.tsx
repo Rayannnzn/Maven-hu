@@ -5,25 +5,25 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 const benefits = [
-  "0% interest for 12–18 months on qualifying HVAC equipment",
-  "Low monthly payments on major plumbing and electrical projects",
-  "Quick credit decisions — approval in minutes",
-  "No prepayment penalties on any plan",
+  "Promotional financing may be available for qualified customers",
+  "Monthly payment options on major HVAC, plumbing, and electrical projects",
+  "Applications reviewed by third-party lending partners",
+  "Terms, rates, and eligibility set by the lender",
 ];
 
 const plans = [
   {
-    name: "Same-As-Cash",
-    badge: "Popular",
-    desc: "0% interest for 12 months. Pay in full within the term and pay no interest whatsoever.",
+    name: "Monthly Payment Plans",
+    badge: "Flexible",
+    desc: "Spread the cost of qualifying repairs and installations over time with fixed monthly payments.",
   },
   {
     name: "Extended Payment",
-    desc: "Low fixed monthly payments spread over 24–60 months. Ideal for larger system replacements.",
+    desc: "Longer repayment terms may be available for larger system replacements, subject to lender approval.",
   },
   {
-    name: "Deferred Interest",
-    desc: "0% interest for 18 months on qualifying purchases. For approved applicants only.",
+    name: "Promotional Offers",
+    desc: "Promotional financing may be available for qualified customers on select purchases. Ask our office for current offers.",
   },
 ];
 
@@ -36,12 +36,13 @@ export default function FinancingSection() {
         <div className="min-w-0">
           <span className="eyebrow mb-5">Financing</span>
           <h2 className="section-heading mb-4 text-left">
-            0% Interest Financing Available
+            Flexible Financing Options
           </h2>
           <p className="mb-7 text-base leading-relaxed text-[#4a5568]">
-            Don&apos;t let budget concerns delay critical repairs or important upgrades.
-            Maven partners with leading financing companies to offer affordable monthly
-            payment options with fast approvals.
+            Don&apos;t let budget concerns delay critical repairs or important
+            upgrades. Maven works with third-party lending partners, and
+            promotional financing may be available for qualified customers.
+            Terms, rates, and eligibility are determined by the lender.
           </p>
           <ul className="mb-8 flex flex-col gap-3.5">
             {benefits.map((item) => (

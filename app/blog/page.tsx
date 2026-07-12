@@ -21,7 +21,7 @@ export default function BlogPage() {
       <PageHero
         eyebrow="Resources"
         title="Home Services Tips & Guides"
-        description="Practical advice from licensed HVAC, plumbing, and electrical professionals serving Maryland and Northern Virginia homeowners."
+        description="Practical advice from experienced HVAC, plumbing, and electrical professionals serving Maryland and Northern Virginia homeowners."
       />
 
       <section className={`${sectionClass} bg-background`}>

@@ -196,7 +196,7 @@ export default function SiteHeader() {
                 {company.phone}
               </a>
               <div className="text-[10px] uppercase tracking-widest text-white/50">
-                Available 24/7
+                Emergency Service
               </div>
             </div>
             <Button asChild className="bg-maven-red font-bold hover:bg-[#b81f1f]">

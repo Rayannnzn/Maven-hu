@@ -29,7 +29,7 @@ export default function UtilityBar() {
         <div className="flex items-center h-[60px] sm:h-[64px] px-4 sm:px-6 gap-3">
           {/* Left: Phone */}
           <a
-            href={`tel:${company.phone}`}
+            href={company.phoneHref}
             className="flex items-center gap-4 shrink-0 font-semibold text-sm sm:text-base hover:text-maven-gold transition-colors duration-200 group"
             aria-label={`Call us at ${company.phone}`}
           >
@@ -47,15 +47,15 @@ export default function UtilityBar() {
               {/* Two copies for seamless loop */}
               <span className="inline-flex items-center gap-2 pr-16">
                 <AlertTriangle className="size-3.5 shrink-0 text-maven-gold" aria-hidden />
-                Emergency Service Available 24/7 Fast Response, Licensed Technicians, All Hours
+                Emergency Service Available for Urgent HVAC, Plumbing &amp; Electrical Issues
               </span>
               <span className="inline-flex items-center gap-2 pr-16" aria-hidden>
                 <AlertTriangle className="size-3.5 shrink-0 text-maven-gold" aria-hidden />
-                Emergency Service Available 24/7 Fast Response, Licensed Technicians, All Hours
+                Emergency Service Available for Urgent HVAC, Plumbing &amp; Electrical Issues
               </span>
               <span className="inline-flex items-center gap-2 pr-16" aria-hidden>
                 <AlertTriangle className="size-3.5 shrink-0 text-maven-gold" aria-hidden />
-                Emergency Service Available 24/7 Fast Response, Licensed Technicians, All Hours
+                Emergency Service Available for Urgent HVAC, Plumbing &amp; Electrical Issues
               </span>
 
             </div>

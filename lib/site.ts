@@ -3,8 +3,8 @@ export const company = {
   shortName: "Maven",
   tagline: "Home Services",
   logo: "/images/logo.png",
-  phone: "(888) 628-3629",
-  phoneHref: "tel:8886283629",
+  phone: "877-MAVEN-11",
+  phoneHref: "tel:8776283611",
   email: "service@mavenhomeservices.com",
   founded: 2008,
   serviceRegion: "Maryland & Virginia",
@@ -62,7 +62,7 @@ export const serviceCities = [
 export const hours = {
   weekday: "Mon – Fri: 7:00 AM – 7:00 PM",
   weekend: "Sat – Sun: 8:00 AM – 5:00 PM",
-  emergency: "Emergency line available 24/7",
+  emergency: "Emergency line available for urgent issues",
 };
 
 export const navLinks = [

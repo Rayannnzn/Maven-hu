@@ -8,14 +8,14 @@ import { company, containerClass, sectionClass, serviceArea } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Maven Home Services — licensed HVAC, plumbing, and electrical professionals based in Rockville, MD, serving Maryland and Northern Virginia since 2008.",
+    "Learn about Maven Home Services experienced HVAC, plumbing, and electrical professionals based in Rockville, MD, serving Maryland and Northern Virginia.",
 };
 
 const stats = [
-  { value: "17+", label: "Years in Business" },
-  { value: "50K+", label: "Jobs Completed" },
-  { value: "4.9★", label: "Average Rating" },
-  { value: "24/7", label: "Emergency Service" },
+  { value: "Experienced", label: "Professional field experience" },
+  { value: "Local", label: "Based in Rockville, Maryland" },
+  { value: "Trusted", label: "By homeowners throughout Maryland" },
+  { value: "Responsive", label: "Emergency service available" },
 ];
 
 const values = [
@@ -27,7 +27,7 @@ const values = [
   {
     icon: "engineering",
     title: "Craftsmanship",
-    desc: "Our technicians average 12+ years of field experience. We invest in ongoing training, proper tools, and quality parts because your home deserves the best.",
+    desc: "Experienced, highly trained technicians. We invest in ongoing training, proper tools, and quality parts because your home deserves the best.",
   },
   {
     icon: "groups",
@@ -37,7 +37,7 @@ const values = [
   {
     icon: "handshake",
     title: "Accountability",
-    desc: "Every job is backed by our 30-day workmanship guarantee. If something isn't right, we return and make it right — at no additional charge.",
+    desc: "We stand behind our work. If something isn't right, let us know and we'll make every reasonable effort to correct it.",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ label: "About Us" }]} />
       <PageHero
         eyebrow="Our Story"
-        title="Trusted Home Services Since 2008"
+        title="Trusted Home Services for Maryland & Northern Virginia"
         description="Maven Home Services was founded on a simple belief: homeowners deserve honest, skilled tradespeople who show up on time, do the job right, and stand behind their work."
       />
 
@@ -61,26 +61,26 @@ export default function AboutPage() {
           />
           <div className="flex flex-col gap-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Maven Home Services started in 2008 with a single truck and a
-              commitment to doing things differently. Our founder, a master
-              electrician with 20 years in the trades, had seen too many
-              homeowners overcharged for unnecessary work by companies that
-              prioritized sales over service.
+              Maven Home Services was built on years of professional field
+              experience and a commitment to doing things differently. We&apos;ve
+              seen too many homeowners overcharged for unnecessary work by
+              companies that prioritized sales over service — and we set out to
+              be the alternative.
             </p>
             <p>
               Today, Maven is headquartered in Rockville, Maryland and serves
               homeowners across Montgomery County, Northern Virginia, and
               surrounding communities within a {serviceArea.radiusMiles}-mile
-              radius. Our team of licensed HVAC technicians, master plumbers,
-              and electricians handles everything from emergency repairs to full
+              radius. Our team of experienced HVAC technicians, plumbers, and
+              electricians handles everything from emergency repairs to full
               system installations — all under one trusted name.
             </p>
             <p>
               What sets us apart isn&apos;t just our technical skill. It&apos;s
               how we treat your home. Shoe covers on entry. Work areas
               protected. Jobsites left clean. Upfront written estimates before
-              any work begins. And a real person on the other end of our
-              emergency line — 24 hours a day, 365 days a year.
+              any work begins. And a real person on the other end of our line
+              when you reach out.
             </p>
             <p>
               We&apos;re not the biggest home services company in the DMV. But
@@ -96,12 +96,12 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="By the Numbers"
             title="Maven at a Glance"
-            subtitle="Nearly two decades of reliable service across Maryland and Northern Virginia."
+            subtitle="Reliable service across Maryland and Northern Virginia."
           />
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <p className="text-4xl font-black text-maven-gold md:text-5xl">
+                <p className="text-2xl font-black text-maven-gold md:text-3xl">
                   {stat.value}
                 </p>
                 <p className="mt-2 text-sm text-white/72">{stat.label}</p>
@@ -149,9 +149,9 @@ export default function AboutPage() {
             Experience the Maven Difference
           </h2>
           <p className="max-w-lg text-white/80">
-            Join thousands of Maryland and Virginia homeowners who trust Maven
-            for HVAC, plumbing, and electrical services. Schedule your first
-            appointment today.
+            Join Maryland and Virginia homeowners who trust Maven for HVAC,
+            plumbing, and electrical services. Schedule your first appointment
+            today.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button

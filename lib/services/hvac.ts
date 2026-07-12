@@ -4,15 +4,15 @@ export const hvacData: ServicePageData = {
   slug: "hvac",
   title: "HVAC Services",
   metaDescription:
-    "Expert HVAC repair, installation, and maintenance in Maryland and Virginia. Licensed technicians for heating, cooling, and ventilation — same-day service available.",
+    "Expert HVAC repair, installation, and maintenance in Maryland and Virginia. Experienced technicians for heating, cooling, and ventilation — same-day appointments available.",
   heroImage: "/images/hvac.png",
   heroTitle: "Professional HVAC Services in Maryland & Virginia",
   heroDescription:
-    "From emergency AC repairs to full system replacements, Maven's licensed HVAC technicians keep your home comfortable through humid Mid-Atlantic summers and winter freezes. Upfront pricing, same-day availability, and workmanship you can trust.",
+    "From emergency AC repairs to full system replacements, Maven's experienced HVAC technicians keep your home comfortable through humid Mid-Atlantic summers and winter freezes. Upfront pricing, same-day appointments, and quality workmanship you can trust.",
   overview: [
     "Your heating and cooling system is the backbone of home comfort — especially in the DMV, where humid summers, temperature swings, and occasional winter freezes push equipment to its limits. When your HVAC system struggles, every room in your home feels it.",
-    "Maven Home Services provides complete HVAC solutions for homeowners and property managers throughout Montgomery County, Northern Virginia, and communities within a 30-mile radius of our Rockville headquarters. Our NATE-certified technicians diagnose problems accurately, recommend honest solutions, and complete repairs that last.",
-    "Whether you need a seasonal tune-up, emergency repair, ductwork service, or a full system upgrade, we arrive on time with the tools and parts to get the job done right the first time.",
+    "Maven Home Services provides complete HVAC solutions for homeowners and property managers throughout Montgomery County, Northern Virginia, and communities within a 30-mile radius of our Rockville headquarters. Our experienced technicians diagnose problems accurately, recommend honest solutions, and complete repairs that last.",
+    "Whether you need a seasonal tune-up, emergency repair, ductwork service, or a full system upgrade, we arrive on time with the tools and parts to deliver quality workmanship on every visit.",
   ],
   offeredServices: [
     {
@@ -52,14 +52,14 @@ export const hvacData: ServicePageData = {
     },
     {
       icon: "emergency",
-      name: "24/7 Emergency HVAC",
-      desc: "Round-the-clock emergency dispatch for no-heat and no-cool situations. Real technicians, not voicemail.",
+      name: "Emergency HVAC Service",
+      desc: "Emergency dispatch for no-heat and no-cool situations. Response times depend on technician availability and your location.",
     },
   ],
   benefits: [
     {
-      title: "NATE-Certified Technicians",
-      desc: "Our HVAC team holds North American Technician Excellence certifications and averages 12+ years of field experience on residential systems.",
+      title: "Experienced HVAC Technicians",
+      desc: "Our experienced, highly trained HVAC technicians work on residential systems of all makes and models.",
     },
     {
       title: "Energy-Efficient Solutions",
@@ -71,7 +71,7 @@ export const hvacData: ServicePageData = {
     },
     {
       title: "Manufacturer-Backed Warranties",
-      desc: "All installations include manufacturer parts warranties plus our 30-day workmanship guarantee on every repair and installation.",
+      desc: "Installations include the applicable manufacturer parts warranty, and we stand behind our workmanship on every repair and installation.",
     },
   ],
   whyChoose: [
@@ -93,7 +93,7 @@ export const hvacData: ServicePageData = {
       num: "01",
       icon: "calendar_month",
       title: "Schedule Your Service",
-      desc: "Book online or call our dispatch line. We confirm your appointment within minutes and send your technician's name and ETA.",
+      desc: "Book online or call our dispatch line. We will contact you promptly to confirm your appointment and share your technician's name.",
     },
     {
       num: "02",
@@ -117,7 +117,7 @@ export const hvacData: ServicePageData = {
   faqs: [
     {
       q: "How often should I schedule HVAC maintenance?",
-      a: "We recommend professional tune-ups twice per year — once before cooling season and once before heating season. Regular maintenance can extend equipment life by 5–10 years and prevent up to 95% of unexpected breakdowns.",
+      a: "We recommend professional tune-ups twice per year — once before cooling season and once before heating season. Regular maintenance helps extend equipment life, maintain efficiency, and catch small issues before they become expensive breakdowns.",
     },
     {
       q: "How long does an HVAC system typically last?",
@@ -125,7 +125,7 @@ export const hvacData: ServicePageData = {
     },
     {
       q: "Do you offer financing for new HVAC systems?",
-      a: "Yes. Maven partners with leading financing providers to offer flexible payment plans, including 0% interest options on qualifying equipment purchases. Ask your technician or our office for current programs.",
+      a: "Promotional financing may be available for qualified customers through third-party lending partners. Terms, rates, and eligibility are determined by the lender. Ask your technician or our office for current options and how to apply.",
     },
     {
       q: "What size AC unit does my home need?",

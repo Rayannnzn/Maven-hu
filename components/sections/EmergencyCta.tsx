@@ -15,8 +15,9 @@ export default function EmergencyCta() {
           or Electrical Service?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/62 md:text-lg">
-          We&apos;re available 24 hours a day, 7 days a week, 365 days a year.
-          Real technicians. Real response. No waiting, no answering machines.
+          Emergency service is available for urgent HVAC, plumbing, and
+          electrical issues. Response times depend on technician availability and
+          your location.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
           <Button

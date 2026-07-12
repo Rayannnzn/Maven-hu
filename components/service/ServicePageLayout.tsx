@@ -49,7 +49,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <SectionHeader
             eyebrow="Services"
             title="What We Offer"
-            subtitle="Comprehensive solutions from licensed professionals."
+            subtitle="Comprehensive solutions from experienced professionals."
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {data.offeredServices.map((svc) => (
@@ -77,7 +77,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <SectionHeader
             eyebrow="Benefits"
             title="Why Homeowners Choose Maven"
-            subtitle="Quality workmanship backed by real guarantees."
+            subtitle="Quality workmanship and professional, reliable service."
           />
           <div className="grid gap-6 md:grid-cols-2">
             {data.benefits.map((benefit) => (
@@ -156,8 +156,9 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             {data.ctaTitle}
           </h2>
           <p className="max-w-lg text-white/80">
-            Schedule your service today or call our team for a free estimate.
-            Same-day appointments available across Maryland and Virginia.
+            Schedule your service today or call our team to request an estimate.
+            Same-day appointments available across Maryland and Virginia,
+            subject to technician availability.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button
@@ -188,7 +189,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
               <SectionHeader
                 eyebrow="Get Started"
                 title="Request Service Today"
-                subtitle="Fill out the form and we'll confirm your appointment within 15 minutes during business hours."
+                subtitle="Fill out the form and we will contact you promptly to confirm your appointment."
                 centered={false}
                 className="mb-0"
               />
@@ -219,7 +220,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                   <span className="material-icons-round text-maven-red">
                     emergency
                   </span>
-                  24/7 emergency service available
+                  Emergency service available for urgent issues
                 </p>
               </div>
             </div>

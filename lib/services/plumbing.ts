@@ -4,14 +4,14 @@ export const plumbingData: ServicePageData = {
   slug: "plumbing",
   title: "Plumbing Services",
   metaDescription:
-    "Licensed plumbers in Maryland and Virginia for leaks, drain cleaning, water heaters, and pipe repair. Emergency plumbing service available 24/7 with upfront pricing.",
+    "Experienced plumbers in Maryland and Virginia for leaks, drain cleaning, water heaters, and pipe repair. Emergency plumbing service available for urgent issues with upfront pricing.",
   heroImage: "/images/plumbing-hero.jpg",
   heroTitle: "Expert Plumbing Services You Can Count On",
   heroDescription:
-    "From dripping faucets to burst pipes, Maven's licensed plumbers solve problems fast with clean workmanship and transparent pricing. Serving Maryland and Northern Virginia homeowners since 2008.",
+    "From dripping faucets to burst pipes, Maven's experienced plumbers solve problems fast with clean workmanship and transparent pricing. Serving Maryland and Northern Virginia homeowners.",
   overview: [
     "Plumbing problems never wait for a convenient time. A slow leak behind a wall can cause thousands in water damage, and a clogged main line can shut down your entire household in hours.",
-    "Maven Home Services delivers reliable residential plumbing across Maryland and Northern Virginia — from routine fixture replacements to complex repiping projects and emergency burst-pipe response. Every plumber on our team is licensed, insured, and background-checked.",
+    "Maven Home Services delivers reliable residential plumbing across Maryland and Northern Virginia — from routine fixture replacements to complex repiping projects and emergency burst-pipe response. Every plumber on our team is insured and background-checked.",
     "We treat your home with respect: shoe covers on entry, work areas protected, and jobsites left cleaner than we found them. That's the Maven standard on every call.",
   ],
   offeredServices: [
@@ -53,13 +53,13 @@ export const plumbingData: ServicePageData = {
     {
       icon: "emergency",
       name: "Emergency Plumbing",
-      desc: "24/7 dispatch for burst pipes, major leaks, sewer backups, and no-water emergencies. Average response under 90 minutes.",
+      desc: "Emergency dispatch for burst pipes, major leaks, sewer backups, and no-water situations. Response times depend on technician availability and your location.",
     },
   ],
   benefits: [
     {
-      title: "Licensed Master Plumbers",
-      desc: "Every Maven plumber holds valid Maryland and Virginia plumbing licenses and stays current on code changes, new materials, and best practices.",
+      title: "Experienced Plumbers",
+      desc: "Every Maven plumber stays current on code changes, new materials, and best practices for reliable, lasting repairs.",
     },
     {
       title: "Advanced Diagnostic Tools",
@@ -110,14 +110,14 @@ export const plumbingData: ServicePageData = {
     {
       num: "04",
       icon: "verified",
-      title: "Test & Guarantee",
-      desc: "All work is pressure-tested and verified before we leave. Repairs are backed by our 30-day workmanship guarantee.",
+      title: "Test & Verify",
+      desc: "All work is pressure-tested and verified before we leave. We stand behind our work and will make every reasonable effort to correct any issue.",
     },
   ],
   faqs: [
     {
       q: "What qualifies as a plumbing emergency?",
-      a: "Burst pipes, major active leaks, sewer backups, no water supply, and gas line concerns related to water heaters are emergencies. Call our 24/7 line immediately — delaying can cause significant property damage.",
+      a: "Burst pipes, major active leaks, sewer backups, no water supply, and gas line concerns related to water heaters are emergencies. Call our emergency line right away — delaying can cause significant property damage.",
     },
     {
       q: "How can I prevent frozen pipes in winter?",

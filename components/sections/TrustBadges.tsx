@@ -1,11 +1,11 @@
 import { containerClass } from "@/lib/site";
 
 const badges = [
-  { icon: "verified_user", iconClass: "text-primary", title: "Fully Licensed", sub: "State Certified" },
+  { icon: "verified_user", iconClass: "text-primary", title: "Vetted Technicians", sub: "Background-Checked" },
   { icon: "shield", iconClass: "text-primary", title: "Fully Insured", sub: "Liability Covered" },
-  { icon: "star", iconClass: "text-maven-gold", title: "5-Star Rated", sub: "1,200+ Reviews" },
-  { icon: "speed", iconClass: "text-primary", title: "Same-Day Service", sub: "Fast Dispatch" },
-  { icon: "emergency", iconClass: "text-maven-red", title: "24/7 Emergency", sub: "Always Available" },
+  { icon: "receipt_long", iconClass: "text-maven-gold", title: "Upfront Pricing", sub: "No Hidden Fees" },
+  { icon: "speed", iconClass: "text-primary", title: "Same-Day Appointments", sub: "Subject to Availability" },
+  { icon: "emergency", iconClass: "text-maven-red", title: "Emergency Service", sub: "For Urgent Issues" },
 ];
 
 export default function TrustBadges() {

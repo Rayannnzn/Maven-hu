@@ -20,10 +20,10 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "home", name: "Home HVAC Service", desc: "Repair, maintenance, and installation for central air, heat pumps, and furnaces in single-family and multi-family residences." },
       { icon: "business", name: "Commercial HVAC", desc: "Rooftop units, split systems, and VRF installations for offices, retail, and light-commercial buildings." },
       { icon: "build", name: "Preventive Maintenance Plans", desc: "Scheduled maintenance contracts that keep residential and commercial systems running at peak efficiency year-round." },
-      { icon: "emergency", name: "24/7 Emergency Service", desc: "Round-the-clock dispatch for critical no-heat and no-cool situations — residential or commercial." },
+      { icon: "emergency", name: "Emergency Service", desc: "Emergency dispatch for critical no-heat and no-cool situations — residential or commercial. Response times vary by availability and location." },
     ],
     benefits: [
-      { title: "Licensed for Both Markets", desc: "Our technicians hold residential and commercial HVAC certifications, covering all property types without switching contractors." },
+      { title: "Residential & Commercial Experience", desc: "Our technicians work on both residential and commercial HVAC systems, covering all property types without switching contractors." },
       { title: "Scalable Maintenance Agreements", desc: "Custom service agreements for property managers covering multiple units or locations under a single contract." },
       { title: "Code-Compliant Installations", desc: "Every installation meets Maryland and Virginia building codes with required permits and inspections." },
       { title: "Upfront Pricing", desc: "Clear written estimates before any work begins — no surprises for homeowners or business owners." },
@@ -34,7 +34,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { title: "Energy Efficiency Focus", desc: "We recommend high-efficiency upgrades that reduce operating costs for both residential and commercial clients." },
     ],
     steps: [
-      { num: "01", icon: "calendar_month", title: "Schedule Your Assessment", desc: "Book a site visit for residential or commercial evaluation. We confirm within minutes." },
+      { num: "01", icon: "calendar_month", title: "Schedule Your Assessment", desc: "Book a site visit for residential or commercial evaluation. We will contact you promptly to confirm." },
       { num: "02", icon: "manage_search", title: "Property Evaluation", desc: "We assess your system, space, load requirements, and energy usage before making any recommendations." },
       { num: "03", icon: "construction", title: "Service or Installation", desc: "Repairs, tune-ups, or full system installs completed to code with quality parts." },
       { num: "04", icon: "task_alt", title: "Follow-Up & Support", desc: "We verify performance, provide documentation, and are available for any follow-up questions." },
@@ -51,14 +51,14 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "hvac/air-conditioners",
     title: "Air Conditioner Services",
     metaDescription:
-      "AC repair, installation, and maintenance in Maryland and Virginia. Same-day air conditioner service from NATE-certified technicians.",
+      "AC repair, installation, and maintenance in Maryland and Virginia. Same-day appointments available from experienced technicians.",
     heroImage: "/images/ac2.jpg",
     heroTitle: "Air Conditioner Repair & Installation",
     heroDescription:
       "Fast, reliable air conditioning service for homes and businesses across the DMV. From emergency repairs to new system installs, Maven keeps you cool.",
     overview: [
       "Mid-Atlantic summers push air conditioning systems hard — high humidity, extended run times, and heat spikes can strain even well-maintained equipment. When your AC struggles, comfort drops and energy bills climb.",
-      "Maven's NATE-certified technicians diagnose and repair all brands of central air conditioners, ductless mini-splits, and heat pumps. We carry common parts on every truck for same-visit repairs in most cases.",
+      "Maven's experienced technicians diagnose and repair all brands of central air conditioners, ductless mini-splits, and heat pumps. We carry common parts on every truck for same-visit repairs in most cases.",
     ],
     offeredServices: [
       { icon: "ac_unit", name: "AC Repair", desc: "Diagnosis and repair of refrigerant leaks, compressor failures, frozen coils, blower motor issues, and thermostat faults." },
@@ -66,13 +66,13 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "build", name: "AC Tune-Up", desc: "Pre-season maintenance including coil cleaning, refrigerant check, electrical testing, and filter replacement." },
       { icon: "air", name: "Ductless Mini-Split Service", desc: "Installation, repair, and maintenance for ductless systems in additions, garages, and older homes without ductwork." },
       { icon: "thermostat", name: "Thermostat Upgrade", desc: "Smart thermostat installation for better comfort control and energy savings connected to your AC system." },
-      { icon: "emergency", name: "Emergency AC Repair", desc: "Same-day and 24/7 emergency service for no-cool situations during peak summer heat." },
+      { icon: "emergency", name: "Emergency AC Repair", desc: "Emergency service for no-cool situations during peak summer heat. Response times depend on availability and your location." },
     ],
     benefits: [
-      { title: "Same-Day Availability", desc: "Most AC repairs are completed same-day with parts on our service vans." },
+      { title: "Same-Day Appointments", desc: "Many AC repairs can be completed same-day with parts on our service vans, subject to availability." },
       { title: "All Brands Serviced", desc: "Carrier, Trane, Lennox, Rheem, Goodman, York, and all other major manufacturers." },
-      { title: "NATE-Certified Technicians", desc: "Our techs average 12+ years of field experience and hold industry-leading certifications." },
-      { title: "Workmanship Guarantee", desc: "30-day workmanship guarantee on every repair." },
+      { title: "Experienced Technicians", desc: "Our experienced, highly trained technicians service all major AC systems." },
+      { title: "Professional Workmanship", desc: "We stand behind our work. If something isn't right, let us know and we'll make every reasonable effort to correct it." },
     ],
     whyChoose: [
       { title: "Accurate First Diagnosis", desc: "We test the full system before recommending repairs — no unnecessary parts replacement." },
@@ -89,7 +89,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { q: "Why is my AC not cooling properly?", a: "Common causes include low refrigerant, dirty coils, a failing compressor, restricted airflow, or thermostat issues. A technician diagnosis is the fastest way to pinpoint the problem." },
       { q: "How long does an AC system last?", a: "Central air conditioners typically last 12–15 years with proper maintenance. Systems over 12 years old that require frequent repairs are often better replaced than repeatedly repaired." },
       { q: "What size AC do I need?", a: "Proper sizing requires a Manual J load calculation. An oversized unit short-cycles and leaves humidity behind; an undersized one runs constantly. We size every installation correctly." },
-      { q: "Is same-day AC repair available?", a: "Yes — we offer same-day service on most repairs and 24/7 emergency dispatch during summer months." },
+      { q: "Is same-day AC repair available?", a: "Same-day appointments are available for many repairs, subject to technician availability and your location. We also offer emergency dispatch during summer months." },
     ],
     ctaTitle: "Stay Cool All Summer — Book AC Service Today",
   },
@@ -98,7 +98,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "hvac/refrigerators",
     title: "Refrigerator Services",
     metaDescription:
-      "Professional refrigerator repair and installation in Maryland and Virginia. Commercial and residential refrigeration service from licensed technicians.",
+      "Professional refrigerator repair and installation in Maryland and Virginia. Commercial and residential refrigeration service from experienced technicians.",
     heroImage: "/images/refig.png",
     heroTitle: "Refrigerator Repair & Service",
     heroDescription:
@@ -117,11 +117,11 @@ const subcategoryData: Record<string, ServicePageData> = {
       { title: "Fast Parts Availability", desc: "We stock common compressors, thermostats, and gaskets to complete most repairs same-day." },
       { title: "All Brands Serviced", desc: "Samsung, LG, Whirlpool, GE, Sub-Zero, True, Turbo Air, and all other residential and commercial brands." },
       { title: "Food Safety Priority", desc: "We understand the urgency of refrigeration failures and prioritize emergency commercial calls." },
-      { title: "Licensed & Insured", desc: "Fully licensed refrigeration technicians certified for EPA-regulated refrigerant handling." },
+      { title: "Insured Technicians", desc: "Insured refrigeration technicians trained in proper refrigerant handling." },
     ],
     whyChoose: [
       { title: "Commercial & Residential Expertise", desc: "Our techs work on home refrigerators and commercial units — you don't need a separate contractor." },
-      { title: "Refrigerant Certified", desc: "EPA Section 608 certified for safe refrigerant handling on all refrigeration systems." },
+      { title: "Proper Refrigerant Handling", desc: "Our technicians follow required practices for safe refrigerant handling on all refrigeration systems." },
       { title: "Upfront Pricing", desc: "Written estimates before any work begins. No hidden fees after the repair." },
     ],
     steps: [
@@ -142,7 +142,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "hvac/ice-makers",
     title: "Ice Maker Services",
     metaDescription:
-      "Ice maker repair and installation in Maryland and Virginia. Commercial and residential ice machine service from certified technicians.",
+      "Ice maker repair and installation in Maryland and Virginia. Commercial and residential ice machine service from experienced technicians.",
     heroImage: "/images/icemaker.png",
     heroTitle: "Ice Maker Repair & Installation",
     heroDescription:
@@ -186,11 +186,11 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "hvac/furnace-heating",
     title: "Furnace & Heating Services",
     metaDescription:
-      "Furnace repair, heating system installation, and maintenance in Maryland and Virginia. Emergency heating service available 24/7.",
+      "Furnace repair, heating system installation, and maintenance in Maryland and Virginia. Emergency heating service available for urgent issues.",
     heroImage: "/images/heatfurnace.jpg",
     heroTitle: "Furnace & Heating System Service",
     heroDescription:
-      "Don't let a heating failure leave your home cold. Maven's technicians repair and install furnaces, heat pumps, and boilers across Maryland and Virginia — with 24/7 emergency service.",
+      "Don't let a heating failure leave your home cold. Maven's technicians repair and install furnaces, heat pumps, and boilers across Maryland and Virginia — with emergency service for urgent issues.",
     overview: [
       "Maryland winters demand reliable heating. Whether your home runs on a gas furnace, heat pump, oil boiler, or electric system, a breakdown during cold weather is an emergency — not an inconvenience.",
       "Maven provides same-day furnace repair, seasonal tune-ups, and full system replacements for homeowners and property managers throughout the DMV. Our technicians diagnose heating problems accurately and carry common parts for same-visit repairs.",
@@ -201,10 +201,10 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "build", name: "Heating Tune-Up", desc: "Pre-season maintenance to ensure safe, efficient furnace operation before cold weather arrives." },
       { icon: "heat_pump", name: "Heat Pump Service", desc: "Repair and maintenance for heat pumps in heating mode, including defrost cycle and reversing valve issues." },
       { icon: "water_heater", name: "Boiler Service", desc: "Repair and maintenance for hot-water boiler systems in older homes." },
-      { icon: "emergency", name: "Emergency Heating Repair", desc: "24/7 emergency dispatch for no-heat situations during cold weather." },
+      { icon: "emergency", name: "Emergency Heating Repair", desc: "Emergency dispatch for no-heat situations during cold weather. Response times depend on availability and your location." },
     ],
     benefits: [
-      { title: "24/7 Emergency Response", desc: "Real technicians available around the clock — not an answering service — for heating emergencies." },
+      { title: "Emergency Response", desc: "Emergency service is available for no-heat situations. Response times depend on technician availability and your location." },
       { title: "Carbon Monoxide Safety", desc: "Every furnace service includes a combustion analysis and CO check for your family's safety." },
       { title: "High-Efficiency Upgrades", desc: "We install 96%+ AFUE furnaces that significantly reduce heating costs compared to older equipment." },
       { title: "All Fuel Types", desc: "Gas, oil, electric, and heat pump systems — one contractor for all your heating needs." },
@@ -224,7 +224,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { q: "Why is my furnace not heating?", a: "Common causes include a failed ignitor, clogged filter, faulty thermostat, tripped limit switch, or blower motor failure. Call us for a fast diagnosis." },
       { q: "Is a cracked heat exchanger dangerous?", a: "Yes — a cracked heat exchanger can leak carbon monoxide into your living space. If we find a crack, we'll explain your options and recommend immediate action." },
       { q: "How long do furnaces last?", a: "Well-maintained gas furnaces typically last 15–20 years. If yours is over 15 years old and needing repairs, a replacement evaluation makes sense." },
-      { q: "Do you offer 24/7 heating repair?", a: "Yes. We dispatch technicians around the clock for no-heat emergencies during cold weather." },
+      { q: "Do you offer emergency heating repair?", a: "Yes. Emergency service is available for no-heat situations during cold weather. Response times depend on technician availability and your location." },
     ],
     ctaTitle: "No Heat? We'll Get You Warm Today.",
   },
@@ -251,7 +251,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "emergency", name: "Emergency Service", desc: "Priority dispatch for walk-in failures where food inventory is at immediate risk." },
     ],
     benefits: [
-      { title: "Commercial Refrigeration Certified", desc: "EPA Section 608 certified technicians for safe refrigerant handling on commercial systems." },
+      { title: "Commercial Refrigeration Experience", desc: "Experienced technicians who follow required practices for safe refrigerant handling on commercial systems." },
       { title: "Inventory Protection Priority", desc: "We understand the urgency and dispatch emergency calls faster than routine service." },
       { title: "All Brands & Manufacturers", desc: "Heatcraft, Bohn, Hussmann, Tyler, and all other commercial refrigeration brands." },
       { title: "Maintenance Contracts", desc: "Scheduled service agreements for operators with multiple walk-in units." },
@@ -281,13 +281,13 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "plumbing/service-repair-installation",
     title: "Plumbing Service, Repair & Installation",
     metaDescription:
-      "Full-service plumbing repair and installation in Maryland and Virginia. Licensed plumbers for residential and commercial plumbing needs.",
+      "Full-service plumbing repair and installation in Maryland and Virginia. Experienced plumbers for residential and commercial plumbing needs.",
     heroImage: "/images/plumbing-service-repair.jpg",
     heroTitle: "Plumbing Service, Repair & Installation",
     heroDescription:
-      "From leaky faucets to full plumbing installations, Maven's licensed plumbers handle every plumbing need for homes and businesses across Maryland and Virginia.",
+      "From leaky faucets to full plumbing installations, Maven's experienced plumbers handle every plumbing need for homes and businesses across Maryland and Virginia.",
     overview: [
-      "Plumbing problems range from minor inconveniences to urgent emergencies that can cause significant water damage. Maven's licensed plumbers respond quickly, diagnose accurately, and complete lasting repairs.",
+      "Plumbing problems range from minor inconveniences to urgent emergencies that can cause significant water damage. Maven's experienced plumbers respond quickly, diagnose accurately, and complete lasting repairs.",
       "We handle the full spectrum of plumbing work — routine repairs, fixture installations, pipe replacements, and emergency leak response — for residential and commercial customers throughout the DMV.",
     ],
     offeredServices: [
@@ -295,14 +295,14 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "build", name: "Fixture Installation", desc: "Faucets, toilets, showers, tubs, and garbage disposals — supply and install or install customer-supplied fixtures." },
       { icon: "water", name: "Pipe Repair & Replacement", desc: "Copper, PEX, and PVC pipe repair for burst pipes, corroded lines, and aging plumbing systems." },
       { icon: "drain", name: "Drain Cleaning", desc: "Clearing clogs in sinks, tubs, toilets, and main lines using snaking and hydro-jetting." },
-      { icon: "emergency", name: "Emergency Plumbing", desc: "24/7 emergency response for burst pipes, major leaks, and sewer backups." },
+      { icon: "emergency", name: "Emergency Plumbing", desc: "Emergency response for burst pipes, major leaks, and sewer backups. Response times depend on availability and your location." },
       { icon: "construction", name: "Remodel Plumbing", desc: "Rough-in and finish plumbing for kitchen and bathroom remodels." },
     ],
     benefits: [
-      { title: "Licensed Master Plumbers", desc: "All work is performed or supervised by licensed master plumbers meeting Maryland and Virginia requirements." },
-      { title: "Same-Day Service", desc: "Most plumbing repairs are available same-day with emergency 24/7 coverage." },
+      { title: "Experienced Plumbers", desc: "All work is performed or supervised by experienced plumbers who follow Maryland and Virginia requirements." },
+      { title: "Same-Day Appointments", desc: "Same-day appointments are available for many plumbing repairs, subject to availability, with emergency coverage for urgent issues." },
       { title: "Upfront Pricing", desc: "Written estimates before work begins. No surprise charges after the job." },
-      { title: "Guaranteed Workmanship", desc: "30-day workmanship guarantee on all repairs and installations." },
+      { title: "Professional Workmanship", desc: "We stand behind our work. If something isn't right, let us know and we'll make every reasonable effort to correct it." },
     ],
     whyChoose: [
       { title: "No Subcontractors", desc: "Every technician dispatched is a Maven employee — licensed, background-checked, and accountable." },
@@ -316,8 +316,8 @@ const subcategoryData: Record<string, ServicePageData> = {
       { num: "04", icon: "task_alt", title: "Verify & Inspect", desc: "We test all connections and verify there are no leaks before leaving." },
     ],
     faqs: [
-      { q: "Do you handle emergency plumbing calls?", a: "Yes — we offer 24/7 emergency dispatch for burst pipes, major leaks, and sewer backups." },
-      { q: "Are your plumbers licensed?", a: "Yes. All our plumbers are licensed in Maryland and Virginia and carry full liability insurance." },
+      { q: "Do you handle emergency plumbing calls?", a: "Yes — emergency dispatch is available for burst pipes, major leaks, and sewer backups. Response times depend on technician availability and your location." },
+      { q: "Are your plumbers insured?", a: "Yes. Our plumbers are insured and carry liability coverage on the work they perform." },
       { q: "Do you pull permits for plumbing work?", a: "We pull required permits for work that demands them. We'll tell you upfront when a permit is needed." },
     ],
     ctaTitle: "Plumbing Problem? We'll Fix It Right.",
@@ -327,11 +327,11 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "plumbing/water-heaters",
     title: "Water Heater Services",
     metaDescription:
-      "Water heater repair and replacement in Maryland and Virginia. Tank and tankless water heater service from licensed plumbers.",
+      "Water heater repair and replacement in Maryland and Virginia. Tank and tankless water heater service from experienced plumbers.",
     heroImage: "/images/heaterwater.jpg",
     heroTitle: "Water Heater Repair & Replacement",
     heroDescription:
-      "No hot water? Maven's licensed plumbers repair and replace tank and tankless water heaters across Maryland and Virginia — often same-day.",
+      "No hot water? Maven's experienced plumbers repair and replace tank and tankless water heaters across Maryland and Virginia — often same-day.",
     overview: [
       "A failed water heater disrupts daily life immediately. Maven provides fast diagnosis and repair for tank water heaters, and expert installation of high-efficiency tank and tankless replacement systems.",
       "We carry common water heater parts and can replace most standard tank units same-day from our vehicle stock. Tankless installations are typically scheduled within 24–48 hours.",
@@ -346,7 +346,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { title: "Same-Day Tank Replacement", desc: "We stock common 40- and 50-gallon units for same-day installation in most cases." },
       { title: "Tankless Expertise", desc: "Proper sizing, gas line upgrades, and venting for on-demand systems." },
       { title: "Energy-Efficient Options", desc: "We recommend Energy Star units and heat pump water heaters that significantly lower energy costs." },
-      { title: "Licensed Installation", desc: "All water heater work is performed by licensed plumbers and meets code requirements." },
+      { title: "Code-Compliant Installation", desc: "All water heater work is performed by experienced plumbers and meets code requirements." },
     ],
     whyChoose: [
       { title: "Fast Hot Water Restoration", desc: "We prioritize no-hot-water calls and complete most replacements the same day you call." },
@@ -354,7 +354,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { title: "Full Gas Line Service", desc: "We handle any gas line upgrades required for tankless installations in-house." },
     ],
     steps: [
-      { num: "01", icon: "calendar_month", title: "Book Same-Day Service", desc: "Call for priority scheduling on no-hot-water calls." },
+      { num: "01", icon: "calendar_month", title: "Book a Same-Day Appointment", desc: "Call for priority scheduling on no-hot-water calls." },
       { num: "02", icon: "manage_search", title: "Assess Repair vs. Replace", desc: "We evaluate your current unit's age and condition and give you an honest recommendation." },
       { num: "03", icon: "construction", title: "Repair or Install", desc: "Same-day repairs or replacement installation using quality, code-compliant equipment." },
       { num: "04", icon: "task_alt", title: "Hot Water Restored", desc: "We verify proper temperature, pressure, and operation before leaving." },
@@ -363,7 +363,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { q: "How long do water heaters last?", a: "Tank water heaters typically last 8–12 years. Tankless units can last 20+ years with proper maintenance." },
       { q: "Should I repair or replace my water heater?", a: "If your tank is over 10 years old and needs a significant repair, replacement is usually the better investment. We'll give you an honest comparison." },
       { q: "What are the benefits of tankless water heaters?", a: "Tankless units provide on-demand hot water, last longer, and use 20–30% less energy than tank models. Upfront cost is higher but pays back over time." },
-      { q: "Can you replace my water heater today?", a: "For standard 40- and 50-gallon tank replacements, same-day service is usually available." },
+      { q: "Can you replace my water heater today?", a: "For standard 40- and 50-gallon tank replacements, same-day appointments are usually available, subject to technician availability and your location." },
     ],
     ctaTitle: "No Hot Water? We'll Restore It Today.",
   },
@@ -372,11 +372,11 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "plumbing/sinks-basins",
     title: "Sink & Basin Services",
     metaDescription:
-      "Sink and basin installation, repair, and drain service in Maryland and Virginia. Kitchen, bathroom, and utility sink plumbing from licensed plumbers.",
+      "Sink and basin installation, repair, and drain service in Maryland and Virginia. Kitchen, bathroom, and utility sink plumbing from experienced plumbers.",
     heroImage: "/images/plumbing-sinks-basins.jpg",
     heroTitle: "Sink & Basin Repair & Installation",
     heroDescription:
-      "Leaky faucet, slow drain, or new sink installation — Maven's licensed plumbers handle all sink and basin plumbing for homes and businesses in Maryland and Virginia.",
+      "Leaky faucet, slow drain, or new sink installation — Maven's experienced plumbers handle all sink and basin plumbing for homes and businesses in Maryland and Virginia.",
     overview: [
       "Sinks and basins are among the most-used fixtures in any home or commercial property. Dripping faucets, slow drains, under-sink leaks, and failing garbage disposals are everyday plumbing issues that our technicians resolve quickly.",
       "We handle kitchen sinks, bathroom vanities, utility sinks, mop basins, and commercial three-compartment sinks — installation, repair, and drain service.",
@@ -393,7 +393,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { title: "All Sink Types", desc: "Kitchen, bathroom, utility, bar, and commercial sinks — we handle them all." },
       { title: "Parts on the Truck", desc: "We carry common faucet cartridges, P-traps, and supply lines for same-visit repairs." },
       { title: "Remodel Support", desc: "We coordinate with contractors for new sink rough-in and finish plumbing during kitchen and bath remodels." },
-      { title: "Licensed & Insured", desc: "All work performed by licensed plumbers with full liability coverage." },
+      { title: "Insured Plumbers", desc: "All work performed by experienced, insured plumbers with liability coverage." },
     ],
     whyChoose: [
       { title: "Same-Day Faucet Repair", desc: "Most faucet repairs and drain clogs are resolved in a single same-day visit." },
@@ -418,36 +418,36 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "plumbing/residential-commercial",
     title: "Residential & Commercial Plumbing",
     metaDescription:
-      "Plumbing services for homes and businesses in Maryland and Virginia. Licensed plumbers for residential and light-commercial plumbing projects.",
+      "Plumbing services for homes and businesses in Maryland and Virginia. Experienced plumbers for residential and light-commercial plumbing projects.",
     heroImage: "/images/plumbingcom.jpg",
     heroTitle: "Residential & Commercial Plumbing",
     heroDescription:
       "Maven provides licensed plumbing services for homeowners, property managers, and business owners across Maryland and Virginia — from routine repairs to major commercial projects.",
     overview: [
-      "Plumbing needs differ significantly between residential and commercial properties in scale, code requirements, and urgency. Maven's licensed plumbers are experienced in both markets, serving single-family homes and multi-unit buildings, restaurants, offices, and retail facilities.",
+      "Plumbing needs differ significantly between residential and commercial properties in scale, code requirements, and urgency. Maven's experienced plumbers work in both markets, serving single-family homes and multi-unit buildings, restaurants, offices, and retail facilities.",
       "We offer the full scope of plumbing services — routine repairs, remodel plumbing, drain services, and emergency response — for all property types.",
     ],
     offeredServices: [
       { icon: "home", name: "Residential Plumbing", desc: "Full plumbing service for single-family homes, townhouses, and condominiums." },
-      { icon: "business", name: "Commercial Plumbing", desc: "Licensed commercial plumbing for restaurants, offices, retail spaces, and light-industrial facilities." },
+      { icon: "business", name: "Commercial Plumbing", desc: "Commercial plumbing for restaurants, offices, retail spaces, and light-industrial facilities." },
       { icon: "construction", name: "New Construction Plumbing", desc: "Rough-in and finish plumbing for residential and commercial new builds." },
-      { icon: "emergency", name: "Emergency Plumbing", desc: "24/7 emergency response for burst pipes, major leaks, and sewer backups — residential and commercial." },
+      { icon: "emergency", name: "Emergency Plumbing", desc: "Emergency response for burst pipes, major leaks, and sewer backups — residential and commercial. Response times vary by availability and location." },
     ],
     benefits: [
-      { title: "Licensed in MD & VA", desc: "Our master plumbers are licensed in both Maryland and Virginia for residential and commercial work." },
+      { title: "Serving MD & VA", desc: "Our plumbers serve both Maryland and Virginia for residential and commercial work." },
       { title: "Permits & Inspections", desc: "We handle required permits and coordinate inspections for commercial and residential projects." },
       { title: "Property Manager Programs", desc: "Priority scheduling and consolidated billing for property managers with multiple units." },
-      { title: "24/7 Emergency Coverage", desc: "Emergency dispatch for both residential and commercial plumbing failures." },
+      { title: "Emergency Coverage", desc: "Emergency dispatch is available for both residential and commercial plumbing failures." },
     ],
     whyChoose: [
       { title: "One Contractor for All Properties", desc: "Whether you own a home or a building, Maven handles your plumbing — no need to manage multiple contractors." },
-      { title: "Commercial Code Expertise", desc: "Commercial plumbing has different code requirements. Our licensed plumbers know both residential and commercial standards." },
+      { title: "Commercial Code Expertise", desc: "Commercial plumbing has different code requirements. Our experienced plumbers know both residential and commercial standards." },
       { title: "Scalable Service Agreements", desc: "Custom maintenance agreements for property managers covering multiple properties under one contract." },
     ],
     steps: [
       { num: "01", icon: "calendar_month", title: "Contact Us", desc: "Call or book online for residential service or to discuss a commercial project." },
       { num: "02", icon: "manage_search", title: "Property Assessment", desc: "We assess your plumbing system or project scope before providing an estimate." },
-      { num: "03", icon: "construction", title: "Complete the Work", desc: "Licensed plumbers complete all work to code with quality materials." },
+      { num: "03", icon: "construction", title: "Complete the Work", desc: "Experienced plumbers complete all work to code with quality materials." },
       { num: "04", icon: "task_alt", title: "Inspection & Sign-Off", desc: "We coordinate required inspections and provide documentation for your records." },
     ],
     faqs: [
@@ -470,7 +470,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     heroDescription:
       "Safe, licensed electrical repair and installation for homes and businesses across Maryland and Virginia. From tripped breakers to full panel upgrades.",
     overview: [
-      "Electrical problems range from nuisances — a tripping breaker, a dead outlet — to genuine safety hazards like overloaded panels, faulty wiring, and fire risks. Maven's licensed electricians diagnose issues accurately and complete safe, code-compliant repairs.",
+      "Electrical problems range from nuisances — a tripping breaker, a dead outlet — to genuine safety hazards like overloaded panels, faulty wiring, and fire risks. Maven's experienced electricians diagnose issues accurately and complete safe, code-compliant repairs.",
       "We handle electrical repairs of every scale: outlet and switch replacement, ceiling fan installation, panel upgrades, whole-home rewiring, and EV charger installation.",
     ],
     offeredServices: [
@@ -479,16 +479,16 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "lightbulb", name: "Lighting Installation", desc: "Recessed lighting, ceiling fans, under-cabinet lighting, and dimmer switches." },
       { icon: "ev_station", name: "EV Charger Installation", desc: "Level 2 EV charger installation for home garages and commercial parking facilities." },
       { icon: "build", name: "Wiring Repair", desc: "Aluminum wiring remediation, knob-and-tube replacement, and general wiring repairs." },
-      { icon: "emergency", name: "Emergency Electrical Service", desc: "Same-day and 24/7 response for electrical failures, power outages, and safety hazards." },
+      { icon: "emergency", name: "Emergency Electrical Service", desc: "Emergency response for electrical failures, power outages, and safety hazards. Response times depend on availability and your location." },
     ],
     benefits: [
-      { title: "Licensed Electricians", desc: "All work performed by licensed master and journeyman electricians in Maryland and Virginia." },
+      { title: "Experienced Electricians", desc: "All work performed by experienced electricians serving Maryland and Virginia." },
       { title: "Code-Compliant Work", desc: "We pull permits and ensure all installations meet National Electrical Code and local requirements." },
       { title: "Safety-First Approach", desc: "We identify and address hidden safety hazards — not just the symptom you called about." },
       { title: "Upfront Pricing", desc: "Written estimates before work begins. No surprises after the job." },
     ],
     whyChoose: [
-      { title: "No DIY Risk", desc: "Electrical work done wrong creates fire and shock hazards. Our licensed electricians do it right, safely." },
+      { title: "No DIY Risk", desc: "Electrical work done wrong creates fire and shock hazards. Our experienced electricians do it right, safely." },
       { title: "Permits & Inspections", desc: "We handle required permits so your work passes inspection and doesn't void homeowner's insurance." },
       { title: "Whole-Home Electrical Assessment", desc: "While we're there for one issue, we flag other potential hazards at no additional charge." },
     ],
@@ -511,14 +511,14 @@ const subcategoryData: Record<string, ServicePageData> = {
     slug: "electrical/commercial-residential",
     title: "Commercial & Residential Electrical",
     metaDescription:
-      "Electrical services for homes and businesses in Maryland and Virginia. Licensed electricians for residential and commercial electrical projects.",
+      "Electrical services for homes and businesses in Maryland and Virginia. Experienced electricians for residential and commercial electrical projects.",
     heroImage: "/images/electrical-commercial-residential.jpg",
     heroTitle: "Commercial & Residential Electrical Services",
     heroDescription:
       "Maven provides licensed electrical services for homeowners and business owners across Maryland and Virginia — from residential panel upgrades to commercial tenant improvements.",
     overview: [
       "Electrical requirements differ significantly between residential and commercial properties. Commercial facilities demand higher capacity, more complex circuitry, and strict code compliance for business operations, safety, and insurance purposes.",
-      "Maven's licensed electricians are experienced in both residential and light-commercial electrical work — serving homes, offices, retail spaces, restaurants, and multi-unit buildings throughout the DMV.",
+      "Maven's experienced electricians work in both residential and light-commercial electrical settings — serving homes, offices, retail spaces, restaurants, and multi-unit buildings throughout the DMV.",
     ],
     offeredServices: [
       { icon: "home", name: "Residential Electrical", desc: "Outlets, panels, lighting, fans, EV chargers, and whole-home wiring for single-family homes and condos." },
@@ -529,7 +529,7 @@ const subcategoryData: Record<string, ServicePageData> = {
       { icon: "construction", name: "New Construction Wiring", desc: "Rough-in and finish wiring for residential and commercial new builds and additions." },
     ],
     benefits: [
-      { title: "Licensed for Both Markets", desc: "Master electricians licensed for residential and commercial work in Maryland and Virginia." },
+      { title: "Residential & Commercial Experience", desc: "Experienced electricians serving both residential and commercial properties in Maryland and Virginia." },
       { title: "Commercial Code Knowledge", desc: "Commercial electrical has different NEC requirements. Our electricians know both standards." },
       { title: "Minimal Business Disruption", desc: "We schedule commercial work to minimize impact on your business operations." },
       { title: "Permits & Inspections", desc: "We manage the full permit process for residential and commercial projects." },
@@ -542,7 +542,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     steps: [
       { num: "01", icon: "calendar_month", title: "Contact Us", desc: "Call or book online for residential service or to discuss a commercial project scope." },
       { num: "02", icon: "manage_search", title: "Site Assessment", desc: "We assess your electrical system and project requirements before providing an estimate." },
-      { num: "03", icon: "construction", title: "Licensed Installation", desc: "All work completed by licensed electricians to NEC and local code standards." },
+      { num: "03", icon: "construction", title: "Code-Compliant Installation", desc: "All work completed by experienced electricians to NEC and local code standards." },
       { num: "04", icon: "task_alt", title: "Inspection & Sign-Off", desc: "We coordinate required inspections and provide documentation for your records." },
     ],
     faqs: [

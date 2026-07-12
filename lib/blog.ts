@@ -95,15 +95,15 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven Home Services has served Maryland and Northern Virginia homeowners since 2008 with licensed, insured HVAC technicians who know Mid-Atlantic climate demands. Our spring tune-ups include a full system report, honest recommendations, and fast scheduling so you're never waiting weeks when summer arrives.",
+          "Maven Home Services serves Maryland and Northern Virginia homeowners with experienced, insured HVAC technicians who know Mid-Atlantic climate demands. Our spring tune-ups include a full system report, honest recommendations, and prompt scheduling so you're not waiting weeks when summer arrives.",
       },
       {
         type: "ul",
         content: [
           "Experienced technicians trained on all major AC and heat pump brands.",
           "Quality workmanship backed by transparent pricing and clear communication.",
-          "Reliable 24/7 emergency response when breakdowns can't wait.",
-          "Customer satisfaction built on thousands of completed service calls across the DMV.",
+          "Emergency service available when breakdowns can't wait; response times vary by availability and location.",
+          "A focus on customer satisfaction and transparent communication at every step.",
         ],
       },
       {
@@ -196,13 +196,13 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven's HVAC team responds quickly across Maryland and Northern Virginia with fully stocked service vehicles and technicians who diagnose accurately the first time. We explain your options in plain language — repair when it makes sense, replace only when it truly saves you money long term.",
+          "Maven's HVAC team responds quickly across Maryland and Northern Virginia with fully stocked service vehicles and technicians who diagnose accurately. We explain your options in plain language — repair when it makes sense, replace only when it truly saves you money long term.",
       },
       {
         type: "ul",
         content: [
-          "Fast response times including 24/7 emergency AC service.",
-          "Licensed, insured technicians with years of field experience.",
+          "Prompt response, with emergency AC service available for urgent issues.",
+          "Experienced, insured technicians with years of field experience.",
           "Quality parts and workmanship you can trust through every season.",
           "Professional, respectful service from dispatch to completion.",
         ],
@@ -295,7 +295,7 @@ const posts: BlogPost[] = [
         content: [
           "Deep experience with furnaces, heat pumps, and hybrid systems common in the DMV.",
           "Quality-focused inspections that prioritize your family's safety.",
-          "Reliable scheduling before winter rush and 24/7 emergency availability.",
+          "Reliable scheduling before the winter rush, with emergency service available for urgent issues.",
           "Professional technicians who respect your home and explain every finding.",
         ],
       },
@@ -313,7 +313,7 @@ const posts: BlogPost[] = [
       "Low water pressure, discolored water, and slow drains can signal serious plumbing issues. Learn when to call an emergency plumber in Maryland and Northern Virginia.",
     category: "Plumbing",
     date: "2026-01-08T10:00:00.000Z",
-    author: { name: "James Whitfield", role: "Master Plumber" },
+    author: { name: "James Whitfield", role: "Plumbing Specialist" },
     featuredImage: "/images/blog/plumbing-problems-never-ignore.jpg",
     readTime: 6,
     body: [
@@ -382,14 +382,14 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven Home Services delivers honest assessments and durable repairs across Maryland and Northern Virginia. Our master plumbers arrive equipped to diagnose accurately, fix root causes — not just symptoms — and restore your peace of mind quickly.",
+          "Maven Home Services delivers honest assessments and durable repairs across Maryland and Northern Virginia. Our experienced plumbers arrive equipped to diagnose accurately, fix root causes — not just symptoms — and restore your peace of mind quickly.",
       },
       {
         type: "ul",
         content: [
-          "Experienced, licensed plumbers who handle everything from drips to main line emergencies.",
+          "Experienced plumbers who handle everything from drips to main line emergencies.",
           "Quality materials and code-compliant workmanship on every job.",
-          "Fast response including 24/7 emergency availability.",
+          "Prompt response, with emergency service available for urgent issues.",
           "Customer-focused service with clear pricing and reliable follow-through.",
         ],
       },
@@ -407,7 +407,7 @@ const posts: BlogPost[] = [
       "Extend your water heater's life and avoid cold showers with this tank and tankless maintenance guide. Learn when to call for water heater repair in Maryland and Northern Virginia.",
     category: "Plumbing",
     date: "2025-12-05T10:00:00.000Z",
-    author: { name: "James Whitfield", role: "Master Plumber" },
+    author: { name: "James Whitfield", role: "Plumbing Specialist" },
     featuredImage: "/images/blog/water-heater-maintenance-guide.jpg",
     readTime: 8,
     body: [
@@ -468,7 +468,7 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven's licensed plumbers maintain and install tank and tankless water heaters throughout Maryland and Northern Virginia. We handle annual maintenance, emergency repairs, and efficient replacements with brands suited to your household demand and budget.",
+          "Maven's experienced plumbers maintain and install tank and tankless water heaters throughout Maryland and Northern Virginia. We handle annual maintenance, emergency repairs, and efficient replacements with brands suited to your household demand and budget.",
       },
       {
         type: "ul",
@@ -578,7 +578,7 @@ const posts: BlogPost[] = [
       "Protect your family with practical electrical safety practices. Learn warning signs that require a licensed electrician in Maryland and Northern Virginia.",
     category: "Electrical",
     date: "2026-01-22T10:00:00.000Z",
-    author: { name: "Robert Hayes", role: "Licensed Electrician" },
+    author: { name: "Robert Hayes", role: "Electrical Specialist" },
     featuredImage: "/images/blog/electrical-safety-tips-homeowners.jpg",
     readTime: 7,
     body: [
@@ -649,12 +649,12 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven Home Services employs licensed electricians who prioritize safety, code compliance, and clear communication. We help Maryland and Virginia homeowners understand their electrical systems and make confident decisions about upgrades and repairs.",
+          "Maven Home Services employs experienced electricians who prioritize safety, code compliance, and clear communication. We help Maryland and Virginia homeowners understand their electrical systems and make confident decisions about upgrades and repairs.",
       },
       {
         type: "ul",
         content: [
-          "Licensed, insured electricians with extensive local experience.",
+          "Experienced, insured electricians with extensive local experience.",
           "Quality workmanship that meets current NEC standards.",
           "Reliable scheduling and responsive service when safety concerns arise.",
           "Professional inspections with written reports you can trust.",
@@ -674,7 +674,7 @@ const posts: BlogPost[] = [
       "An outdated electrical panel limits power capacity and poses safety risks. Learn the signs you need a panel upgrade and when to call a licensed electrician.",
     category: "Electrical",
     date: "2025-10-18T10:00:00.000Z",
-    author: { name: "Robert Hayes", role: "Licensed Electrician" },
+    author: { name: "Robert Hayes", role: "Electrical Specialist" },
     featuredImage: "/images/blog/when-upgrade-electrical-panel.jpg",
     readTime: 7,
     body: [
@@ -737,7 +737,7 @@ const posts: BlogPost[] = [
       {
         type: "ul",
         content: [
-          "Experienced licensed electricians who specialize in panel upgrades.",
+          "Experienced electricians who specialize in panel upgrades.",
           "Quality components and workmanship built for long-term safety.",
           "Reliable project management including permits and utility coordination.",
           "Customer satisfaction through transparent communication at every step.",
@@ -831,14 +831,14 @@ const posts: BlogPost[] = [
       {
         type: "p",
         content:
-          "Maven Home Services simplifies seasonal maintenance for busy Maryland and Virginia homeowners. Our licensed technicians across all three trades deliver quality work, fast response, and the reliability you need to protect your biggest investment — your home.",
+          "Maven Home Services simplifies seasonal maintenance for busy Maryland and Virginia homeowners. Our experienced technicians across all three trades deliver quality work, prompt response, and the reliability you need to protect your biggest investment — your home.",
       },
       {
         type: "ul",
         content: [
           "One trusted partner for HVAC, plumbing, and electrical maintenance.",
           "Experienced teams who understand Mid-Atlantic climate challenges.",
-          "Quality service with 24/7 emergency availability year-round.",
+          "Quality service, with emergency availability for urgent issues year-round.",
           "Professional, customer-first approach that keeps your home running smoothly.",
         ],
       },

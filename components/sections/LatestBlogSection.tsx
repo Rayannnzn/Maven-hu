@@ -5,6 +5,14 @@ import { containerClass, sectionClass } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export default function LatestBlogSection() {
   const posts = getRecentPosts(3);
 
@@ -41,7 +49,9 @@ export default function LatestBlogSection() {
                   {post.excerpt}
                 </p>
                 <div className="flex items-center justify-between">
-                  <time className="text-xs text-muted-foreground">{post.date}</time>
+                  <time dateTime={post.date} className="text-xs text-muted-foreground">
+                    {formatDate(post.date)}
+                  </time>
                   <Link
                     href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-1 text-sm font-semibold text-maven-red hover:underline"

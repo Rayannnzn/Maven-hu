@@ -56,7 +56,7 @@ export default function ContactSection() {
         <SectionHeader
           eyebrow="Contact Us"
           title="Ready to Get Started?"
-          subtitle="Call us or fill out the form and we'll get back to you within 15 minutes."
+          subtitle="Call us or fill out the form and we will contact you promptly."
         />
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">
           <div>
@@ -65,7 +65,7 @@ export default function ContactSection() {
                 icon="phone"
                 label="Phone"
                 primary={company.phone}
-                sub="Available 24/7 for emergencies"
+                sub="Emergency service available for urgent issues"
                 href={company.phoneHref}
               />
               <div className="flex items-start gap-4">
@@ -124,7 +124,7 @@ export default function ContactSection() {
                 {company.phone}
               </div>
               <div className="mt-1 text-sm text-white/65">
-                Available 24 hours / 7 days a week
+                Available for urgent issues
               </div>
             </div>
           </div>

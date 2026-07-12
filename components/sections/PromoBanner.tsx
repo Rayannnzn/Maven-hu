@@ -13,13 +13,13 @@ export default function PromoBanner() {
             Limited Availability — Book Today
           </p>
           <h2 className="text-2xl font-extrabold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
-            Need Immediate Help?
+            Need Help Soon?
             <br />
-            Schedule Same-Day Service Today.
+            Same-day appointments available.
           </h2>
           <p className="mt-3 text-base leading-relaxed text-white/62">
-            Our dispatch team is standing by. We can have a licensed technician at
-            your home today.
+            Our dispatch team is ready to help. Same-day appointments are
+            available, subject to technician availability and your location.
           </p>
         </div>
         <div className="flex w-full shrink-0 flex-col gap-3 sm:w-auto sm:flex-row">
