@@ -1,10 +1,12 @@
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBadges from "@/components/sections/TrustBadges";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import AboutPreview from "@/components/sections/AboutPreview";
 import ProcessSection from "@/components/sections/ProcessSection";
 import PromoBanner from "@/components/sections/PromoBanner";
+import VeteransDiscountBanner from "@/components/sections/VeteransDiscountBanner";
 import FinancingSection from "@/components/sections/FinancingSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import LatestBlogSection from "@/components/sections/LatestBlogSection";
@@ -19,11 +21,13 @@ export default function Home() {
     <>
       <HeroSection />
       <TrustBadges />
+      <CertificationsSection />
       <ServicesGrid />
       <WhyChooseSection />
       <AboutPreview />
       <ProcessSection />
       <PromoBanner />
+      <VeteransDiscountBanner />
       <FinancingSection />
       <ReviewsSection />
       <LatestBlogSection />

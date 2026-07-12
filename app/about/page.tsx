@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { PageHero, SectionHeader } from "@/components/shared/PageHero";
+import CertificationsSection from "@/components/sections/CertificationsSection";
+import VeteransDiscountBanner from "@/components/sections/VeteransDiscountBanner";
 import { Button } from "@/components/ui/button";
 import { company, containerClass, sectionClass, serviceArea } from "@/lib/site";
 
@@ -111,6 +113,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <CertificationsSection />
+
       <section className={`${sectionClass} bg-muted`}>
         <div className={containerClass}>
           <SectionHeader
@@ -140,6 +144,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <VeteransDiscountBanner />
 
       <section className="bg-maven-red py-12 text-white md:py-16">
         <div

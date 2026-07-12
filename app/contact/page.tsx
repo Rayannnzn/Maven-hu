@@ -12,6 +12,7 @@ import {
   hours,
   sectionClass,
   serviceArea,
+  veteransDiscount,
 } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -128,7 +129,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <ScheduleForm title="Schedule a Service" />
+            <div className="flex flex-col gap-6">
+              <div className="rounded-2xl border border-maven-gold/30 bg-maven-gold/10 p-5">
+                <div className="mb-3 flex items-center gap-2">
+                  <span className="material-icons-round text-2xl text-maven-gold">
+                    military_tech
+                  </span>
+                  <h3 className="font-bold text-primary">
+                    {veteransDiscount.title}
+                  </h3>
+                </div>
+                <p className="text-sm font-semibold text-primary">
+                  {veteransDiscount.audience}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {veteransDiscount.description}
+                </p>
+                <p className="mt-2 text-xs text-muted-foreground">
+                  Mention your eligibility when scheduling. Valid military or
+                  first responder ID required at time of service.
+                </p>
+              </div>
+
+              <ScheduleForm title="Schedule a Service" />
+            </div>
           </div>
         </div>
       </section>

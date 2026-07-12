@@ -273,3 +273,40 @@ export const footerCompanyLinks = [
 
 export const containerClass = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-10";
 export const sectionClass = "py-12 md:py-16 lg:py-24";
+
+export const certifications = [
+  {
+    name: "MHIC Licensed",
+    image: "/images/certifications/mhic.png",
+    alt: "MHIC Licensed contractor — Maryland Home Improvement Commission",
+  },
+  {
+    name: "General Contractors",
+    image: "/images/certifications/general-contractor.png",
+    alt: "Maryland General Contractors license",
+  },
+  {
+    name: "EPA 608 Certified",
+    image: "/images/certifications/epa-608.png",
+    alt: "EPA Section 608 Universal certification",
+  },
+  {
+    name: "OSHA Certified",
+    image: "/images/certifications/osha.png",
+    alt: "OSHA safety certification",
+  },
+  {
+    name: "Haag Certified Inspector",
+    image: "/images/certifications/haag.png",
+    alt: "Haag certified residential roof inspector",
+  },
+] as const;
+
+export const veteransDiscount = {
+  title: "10% Off All Services",
+  audience: "Veterans, Active Military & First Responders",
+  description:
+    "Maven Home Services proudly offers 10% off all HVAC, plumbing, and electrical services for veterans, active-duty military, and first responders. Valid ID required at time of service.",
+  ctaLabel: "Schedule & Save",
+  ctaHref: "/contact",
+} as const;

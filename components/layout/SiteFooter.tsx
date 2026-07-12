@@ -1,11 +1,13 @@
 import Link from "next/link";
 import SiteLogo from "@/components/layout/SiteLogo";
+import CertificationsSection from "@/components/sections/CertificationsSection";
 import {
   addressLines,
   company,
   containerClass,
   footerCompanyLinks,
   footerServiceLinks,
+  veteransDiscount,
 } from "@/lib/site";
 
 export default function SiteFooter() {
@@ -104,6 +106,15 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
+      </div>
+
+      <CertificationsSection compact />
+
+      <div
+        className={`${containerClass} border-b border-white/10 py-4 text-center text-sm text-white/45`}
+      >
+        {veteransDiscount.title} for {veteransDiscount.audience} — valid ID
+        required.
       </div>
 
       <div
