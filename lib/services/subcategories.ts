@@ -234,7 +234,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Walk-in Cooler & Freezer Services",
     metaDescription:
       "Walk-in cooler and freezer repair, installation, and maintenance in Maryland and Virginia. Commercial refrigeration service with fast emergency response.",
-    heroImage: "/images/walkin.jpg",
+    heroImage: "/images/walkin.png",
     heroTitle: "Walk-in Cooler & Freezer Service",
     heroDescription:
       "Expert walk-in cooler and freezer repair for restaurants, grocery stores, and food service operations across Maryland and Virginia. Fast response to protect your inventory.",
