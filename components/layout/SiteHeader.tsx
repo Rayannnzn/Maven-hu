@@ -283,24 +283,55 @@ function MobileServiceSubNav({
   category: ServiceCategory;
   pathname: string;
 }) {
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    setExpanded(false);
+  }, [category.href]);
+
   return (
     <nav
       className="border-t border-white/10 pb-2 lg:hidden"
       aria-label={`${category.label} services`}
     >
-      <div className="flex flex-wrap items-center gap-1.5 py-1.5">
-        <Link
-          href={category.href}
-          className={mobileSubcategoryButtonClass(pathname === category.href)}
-          aria-current={pathname === category.href ? "page" : undefined}
+      <div className="flex items-start gap-2 py-1.5">
+        <div
+          className={cn(
+            "flex flex-wrap items-center gap-1.5",
+            !expanded && "max-h-[42px] overflow-hidden",
+          )}
         >
-          All {category.label}
-        </Link>
-        <ServiceSubNavItems
-          category={category}
-          pathname={pathname}
-          variant="mobile"
-        />
+          <Link
+            href={category.href}
+            className={mobileSubcategoryButtonClass(pathname === category.href)}
+            aria-current={pathname === category.href ? "page" : undefined}
+          >
+            All {category.label}
+          </Link>
+          <ServiceSubNavItems
+            category={category}
+            pathname={pathname}
+            variant="mobile"
+          />
+        </div>
+        <button
+          type="button"
+          onClick={() => setExpanded((prev) => !prev)}
+          aria-expanded={expanded}
+          className={cn(
+            "inline-flex min-h-[36px] shrink-0 items-center gap-1 rounded-md border border-white/25 px-2.5 py-1.5",
+            "text-[11px] font-medium leading-tight text-white/85 transition-colors hover:border-white/40 hover:bg-white/5 sm:text-xs",
+            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
+          )}
+        >
+          {expanded ? "Less" : "More"}
+          <ChevronDown
+            className={cn(
+              "size-3.5 transition-transform",
+              expanded && "rotate-180",
+            )}
+          />
+        </button>
       </div>
     </nav>
   );
