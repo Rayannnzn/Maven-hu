@@ -133,9 +133,10 @@ export const serviceCategories: ServiceCategory[] = [
       {
         label: "Air Conditioning",
         links: [
-          { href: serviceAnchor("/hvac", "ac-repair"), label: "AC Repair" },
-          { href: serviceAnchor("/hvac", "ac-maintenance"), label: "AC Maintenance" },
-          { href: serviceAnchor("/hvac", "ac-installation"), label: "AC Installation" },
+          {
+            href: serviceAnchor("/hvac", "ac-repair"),
+            label: "AC Repair/Maintenance/Installation",
+          },
           {
             href: serviceAnchor("/hvac", "central-air-conditioning"),
             label: "Central Air Conditioning",
@@ -149,13 +150,8 @@ export const serviceCategories: ServiceCategory[] = [
         links: [
           {
             href: serviceAnchor("/hvac", "furnace-installation"),
-            label: "Furnace Installation",
+            label: "Furnace Installation/Maintenance/Repair",
           },
-          {
-            href: serviceAnchor("/hvac", "furnace-maintenance"),
-            label: "Furnace Maintenance",
-          },
-          { href: serviceAnchor("/hvac", "furnace-repair"), label: "Furnace Repair" },
           { href: serviceAnchor("/hvac", "heat-pumps"), label: "Heat Pumps" },
           { href: serviceAnchor("/hvac", "heating-thermostats"), label: "Thermostats" },
         ],
@@ -202,9 +198,8 @@ export const serviceCategories: ServiceCategory[] = [
     anchorLinks: [
       {
         href: serviceAnchor("/electrical", "electrical-installation"),
-        label: "Electrical Installation",
+        label: "Electrical Installation/Repair",
       },
-      { href: serviceAnchor("/electrical", "electrical-repair"), label: "Electrical Repair" },
       {
         href: serviceAnchor("/electrical", "ev-charger-installation"),
         label: "EV Charger Installation",
@@ -245,8 +240,10 @@ export const serviceCategories: ServiceCategory[] = [
         href: serviceAnchor("/commercial", "rooftop-package-units"),
         label: "Rooftop Package Units",
       },
-      { href: serviceAnchor("/commercial", "walk-in-freezers"), label: "Walk-in Freezers" },
-      { href: serviceAnchor("/commercial", "walk-in-coolers"), label: "Walk-in Coolers" },
+      {
+        href: serviceAnchor("/commercial", "walk-in-freezers"),
+        label: "Walk-in Coolers/Freezers",
+      },
       { href: serviceAnchor("/commercial", "commercial-maintenance"), label: "Maintenance" },
       { href: serviceAnchor("/commercial", "new-installations"), label: "New Installations" },
     ],

@@ -74,8 +74,8 @@ function ServiceNavLink({
 
 function mobileMainCategoryButtonClass(isActive: boolean) {
   return cn(
-    "flex min-h-[44px] w-full items-center justify-center rounded-md border px-2 py-2.5 text-center",
-    "text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:px-3 sm:text-sm",
+    "flex min-h-[38px] w-full items-center justify-center rounded-md border px-2 py-1.5 text-center",
+    "text-[11px] font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary sm:px-3 sm:text-sm",
     isActive
       ? "border-maven-gold bg-maven-gold/15 text-maven-gold"
       : "border-white/25 text-white hover:border-white/40 hover:bg-white/5",
@@ -84,8 +84,8 @@ function mobileMainCategoryButtonClass(isActive: boolean) {
 
 function mobileSubcategoryButtonClass(isActive: boolean) {
   return cn(
-    "inline-flex min-h-[36px] items-center rounded-md border px-2.5 py-1.5",
-    "text-[11px] font-medium leading-tight transition-colors sm:text-xs",
+    "inline-flex min-h-[30px] items-center rounded-md border px-2 py-1",
+    "text-[10px] font-medium leading-tight transition-colors sm:text-[11px]",
     "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
     isActive
       ? "border-maven-gold bg-maven-gold/15 font-semibold text-maven-gold"
@@ -97,19 +97,6 @@ function desktopSubcategoryLinkClass(isActive: boolean) {
   return cn(
     "min-h-[36px] rounded px-2 py-1.5 text-xs transition-colors hover:text-white sm:text-sm",
     isActive ? "font-semibold text-white" : "text-white/65",
-  );
-}
-
-function mobileGroupLabelClass() {
-  return cn(
-    "inline-flex min-h-[36px] items-center rounded-md border border-white/15 bg-white/5 px-2.5 py-1.5",
-    "text-[10px] font-bold uppercase tracking-wide text-maven-gold/90 sm:text-[11px]",
-  );
-}
-
-function desktopGroupLabelClass() {
-  return cn(
-    "inline-flex min-h-[36px] items-center rounded px-2 py-1.5 text-[10px] font-bold uppercase tracking-wide text-maven-gold/80 sm:text-[11px]",
   );
 }
 
@@ -221,57 +208,39 @@ function ServiceSubNavItems({
   variant: "mobile" | "desktop";
 }) {
   const items = getCategoryNavItems(category);
-  let lastGroup: string | undefined;
 
   return (
     <>
-      {items.map((item) => {
-        const showGroupLabel = item.group && item.group !== lastGroup;
-        if (showGroupLabel) {
-          lastGroup = item.group;
-        }
-
-        return (
-          <span key={item.href} className="contents">
-            {showGroupLabel &&
-              (variant === "mobile" ? (
-                <span className={mobileGroupLabelClass()}>{item.group}</span>
-              ) : (
-                <span className={desktopGroupLabelClass()}>{item.group}</span>
-              ))}
-            {item.section === "featured" ? (
-              <Link
-                href={item.href}
-                className={
-                  variant === "mobile"
-                    ? mobileSubcategoryButtonClass(
-                        isActiveLink(pathname, item.href),
-                      )
-                    : desktopSubcategoryLinkClass(
-                        isActiveLink(pathname, item.href),
-                      )
-                }
-                aria-current={
-                  isActiveLink(pathname, item.href) ? "page" : undefined
-                }
-              >
-                {item.label}
-              </Link>
-            ) : (
-              <ServiceNavLink
-                href={item.href}
-                label={item.label}
-                pathname={pathname}
-                className={
-                  variant === "mobile"
-                    ? mobileSubcategoryButtonClass(false)
-                    : desktopSubcategoryLinkClass(false)
-                }
-              />
-            )}
-          </span>
-        );
-      })}
+      {items.map((item) =>
+        item.section === "featured" ? (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={
+              variant === "mobile"
+                ? mobileSubcategoryButtonClass(isActiveLink(pathname, item.href))
+                : desktopSubcategoryLinkClass(isActiveLink(pathname, item.href))
+            }
+            aria-current={
+              isActiveLink(pathname, item.href) ? "page" : undefined
+            }
+          >
+            {item.label}
+          </Link>
+        ) : (
+          <ServiceNavLink
+            key={item.href}
+            href={item.href}
+            label={item.label}
+            pathname={pathname}
+            className={
+              variant === "mobile"
+                ? mobileSubcategoryButtonClass(false)
+                : desktopSubcategoryLinkClass(false)
+            }
+          />
+        ),
+      )}
     </>
   );
 }
@@ -283,55 +252,17 @@ function MobileServiceSubNav({
   category: ServiceCategory;
   pathname: string;
 }) {
-  const [expanded, setExpanded] = useState(false);
-
-  useEffect(() => {
-    setExpanded(false);
-  }, [category.href]);
-
   return (
     <nav
       className="border-t border-white/10 pb-2 lg:hidden"
       aria-label={`${category.label} services`}
     >
-      <div className="flex items-start gap-2 py-1.5">
-        <div
-          className={cn(
-            "flex flex-wrap items-center gap-1.5",
-            !expanded && "max-h-[42px] overflow-hidden",
-          )}
-        >
-          <Link
-            href={category.href}
-            className={mobileSubcategoryButtonClass(pathname === category.href)}
-            aria-current={pathname === category.href ? "page" : undefined}
-          >
-            All {category.label}
-          </Link>
-          <ServiceSubNavItems
-            category={category}
-            pathname={pathname}
-            variant="mobile"
-          />
-        </div>
-        <button
-          type="button"
-          onClick={() => setExpanded((prev) => !prev)}
-          aria-expanded={expanded}
-          className={cn(
-            "inline-flex min-h-[36px] shrink-0 items-center gap-1 rounded-md border border-white/25 px-2.5 py-1.5",
-            "text-[11px] font-medium leading-tight text-white/85 transition-colors hover:border-white/40 hover:bg-white/5 sm:text-xs",
-            "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-maven-gold focus-visible:ring-offset-2 focus-visible:ring-offset-primary",
-          )}
-        >
-          {expanded ? "Less" : "More"}
-          <ChevronDown
-            className={cn(
-              "size-3.5 transition-transform",
-              expanded && "rotate-180",
-            )}
-          />
-        </button>
+      <div className="flex flex-wrap items-center gap-1 py-1.5">
+        <ServiceSubNavItems
+          category={category}
+          pathname={pathname}
+          variant="mobile"
+        />
       </div>
     </nav>
   );
@@ -350,16 +281,6 @@ function DesktopServiceSubNav({
       aria-label={`${category.label} services`}
     >
       <div className="flex flex-wrap items-center gap-x-1 gap-y-1 py-1.5 lg:gap-x-2">
-        <Link
-          href={category.href}
-          className={cn(
-            "min-h-[36px] rounded px-2 py-1.5 text-xs font-bold uppercase tracking-wide transition-colors hover:text-white sm:text-sm",
-            pathname === category.href ? "text-maven-gold" : "text-white/60",
-          )}
-        >
-          {category.label}
-        </Link>
-        <span className="text-white/30">/</span>
         <ServiceSubNavItems
           category={category}
           pathname={pathname}
@@ -659,7 +580,7 @@ export default function SiteHeader() {
           className="border-t border-white/10 pb-2 lg:hidden"
           aria-label="Service categories"
         >
-          <div className="grid grid-cols-2 gap-1.5 pt-1 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-1 pt-1 sm:grid-cols-4">
             {serviceCategories.map((link) => {
               const isActive = isActiveLink(pathname, link.href);
               return (
