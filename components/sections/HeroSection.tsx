@@ -73,7 +73,7 @@ export default function HeroSection() {
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/3.5] overflow-hidden rounded-2xl bg-maven-deep sm:aspect-[460/420]">
             <Image
-              src="/images/home/mavens.png"
+              src="/images/home/hero.png"
               alt="Team of Maven Services technicians on the job"
               fill
               priority

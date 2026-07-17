@@ -6,7 +6,7 @@ export const electricalData: ServicePageData = {
   title: "Electrical Services",
   metaDescription:
     "Experienced electricians in Maryland and Virginia for panel upgrades, wiring, outlets, and safety inspections. Code-compliant electrical work with upfront estimates.",
-  heroImage: "/images/electrical-hero.jpg",
+  heroImage: "/images/electrical/electrical-hero.png",
   heroTitle: "Professional Electrical Services for Maryland & Virginia Homes",
   heroDescription:
     "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",
