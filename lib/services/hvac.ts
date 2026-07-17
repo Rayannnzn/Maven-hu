@@ -6,7 +6,7 @@ export const hvacData: ServicePageData = {
   title: "HVAC Services",
   metaDescription:
     "Expert HVAC repair, installation, and maintenance in Maryland and Virginia. Experienced technicians for heating, cooling, and ventilation — same-day appointments available.",
-  heroImage: "/images/hvac.png",
+  heroImage: "/images/hvac/hvac.png",
   heroTitle: "Professional HVAC Services in Maryland & Virginia",
   heroDescription:
     "From emergency AC repairs to full system replacements, Maven's experienced HVAC technicians keep your home comfortable through humid Mid-Atlantic summers and winter freezes. Upfront pricing, same-day appointments, and quality workmanship you can trust.",

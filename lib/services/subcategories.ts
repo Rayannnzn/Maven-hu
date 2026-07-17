@@ -52,7 +52,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Air Conditioner Services",
     metaDescription:
       "AC repair, installation, and maintenance in Maryland and Virginia. Same-day appointments available from experienced technicians.",
-    heroImage: "/images/ac2.jpg",
+    heroImage: "/images/hvac/air-conditioner.jpeg",
     heroTitle: "Air Conditioner Repair & Installation",
     heroDescription:
       "Fast, reliable air conditioning service for homes and businesses across the DMV. From emergency repairs to new system installs, Maven keeps you cool.",
@@ -99,7 +99,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Refrigerator Services",
     metaDescription:
       "Professional refrigerator repair and installation in Maryland and Virginia. Commercial and residential refrigeration service from experienced technicians.",
-    heroImage: "/images/refig.png",
+    heroImage: "/images/hvac/refrigerator.jpeg",
     heroTitle: "Refrigerator Repair & Service",
     heroDescription:
       "Reliable refrigerator repair for homes and commercial kitchens across Maryland and Virginia. Fast diagnostics, quality parts, and lasting repairs.",
@@ -143,7 +143,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Ice Maker Services",
     metaDescription:
       "Ice maker repair and installation in Maryland and Virginia. Commercial and residential ice machine service from experienced technicians.",
-    heroImage: "/images/icemaker.png",
+    heroImage: "/images/hvac/ice-maker.jpeg",
     heroTitle: "Ice Maker Repair & Installation",
     heroDescription:
       "Fast ice maker repair for homes and commercial operations across Maryland and Virginia. We service all brands of built-in, undercounter, and commercial ice machines.",
@@ -187,7 +187,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Furnace & Heating Services",
     metaDescription:
       "Furnace repair, heating system installation, and maintenance in Maryland and Virginia. Emergency heating service available for urgent issues.",
-    heroImage: "/images/heatfurnace.jpg",
+    heroImage: "/images/hvac/furnace.jpeg",
     heroTitle: "Furnace & Heating System Service",
     heroDescription:
       "Don't let a heating failure leave your home cold. Maven's technicians repair and install furnaces, heat pumps, and boilers across Maryland and Virginia — with emergency service for urgent issues.",
@@ -234,7 +234,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Walk-in Cooler & Freezer Services",
     metaDescription:
       "Walk-in cooler and freezer repair, installation, and maintenance in Maryland and Virginia. Commercial refrigeration service with fast emergency response.",
-    heroImage: "/images/walkin.png",
+    heroImage: "/images/hvac/walkin.png",
     heroTitle: "Walk-in Cooler & Freezer Service",
     heroDescription:
       "Expert walk-in cooler and freezer repair for restaurants, grocery stores, and food service operations across Maryland and Virginia. Fast response to protect your inventory.",
@@ -328,7 +328,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Water Heater Services",
     metaDescription:
       "Water heater repair and replacement in Maryland and Virginia. Tank and tankless water heater service from experienced plumbers.",
-    heroImage: "/images/heaterwater.jpg",
+    heroImage: "/images/plumbing/water-heaters.jpeg",
     heroTitle: "Water Heater Repair & Replacement",
     heroDescription:
       "No hot water? Maven's experienced plumbers repair and replace tank and tankless water heaters across Maryland and Virginia — often same-day.",
@@ -419,7 +419,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Residential & Commercial Plumbing",
     metaDescription:
       "Plumbing services for homes and businesses in Maryland and Virginia. Experienced plumbers for residential and light-commercial plumbing projects.",
-    heroImage: "/images/plumbingcom.jpg",
+    heroImage: "/images/plumbing/plumbingcom.jpg",
     heroTitle: "Residential & Commercial Plumbing",
     heroDescription:
       "Maven provides licensed plumbing services for homeowners, property managers, and business owners across Maryland and Virginia — from routine repairs to major commercial projects.",
@@ -465,7 +465,7 @@ const subcategoryData: Record<string, ServicePageData> = {
     title: "Electrical Repair & Installation",
     metaDescription:
       "Licensed electrical repair and installation in Maryland and Virginia. From outlets to panel upgrades — safe, code-compliant electrical work.",
-    heroImage: "/images/electric.jpg",
+    heroImage: "/images/electrical/electrical.jpeg",
     heroTitle: "Electrical Repair & Installation",
     heroDescription:
       "Safe, licensed electrical repair and installation for homes and businesses across Maryland and Virginia. From tripped breakers to full panel upgrades.",
