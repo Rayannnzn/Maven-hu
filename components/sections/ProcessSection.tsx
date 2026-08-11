@@ -9,7 +9,7 @@ export default function ProcessSection() {
       <div className={containerClass}>
         <SectionHeader
           eyebrow="How It Works"
-          title="Simple. Fast. Reliable."
+          title="How Booking a Service with Maven Works"
           subtitle="From booking to completion, we keep you informed at every step of the process."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

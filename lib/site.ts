@@ -276,26 +276,31 @@ export const certifications = [
     name: "MHIC Licensed",
     image: "/images/certifications/mhic.png",
     alt: "MHIC Licensed contractor — Maryland Home Improvement Commission",
+    desc: "Legally authorized to perform home improvement work in Maryland.",
   },
   {
     name: "General Contractors",
     image: "/images/certifications/general-contractor.png",
     alt: "Maryland General Contractors license",
+    desc: "Licensed to manage larger multi-trade home improvement projects.",
   },
   {
     name: "EPA 608 Certified",
     image: "/images/certifications/epa-608.png",
     alt: "EPA Section 608 Universal certification",
+    desc: "Certified to safely handle refrigerants in AC and heat pump systems.",
   },
   {
     name: "OSHA Certified",
     image: "/images/certifications/osha.png",
     alt: "OSHA safety certification",
+    desc: "Trained in on-site safety standards to protect your home and family.",
   },
   {
     name: "Haag Certified Inspector",
     image: "/images/certifications/haag.png",
     alt: "Haag certified residential roof inspector",
+    desc: "Trained to industry standard for residential inspection accuracy.",
   },
 ] as const;
 

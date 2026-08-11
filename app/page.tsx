@@ -15,6 +15,17 @@ import EmergencyCta from "@/components/sections/EmergencyCta";
 import FaqSection from "@/components/sections/FaqSection";
 import ContactSection from "@/components/sections/ContactSection";
 import { faqs } from "@/lib/content";
+import { company } from "@/lib/site";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  // `absolute` keeps the SEO title exactly as written — the root layout's
+  // "%s | Maven Home Services" template would otherwise double the brand.
+  title: {
+    absolute: "HVAC, Plumbing & Electrical in Maryland & Northern VA | Maven",
+  },
+  description: `Licensed HVAC, plumbing & electrical pros serving Rockville, Silver Spring, Bethesda, Frederick MD & Northern Virginia. Same-day service. Call ${company.phone}.`,
+};
 
 export default function Home() {
   return (

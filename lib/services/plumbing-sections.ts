@@ -5,7 +5,7 @@ export const plumbingDetailSections: ServiceDetailSection[] = [
     id: "emergency-plumbing",
     heading: "Emergency Plumbing",
     description:
-      "Burst pipes, major leaks, sewer backups, and complete water loss demand immediate professional response. Maven's emergency plumbing team dispatches experienced technicians equipped to contain damage, restore water service, and make lasting repairs — day or night, including weekends and holidays. We prioritize urgent calls across Maryland and Northern Virginia to minimize water damage and restore your household as quickly as possible.",
+      "Burst pipes, major leaks, sewer backups, and complete water loss demand immediate professional response. Maven's emergency plumbing team dispatches experienced technicians equipped to contain damage, restore water service, and make lasting repairs — day or night, including weekends and holidays. We prioritize urgent calls across our Maryland service area to minimize water damage and restore your household as quickly as possible.",
     commonProblems: [
       "Burst or frozen pipes flooding your home",
       "Sewer backups causing toilets and drains to overflow",
@@ -19,7 +19,7 @@ export const plumbingDetailSections: ServiceDetailSection[] = [
     id: "water-heaters",
     heading: "Water Heaters",
     description:
-      "From lukewarm showers to complete hot water loss, water heater problems disrupt daily life fast. Maven repairs and replaces tank and tankless water heaters of all major brands — diagnosing heating element failures, sediment buildup, thermostat issues, anode rod corrosion, and gas valve problems. When replacement makes more sense than repair, we handle removal, installation, permit coordination, and proper disposal of your old unit.",
+      "From lukewarm showers to complete hot water loss, water heater problems disrupt daily life fast. Maven repairs and replaces tank and tankless water heaters of all major brands — diagnosing heating element failures, sediment buildup, thermostat issues, anode rod corrosion, and gas valve problems. We provide water heater installation, replacement, and maintenance for homeowners in Frederick, Silver Spring, and throughout Maryland. When replacement makes more sense than repair, we handle removal, installation, permit coordination, and proper disposal of your old unit.",
     commonProblems: [
       "No hot water or insufficient hot water supply",
       "Rusty or discolored hot water from corrosion",
@@ -103,7 +103,7 @@ export const plumbingDetailSections: ServiceDetailSection[] = [
     id: "sump-pump-repair-installation",
     heading: "Sump Pump Repair & Installation",
     description:
-      "A reliable sump pump is your basement's best defense against groundwater flooding — especially in Maryland and Virginia where clay soils and high water tables are common. Maven installs new sump pump systems with proper pit sizing, discharge line routing, and check valves. We repair stuck float switches, burned-out motors, and failed check valves, and install battery backup systems that keep your basement protected during power outages.",
+      "A reliable sump pump is your basement's best defense against groundwater flooding — especially in Maryland, where clay soils and high water tables are common. Maven installs new sump pump systems with proper pit sizing, discharge line routing, and check valves. We repair stuck float switches, burned-out motors, and failed check valves, and install battery backup systems that keep your basement protected during power outages.",
     commonProblems: [
       "Sump pump running constantly or not running at all",
       "Basement flooding during heavy rain events",

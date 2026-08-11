@@ -4,7 +4,11 @@ import { hvacData } from "@/lib/services/hvac";
 
 export function generateMetadata(): Metadata {
   return {
-    title: hvacData.title,
+    // `absolute` keeps the SEO title exactly as written — the root layout's
+    // "%s | Maven Home Services" template would otherwise double the brand.
+    title: hvacData.seoTitle
+      ? { absolute: hvacData.seoTitle }
+      : hvacData.title,
     description: hvacData.metaDescription,
   };
 }

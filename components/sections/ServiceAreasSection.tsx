@@ -17,7 +17,9 @@ export default function ServiceAreasSection() {
       <div className={`${containerClass} grid gap-10 lg:grid-cols-[1fr_340px] lg:gap-16`}>
         <div className="min-w-0">
           <span className="eyebrow mb-5">Where We Work</span>
-          <h2 className="section-heading mb-4 text-left">Service Areas</h2>
+          <h2 className="section-heading mb-4 text-left">
+            Service Areas — Maryland &amp; Northern Virginia
+          </h2>
           <p className="mb-8 text-base leading-relaxed text-muted-foreground">
             {serviceArea.description} Contact us to confirm availability in your
             area.

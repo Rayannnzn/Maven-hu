@@ -35,7 +35,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         <div className={`${containerClass} max-w-3xl`}>
           <SectionHeader
             eyebrow="Overview"
-            title={`About Our ${data.title}`}
+            title={data.overviewTitle ?? `About Our ${data.title}`}
             centered={false}
             className="mb-8"
           />
@@ -56,7 +56,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <SectionHeader
             eyebrow="Services"
             title="What We Offer"
-            subtitle="Comprehensive solutions from experienced professionals."
+            subtitle={
+              data.offeredServicesSubtitle ??
+              "Comprehensive solutions from experienced professionals."
+            }
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {data.offeredServices.map((svc) => (
@@ -83,7 +86,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         <div className={containerClass}>
           <SectionHeader
             eyebrow="Benefits"
-            title="Why Homeowners Choose Maven"
+            title={data.benefitsTitle ?? "Why Homeowners Choose Maven"}
             subtitle="Quality workmanship and professional, reliable service."
           />
           <div className="grid gap-6 md:grid-cols-2">
@@ -163,9 +166,8 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             {data.ctaTitle}
           </h2>
           <p className="max-w-lg text-white/80">
-            Schedule your service today or call our team to request an estimate.
-            Same-day appointments available across Maryland and Virginia,
-            subject to technician availability.
+            {data.ctaDescription ??
+              "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland and Virginia, subject to technician availability."}
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Button

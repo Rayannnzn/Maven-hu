@@ -1,3 +1,5 @@
+import { company } from "@/lib/site";
+
 export type Service = {
   icon: string;
   name: string;
@@ -26,32 +28,22 @@ export const services: Service[] = [
   {
     icon: "hvac",
     name: "HVAC",
-    desc: "Complete heating and ventilation system installation, repair, and seasonal tune-ups for year-round indoor comfort.",
+    desc: "AC repair, heat pump installation, geothermal systems, and duct cleaning across Montgomery County and Frederick, MD.",
   },
   {
     icon: "plumbing",
     name: "Plumbing",
-    desc: "Expert plumbing for leaks, drain cleaning, water heater installation, and full pipe replacement services.",
+    desc: "Water heater installation, replacement and repair, drain cleaning, and leak repair in Silver Spring, Frederick, and Northern Virginia.",
   },
   {
     icon: "electrical_services",
     name: "Electrical",
-    desc: "Electricians for panel upgrades, outlet installation, wiring repairs, and electrical safety inspections.",
+    desc: "Panel upgrades, wiring, safety inspections, and Level 2 EV charger installation in Maryland.",
   },
   {
-    icon: "ac_unit",
-    name: "Air Conditioning",
-    desc: "AC installation, repair, refrigerant recharge, and annual tune-ups to maximize system efficiency and lifespan.",
-  },
-  {
-    icon: "thermostat",
-    name: "Cooling Systems",
-    desc: "Full-service cooling solutions including ductwork design, zone control systems, and refrigerant leak detection.",
-  },
-  {
-    icon: "home_repair_service",
-    name: "Preventive Maintenance Plans",
-    desc: "Scheduled preventive maintenance plans to protect your home systems and help avoid costly emergency repairs.",
+    icon: "apartment",
+    name: "Commercial",
+    desc: "Commercial HVAC and plumbing contractors serving Maryland and Northern Virginia businesses.",
   },
 ];
 
@@ -79,7 +71,7 @@ export const features: Feature[] = [
   {
     icon: "engineering",
     title: "Experienced Technicians",
-    desc: "Experienced, highly trained technicians work across HVAC, plumbing, and electrical trades.",
+    desc: "Our technicians bring years of hands-on field experience across HVAC, plumbing, and electrical trades — not call-center dispatch. Every estimate is written by the technician who will do the work.",
   },
   {
     icon: "thumb_up_alt",
@@ -117,27 +109,27 @@ export const steps: Step[] = [
 
 export const faqs: Faq[] = [
   {
-    q: "Do you offer same-day service?",
-    a: "Same-day appointments are available for many HVAC, plumbing, and electrical needs, subject to technician availability and your location. Calling earlier in the day generally gives you the best chance of same-day scheduling. When you book, we will contact you promptly to confirm your appointment and share your technician's details.",
+    q: "Do you offer same-day HVAC, plumbing, or electrical service?",
+    a: `Yes, Maven offers same-day appointments for urgent HVAC, plumbing, and electrical issues in Maryland and Northern Virginia, subject to technician availability and your location. Call ${company.phone} to check availability in your area.`,
   },
   {
-    q: "Are your technicians insured?",
-    a: "Yes. Our technicians are insured and background-checked, and we carry liability coverage on the work we perform. We invest in ongoing training so every team member stays current on best practices across the HVAC, plumbing, and electrical trades.",
+    q: "Are Maven technicians licensed and insured?",
+    a: "Yes. Maven technicians are MHIC licensed, background-checked, and fully insured, with EPA 608 and OSHA certifications for HVAC and safety work.",
   },
   {
-    q: "Do you provide estimates before work begins?",
-    a: "Yes. We provide an upfront written estimate before any work begins, so you can approve the cost in advance with no hidden fees. A diagnostic fee may apply for complex system evaluations, and we'll explain any such fee before we start.",
+    q: "Do you provide a written estimate before starting work?",
+    a: "Yes, every job includes an upfront written estimate before any work begins, so you approve the cost in advance with no hidden fees.",
   },
   {
-    q: "What areas do you serve?",
-    a: "We are based in Rockville, Maryland and serve homeowners and businesses across Maryland and Northern Virginia — including Montgomery County, Arlington, Fairfax, Alexandria, Bethesda, Silver Spring, and surrounding communities. Contact us to confirm service availability in your ZIP code.",
+    q: "What areas does Maven serve?",
+    a: "Maven serves homeowners and businesses within about 30 miles of Rockville, Maryland, including Bethesda, Silver Spring, Frederick, and Northern Virginia cities like Arlington, Alexandria, and Fairfax.",
   },
   {
-    q: "Do you offer financing options?",
-    a: "Promotional financing may be available for qualified customers on qualifying equipment and major installations. Terms, rates, and eligibility are determined by third-party lenders. Contact our office for current options and details on how to apply.",
+    q: "Does Maven offer financing for HVAC or plumbing projects?",
+    a: "Yes, Maven works with third-party lending partners who may offer promotional financing for qualified customers on major HVAC, plumbing, and electrical projects. Terms are set by the lender.",
   },
   {
     q: "What if I'm not satisfied with the work?",
-    a: "We stand behind our work. If something isn't right, let us know and we'll make every reasonable effort to correct it. Parts are covered by the applicable manufacturer's warranty, which varies by component and brand.",
+    a: "Maven stands behind every job. If something isn't right, contact us and we will make every reasonable effort to correct it at no additional cost.",
   },
 ];

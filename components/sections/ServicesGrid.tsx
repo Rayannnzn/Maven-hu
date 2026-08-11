@@ -3,11 +3,13 @@ import { services } from "@/lib/content";
 import { SectionHeader } from "@/components/shared/PageHero";
 import { containerClass, sectionClass } from "@/lib/site";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 function getServiceHref(name: string): string {
   if (name === "HVAC") return "/hvac";
   if (name === "Plumbing") return "/plumbing";
   if (name === "Electrical") return "/electrical";
+  if (name === "Commercial") return "/commercial";
   if (name.includes("Air Conditioning") || name.includes("Cooling")) return "/hvac";
   if (name.includes("Maintenance")) return "/contact";
   return "/contact";
@@ -19,10 +21,10 @@ export default function ServicesGrid() {
       <div className={containerClass}>
         <SectionHeader
           eyebrow="Our Services"
-          title="Complete Home Service Solutions"
-          subtitle="Expert installation, repair, and maintenance for every system in your home delivered by experienced professionals."
+          title="Complete Home Service Solutions for Maryland & Northern Virginia Homeowners"
+          subtitle="Maven offers HVAC, plumbing, and electrical installation, repair, and maintenance across Maryland and Northern Virginia — including AC repair, heat pump and geothermal installation, water heater replacement, drain cleaning, panel upgrades, and EV charger installation."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-7">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
           {services.map((svc) => (
             <Card
               key={svc.name}
@@ -48,6 +50,14 @@ export default function ServicesGrid() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-10 flex justify-center md:mt-12">
+          <Button asChild size="lg" className="font-bold">
+            <Link href="/services">
+              View All Services
+              <span className="material-icons-round text-lg">arrow_forward</span>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

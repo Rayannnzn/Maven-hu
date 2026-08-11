@@ -30,7 +30,7 @@ export default function PromoBanner() {
           >
             <a href={company.phoneHref}>
               <span className="material-icons-round text-xl">phone</span>
-              Call Now
+              Call Now {company.phone}
             </a>
           </Button>
           <Button

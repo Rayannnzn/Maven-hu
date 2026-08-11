@@ -44,8 +44,8 @@ export default function CertificationsSection({
       <div className={containerClass}>
         <SectionHeader
           eyebrow="Licensed & Certified"
-          title="Industry Certifications & Credentials"
-          subtitle="Our team holds the licenses and certifications your home deserves."
+          title="Licensed, Certified, and Insured Home Service Professionals"
+          subtitle="Maven technicians hold MHIC (Maryland Home Improvement Commission) licensing, EPA Section 608 refrigerant certification, OSHA safety certification, and Haag inspection credentials. Every technician is background-checked and fully insured before stepping into your home."
         />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5">
           {certifications.map((cert) => (
@@ -63,6 +63,9 @@ export default function CertificationsSection({
                 />
               </div>
               <p className="text-sm font-bold text-primary">{cert.name}</p>
+              <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                {cert.desc}
+              </p>
             </div>
           ))}
         </div>

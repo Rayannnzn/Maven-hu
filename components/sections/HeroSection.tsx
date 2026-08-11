@@ -22,16 +22,19 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-            Reliable HVAC, Plumbing{" "}
+            Trusted HVAC, Plumbing{" "}
             <span className="text-maven-gold">&amp; Electrical Services</span>
             <br />
-            for Maryland &amp; Northern Virginia
+            in Maryland &amp; Northern Virginia
           </h1>
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/72 md:text-lg">
-            Fast, dependable service from experienced professionals. Upfront
-            pricing, quality workmanship, and responsive support when you need
-            it.
+            {company.name} provides licensed HVAC, plumbing, and electrical
+            repair and installation for homeowners in Rockville, Bethesda,
+            Silver Spring, Gaithersburg, Frederick, and surrounding Maryland and
+            Northern Virginia communities. Same-day appointments are available,
+            all technicians are insured and background-checked, and every job
+            includes an upfront written estimate before work begins.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

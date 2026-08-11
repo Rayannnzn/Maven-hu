@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { company, containerClass, sectionClass } from "@/lib/site";
+import { company, containerClass, sectionClass, serviceArea } from "@/lib/site";
 
 const stats = [
   { value: "Experienced", label: "Professional field experience", highlight: false },
@@ -18,10 +18,11 @@ export default function AboutPreview() {
             Built on Skill, Integrity, and Results
           </h2>
           <p className="mb-4 text-base leading-relaxed text-[#4a5568]">
-            {company.name} was built by experienced tradespeople who believed
-            homeowners deserved better. We built a company where every technician
-            is background-checked, every quote is written, and there&apos;s
-            quality workmanship on every visit.
+            Founded by tradespeople with direct field experience in HVAC,
+            plumbing, and electrical work, {company.name} is based in Rockville,
+            Maryland, and serves homeowners, property managers, and businesses
+            within a {serviceArea.radiusMiles}-mile service radius across
+            Maryland and Northern Virginia.
           </p>
           <p className="mb-8 text-base leading-relaxed text-[#4a5568] md:mb-10">
             Today, Maven serves homeowners, property managers, and businesses

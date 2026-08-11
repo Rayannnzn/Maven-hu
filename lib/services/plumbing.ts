@@ -1,20 +1,25 @@
 import type { ServicePageData } from "./types";
 import { plumbingDetailSections } from "./plumbing-sections";
+import { company } from "@/lib/site";
 
 export const plumbingData: ServicePageData = {
   slug: "plumbing",
   title: "Plumbing Services",
-  metaDescription:
-    "Experienced plumbers in Maryland and Virginia for leaks, drain cleaning, water heaters, and pipe repair. Emergency plumbing service available for urgent issues with upfront pricing.",
+  seoTitle:
+    "Plumbing Services in Maryland | Water Heaters, Drains, Repair | Maven",
+  metaDescription: `Licensed Maryland plumbers — water heater installation & repair, drain cleaning, sewer lines, repiping. Serving Silver Spring, Frederick & more. Call ${company.phone}.`,
   heroImage: "/images/plumbing-hero.jpg",
-  heroTitle: "Expert Plumbing Services You Can Count On",
+  heroTitle: "Expert Plumbing Services in Maryland",
   heroDescription:
-    "From dripping faucets to burst pipes, Maven's experienced plumbers solve problems fast with clean workmanship and transparent pricing. Serving Maryland and Northern Virginia homeowners.",
+    "From dripping faucets to burst pipes, Maven's experienced plumbers solve problems fast with clean workmanship and transparent pricing. Serving homeowners throughout Maryland.",
+  overviewTitle: "About Our Plumbing Services in Maryland",
   overview: [
     "Plumbing problems never wait for a convenient time. A slow leak behind a wall can cause thousands in water damage, and a clogged main line can shut down your entire household in hours.",
-    "Maven Home Services delivers reliable residential plumbing across Maryland and Northern Virginia — from routine fixture replacements to complex repiping projects and emergency burst-pipe response. Every plumber on our team is insured and background-checked.",
+    "Maven Home Services delivers reliable residential plumbing across Maryland — from routine fixture replacements to complex repiping projects and emergency burst-pipe response. Every plumber on our team is insured and background-checked.",
     "We treat your home with respect: shoe covers on entry, work areas protected, and jobsites left cleaner than we found them. That's the Maven standard on every call.",
   ],
+  offeredServicesSubtitle:
+    "Comprehensive plumbing solutions from experienced Maryland professionals.",
   offeredServices: [
     {
       icon: "water_drop",
@@ -29,7 +34,7 @@ export const plumbingData: ServicePageData = {
     {
       icon: "water_heater",
       name: "Water Heater Services",
-      desc: "Repair, maintenance, and installation of tank and tankless water heaters. Same-day replacement available for most models.",
+      desc: "Repair, maintenance, and installation of tank and tankless water heaters across Maryland. Same-day replacement available for most models.",
     },
     {
       icon: "pipe",
@@ -57,6 +62,7 @@ export const plumbingData: ServicePageData = {
       desc: "Emergency dispatch for burst pipes, major leaks, sewer backups, and no-water situations. Response times depend on technician availability and your location.",
     },
   ],
+  benefitsTitle: "Why Maryland Homeowners Choose Maven",
   benefits: [
     {
       title: "Experienced Plumbers",
@@ -82,7 +88,7 @@ export const plumbingData: ServicePageData = {
     },
     {
       title: "Hard Water Experience",
-      desc: "Maryland and Northern Virginia's moderately hard water accelerates pipe corrosion and fixture scale buildup. We recommend solutions tailored to local water conditions.",
+      desc: "Maryland's moderately hard water accelerates pipe corrosion and fixture scale buildup. We recommend solutions tailored to local water conditions.",
     },
     {
       title: "Whole-Home Plumbing Knowledge",
@@ -106,7 +112,7 @@ export const plumbingData: ServicePageData = {
       num: "03",
       icon: "handyman",
       title: "Professional Repair",
-      desc: "We complete the repair using quality parts and proper techniques, following Maryland and Virginia plumbing code on every connection and installation.",
+      desc: "We complete the repair using quality parts and proper techniques, following Maryland plumbing code on every connection and installation.",
     },
     {
       num: "04",
@@ -118,29 +124,31 @@ export const plumbingData: ServicePageData = {
   faqs: [
     {
       q: "What qualifies as a plumbing emergency?",
-      a: "Burst pipes, major active leaks, sewer backups, no water supply, and gas line concerns related to water heaters are emergencies. Call our emergency line right away — delaying can cause significant property damage.",
+      a: `A plumbing emergency is any issue that risks property damage or safety — burst pipes, major leaks, sewer backups, complete water loss, or a gas odor near a water heater. Call ${company.phone} immediately for these situations.`,
     },
     {
       q: "How can I prevent frozen pipes in winter?",
-      a: "Insulate exposed pipes in attics, garages, and crawl spaces. Let faucets drip during hard freezes and keep cabinet doors open under sinks on exterior walls. Maven offers pre-winter pipe insulation services across Maryland and Northern Virginia.",
+      a: "Keep your thermostat above 55°F, insulate exposed pipes in unheated areas like basements and crawl spaces, and let faucets drip slightly during extreme cold to keep water moving.",
     },
     {
       q: "Tank or tankless water heater — which is better?",
-      a: "Tank heaters have lower upfront cost and are simpler to maintain. Tankless units last longer and save energy for homes with moderate hot water demand. We assess your household size, usage patterns, and budget to recommend the right fit.",
+      a: "Tankless water heaters cost more upfront but offer endless hot water and lower operating costs, while tank water heaters cost less to install. The right choice depends on household size, hot water demand, and budget — Maven can help you decide during a free estimate.",
     },
     {
       q: "Why do my drains keep clogging?",
-      a: "Recurring clogs often indicate a deeper issue — grease buildup, tree roots, bellied pipes, or improper venting. Camera inspection identifies the root cause so we fix it permanently, not just clear the symptom.",
+      a: "Recurring clogs usually point to grease buildup, tree root intrusion, or a pipe belly further down the line rather than a simple surface blockage. A camera inspection identifies the exact cause so the right fix is applied.",
     },
     {
       q: "Do you pull permits for plumbing work?",
-      a: "Yes. Permits are pulled for work that requires inspection under local code, including water heater replacements, repiping, and sewer line work. Permit costs are included in your written estimate.",
+      a: "Yes, Maven handles permit coordination for repiping, water heater replacement, and other work that requires inspection under Maryland plumbing code.",
     },
     {
       q: "How do I know if I have a hidden water leak?",
-      a: "Signs include unexplained increases in your water bill, musty odors, warm spots on floors, low water pressure, and visible mold. Our electronic leak detection pinpoints hidden leaks without tearing open walls unnecessarily.",
+      a: "Watch for unexplained increases in your water bill, damp spots on walls or ceilings, a musty smell, or your water meter still running when all fixtures are off. Maven uses electronic leak detection to locate hidden leaks without unnecessary demolition.",
     },
   ],
   ctaTitle: "Don't Let Plumbing Problems Get Worse",
+  ctaDescription:
+    "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland, subject to technician availability.",
   detailSections: plumbingDetailSections,
 };
