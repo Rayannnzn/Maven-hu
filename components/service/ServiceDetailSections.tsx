@@ -9,17 +9,22 @@ export default function ServiceDetailSections({
 }: {
   sections: ServiceDetailSection[];
 }) {
+  const groupHeaderFlags: boolean[] = [];
   let currentGroup: string | undefined;
+  for (const section of sections) {
+    const showGroupHeader = Boolean(
+      section.group && section.group !== currentGroup,
+    );
+    if (showGroupHeader) {
+      currentGroup = section.group;
+    }
+    groupHeaderFlags.push(showGroupHeader);
+  }
 
   return (
     <>
       {sections.map((section, index) => {
-        const showGroupHeader =
-          section.group && section.group !== currentGroup;
-        if (showGroupHeader) {
-          currentGroup = section.group;
-        }
-
+        const showGroupHeader = groupHeaderFlags[index];
         const bgClass = index % 2 === 0 ? "bg-muted" : "bg-background";
 
         return (
