@@ -1,15 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { containerClass, sectionClass, serviceArea, serviceCities } from "@/lib/site";
 import { Button } from "@/components/ui/button";
-
-const mapPins = [
-  { label: "Rockville HQ", top: "42%", left: "48%" },
-  { label: "Bethesda", top: "38%", left: "52%" },
-  { label: "Arlington", top: "55%", left: "58%" },
-  { label: "Alexandria", top: "62%", left: "56%" },
-  { label: "Fairfax", top: "58%", left: "52%" },
-];
 
 export default function ServiceAreasSection() {
   return (
@@ -24,30 +15,14 @@ export default function ServiceAreasSection() {
             {serviceArea.description} Contact us to confirm availability in your
             area.
           </p>
-          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#dce4f0] sm:aspect-[5/4]">
-            <Image
-              src={serviceArea.mapImage}
-              alt="Map of Maven service areas across Maryland and Northern Virginia"
-              fill
-              sizes="(max-width: 1024px) 100vw, 800px"
-              className="object-cover"
+          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border bg-[#dce4f0] sm:aspect-[5/4]">
+            <iframe
+              title="Map of Maven service areas across Maryland and Northern Virginia"
+              src={serviceArea.mapEmbedUrl}
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
-            {mapPins.map((pin) => (
-              <span
-                key={pin.label}
-                className="material-icons-round absolute text-primary drop-shadow-md"
-                style={{
-                  top: pin.top,
-                  left: pin.left,
-                  fontSize: 28,
-                  transform: "translate(-50%, -100%)",
-                }}
-                title={pin.label}
-                aria-hidden
-              >
-                location_on
-              </span>
-            ))}
           </div>
         </div>
 

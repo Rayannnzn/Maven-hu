@@ -35,6 +35,9 @@ export const serviceArea = {
   description:
     "Based in Rockville, Maryland — serving homeowners and businesses within a 30-mile radius across Maryland and Northern Virginia.",
   mapImage: "/images/md-va-service-map.png",
+  // Google Maps embed centred on Maryland — Google draws the state boundary
+  // highlight for a state-name query, which is the region we want to show.
+  mapEmbedUrl: "https://maps.google.com/maps?q=Maryland,+USA&z=7&output=embed",
 };
 
 export const serviceCities = [
