@@ -73,7 +73,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md lg:max-w-none">
+        <div className="mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/3.5] overflow-hidden rounded-2xl bg-maven-deep sm:aspect-[460/420]">
             <Image
               src="/images/home/hero.png"
@@ -85,32 +85,28 @@ export default function HeroSection() {
             />
           </div>
 
-          <div className="mt-4 flex flex-col gap-3 sm:absolute sm:mt-0 sm:flex-row sm:gap-0">
-            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:top-4 sm:mt-0 sm:max-w-52">
-              <div className="flex items-center gap-2">
-                <span className="material-icons-round text-lg text-maven-gold">
-                  home
-                </span>
-                <div className="text-sm font-bold leading-tight text-primary">
-                  Trusted by homeowners throughout Maryland.
-                </div>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="flex items-center gap-2 rounded-xl bg-white p-4 shadow-lg">
+              <span className="material-icons-round shrink-0 text-lg text-maven-gold">
+                home
+              </span>
+              <div className="text-sm font-bold leading-tight text-primary">
+                Trusted by homeowners throughout Maryland.
               </div>
             </div>
 
-            <div className="rounded-xl bg-white p-4 shadow-lg sm:absolute sm:-right-4 sm:bottom-12 sm:min-w-52 sm:max-w-56">
-              <div className="flex items-center gap-3">
-                <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary sm:size-10">
-                  <span className="material-icons-round text-lg text-maven-gold sm:text-xl">
-                    schedule
-                  </span>
+            <div className="flex items-center gap-3 rounded-xl bg-white p-4 shadow-lg">
+              <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-primary sm:size-10">
+                <span className="material-icons-round text-lg text-maven-gold sm:text-xl">
+                  schedule
+                </span>
+              </div>
+              <div>
+                <div className="text-xs font-bold leading-tight text-primary sm:text-sm">
+                  Estimated Arrival
                 </div>
-                <div>
-                  <div className="text-xs font-bold leading-tight text-primary sm:text-sm">
-                    Estimated Arrival
-                  </div>
-                  <div className="mt-0.5 text-[11px] text-muted-foreground">
-                    Times vary by location and technician availability.
-                  </div>
+                <div className="mt-0.5 text-[11px] text-muted-foreground">
+                  Times vary by location and technician availability.
                 </div>
               </div>
             </div>
