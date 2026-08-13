@@ -5,7 +5,7 @@ export const electricalDetailSections: ServiceDetailSection[] = [
     id: "electrical-installation",
     heading: "Electrical Installation",
     description:
-      "New circuits, dedicated lines, and electrical system expansions require precise planning and code-compliant execution. Maven's electricians install new wiring for kitchen remodels, home additions, appliance upgrades, and smart home integrations — pulling permits, coordinating inspections, and ensuring every connection meets National Electrical Code standards and local Maryland and Virginia amendments.",
+      "New circuits, dedicated lines, and electrical system expansions require precise planning and code-compliant execution. Maven's electricians install new wiring for kitchen remodels, home additions, appliance upgrades, and smart home integrations — pulling permits, coordinating inspections, and ensuring every connection meets National Electrical Code standards and local Maryland amendments.",
     benefits: [
       "Permits pulled and inspections scheduled when required",
       "Proper circuit sizing prevents overloads and breaker trips",
@@ -29,9 +29,9 @@ export const electricalDetailSections: ServiceDetailSection[] = [
   },
   {
     id: "ev-charger-installation",
-    heading: "EV Charger Installation",
+    heading: "EV Charger Installation in Maryland",
     description:
-      "Home EV charging requires a dedicated 240-volt circuit, proper wire gauge, and often a panel upgrade to handle the additional load. Maven installs Level 2 EV chargers for all major vehicle brands — handling load calculations, circuit installation, charger mounting, permit coordination, and utility notification. We ensure your charging setup is safe, efficient, and ready for faster charging at home.",
+      "Home EV charging requires a dedicated 240-volt circuit, proper wire gauge, and often a panel upgrade to handle the additional load. Maven installs Level 2 EV chargers for homeowners throughout Maryland — including Marriottsville and surrounding communities — for all major vehicle brands, handling load calculations, circuit installation, charger mounting, permit coordination, and utility notification. We ensure your EV charger installation is safe, efficient, and ready for faster charging at home.",
     benefits: [
       "Dedicated circuits sized for your charger and vehicle",
       "Hardwired or NEMA 14-50 outlet configurations",

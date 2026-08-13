@@ -1,3 +1,11 @@
+/**
+ * Production origin. Used as Next's `metadataBase` so relative Open Graph and
+ * Twitter image paths resolve to absolute URLs — without it, Next falls back to
+ * http://localhost:3000 and social previews break. Also the base for any future
+ * sitemap.ts / robots.ts.
+ */
+export const siteUrl = "https://mavendmv.com";
+
 export const company = {
   name: "Maven Home Services",
   shortName: "Maven",

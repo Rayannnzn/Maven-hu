@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import UtilityBar from "@/components/layout/UtilityBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
-import { company } from "@/lib/site";
+import { company, siteUrl } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Maven Home Services | HVAC, Plumbing & Electrical in Maryland & Virginia",
     template: "%s | Maven Home Services",

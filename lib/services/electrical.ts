@@ -1,20 +1,25 @@
 import type { ServicePageData } from "./types";
 import { electricalDetailSections } from "./electrical-sections";
+import { company } from "@/lib/site";
 
 export const electricalData: ServicePageData = {
   slug: "electrical",
   title: "Electrical Services",
-  metaDescription:
-    "Experienced electricians in Maryland and Virginia for panel upgrades, wiring, outlets, and safety inspections. Code-compliant electrical work with upfront estimates.",
+  seoTitle:
+    "Electrical Services in Maryland | Panel Upgrades, EV Chargers | Maven",
+  metaDescription: `Licensed Maryland electricians — panel upgrades, wiring, outlet installation & Level 2 EV charger installation. Code-compliant, same-day service. Call ${company.phone}.`,
   heroImage: "/images/electrical/electrical-hero.png",
-  heroTitle: "Professional Electrical Services for Maryland & Virginia Homes",
+  heroTitle: "Professional Electrical Services for Maryland Homes",
   heroDescription:
     "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",
+  overviewTitle: "About Our Electrical Services in Maryland",
   overview: [
     "Faulty wiring isn't just inconvenient — it's a serious safety hazard. Flickering lights, warm outlets, and tripping breakers are warning signs that deserve immediate professional attention.",
-    "Maven Home Services provides full-service residential electrical work across Maryland and Northern Virginia. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland and Virginia amendments.",
+    "Maven Home Services provides full-service residential electrical work across Maryland. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland amendments.",
     "Whether you're renovating, adding circuits for new appliances, or upgrading an outdated electrical panel, we deliver work that passes inspection and protects your family for years to come.",
   ],
+  offeredServicesSubtitle:
+    "Comprehensive electrical solutions from experienced Maryland professionals.",
   offeredServices: [
     {
       icon: "electrical_services",
@@ -39,7 +44,7 @@ export const electricalData: ServicePageData = {
     {
       icon: "ev_station",
       name: "EV Charger Installation",
-      desc: "Level 2 home EV charger installation with dedicated circuits, permit handling, and utility coordination.",
+      desc: "Level 2 home EV charger installation across Maryland with dedicated circuits, permit handling, and utility coordination.",
     },
     {
       icon: "bolt",
@@ -57,10 +62,11 @@ export const electricalData: ServicePageData = {
       desc: "Emergency response for power outages, sparking outlets, burning smells, and other urgent electrical hazards. Response times depend on technician availability and your location.",
     },
   ],
+  benefitsTitle: "Why Maryland Homeowners Choose Maven",
   benefits: [
     {
       title: "Code-Compliant Work",
-      desc: "All work meets National Electrical Code standards and local Maryland and Virginia amendments. Permits pulled and inspections scheduled when required.",
+      desc: "All work meets National Electrical Code standards and local Maryland amendments. Permits pulled and inspections scheduled when required.",
     },
     {
       title: "Safety-First Approach",
@@ -118,29 +124,31 @@ export const electricalData: ServicePageData = {
   faqs: [
     {
       q: "How do I know if my electrical panel needs upgrading?",
-      a: "Signs include frequent breaker trips, flickering lights when appliances run, a panel that's warm to the touch, rust or corrosion, or a fuse box instead of breakers. Homes built before 1990 with 100-amp service often need upgrades for modern loads.",
+      a: "Signs your panel needs upgrading include frequent breaker trips, a fuse box instead of breakers, flickering lights when appliances turn on, or a panel rated below 100 amps. Maven can assess your panel's condition and actual load needs during a free estimate.",
     },
     {
       q: "What is GFCI protection and do I need it?",
-      a: "GFCI (Ground Fault Circuit Interrupter) outlets prevent shock in wet areas like kitchens, bathrooms, garages, and outdoors. Maryland and Virginia code requires GFCI protection in these locations. We install and test GFCI outlets and breakers to keep your home compliant and safe.",
+      a: "GFCI (Ground Fault Circuit Interrupter) outlets shut off power instantly if they detect a current leak, preventing shock. Current code requires them in kitchens, bathrooms, garages, and outdoor areas — most Maryland homes built before the 2000s need them added.",
     },
     {
       q: "Can I install an EV charger with my current electrical panel?",
-      a: "It depends on your panel capacity and existing load. A Level 2 charger typically needs a dedicated 40–50 amp circuit. We perform a load calculation to determine if your panel can support it or if an upgrade is recommended.",
+      a: "It depends on your panel's available capacity. Many homes need a panel upgrade to safely support a Level 2 EV charger's 240-volt circuit — Maven performs a load calculation during your estimate to confirm what your panel can handle.",
     },
     {
       q: "Why does my circuit breaker keep tripping?",
-      a: "Common causes include overloaded circuits, short circuits, ground faults, or a failing breaker. If a breaker trips repeatedly, don't keep resetting it — call a licensed electrician to diagnose the underlying issue safely.",
+      a: "A breaker that trips repeatedly usually signals an overloaded circuit, a short circuit, or a ground fault. Continuing to reset it without diagnosis can be a fire risk, so it's best to have an electrician identify the root cause.",
     },
     {
       q: "Do you handle permits and inspections?",
-      a: "Yes. For work requiring permits under local code — panel upgrades, new circuits, service changes — we handle permit applications and coordinate inspections. Permit fees are included in your estimate.",
+      a: "Yes, Maven pulls permits and coordinates inspections for panel upgrades, rewiring, and other work that requires it under Maryland electrical code.",
     },
     {
       q: "Is aluminum wiring in my home dangerous?",
-      a: "Aluminum wiring installed in the 1960s–70s can pose fire risks at connections. COPALUM crimp connections or complete rewiring are proven remediation methods. We inspect aluminum wiring systems and recommend the safest, most cost-effective solution.",
+      a: "Aluminum wiring installed in the 1960s and 70s can be a fire hazard if connections loosen over time. Maven remediates aluminum wiring with COPALUM connectors or targeted rewiring to bring it up to a safe, modern standard.",
     },
   ],
   ctaTitle: "Power Your Home Safely & Reliably",
+  ctaDescription:
+    "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland, subject to technician availability.",
   detailSections: electricalDetailSections,
 };
