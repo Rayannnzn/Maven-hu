@@ -22,7 +22,7 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem]">
-            Trusted HVAC, Plumbing{" "}
+            Trusted HVACccccc, Plumbing{" "}
             <span className="text-maven-gold">&amp; Electrical Services</span>
             <br />
             in Maryland &amp; Northern Virginia
