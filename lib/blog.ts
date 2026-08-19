@@ -1,23 +1,306 @@
+export type BlogTocItem = { label: string; href: string };
+export type BlogFaqItem = { question: string; answer: string };
+
 export type BlogBodyBlock =
   | { type: "p"; content: string }
-  | { type: "h2"; content: string }
-  | { type: "h3"; content: string }
+  | { type: "h2"; content: string; id?: string }
+  | { type: "h3"; content: string; id?: string }
   | { type: "ul"; content: string[] }
+  | { type: "lines"; content: string[] }
+  | { type: "toc"; title: string; items: BlogTocItem[] }
+  | { type: "faq"; items: BlogFaqItem[] }
   | { type: "cta"; text: string; href: string };
 
 export type BlogPost = {
   slug: string;
   title: string;
+  /**
+   * Meta <title> when it should differ from the on-page H1. It runs through the
+   * root layout's "%s | Maven Home Services" template unless it already carries
+   * the brand, in which case it is emitted verbatim.
+   */
+  seoTitle?: string;
+  keywords?: string[];
   excerpt: string;
   category: "HVAC" | "Plumbing" | "Electrical" | "Seasonal" | "Energy";
   date: string;
-  author: { name: string; role: string };
+  author: { name: string; role?: string };
   featuredImage: string;
   readTime: number;
   body: BlogBodyBlock[];
 };
 
 const posts: BlogPost[] = [
+  {
+    slug: "hvac-services-in-maryland",
+    title:
+      "HVAC Services in Maryland: What's Actually Involved, From Repair to Replacement",
+    seoTitle:
+      "HVAC Services in Maryland: A Real Guide to Repairs, Installs & Maintenance",
+    excerpt:
+      "Licensed HVAC services in Maryland from a Rockville-based team — AC repair, heat pump installs, indoor air quality, and what to expect from permits to pricing across Montgomery County.",
+    keywords: [
+      "hvac services in maryland",
+      "hvac companies in maryland",
+      "hvac contractors in maryland",
+      "hvac maryland",
+      "heat pump installation maryland",
+      "duct cleaning maryland",
+      "ac repair maryland",
+      "hvac in maryland",
+    ],
+    category: "HVAC",
+    date: "2026-08-19T14:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/hvac-residential-commercial.jpg",
+    readTime: 8,
+    body: [
+      { type: "p", content: "Search \"HVAC services in Maryland\" and you'll get a wall of companies all saying pretty much the same thing — licensed, insured, 24/7. What most of those pages don't tell you is what actually happens once a technician is in your house: how repairs are diagnosed, why permits take as long as they do, or why the same AC unit performs differently in a Rockville rowhouse versus a Damascus farmhouse. That's what this guide covers." },
+      { type: "p", content: "We're Maven Home Services, based in Rockville, and we work on HVAC systems across Montgomery County and Frederick County every week. This is written from that experience, not from a template." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "What \"HVAC Services\" Actually Covers", href: "#what-it-covers" },
+          { label: "Repair vs. Replacement: How That Decision Gets Made", href: "#repair-vs-replacement" },
+          { label: "Why Maryland Homes Have Specific HVAC Problems", href: "#maryland-specific-problems" },
+          { label: "Indoor Air Quality: The Service Most People Skip", href: "#indoor-air-quality" },
+          { label: "Heat Pumps in Maryland: Repair, Install & What to Expect", href: "#heat-pumps" },
+          { label: "Permits, Timelines & What Slows a Job Down", href: "#permits-timelines" },
+          { label: "What to Ask Before Hiring an HVAC Company in Maryland", href: "#what-to-ask" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "what-it-covers", content: "What \"HVAC Services\" Actually Covers" },
+      { type: "p", content: "\"HVAC services\" is a broad phrase, and companies use it loosely, so here's what it typically breaks down into for a Maryland home:" },
+      {
+        type: "ul",
+        content: [
+          "**Repair** — diagnosing and fixing an existing AC, furnace, or heat pump: refrigerant leaks, failed capacitors, blower motor issues, thermostat problems.",
+          "**Installation** — replacing an old system or installing new equipment, including heat pumps and central air.",
+          "**Maintenance** — seasonal tune-ups that catch small problems before they become breakdowns.",
+          "**Indoor air quality** — humidity control, filtration, and duct sealing, which matters more in Maryland than in drier climates.",
+          "**Duct work** — cleaning, sealing, or redesigning ductwork, especially in homes built before the 1990s.",
+        ],
+      },
+      { type: "p", content: "A company that only pushes replacements, or only ever recommends the most expensive option, isn't giving you real HVAC service — they're upselling. A legitimate technician should be able to explain why a repair makes sense in one case and replacement in another." },
+      { type: "h2", id: "repair-vs-replacement", content: "Repair vs. Replacement: How That Decision Gets Made" },
+      { type: "p", content: "There's a rough industry guideline — if the repair cost is more than 50% of a new system's cost, or the unit is past 12-15 years old, replacement usually makes more financial sense. But that's a starting point, not a rule. A 9-year-old system with a failed compressor can cost nearly as much to repair as a new unit would, while a 14-year-old system with a simple capacitor issue might have a few good years left in it." },
+      { type: "p", content: "What actually matters is the specific failure, the system's repair history, and how much you're already paying in energy costs from an inefficient unit. A technician who gives you real numbers for both options — repair cost versus new install cost versus expected energy savings — is doing their job properly. One who just says \"it's old, replace it\" isn't." },
+      { type: "h2", id: "maryland-specific-problems", content: "Why Maryland Homes Have Specific HVAC Problems" },
+      { type: "p", content: "Two things make Maryland HVAC different from a lot of the country:" },
+      { type: "p", content: "**The humidity.** Summers here are muggy enough that a system can hit the thermostat's target temperature and still leave the house feeling damp. That's usually a sign the system isn't running long enough to pull moisture out of the air — often because it's oversized for the space, which sounds counterintuitive but is a common mistake in older installs." },
+      { type: "p", content: "**The building stock.** A lot of homes across Montgomery County — especially the suburban boom areas built through the 1970s and 80s in Gaithersburg, Germantown, and Montgomery Village — have original attic ductwork. Decades of attic heat dry out the seals and tape on that ductwork, and it starts leaking conditioned air into the attic instead of the house. That single issue is behind a huge share of the \"my AC runs constantly but the house never gets cool\" calls we get." },
+      { type: "p", content: "If a technician diagnoses your system without ever mentioning duct condition, ask about it directly — it's often the actual problem, not the equipment." },
+      { type: "h2", id: "indoor-air-quality", content: "Indoor Air Quality: The Service Most People Skip" },
+      { type: "p", content: "Whole-home dehumidifiers, filtration upgrades, and duct sealing don't get requested nearly as often as repairs or replacements, but for a lot of Maryland homes they solve the actual complaint — a house that feels stuffy, musty, or \"never quite comfortable\" even when the AC is running fine mechanically." },
+      { type: "p", content: "This is worth raising with your technician directly, because it's rarely offered upfront. If your house has recurring musty smells, visible condensation on ducts or windows in summer, or family members with allergy symptoms that seem to correlate with being home, it's worth a conversation before you assume the HVAC unit itself needs replacing." },
+      { type: "h2", id: "heat-pumps", content: "Heat Pumps in Maryland: Repair, Install & What to Expect" },
+      { type: "p", content: "Heat pump service has become one of the most requested HVAC services in Maryland over the past couple of years, partly due to utility rebate programs and partly because newer heat pumps genuinely handle Mid-Atlantic winters better than older models did. For homes without existing gas lines — more common toward the outer edges of the county and into Frederick — a heat pump is often the more practical option than adding gas infrastructure from scratch." },
+      { type: "p", content: "If you already have one and it's underperforming in winter, that's very often a sizing or setup issue rather than a fundamental flaw in heat pump technology — worth a second opinion before assuming you need to switch back to a furnace." },
+      { type: "h2", id: "permits-timelines", content: "Permits, Timelines & What Slows a Job Down" },
+      { type: "p", content: "This is the part almost nobody explains upfront. Standard residential HVAC permits in Maryland typically take a few weeks to process, though some jurisdictions offer faster expedited tracks for straightforward replacements. A simple repair — thermostat, capacitor, filter, minor refrigerant work — is usually same-day. A full system replacement is typically a one-to-two-day job on-site, longer if ductwork modifications are involved." },
+      { type: "p", content: "If a contractor quotes same-day installation for a full system replacement with no mention of permitting, ask directly how they're handling it. Skipping permits is a real problem down the line if you ever sell the home." },
+      { type: "h2", id: "what-to-ask", content: "What to Ask Before Hiring an HVAC Company in Maryland" },
+      {
+        type: "ul",
+        content: [
+          "Are you MHIC licensed, and can I see the license number?",
+          "Is the technician doing the diagnosis the same one doing the repair, or is it a dispatch model?",
+          "Will I get a written estimate before work starts, not just a verbal number?",
+          "Do you carry EPA Section 608 certification for refrigerant handling?",
+          "What's your actual response time for emergency service in my area — not the general marketing claim?",
+        ],
+      },
+      { type: "p", content: "At Maven Home Services, our technicians carry MHIC licensing, EPA 608 refrigerant certification, and OSHA safety training, and every estimate is written and provided before any work begins. We're based in Rockville and serve homeowners and businesses across Olney, Potomac, Bethesda, Damascus, Frederick, Rockville, Germantown, Gaithersburg, and Montgomery Village." },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "What HVAC services are most commonly needed in Maryland?",
+            answer: "AC repair and seasonal tune-ups are the most requested services, followed by heat pump installation and duct sealing — especially in homes built before the 1990s where original ductwork has degraded.",
+          },
+          {
+            question: "How long does an HVAC repair typically take?",
+            answer: "Simple repairs like a thermostat swap, filter change, or minor refrigerant top-off are usually same-day. Larger issues involving a compressor or full system replacement can take one to two days, longer if ductwork needs work.",
+          },
+          {
+            question: "Is it normal for a Maryland home to need duct sealing?",
+            answer: "Yes, particularly for homes built in the 1970s through 90s with original attic ductwork. Decades of attic heat dry out seals and tape, causing air loss that makes the system work harder without actually cooling the house better.",
+          },
+          {
+            question: "Do I need a permit for HVAC replacement in Maryland?",
+            answer: "Most full system replacements require a permit, and standard processing takes a few weeks, though some jurisdictions offer expedited options for straightforward jobs. A licensed contractor should handle this as part of the installation, not leave it for you to sort out.",
+          },
+          {
+            question: "How do I know if I need a repair or a full replacement?",
+            answer: "It depends on the system's age, the cost of the specific repair, and its repair history — not just how old the unit is. A technician should walk you through real numbers for both options rather than pushing one answer by default.",
+          },
+          {
+            question: "Does Maven Home Services offer emergency HVAC service in Montgomery County?",
+            answer: "Yes, emergency service is available for urgent heating and cooling issues. Response times depend on technician availability and your specific location — call 240-604-1370 to check current availability.",
+          },
+        ],
+      },
+      { type: "h2", content: "Looking for Reliable HVAC Services in Maryland?" },
+      { type: "p", content: "Maven Home Services is a licensed, MHIC-certified team based in Rockville, serving Olney, Potomac, Bethesda, Damascus, Frederick, Rockville, Germantown, Gaithersburg, and Montgomery Village. Every job includes a written estimate before work begins." },
+      {
+        type: "lines",
+        content: [
+          "📍 [9200 Corporate Blvd #470, Rockville, MD 20850](https://www.google.com/search?q=mavendmv+rockville+address)",
+          "📞 [+1 240-604-1370](tel:+12406041370)",
+          "🌐 [Get Directions](https://share.google/Tg9RmUimJqWIt1iEf)",
+        ],
+      },
+      {
+        type: "lines",
+        content: [
+          "**Related services:**",
+          "[HVAC Services](/hvac) · [Plumbing Services](/plumbing) · [Electrical Services](/electrical) · [Commercial Services](/commercial) · [Contact Us](/contact)",
+        ],
+      },
+      {
+        type: "lines",
+        content: [
+          "**Outside resources for reference:**",
+          "[ENERGY STAR — HVAC Efficiency Guidelines](https://www.energystar.gov/products/heating_cooling)",
+          "[Maryland Home Improvement Commission — License Lookup](https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_Search/OP_search.cgi?calling_app=HIC::HIC_qselect)",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "maryland-hvac-guide-homeowners",
+    title:
+      "The Honest Maryland HVAC Guide: What Rockville, Bethesda & Frederick County Homeowners Actually Need to Know",
+    seoTitle:
+      "Maryland HVAC Guide: What Rockville, Bethesda & Frederick Homeowners Need to Know | Maven",
+    excerpt:
+      "A real-world Maryland HVAC guide from a Rockville-based, MHIC-licensed contractor — AC repair signs, heat pump costs, duct cleaning, and how to pick a trustworthy HVAC company in Montgomery County.",
+    category: "HVAC",
+    date: "2026-08-19T10:00:00.000Z",
+    author: { name: "David Chen", role: "HVAC Service Manager" },
+    featuredImage: "/images/hvac/hvac-hero.png",
+    readTime: 9,
+    body: [
+      { type: "p", content: "If you've owned a home in Maryland for more than one summer, you already know the drill. July hits, the humidity turns your living room into a greenhouse, and somewhere around 3 p.m. your air conditioner starts making a noise it definitely wasn't making last week. Then January rolls around and the same system that couldn't keep up in August suddenly can't keep the house above 65 degrees." },
+      { type: "p", content: "Maryland HVAC isn't like HVAC anywhere else. Between the Chesapeake humidity, the swing from 95-degree summers to teens in winter, and the mix of older homes in places like Bethesda and Potomac alongside newer builds in Germantown and Montgomery Village, your system gets worked harder here than in most of the country. This guide walks through what actually matters — no filler, no scare tactics — for homeowners across Rockville, Olney, Damascus, Frederick, Gaithersburg, and the rest of Montgomery County." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "Why Maryland Weather Is Rough on HVAC Systems", href: "#why-maryland-weather" },
+          { label: "Signs Your AC or Heating System Needs Attention", href: "#warning-signs" },
+          { label: "Heat Pumps and Geothermal: What's Actually Worth It in Maryland", href: "#heat-pumps-geothermal" },
+          { label: "Duct Cleaning: When It Helps and When It's a Waste of Money", href: "#duct-cleaning" },
+          { label: "It's Not Just HVAC — Plumbing and Electrical Tie Together", href: "#plumbing-electrical" },
+          { label: "What Homeowners in Olney, Potomac, Bethesda & Frederick Should Know", href: "#local-notes" },
+          { label: "How to Actually Vet an HVAC Contractor in Maryland", href: "#vetting-a-contractor" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "why-maryland-weather", content: "Why Maryland Weather Is Rough on HVAC Systems" },
+      { type: "p", content: "Most HVAC systems in the U.S. are designed around one dominant season — heavy cooling in the South, heavy heating in the North. Maryland asks a system to do both, hard, every single year. That back-and-forth is why a unit that's perfectly sized on paper can still feel like it's struggling in a Rockville rowhouse or a Damascus farmhouse." },
+      { type: "p", content: "Humidity is the other piece people underestimate. A system can technically hit the thermostat setting and still leave a house feeling clammy because it's not pulling enough moisture out of the air. That's a sizing and airflow issue more than a temperature issue, and it's one of the most common calls we get from homes in Bethesda and Potomac with older ductwork." },
+      { type: "h2", id: "warning-signs", content: "Signs Your AC or Heating System Needs Attention" },
+      { type: "p", content: "You don't need to wait for a full breakdown to know something's off. A few things worth paying attention to:" },
+      {
+        type: "ul",
+        content: [
+          "**Uneven temperatures room to room.** Upstairs bedrooms in Germantown and Gaithersburg colonials are notorious for this — it usually points to duct or airflow problems, not just an aging unit.",
+          "**Rising energy bills with no change in habits.** If your July bill jumped and you didn't change the thermostat, the system is likely working harder than it should.",
+          "**Short cycling.** The unit turns on, runs for a few minutes, shuts off, and repeats. This wears out components fast and is often fixable before it becomes expensive.",
+          "**Weird smells on startup.** A musty smell usually points to moisture in the ductwork or a dirty coil; a burning smell means stop using it and call someone.",
+          "**The system is 12–15+ years old.** Most AC and furnace units in this region start losing efficiency noticeably around this age, especially if maintenance has been inconsistent.",
+        ],
+      },
+      { type: "p", content: "None of these automatically mean \"replace everything.\" A lot of the time it's a repair, a cleaning, or a duct adjustment. But ignoring them for a full season usually turns a $300 fix into a $3,000 one." },
+      { type: "h2", id: "heat-pumps-geothermal", content: "Heat Pumps and Geothermal: What's Actually Worth It in Maryland" },
+      { type: "p", content: "Heat pump installation has picked up a lot in Maryland over the last few years, partly because of utility rebates and partly because modern heat pumps handle our winters better than the older models people remember. For most homes in Montgomery County, a heat pump is a legitimate option even for winter heating, not just summer cooling — you just want a contractor who sizes it for our climate zone instead of copying a spec sheet from a warmer state." },
+      { type: "p", content: "Geothermal is the bigger commitment. It costs more upfront because of the ground loop installation, but it's remarkably efficient long-term and a lot of Maryland homeowners with larger lots — Damascus and outer Frederick County properties especially — are good candidates simply because they have the yard space for it. It's not the right call for every home, and any contractor who tells you it is without looking at your property first isn't being straight with you." },
+      { type: "h2", id: "duct-cleaning", content: "Duct Cleaning: When It Helps and When It's a Waste of Money" },
+      { type: "p", content: "Duct cleaning gets marketed hard, and honestly, it's oversold half the time. It genuinely helps if you've had recent renovation dust, pets, a musty smell, or visible buildup at your vents. It does very little if your real issue is an aging system or leaky ductwork — cleaning dirty ducts doesn't fix a duct that's dumping conditioned air into your attic." },
+      { type: "p", content: "If a company shows up and pushes duct cleaning without first inspecting your actual airflow and equipment, that's worth a second opinion." },
+      { type: "h2", id: "plumbing-electrical", content: "It's Not Just HVAC — Plumbing and Electrical Tie Together" },
+      { type: "p", content: "Homeowners tend to think of HVAC, plumbing, and electrical as separate problems, but in practice they overlap constantly. A water heater nearing the end of its life often shares attic or basement space with your furnace, and both tend to fail around the same age. Panel upgrades come up more often than people expect too, especially in older Bethesda and Potomac homes where the electrical panel wasn't built for central AC, an EV charger, and modern appliances all running at once." },
+      { type: "p", content: "If you're already having HVAC work done, it's worth asking your technician to take a quick look at your water heater and panel while they're there. It's a lot easier to plan for a replacement than to get surprised by one." },
+      { type: "h2", id: "local-notes", content: "What Homeowners in Olney, Potomac, Bethesda & Frederick Should Know" },
+      { type: "p", content: "A few things worth knowing depending on where you are in the region:" },
+      {
+        type: "ul",
+        content: [
+          "**Olney and Damascus** — more standalone homes with larger yards, which makes both duct sealing and geothermal more relevant here than in denser areas.",
+          "**Potomac and Bethesda** — older housing stock means original ductwork and panels that often weren't designed for today's electrical or cooling loads.",
+          "**Rockville and Gaithersburg** — a mix of older and newer construction, so it really comes down to the specific home's age and system history.",
+          "**Germantown and Montgomery Village** — a lot of homes built in the same era with similar HVAC layouts, so if a neighbor just had a system replaced, it's not a bad idea to ask what they learned.",
+          "**Frederick** — colder overnight temps than closer-in suburbs, which matters when sizing a heat pump for winter performance.",
+        ],
+      },
+      { type: "p", content: "None of this replaces an actual in-home evaluation, but it's useful context before a technician shows up." },
+      { type: "h2", id: "vetting-a-contractor", content: "How to Actually Vet an HVAC Contractor in Maryland" },
+      { type: "p", content: "This is the part most guides skip, and it matters more than any specific repair tip." },
+      { type: "p", content: "Maryland requires home improvement contractors to hold an **MHIC license** (Maryland Home Improvement Commission), and anyone doing refrigerant work should carry **EPA Section 608 certification**. Ask for both before anyone touches your system. A legitimate contractor won't hesitate to share license numbers — you can look them up yourself through the state's licensing search." },
+      { type: "p", content: "A few other things worth checking:" },
+      {
+        type: "ul",
+        content: [
+          "Do they give you a written estimate before starting work, or just a verbal number?",
+          "Are technicians background-checked and insured, not just subcontracted out to whoever's available?",
+          "Do they explain what's wrong in plain language, or just tell you it needs replacing?",
+          "Are they actually local to the DMV, with real reviews from your area — not a call center dispatching whoever's closest?",
+        ],
+      },
+      { type: "p", content: "At Maven Home Services, every technician carries MHIC licensing, EPA 608 certification, and OSHA safety training, and every job gets a written estimate before work starts — no surprises on the invoice. We're based right in Rockville and serve Olney, Potomac, Bethesda, Damascus, Frederick, Germantown, Gaithersburg, Montgomery Village, and the surrounding communities within about a 30-mile radius." },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "How often should I have my HVAC system serviced in Maryland?",
+            answer: "Twice a year is the general rule — once before summer for the AC, once before winter for the heating side. Maryland's swing between hot, humid summers and cold winters is hard on equipment, so catching small issues each season prevents most emergency breakdowns.",
+          },
+          {
+            question: "Is it worth repairing an old AC unit or should I just replace it?",
+            answer: "If the unit is under 10 years old and the repair is under a few hundred dollars, repair usually makes sense. Past 12–15 years, or if you're facing a major component failure like a compressor, replacement is often the better long-term value — a technician can walk you through the actual numbers for your system.",
+          },
+          {
+            question: "Do heat pumps really work well in Maryland winters?",
+            answer: "Yes, modern heat pumps are built to handle Mid-Atlantic winters effectively, including the occasional stretch of freezing temperatures. Proper sizing for your specific home and climate zone is what makes the difference, not the technology itself.",
+          },
+          {
+            question: "How much does duct cleaning cost, and is it necessary every year?",
+            answer: "It's not an annual necessity for most homes. It's worth doing after major renovations, if you notice dust buildup at vents, or roughly every 3–5 years as general maintenance — not on a fixed yearly schedule.",
+          },
+          {
+            question: "What's included in a written HVAC estimate?",
+            answer: "A proper estimate should list the diagnosis, the specific parts or equipment needed, labor cost, and the total before any work begins — with no vague \"we'll see once we're inside\" pricing.",
+          },
+          {
+            question: "Does Maven Home Services offer emergency HVAC repair in Rockville and Montgomery County?",
+            answer: "Yes. Emergency service is available for urgent heating and cooling issues, though response times depend on technician availability and your specific location. Call 240-604-1370 to check availability.",
+          },
+        ],
+      },
+      { type: "h2", content: "Need HVAC, Plumbing, or Electrical Work Done Right?" },
+      { type: "p", content: "Maven Home Services is a licensed, MHIC-certified team based in Rockville, serving homeowners across Olney, Potomac, Bethesda, Damascus, Frederick, Rockville, Germantown, Gaithersburg, and Montgomery Village. Every job comes with an upfront written estimate — no guessing, no pressure." },
+      {
+        type: "p",
+        content:
+          "📍 [9200 Corporate Blvd #470, Rockville, MD 20850](https://www.google.com/search?q=mavendmv+rockville+address) 📞 [+1 240-604-1370](tel:+12406041370) 🌐 [Get Directions](https://share.google/Tg9RmUimJqWIt1iEf)",
+      },
+      {
+        type: "p",
+        content:
+          "**Related services:** [HVAC Services](/hvac) | [Plumbing Services](/plumbing) | [Electrical Services](/electrical) | [Commercial Services](/commercial) | [Contact Us](/contact)",
+      },
+      {
+        type: "p",
+        content:
+          "**Helpful outside resources:** [ENERGY STAR — HVAC Efficiency Guidelines](https://www.energystar.gov/products/heating_cooling) | [Maryland Home Improvement Commission — License Lookup](https://www.dllr.state.md.us/cgi-bin/ElectronicLicensing/OP_Search/OP_search.cgi?calling_app=HIC::HIC_qselect)",
+      },
+    ],
+  },
   {
     slug: "spring-hvac-maintenance-checklist",
     title: "Spring HVAC Maintenance Checklist for Maryland & Virginia Homeowners",

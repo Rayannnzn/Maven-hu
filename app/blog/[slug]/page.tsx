@@ -5,14 +5,19 @@ import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import BlogPostBody from "@/components/blog/BlogPostBody";
 import RelatedPosts from "@/components/blog/RelatedPosts";
 import { Badge } from "@/components/ui/badge";
+import type { BlogPost } from "@/lib/blog";
 import {
   getAllPosts,
   getPostBySlug,
   getRelatedPosts,
 } from "@/lib/blog";
-import { containerClass, sectionClass } from "@/lib/site";
+import { company, containerClass, sectionClass, siteUrl } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
+
+// A seoTitle that already carries the brand must opt out of the root layout's
+// "%s | Maven Home Services" template; one that doesn't goes through it as usual.
+const BRANDED_TITLE = /\|\s*Maven/;
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
@@ -24,10 +29,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post Not Found" };
 
   return {
-    title: post.title,
+    title: post.seoTitle
+      ? BRANDED_TITLE.test(post.seoTitle)
+        ? { absolute: post.seoTitle }
+        : post.seoTitle
+      : post.title,
     description: post.excerpt,
+    keywords: post.keywords,
+    alternates: { canonical: `/blog/${post.slug}` },
     openGraph: {
-      title: post.title,
+      title: post.seoTitle ?? post.title,
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
@@ -35,6 +46,59 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [{ url: post.featuredImage, alt: post.title }],
     },
   };
+}
+
+/** Markdown-ish inline syntax has no place in structured data. */
+function plainText(text: string) {
+  return text.replace(/\*\*/g, "").replace(/\[([^\]]+)\]\([^)\s]+\)/g, "$1");
+}
+
+function structuredData(post: BlogPost) {
+  const url = `${siteUrl}/blog/${post.slug}`;
+
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.excerpt,
+    image: [`${siteUrl}${post.featuredImage}`],
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": post.author.name === company.name ? "Organization" : "Person",
+      name: post.author.name,
+      ...(post.author.role ? { jobTitle: post.author.role } : {}),
+    },
+    publisher: {
+      "@type": "Organization",
+      name: company.name,
+      logo: { "@type": "ImageObject", url: `${siteUrl}${company.logo}` },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+  };
+
+  const faqs = post.body.flatMap((block) =>
+    block.type === "faq" ? block.items : [],
+  );
+
+  const graph: Record<string, unknown>[] = [article];
+  if (faqs.length > 0) {
+    graph.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: plainText(item.question),
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: plainText(item.answer),
+        },
+      })),
+    });
+  }
+
+  // `<` is escaped so a stray "</script>" in copy can't break out of the tag.
+  return JSON.stringify(graph).replace(/</g, "\\u003c");
 }
 
 function formatDate(iso: string) {
@@ -54,6 +118,11 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: structuredData(post) }}
+      />
+
       <Breadcrumbs
         items={[
           { label: "Blog", href: "/blog" },
@@ -80,8 +149,14 @@ export default async function BlogPostPage({ params }: Props) {
               <span className="font-semibold text-primary">
                 {post.author.name}
               </span>
-              <span className="text-muted-foreground">·</span>
-              <span className="text-muted-foreground">{post.author.role}</span>
+              {post.author.role && (
+                <>
+                  <span className="text-muted-foreground">·</span>
+                  <span className="text-muted-foreground">
+                    {post.author.role}
+                  </span>
+                </>
+              )}
             </div>
           </div>
         </header>

@@ -25,7 +25,23 @@ There is no test suite, no test runner, and no CI config. `npm run build` is wha
 
 Marketing site for Maven Home Services (HVAC / plumbing / electrical contractor, Rockville MD). Next.js 16 App Router + React 19 + Tailwind v4 + shadcn/ui.
 
-There is **no database, no CMS, no API routes, and no server actions**. Every page is statically rendered from TypeScript data modules in `lib/`. Forms (`ScheduleForm`, `ContactSection`) are presentational — `onSubmit` calls `preventDefault()` and nothing is sent anywhere. Wiring up a real submission endpoint would be new infrastructure, not an edit.
+There is **no database, no CMS, and no server actions**, and exactly one API route. Every page is statically rendered from TypeScript data modules in `lib/`; the only dynamic (`ƒ`) entry in the build output is `/api/leads`.
+
+### Lead capture
+
+`ScheduleForm` (rendered on `/contact`, in `ContactSection`, and at the bottom of every service page) POSTs JSON to `app/api/leads/route.ts`, which emails the lead via [Resend](https://resend.com).
+
+| File | Role |
+|---|---|
+| `lib/leads.ts` | Shared contract — `serviceOptions`, `LeadInput`, `validateLead()`. Imported by **both** client and server, so it must never read `process.env` or import Node modules. |
+| `lib/email/leadEmails.ts` | Server-only HTML/text bodies for the two emails. Inline-styled tables with hardcoded brand hexes — email clients strip `<style>` and have no flex/grid, so Tailwind is unusable here. |
+| `app/api/leads/route.ts` | Revalidates, screens for bots, sends. `runtime = "nodejs"` + `dynamic = "force-dynamic"`. |
+
+Two emails go out per submission: the **notification** to `LEAD_TO_EMAIL` (with `replyTo` set to the customer, so replying reaches them directly) and an **auto-reply** to the customer. The notification is the lead — if it fails the request returns 502. The auto-reply is a courtesy: a failure there is logged but still reports success, because the lead was already captured.
+
+Spam screening is a hidden honeypot field plus a `MIN_FILL_MS` timing check. Both return `{ok: true}` without sending — a bot that learns which submissions were rejected can tune around the filter, so rejections are deliberately indistinguishable from successes.
+
+Env vars live in `.env.local` (gitignored); `.env.example` documents them and **is** committed via a `!.env.example` negation in `.gitignore`. Missing env vars fail at request time, not build time — the build succeeds without them, and the route returns a "please call us" message instead.
 
 ## Architecture: content lives in `lib/`, layout lives in `components/`
 
