@@ -20,7 +20,11 @@ type Props = { params: Promise<{ slug: string }> };
 const BRANDED_TITLE = /\|\s*Maven/;
 
 export function generateStaticParams() {
-  return getAllPosts().map((post) => ({ slug: post.slug }));
+  // Posts with their own route file under app/blog/<slug>/ are rendered there;
+  // generating them here too would collide with that static segment.
+  return getAllPosts()
+    .filter((post) => !post.customRoute)
+    .map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

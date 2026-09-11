@@ -28,9 +28,59 @@ export type BlogPost = {
   featuredImage: string;
   readTime: number;
   body: BlogBodyBlock[];
+  /**
+   * Set when the post ships its own route file at `app/blog/<slug>/page.tsx`
+   * instead of being rendered by `app/blog/[slug]`. These posts still show up
+   * in listings and related-post rails, but the dynamic route's
+   * `generateStaticParams` skips them so the two routes can't collide — and
+   * their `body` stays empty, because the route file holds the real copy.
+   */
+  customRoute?: true;
 };
 
 const posts: BlogPost[] = [
+  {
+    slug: "water-heater-maryland",
+    title:
+      "Water Heater Problems in Maryland: What Homeowners Need to Know Before Calling a Plumber",
+    seoTitle: "Water Heater Repair & Installation in Maryland | Maven",
+    excerpt:
+      "Need water heater repair, replacement, or installation in Maryland? Maven Home Services offers licensed, same-day water heater service across MD.",
+    keywords: [
+      "water heater maryland",
+      "water heater repair maryland",
+      "water heater installation maryland",
+      "water heater replacement maryland",
+      "tankless water heater maryland",
+    ],
+    category: "Plumbing",
+    date: "2026-09-11T10:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/plumbing-water-heaters.jpg",
+    readTime: 6,
+    body: [],
+    customRoute: true,
+  },
+  {
+    slug: "maryland-duct-cleaning",
+    title: "Air Duct Cleaning in Maryland: Do You Actually Need It?",
+    seoTitle: "Air Duct Cleaning in Maryland: Do You Need It? | Maven",
+    excerpt:
+      "Wondering if you need air duct cleaning in Maryland? Learn the real signs, EPA guidance, and what Maven's licensed HVAC team checks before recommending service.",
+    keywords: [
+      "maryland duct cleaning",
+      "air duct cleaning maryland",
+      "duct cleaning maryland",
+      "hvac duct cleaning maryland",
+    ],
+    category: "HVAC",
+    date: "2026-09-11T09:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/hvac/furnace.jpeg",
+    readTime: 5,
+    body: [],
+    customRoute: true,
+  },
   {
     slug: "hvac-services-in-maryland",
     title:
