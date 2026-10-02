@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SectionHeader } from "@/components/shared/PageHero";
+import { parseInline } from "@/components/shared/inlineText";
 import { Button } from "@/components/ui/button";
 import { company, containerClass, sectionClass } from "@/lib/site";
 import type { ServiceDetailSection } from "@/lib/services/types";
@@ -51,13 +52,13 @@ export default function ServiceDetailSections({
                   className="mb-6"
                 />
                 <p className="mb-8 text-base leading-relaxed text-muted-foreground">
-                  {section.description}
+                  {parseInline(section.description)}
                 </p>
 
                 {section.benefits && section.benefits.length > 0 && (
                   <div className="mb-8">
                     <h3 className="mb-4 text-lg font-bold text-primary">
-                      Benefits
+                      {section.benefitsHeading ?? "Benefits"}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {section.benefits.map((benefit) => (
@@ -68,7 +69,7 @@ export default function ServiceDetailSections({
                           <span className="material-icons-round mt-0.5 shrink-0 text-lg text-maven-gold">
                             check_circle
                           </span>
-                          {benefit}
+                          {parseInline(benefit)}
                         </li>
                       ))}
                     </ul>
@@ -78,7 +79,7 @@ export default function ServiceDetailSections({
                 {section.commonProblems && section.commonProblems.length > 0 && (
                   <div className="mb-8">
                     <h3 className="mb-4 text-lg font-bold text-primary">
-                      Common Problems We Solve
+                      {section.problemsHeading ?? "Common Problems We Solve"}
                     </h3>
                     <ul className="flex flex-col gap-3">
                       {section.commonProblems.map((problem) => (
@@ -89,7 +90,7 @@ export default function ServiceDetailSections({
                           <span className="material-icons-round mt-0.5 shrink-0 text-lg text-maven-red">
                             build
                           </span>
-                          {problem}
+                          {parseInline(problem)}
                         </li>
                       ))}
                     </ul>

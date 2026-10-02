@@ -5,6 +5,9 @@ import { getSubcategoryData, getSubcategorySlugs } from "@/lib/services/subcateg
 
 type Props = { params: Promise<{ subcategory: string }> };
 
+// Never add "central-air-conditioning-rockville-md" to subcategoryData — it has its
+// own static route at app/hvac/central-air-conditioning-rockville-md/, and returning
+// a path here that already exists as a static page aborts `next build`.
 export async function generateStaticParams() {
   return getSubcategorySlugs("hvac").map((subcategory) => ({ subcategory }));
 }

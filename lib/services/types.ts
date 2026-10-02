@@ -3,7 +3,12 @@ export type ServiceDetailSection = {
   heading: string;
   description: string;
   benefits?: string[];
+  /** Heading above `benefits`. Falls back to "Benefits" when omitted. Distinct from
+   *  `ServicePageData.benefitsTitle`, which labels the whole-page benefits section. */
+  benefitsHeading?: string;
   commonProblems?: string[];
+  /** Heading above `commonProblems`. Falls back to "Common Problems We Solve". */
+  problemsHeading?: string;
   group?: string;
   ctaText?: string;
 };
