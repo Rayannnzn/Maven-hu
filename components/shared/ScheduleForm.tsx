@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -312,7 +313,12 @@ export default function ScheduleForm({
           {submitting ? "Sending..." : "Request Service Appointment →"}
         </Button>
         <p className="text-center text-xs text-muted-foreground">
-          We will contact you promptly regarding your request.
+          We will contact you promptly regarding your request. By submitting,
+          you agree to our{" "}
+          <Link href="/privacy-policy" className="underline hover:text-primary">
+            Privacy Policy
+          </Link>
+          .
         </p>
       </form>
     </div>

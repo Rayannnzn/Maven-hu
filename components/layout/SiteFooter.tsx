@@ -7,6 +7,7 @@ import {
   containerClass,
   footerCompanyLinks,
   footerServiceLinks,
+  legalLinks,
   veteransDiscount,
 } from "@/lib/site";
 
@@ -122,9 +123,9 @@ export default function SiteFooter() {
       >
         <p>© 2026 {company.name}. All rights reserved.</p>
         <div className="flex gap-5">
-          {["Privacy Policy", "Terms of Service", "Sitemap"].map((item) => (
-            <Link key={item} href="#" className="hover:text-white/65">
-              {item}
+          {legalLinks.map((link) => (
+            <Link key={link.href} href={link.href} className="hover:text-white/65">
+              {link.label}
             </Link>
           ))}
         </div>

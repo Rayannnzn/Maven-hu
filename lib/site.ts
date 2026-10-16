@@ -1,8 +1,8 @@
 /**
  * Production origin. Used as Next's `metadataBase` so relative Open Graph and
  * Twitter image paths resolve to absolute URLs — without it, Next falls back to
- * http://localhost:3000 and social previews break. Also the base for any future
- * sitemap.ts / robots.ts.
+ * http://localhost:3000 and social previews break. Also the base for
+ * app/sitemap.ts and app/robots.ts.
  */
 export const siteUrl = "https://mavendmv.com";
 
@@ -276,7 +276,13 @@ export const footerCompanyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
-  { href: "#", label: "Privacy Policy" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+] as const;
+
+export const legalLinks = [
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-service", label: "Terms of Service" },
+  { href: "/site-map", label: "Sitemap" },
 ] as const;
 
 export const containerClass = "mx-auto max-w-7xl px-4 sm:px-6 lg:px-10";
