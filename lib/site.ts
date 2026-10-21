@@ -14,6 +14,8 @@ export const company = {
   phone: "240-255-4794",
   phoneHref: "tel:+12402554794",
   email: "service@mavenhomeservices.com",
+  /** Google Business Profile share link — also the JSON-LD `sameAs` value. */
+  googleBusinessProfile: "https://share.google/KJudab7Ho272ukUML",
   founded: 2008,
   serviceRegion: "Maryland & Virginia",
 };

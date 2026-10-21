@@ -9,6 +9,11 @@
  */
 import { getAllPosts } from "@/lib/blog";
 import { rockvilleCentralAcData } from "@/lib/services/rockville-central-ac";
+import { rockvilleDrainCleaningData } from "@/lib/services/rockville-drain-cleaning";
+import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
+import { rockvilleBackflowData } from "@/lib/services/rockville-backflow";
+import { rockvillePlumbingRepairData } from "@/lib/services/rockville-plumbing-repair";
+import { rockvilleWaterMainRepairData } from "@/lib/services/rockville-water-main-repair";
 import { getSubcategoryData, getSubcategorySlugs } from "@/lib/services/subcategories";
 import { serviceCategories } from "@/lib/site";
 
@@ -30,6 +35,28 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/hvac/central-air-conditioning-rockville-md",
       label: rockvilleCentralAcData.title,
+    },
+  ],
+  "/plumbing": [
+    {
+      href: "/plumbing/drain-cleaning-rockville-md",
+      label: rockvilleDrainCleaningData.title,
+    },
+    {
+      href: "/plumbing/emergency-plumbing-rockville-md",
+      label: rockvilleEmergencyPlumbingData.title,
+    },
+    {
+      href: "/plumbing/plumbing-repair-rockville-md",
+      label: rockvillePlumbingRepairData.title,
+    },
+    {
+      href: "/plumbing/water-main-repair",
+      label: rockvilleWaterMainRepairData.title,
+    },
+    {
+      href: "/plumbing/backflow",
+      label: rockvilleBackflowData.title,
     },
   ],
 };

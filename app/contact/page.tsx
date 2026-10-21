@@ -55,6 +55,14 @@ export default function ContactPage() {
                         </span>
                       ))}
                     </address>
+                    <a
+                      href={company.googleBusinessProfile}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 inline-block text-sm text-muted-foreground underline hover:text-maven-red"
+                    >
+                      View us on Google
+                    </a>
                   </div>
                 </div>
                 <div className="flex gap-4">

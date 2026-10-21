@@ -39,6 +39,14 @@ export default function SiteFooter() {
                 </span>
               ))}
             </address>
+            <a
+              href={company.googleBusinessProfile}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-block text-sm text-white/45 underline underline-offset-2 hover:text-white/80"
+            >
+              Google Business Profile
+            </a>
           </div>
 
           <div>

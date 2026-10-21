@@ -51,15 +51,19 @@ export default function ServiceDetailSections({
                   centered={false}
                   className="mb-6"
                 />
-                <p className="mb-8 text-base leading-relaxed text-muted-foreground">
-                  {parseInline(section.description)}
-                </p>
+                {section.description && (
+                  <p className="mb-8 text-base leading-relaxed text-muted-foreground">
+                    {parseInline(section.description)}
+                  </p>
+                )}
 
                 {section.benefits && section.benefits.length > 0 && (
                   <div className="mb-8">
-                    <h3 className="mb-4 text-lg font-bold text-primary">
-                      {section.benefitsHeading ?? "Benefits"}
-                    </h3>
+                    {section.benefitsHeading !== "" && (
+                      <h3 className="mb-4 text-lg font-bold text-primary">
+                        {section.benefitsHeading ?? "Benefits"}
+                      </h3>
+                    )}
                     <ul className="flex flex-col gap-3">
                       {section.benefits.map((benefit) => (
                         <li
@@ -76,25 +80,32 @@ export default function ServiceDetailSections({
                   </div>
                 )}
 
-                {section.commonProblems && section.commonProblems.length > 0 && (
-                  <div className="mb-8">
-                    <h3 className="mb-4 text-lg font-bold text-primary">
-                      {section.problemsHeading ?? "Common Problems We Solve"}
-                    </h3>
-                    <ul className="flex flex-col gap-3">
-                      {section.commonProblems.map((problem) => (
-                        <li
-                          key={problem}
-                          className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
-                        >
-                          <span className="material-icons-round mt-0.5 shrink-0 text-lg text-maven-red">
-                            build
-                          </span>
-                          {parseInline(problem)}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                {section.commonProblems &&
+                  section.commonProblems.length > 0 && (
+                    <div className="mb-8">
+                      <h3 className="mb-4 text-lg font-bold text-primary">
+                        {section.problemsHeading ?? "Common Problems We Solve"}
+                      </h3>
+                      <ul className="flex flex-col gap-3">
+                        {section.commonProblems.map((problem) => (
+                          <li
+                            key={problem}
+                            className="flex gap-3 text-sm leading-relaxed text-muted-foreground"
+                          >
+                            <span className="material-icons-round mt-0.5 shrink-0 text-lg text-maven-red">
+                              build
+                            </span>
+                            {parseInline(problem)}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                {section.closing && (
+                  <p className="mb-8 text-base leading-relaxed text-muted-foreground">
+                    {parseInline(section.closing)}
+                  </p>
                 )}
 
                 <div className="flex flex-col gap-3 sm:flex-row">

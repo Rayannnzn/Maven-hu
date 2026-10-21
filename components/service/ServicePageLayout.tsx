@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/layout/Breadcrumbs";
 import { PageHero, SectionHeader } from "@/components/shared/PageHero";
+import { parseInline } from "@/components/shared/inlineText";
 import FaqSection from "@/components/sections/FaqSection";
 import ScheduleForm from "@/components/shared/ScheduleForm";
 import ServiceDetailSections from "@/components/service/ServiceDetailSections";
@@ -41,7 +42,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           />
           <div className="flex flex-col gap-4 text-base leading-relaxed text-muted-foreground">
             {data.overview.map((paragraph) => (
-              <p key={paragraph.slice(0, 40)}>{paragraph}</p>
+              <p key={paragraph.slice(0, 40)}>{parseInline(paragraph)}</p>
             ))}
           </div>
         </div>
@@ -55,7 +56,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         <div className={containerClass}>
           <SectionHeader
             eyebrow="Services"
-            title="What We Offer"
+            title={data.offeredServicesTitle ?? "What We Offer"}
             subtitle={
               data.offeredServicesSubtitle ??
               "Comprehensive solutions from experienced professionals."
@@ -74,7 +75,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
                   {svc.name}
                 </h3>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  {svc.desc}
+                  {parseInline(svc.desc)}
                 </p>
               </div>
             ))}
@@ -82,81 +83,87 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
       </section>
 
-      <section className={`${sectionClass} bg-background`}>
-        <div className={containerClass}>
-          <SectionHeader
-            eyebrow="Benefits"
-            title={data.benefitsTitle ?? "Why Homeowners Choose Maven"}
-            subtitle="Quality workmanship and professional, reliable service."
-          />
-          <div className="grid gap-6 md:grid-cols-2">
-            {data.benefits.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="flex gap-4 rounded-2xl border bg-card p-6"
-              >
-                <span className="material-icons-round shrink-0 text-2xl text-maven-gold">
-                  check_circle
-                </span>
-                <div>
-                  <h3 className="mb-2 font-bold text-primary">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {benefit.desc}
+      {data.benefits.length > 0 && (
+        <section className={`${sectionClass} bg-background`}>
+          <div className={containerClass}>
+            <SectionHeader
+              eyebrow="Benefits"
+              title={data.benefitsTitle ?? "Why Homeowners Choose Maven"}
+              subtitle="Quality workmanship and professional, reliable service."
+            />
+            <div className="grid gap-6 md:grid-cols-2">
+              {data.benefits.map((benefit) => (
+                <div
+                  key={benefit.title}
+                  className="flex gap-4 rounded-2xl border bg-card p-6"
+                >
+                  <span className="material-icons-round shrink-0 text-2xl text-maven-gold">
+                    check_circle
+                  </span>
+                  <div>
+                    <h3 className="mb-2 font-bold text-primary">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-muted-foreground">
+                      {benefit.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {data.whyChoose.length > 0 && (
+        <section className={`${sectionClass} bg-primary text-white`}>
+          <div className={containerClass}>
+            <SectionHeader
+              eyebrow="The Maven Difference"
+              title="Why Choose Us"
+              subtitle="Local expertise, honest service, lasting results."
+            />
+            <div className="grid gap-8 md:grid-cols-3">
+              {data.whyChoose.map((item) => (
+                <div key={item.title} className="text-center">
+                  <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
+                  <p className="text-sm leading-relaxed text-white/72">
+                    {item.desc}
                   </p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      <section className={`${sectionClass} bg-primary text-white`}>
-        <div className={containerClass}>
-          <SectionHeader
-            eyebrow="The Maven Difference"
-            title="Why Choose Us"
-            subtitle="Local expertise, honest service, lasting results."
-          />
-          <div className="grid gap-8 md:grid-cols-3">
-            {data.whyChoose.map((item) => (
-              <div key={item.title} className="text-center">
-                <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-white/72">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+      {data.steps.length > 0 && (
+        <section className={`${sectionClass} bg-muted`}>
+          <div className={containerClass}>
+            <SectionHeader
+              eyebrow="Process"
+              title={data.stepsTitle ?? "How It Works"}
+              subtitle="From first call to finished job — simple and transparent."
+            />
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+              {data.steps.map((step) => (
+                <div key={step.num} className="relative text-center">
+                  <span className="mb-4 block text-4xl font-black text-maven-gold/30">
+                    {step.num}
+                  </span>
+                  <span className="material-icons-round mb-3 text-3xl text-maven-red">
+                    {step.icon}
+                  </span>
+                  <h3 className="mb-2 font-bold text-primary">{step.title}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className={`${sectionClass} bg-muted`}>
-        <div className={containerClass}>
-          <SectionHeader
-            eyebrow="Process"
-            title="How It Works"
-            subtitle="From first call to finished job — simple and transparent."
-          />
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {data.steps.map((step) => (
-              <div key={step.num} className="relative text-center">
-                <span className="mb-4 block text-4xl font-black text-maven-gold/30">
-                  {step.num}
-                </span>
-                <span className="material-icons-round mb-3 text-3xl text-maven-red">
-                  {step.icon}
-                </span>
-                <h3 className="mb-2 font-bold text-primary">{step.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  {step.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <section className="bg-maven-red py-12 text-white md:py-16">
         <div
