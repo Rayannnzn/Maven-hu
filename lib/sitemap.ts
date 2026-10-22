@@ -13,6 +13,8 @@ import { rockvilleDrainCleaningData } from "@/lib/services/rockville-drain-clean
 import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
 import { rockvilleBackflowData } from "@/lib/services/rockville-backflow";
 import { rockvillePlumbingRepairData } from "@/lib/services/rockville-plumbing-repair";
+import { rockvilleWalkInCoolerData } from "@/lib/services/rockville-walk-in-cooler";
+import { rockvilleWaterHeaterData } from "@/lib/services/rockville-water-heater";
 import { rockvilleWaterMainRepairData } from "@/lib/services/rockville-water-main-repair";
 import { getSubcategoryData, getSubcategorySlugs } from "@/lib/services/subcategories";
 import { serviceCategories } from "@/lib/site";
@@ -36,6 +38,10 @@ const extraServicePages: Record<string, SitemapLink[]> = {
       href: "/hvac/central-air-conditioning-rockville-md",
       label: rockvilleCentralAcData.title,
     },
+    {
+      href: "/walk-in-cooler-freezer-service-rockville-md",
+      label: rockvilleWalkInCoolerData.title,
+    },
   ],
   "/plumbing": [
     {
@@ -57,6 +63,10 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/plumbing/backflow",
       label: rockvilleBackflowData.title,
+    },
+    {
+      href: "/plumbing/water-heaters-rockville-md",
+      label: rockvilleWaterHeaterData.title,
     },
   ],
 };

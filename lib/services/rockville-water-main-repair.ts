@@ -10,9 +10,6 @@ import type { ServicePageData } from "@/lib/services/types";
 // by its own static route at app/plumbing/water-main-repair/, and adding the slug
 // to subcategoryData would make generateStaticParams emit a path that already
 // exists as a static page, which aborts `next build`.
-//
-// /plumbing/water-heaters-rockville-md is linked as the package specifies; that
-// page does not exist yet.
 export const rockvilleWaterMainRepairData: ServicePageData = {
   slug: "plumbing/water-main-repair",
   // Short on purpose: this drives the breadcrumb leaf, not the <title> tag.
