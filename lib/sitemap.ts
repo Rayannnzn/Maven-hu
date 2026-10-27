@@ -8,6 +8,7 @@
  * are listed by hand — add new top-level pages here.
  */
 import { getAllPosts } from "@/lib/blog";
+import { montgomeryVillageTanklessData } from "@/lib/services/montgomery-village-tankless-water-heater";
 import { rockvilleCentralAcData } from "@/lib/services/rockville-central-ac";
 import { rockvilleDrainCleaningData } from "@/lib/services/rockville-drain-cleaning";
 import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
@@ -67,6 +68,10 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/plumbing/water-heaters-rockville-md",
       label: rockvilleWaterHeaterData.title,
+    },
+    {
+      href: "/plumbing/tankless-water-heater-service-montgomery-village-md",
+      label: montgomeryVillageTanklessData.title,
     },
   ],
 };

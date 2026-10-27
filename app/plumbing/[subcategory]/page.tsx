@@ -6,8 +6,9 @@ import { getSubcategoryData, getSubcategorySlugs } from "@/lib/services/subcateg
 type Props = { params: Promise<{ subcategory: string }> };
 
 // Never add "drain-cleaning-rockville-md", "emergency-plumbing-rockville-md",
-// "plumbing-repair-rockville-md", "water-main-repair", "backflow" or
-// "water-heaters-rockville-md" to subcategoryData — each has its own static route
+// "plumbing-repair-rockville-md", "water-main-repair", "backflow",
+// "water-heaters-rockville-md" or "tankless-water-heater-service-montgomery-village-md"
+// to subcategoryData — each has its own static route
 // under app/plumbing/, and returning a path here that already exists as a static
 // page aborts `next build`.
 export async function generateStaticParams() {
