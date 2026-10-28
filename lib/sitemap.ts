@@ -8,7 +8,10 @@
  * are listed by hand — add new top-level pages here.
  */
 import { getAllPosts } from "@/lib/blog";
+import { bethesdaTanklessData } from "@/lib/services/bethesda-tankless-water-heater";
 import { montgomeryVillageTanklessData } from "@/lib/services/montgomery-village-tankless-water-heater";
+import { olneyTanklessData } from "@/lib/services/olney-tankless-water-heater";
+import { potomacTanklessData } from "@/lib/services/potomac-tankless-water-heater";
 import { rockvilleCentralAcData } from "@/lib/services/rockville-central-ac";
 import { rockvilleDrainCleaningData } from "@/lib/services/rockville-drain-cleaning";
 import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
@@ -72,6 +75,18 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/plumbing/tankless-water-heater-service-montgomery-village-md",
       label: montgomeryVillageTanklessData.title,
+    },
+    {
+      href: "/plumbing/tankless-water-heater-service-olney-md",
+      label: olneyTanklessData.title,
+    },
+    {
+      href: "/plumbing/tankless-water-heater-repair-potomac-md",
+      label: potomacTanklessData.title,
+    },
+    {
+      href: "/plumbing/commercial-tankless-water-heater-service-bethesda-md",
+      label: bethesdaTanklessData.title,
     },
   ],
 };
