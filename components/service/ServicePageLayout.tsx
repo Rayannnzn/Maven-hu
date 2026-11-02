@@ -23,7 +23,9 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             src={data.heroImage}
             alt=""
             fill
-            className="object-contain"
+            className={
+              data.heroImageFit === "cover" ? "object-cover" : "object-contain"
+            }
             priority
             sizes="(min-width: 1024px) 1024px, 100vw"
           />

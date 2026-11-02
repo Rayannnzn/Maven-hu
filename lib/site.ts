@@ -73,9 +73,8 @@ export const serviceCities = [
 ] as const;
 
 export const hours = {
-  weekday: "Mon – Fri: 7:00 AM – 7:00 PM",
-  weekend: "Sat – Sun: 8:00 AM – 5:00 PM",
-  emergency: "Emergency line available for urgent issues",
+  schedule: "Open 24 hours a day, 7 days a week",
+  emergency: "24/7 emergency service for urgent issues",
 };
 
 export type ServiceNavLink = {
@@ -278,6 +277,7 @@ export const footerCompanyLinks = [
   { href: "/about", label: "About Us" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
+  { href: "/become-a-subcontractor", label: "Become a Subcontractor" },
   { href: "/privacy-policy", label: "Privacy Policy" },
 ] as const;
 
@@ -320,6 +320,25 @@ export const certifications = [
     image: "/images/certifications/haag.png",
     alt: "Haag certified residential roof inspector",
     desc: "Trained to industry standard for residential inspection accuracy.",
+  },
+] as const;
+
+/** Commercial clients shown in the "Trusted by Leading Brands" section on the landing page. */
+export const clients = [
+  {
+    name: "Firehouse Subs",
+    image: "/images/clients/firehouse-subs.png",
+    alt: "Firehouse Subs logo",
+  },
+  {
+    name: "Qdoba Mexican Eats",
+    image: "/images/clients/qdoba.png",
+    alt: "Qdoba Mexican Eats logo",
+  },
+  {
+    name: "Lil' Cakes & Creamery",
+    image: "/images/clients/lil-cakes-and-creamery.png",
+    alt: "Lil' Cakes & Creamery logo",
   },
 ] as const;
 

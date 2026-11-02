@@ -8,7 +8,8 @@ export const electricalData: ServicePageData = {
   seoTitle:
     "Electrical Services in Maryland | Panel Upgrades, EV Chargers | Maven",
   metaDescription: `Licensed Maryland electricians — panel upgrades, wiring, outlet installation & Level 2 EV charger installation. Code-compliant, same-day service. Call ${company.phone}.`,
-  heroImage: "/images/electrical/electrical-hero.png",
+  heroImage: "/images/electrical/electrical-hero.jpg",
+  heroImageFit: "cover",
   heroTitle: "Professional Electrical Services for Maryland Homes",
   heroDescription:
     "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",

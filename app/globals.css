@@ -80,13 +80,6 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    padding-bottom: 60px;
-  }
-
-  @media (min-width: 640px) {
-    body {
-      padding-bottom: 64px;
-    }
   }
 
   a:focus-visible,
@@ -98,23 +91,11 @@
   }
 }
 
-@keyframes marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 @layer utilities {
-  .animate-marquee {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    animation: marquee 22s linear infinite;
-  }
-
   .eyebrow {
     @apply inline-block rounded-full bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-maven-red;
   }

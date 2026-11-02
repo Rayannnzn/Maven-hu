@@ -24,6 +24,12 @@ export type ServicePageData = {
   seoTitle?: string;
   metaDescription: string;
   heroImage: string;
+  /**
+   * How the hero photo fills its fixed-height frame. Defaults to `contain`
+   * (full photo, letterboxed on navy); use `cover` for portrait photos that
+   * should crop to fill the frame instead.
+   */
+  heroImageFit?: "contain" | "cover";
   heroTitle: string;
   heroDescription: string;
   /** Overview heading. Falls back to `About Our {title}` when omitted. */

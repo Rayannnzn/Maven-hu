@@ -88,11 +88,11 @@ Anchor scrolling is handled in two places: `SiteHeader` intercepts same-page anc
 
 **Icons.** Two systems coexist. Data files store **Material Icons Round ligature names** (`"ac_unit"`, `"electric_bolt"`) rendered as `<span className="material-icons-round">{icon}</span>`; the font is loaded via a `<link>` in `app/layout.tsx`. `lucide-react` is used for chrome (header, UI components). Icon strings in `lib/` are always Material names.
 
-**Styling.** Tailwind v4 with CSS-first config — there is no `tailwind.config.*`. Theme tokens live in `@theme inline` in `app/globals.css`: shadcn semantic tokens (`primary` = navy `#0b2d5b`, `muted`, `card`, …) plus brand colors `maven-navy`, `maven-red`, `maven-gold`, `maven-slate`, `maven-light`, `maven-deep`. Custom utilities `.eyebrow`, `.section-heading`, `.section-subheading`, `.animate-marquee` are defined there too. Light mode only in practice — the `dark` variant is declared but no dark palette exists.
+**Styling.** Tailwind v4 with CSS-first config — there is no `tailwind.config.*`. Theme tokens live in `@theme inline` in `app/globals.css`: shadcn semantic tokens (`primary` = navy `#0b2d5b`, `muted`, `card`, …) plus brand colors `maven-navy`, `maven-red`, `maven-gold`, `maven-slate`, `maven-light`, `maven-deep`. Custom utilities `.eyebrow`, `.section-heading`, `.section-subheading` are defined there too. Light mode only in practice — the `dark` variant is declared but no dark palette exists.
 
 **shadcn/ui.** `components/ui/*` is generated (new-york style, slate base, CSS variables — see `components.json`). Prefer `npx shadcn@latest add <component>` over hand-writing new primitives.
 
-**Server-first.** Only five app components are `"use client"` (`SiteHeader`, `UtilityBar`, `HashScrollHandler`, `ScheduleForm`, plus Radix-backed `components/ui/*`). Keep new components server components unless they need state or effects.
+**Server-first.** Only four app components are `"use client"` (`SiteHeader`, `HashScrollHandler`, `ScheduleForm`, plus Radix-backed `components/ui/*`). Keep new components server components unless they need state or effects.
 
 **Content voice.** The marketing copy was deliberately audited to avoid unqualified promises: availability claims are hedged ("same-day appointments available, subject to technician availability"), and there are no warranty/guarantee absolutes or invented review counts. Match that hedging when writing or editing copy — it's a compliance choice, not stylistic drift.
 

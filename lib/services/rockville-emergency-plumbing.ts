@@ -3,7 +3,8 @@ import type { ServicePageData } from "@/lib/services/types";
 // Standalone Rockville emergency-plumbing landing page, built verbatim from the
 // approved SEO content package (primary keyword "emergency plumber Rockville MD").
 // Copy, headings, and link targets are the client's — edit only against an
-// updated package. Per the package, do not add 24/7 or arrival-time promises.
+// updated package. Hours were updated to 24/7 at the client's request
+// (Nov 2026); do not add arrival-time promises.
 //
 // Deliberately NOT an entry in lib/services/subcategories.ts: this page is served
 // by its own static route at app/plumbing/emergency-plumbing-rockville-md/, and
@@ -63,7 +64,7 @@ export const rockvilleEmergencyPlumbingData: ServicePageData = {
         "Upfront pricing with no surprise fees",
         "Technicians trained on pipes, drains, water heaters, and main water lines",
         "Emergency line available for urgent issues",
-        "Office hours: Monday to Friday 7:00 AM to 7:00 PM, Saturday and Sunday 8:00 AM to 5:00 PM",
+        "Open 24 hours a day, 7 days a week",
         "Local team based at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
       ],
       closing:
@@ -103,7 +104,7 @@ export const rockvilleEmergencyPlumbingData: ServicePageData = {
     { q: "What counts as a plumbing emergency?", a: "A burst or frozen pipe, a major leak, sewage backup, no water at all, a failed water heater that is leaking, or a broken main water line. If water is damaging your property, treat it as an emergency." },
     { q: "What should I do first when a pipe bursts?", a: "Shut off your main water valve, turn off your water heater, and move valuables away from the water. Then call 240 255 4794 and tell us what you see." },
     { q: "Where is my main water shutoff valve?", a: "It is usually near the water meter, in a basement, utility room, or crawl space, or on an exterior wall where the line enters the home. Turn it clockwise to close it." },
-    { q: "Do you offer emergency plumbing service in Rockville, MD?", a: "Yes. Call 240 255 4794 and use our emergency line for urgent issues. Our regular office hours are Monday to Friday 7:00 AM to 7:00 PM and Saturday and Sunday 8:00 AM to 5:00 PM." },
+    { q: "Do you offer emergency plumbing service in Rockville, MD?", a: "Yes. Call 240 255 4794 and use our emergency line for urgent issues. We are open 24 hours a day, 7 days a week." },
     { q: "How much does emergency plumbing cost?", a: "Cost depends on the problem, the parts, and the time needed. We explain the issue and give you a clear price before the repair begins." },
     { q: "What should I do if I smell gas?", a: "Leave the home right away and call 911 or your gas utility from outside. Do not use switches, phones, or flames inside. Call us after the area is declared safe." },
     { q: "How do I prevent frozen pipes in winter?", a: "Keep indoor heat on, open cabinet doors under sinks on very cold nights, insulate exposed pipes, and disconnect outdoor hoses before freezing weather arrives." },

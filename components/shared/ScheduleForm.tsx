@@ -27,6 +27,16 @@ import {
 type ScheduleFormProps = {
   compact?: boolean;
   title?: string;
+  /**
+   * Pre-fills and hides the "Service Needed" field, so the form submits a fixed
+   * service (e.g. the subcontractor inquiry page). Omit for the normal picker.
+   */
+  defaultService?: string;
+  messageLabel?: string;
+  messagePlaceholder?: string;
+  submitLabel?: string;
+  successTitle?: string;
+  successMessage?: string;
 };
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -43,7 +53,16 @@ function FieldError({ id, message }: { id: string; message?: string }) {
 export default function ScheduleForm({
   compact = false,
   title = "Schedule a Service",
+  defaultService,
+  messageLabel = "Message (Optional)",
+  messagePlaceholder = "Describe the issue or what you need...",
+  submitLabel = "Request Service Appointment →",
+  successTitle = "Request received",
+  successMessage = "Thanks for reaching out. A confirmation is on its way to your inbox, and a member of our team will contact you promptly. For urgent issues, calling is the fastest way to reach a technician.",
 }: ScheduleFormProps) {
+  const initialLead: LeadInput = defaultService
+    ? { ...emptyLead, service: defaultService }
+    : emptyLead;
   // Several ScheduleForms can share a page (service pages render one in the
   // layout and one in the CTA), so every input id has to be instance-scoped or
   // the <Label htmlFor> bindings would all point at the first form.
@@ -51,7 +70,7 @@ export default function ScheduleForm({
   const fid = (name: string) => `${name}-${uid}`;
 
   const pathname = usePathname();
-  const [values, setValues] = useState<LeadInput>(emptyLead);
+  const [values, setValues] = useState<LeadInput>(initialLead);
   const [errors, setErrors] = useState<LeadErrors>({});
   const [status, setStatus] = useState<Status>("idle");
   const [formError, setFormError] = useState("");
@@ -114,7 +133,7 @@ export default function ScheduleForm({
         return;
       }
 
-      setValues(emptyLead);
+      setValues(initialLead);
       setStatus("success");
     } catch {
       setFormError(
@@ -136,11 +155,9 @@ export default function ScheduleForm({
           <span className="material-icons-round text-4xl text-maven-gold">
             check_circle
           </span>
-          <h3 className="text-xl font-bold text-primary">Request received</h3>
+          <h3 className="text-xl font-bold text-primary">{successTitle}</h3>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Thanks for reaching out. A confirmation is on its way to your inbox, and
-            a member of our team will contact you promptly. For urgent issues,
-            calling is the fastest way to reach a technician.
+            {successMessage}
           </p>
           <a
             href={company.phoneHref}
@@ -234,6 +251,9 @@ export default function ScheduleForm({
           />
           <FieldError id={fid("phone-error")} message={errors.phone} />
         </div>
+        {defaultService ? (
+          <input type="hidden" name="service" value={values.service} />
+        ) : (
         <div className="flex flex-col gap-1.5">
           <Label htmlFor={fid("service")}>Service Needed</Label>
           <Select
@@ -259,12 +279,13 @@ export default function ScheduleForm({
           </Select>
           <FieldError id={fid("service-error")} message={errors.service} />
         </div>
+        )}
         <div className="flex flex-col gap-1.5">
-          <Label htmlFor={fid("message")}>Message (Optional)</Label>
+          <Label htmlFor={fid("message")}>{messageLabel}</Label>
           <Textarea
             id={fid("message")}
             name="message"
-            placeholder="Describe the issue or what you need..."
+            placeholder={messagePlaceholder}
             rows={3}
             value={values.message}
             onChange={(e) => setField("message", e.target.value)}
@@ -310,7 +331,7 @@ export default function ScheduleForm({
           disabled={submitting}
           className="w-full bg-maven-red font-bold hover:bg-[#b81f1f]"
         >
-          {submitting ? "Sending..." : "Request Service Appointment →"}
+          {submitting ? "Sending..." : submitLabel}
         </Button>
         <p className="text-center text-xs text-muted-foreground">
           We will contact you promptly regarding your request. By submitting,

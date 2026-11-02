@@ -21,9 +21,10 @@ export default function SiteFooter() {
               <SiteLogo className="h-10" />
             </Link>
             <p className="mb-5 max-w-xs text-sm leading-relaxed text-white/52">
-              Insured home service professionals based in Rockville, Maryland —
-              serving homeowners and businesses across Maryland and Northern
-              Virginia. Emergency service is available for urgent issues.
+              Insured HVAC/R, plumbing, electrical, and roofing professionals
+              based in Rockville, Maryland, serving commercial and residential
+              clients across Maryland and Northern Virginia. Emergency service
+              is available for urgent issues.
             </p>
             <a
               href={company.phoneHref}
@@ -95,16 +96,12 @@ export default function SiteFooter() {
             </h3>
             <div className="space-y-3 text-sm">
               <div>
-                <p className="text-white/45">Monday – Friday</p>
-                <p className="font-medium text-white/82">7:00 AM – 7:00 PM</p>
-              </div>
-              <div>
-                <p className="text-white/45">Saturday – Sunday</p>
-                <p className="font-medium text-white/82">8:00 AM – 5:00 PM</p>
+                <p className="text-white/45">Every Day</p>
+                <p className="font-medium text-white/82">Open 24/7</p>
               </div>
               <div className="mt-2 rounded-lg border border-maven-red/30 bg-maven-red/15 p-3.5">
                 <p className="text-xs font-bold text-maven-red">Emergency Service</p>
-                <p className="text-sm text-white/65">Available for urgent issues</p>
+                <p className="text-sm text-white/65">Available 24/7 for urgent issues</p>
                 <a
                   href={company.phoneHref}
                   className="mt-1.5 block font-bold hover:text-white/90"

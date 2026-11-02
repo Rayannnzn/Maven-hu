@@ -79,10 +79,7 @@ export default function ContactSection() {
                     Business Hours
                   </div>
                   <div className="text-sm font-semibold text-foreground md:text-base">
-                    {hours.weekday}
-                  </div>
-                  <div className="text-sm font-semibold text-foreground md:text-base">
-                    {hours.weekend}
+                    {hours.schedule}
                   </div>
                   <div className="mt-1 text-sm font-semibold text-maven-red">
                     {hours.emergency}

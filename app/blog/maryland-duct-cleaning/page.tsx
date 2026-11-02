@@ -381,7 +381,7 @@ export default function MarylandDuctCleaningPage() {
               Rockville, MD 20850
             </p>
             <p>
-              <strong>Hours:</strong> Mon–Fri 7AM–7PM, Sat–Sun 8AM–5PM
+              <strong>Hours:</strong> Open 24/7
             </p>
           </div>
           <Link

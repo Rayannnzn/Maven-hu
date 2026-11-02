@@ -10,7 +10,7 @@
  * here. Brand hexes are duplicated from `app/globals.css` for the same reason.
  */
 import { company, address, hours } from "@/lib/site";
-import type { LeadInput } from "@/lib/leads";
+import { subcontractorService, type LeadInput } from "@/lib/leads";
 
 const NAVY = "#0b2d5b";
 const RED = "#d62828";
@@ -73,10 +73,13 @@ export function buildNotificationEmail(lead: LeadInput, submittedAt: Date): Lead
     timeStyle: "short",
   });
 
-  const subject = `New ${lead.service} lead — ${fullName}`;
+  const partner = lead.service === subcontractorService;
+  const subject = partner
+    ? `New subcontractor inquiry — ${fullName}`
+    : `New ${lead.service} lead — ${fullName}`;
 
   const html = shell(
-    header("New Service Request", RED) +
+    header(partner ? "New Subcontractor Inquiry" : "New Service Request", RED) +
       `<tr>
         <td style="padding:24px 28px;">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
@@ -114,6 +117,7 @@ export function buildNotificationEmail(lead: LeadInput, submittedAt: Date): Lead
 
 /** Customer-facing confirmation. Copy is hedged to match the site's voice. */
 export function buildAutoReplyEmail(lead: LeadInput): LeadEmail {
+  const partner = lead.service === subcontractorService;
   const subject = `We received your request — ${company.name}`;
 
   const html = shell(
@@ -122,12 +126,18 @@ export function buildAutoReplyEmail(lead: LeadInput): LeadEmail {
         <td style="padding:24px 28px;font-size:15px;line-height:1.7;color:${NAVY};">
           <p style="margin:0 0 16px;">Hi ${esc(lead.firstName)},</p>
           <p style="margin:0 0 16px;">
-            Thanks for contacting ${esc(company.name)}. We have received your request for
-            <strong>${esc(lead.service)}</strong> and a member of our team will contact you
-            promptly to confirm the details and schedule a visit.
+            ${
+              partner
+                ? `Thanks for your interest in partnering with ${esc(company.name)}. We have received your <strong>${esc(lead.service)}</strong> and a member of our team will review it and follow up with you.`
+                : `Thanks for contacting ${esc(company.name)}. We have received your request for <strong>${esc(lead.service)}</strong> and a member of our team will contact you promptly to confirm the details and schedule a visit.`
+            }
           </p>
           <p style="margin:0 0 20px;">
-            If your issue is urgent, calling us is the fastest way to reach a technician.
+            ${
+              partner
+                ? "Have your trade license and certificate of insurance ready; we will ask for both before onboarding."
+                : "If your issue is urgent, calling us is the fastest way to reach a technician."
+            }
           </p>
           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
             <tr>
@@ -147,8 +157,7 @@ export function buildAutoReplyEmail(lead: LeadInput): LeadEmail {
             </table>
           </div>
           <p style="margin:24px 0 0;font-size:13px;color:${SLATE};line-height:1.7;">
-            ${esc(hours.weekday)}<br />
-            ${esc(hours.weekend)}<br />
+            ${esc(hours.schedule)}<br />
             ${esc(hours.emergency)}
           </p>
         </td>
@@ -165,17 +174,20 @@ export function buildAutoReplyEmail(lead: LeadInput): LeadEmail {
   const text = [
     `Hi ${lead.firstName},`,
     "",
-    `Thanks for contacting ${company.name}. We have received your request for ${lead.service} and a member of our team will contact you promptly to confirm the details and schedule a visit.`,
+    partner
+      ? `Thanks for your interest in partnering with ${company.name}. We have received your ${lead.service} and a member of our team will review it and follow up with you.`
+      : `Thanks for contacting ${company.name}. We have received your request for ${lead.service} and a member of our team will contact you promptly to confirm the details and schedule a visit.`,
     "",
-    `If your issue is urgent, calling us is the fastest way to reach a technician: ${company.phone}`,
+    partner
+      ? "Have your trade license and certificate of insurance ready; we will ask for both before onboarding."
+      : `If your issue is urgent, calling us is the fastest way to reach a technician: ${company.phone}`,
     "",
     "YOUR REQUEST",
     `Service: ${lead.service}`,
     `Phone:   ${lead.phone}`,
     ...(lead.message ? [`Message: ${lead.message}`] : []),
     "",
-    hours.weekday,
-    hours.weekend,
+    hours.schedule,
     hours.emergency,
     "",
     company.name,

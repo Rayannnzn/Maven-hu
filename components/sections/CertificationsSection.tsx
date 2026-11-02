@@ -45,7 +45,7 @@ export default function CertificationsSection({
         <SectionHeader
           eyebrow="Licensed & Certified"
           title="Licensed, Certified, and Insured Home Service Professionals"
-          subtitle="Maven technicians hold MHIC (Maryland Home Improvement Commission) licensing, EPA Section 608 refrigerant certification, OSHA safety certification, and Haag inspection credentials. Every technician is background-checked and fully insured before stepping into your home."
+          subtitle="MAVEN is MHIC-licensed and fully insured, and our team holds the trade credentials the work demands, including EPA Section 608 refrigerant certification, OSHA 10/30 safety training, and Haag roof inspection certification. Every technician is background-checked before stepping onto your property."
         />
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5">
           {certifications.map((cert) => (

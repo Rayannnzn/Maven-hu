@@ -121,6 +121,7 @@ export function getSitemapGroups(): SitemapGroup[] {
         { href: "/services", label: "All Services" },
         { href: "/about", label: "About Us" },
         { href: "/contact", label: "Contact & Scheduling" },
+        { href: "/become-a-subcontractor", label: "Become a Subcontractor" },
       ],
     },
     ...serviceGroups,

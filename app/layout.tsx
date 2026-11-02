@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import UtilityBar from "@/components/layout/UtilityBar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import { company, siteUrl } from "@/lib/site";
@@ -51,7 +50,6 @@ export default function RootLayout({
         <SiteHeader />
         <main id="main-content">{children}</main>
         <SiteFooter />
-        <UtilityBar />
       </body>
     </html>
   );

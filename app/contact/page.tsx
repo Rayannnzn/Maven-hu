@@ -78,7 +78,7 @@ export default function ContactPage() {
                       {company.phone}
                     </a>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      Emergency line available for urgent issues
+                      Emergency line available 24/7 for urgent issues
                     </p>
                   </div>
                 </div>
@@ -103,10 +103,7 @@ export default function ContactPage() {
                   <div>
                     <p className="font-semibold text-primary">Business Hours</p>
                     <p className="text-sm text-muted-foreground">
-                      {hours.weekday}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {hours.weekend}
+                      {hours.schedule}
                     </p>
                     <p className="mt-1 text-xs font-medium text-maven-red">
                       {hours.emergency}

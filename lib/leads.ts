@@ -17,6 +17,15 @@ export const serviceOptions = [
   "Emergency Service",
 ] as const;
 
+/**
+ * Submitted by the form on /become-a-subcontractor. Deliberately NOT part of
+ * `serviceOptions` so it never appears in the customer-facing "Service Needed"
+ * dropdown, but the server accepts it as a valid lead.
+ */
+export const subcontractorService = "Subcontractor Inquiry";
+
+const acceptedServices: readonly string[] = [...serviceOptions, subcontractorService];
+
 export type LeadInput = {
   firstName: string;
   lastName: string;
@@ -83,7 +92,7 @@ export function validateLead(input: Partial<LeadInput>): LeadErrors {
     errors.phone = "Please enter a valid phone number.";
 
   if (!service) errors.service = "Please select the service you need.";
-  else if (!serviceOptions.includes(service as (typeof serviceOptions)[number]))
+  else if (!acceptedServices.includes(service))
     errors.service = "Please select a service from the list.";
 
   if (message.length > 4000) errors.message = "Message is too long (4000 characters max).";

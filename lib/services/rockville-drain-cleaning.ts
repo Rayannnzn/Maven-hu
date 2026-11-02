@@ -60,7 +60,7 @@ export const rockvilleDrainCleaningData: ServicePageData = {
         "Licensed and insured plumbing professionals",
         "Upfront pricing with no surprise fees",
         "Technicians trained on drains, sewer lines, and complete plumbing systems",
-        "Convenient hours: Monday to Friday 7:00 AM to 7:00 PM, Saturday and Sunday 8:00 AM to 5:00 PM",
+        "Open 24/7 for scheduled and emergency service",
         "Local team based at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
       ],
       closing:

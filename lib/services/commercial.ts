@@ -6,7 +6,8 @@ export const commercialData: ServicePageData = {
   title: "Commercial Services",
   metaDescription:
     "Commercial HVAC and refrigeration services in Maryland and Virginia. Rooftop units, walk-in coolers, walk-in freezers, maintenance programs, and new installations for businesses.",
-  heroImage: "/images/commercial/commercial-hvac-refrigeration.png",
+  heroImage: "/images/commercial/commercial-hero.jpg",
+  heroImageFit: "cover",
   heroTitle: "Commercial HVAC & Refrigeration Services",
   heroDescription:
     "Keep your business running with reliable commercial heating, cooling, and refrigeration. Maven services rooftop package units, walk-in coolers and freezers, and complete commercial HVAC systems — with maintenance programs designed to prevent costly downtime.",

@@ -1,6 +1,7 @@
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBadges from "@/components/sections/TrustBadges";
 import CertificationsSection from "@/components/sections/CertificationsSection";
+import ClientsSection from "@/components/sections/ClientsSection";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import WhyChooseSection from "@/components/sections/WhyChooseSection";
 import AboutPreview from "@/components/sections/AboutPreview";
@@ -33,6 +34,7 @@ export default function Home() {
       <HeroSection />
       <TrustBadges />
       <CertificationsSection />
+      <ClientsSection />
       <ServicesGrid />
       <WhyChooseSection />
       <AboutPreview />

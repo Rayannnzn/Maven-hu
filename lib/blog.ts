@@ -138,7 +138,7 @@ const posts: BlogPost[] = [
         content: [
           "**Maven Home Services (Maven DMV)**",
           "9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
-          "Mon-Fri 7:00 AM-7:00 PM · Sat-Sun 8:00 AM-5:00 PM · Emergency line for urgent issues",
+          "Open 24/7 · Emergency line for urgent issues",
           "Serving Rockville and communities within about 30 miles across Maryland and Northern Virginia.",
         ],
       },
@@ -288,7 +288,7 @@ const posts: BlogPost[] = [
         content: [
           "**Maven Home Services (Maven DMV)**",
           "9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
-          "Mon-Fri 7:00 AM-7:00 PM · Sat-Sun 8:00 AM-5:00 PM · Emergency line for urgent issues",
+          "Open 24/7 · Emergency line for urgent issues",
           "Serving Rockville and communities within about 30 miles across Maryland and Northern Virginia.",
         ],
       },
@@ -464,7 +464,7 @@ const posts: BlogPost[] = [
         content: [
           "**Maven Home Services (Maven DMV)**",
           "9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
-          "Mon-Fri 7:00 AM-7:00 PM · Sat-Sun 8:00 AM-5:00 PM · Emergency line for urgent issues",
+          "Open 24/7 · Emergency line for urgent issues",
           "Serving Rockville and communities within about 30 miles across Maryland and Northern Virginia.",
         ],
       },

@@ -498,6 +498,17 @@ export default function SiteHeader() {
           </nav>
 
           <div className="hidden items-center gap-4 lg:flex">
+            <Link
+              href="/become-a-subcontractor"
+              className={cn(
+                "whitespace-nowrap text-xs font-semibold transition-colors hover:text-white",
+                isActiveLink(pathname, "/become-a-subcontractor")
+                  ? "text-white"
+                  : "text-white/70",
+              )}
+            >
+              Become a Subcontractor
+            </Link>
             <div className="text-right">
               <a
                 href={company.phoneHref}
@@ -506,7 +517,7 @@ export default function SiteHeader() {
                 {company.phone}
               </a>
               <div className="text-[10px] uppercase tracking-widest text-white/50">
-                Emergency Service
+                24/7 Emergency Service
               </div>
             </div>
             <Button asChild className="bg-maven-red font-bold hover:bg-[#b81f1f]">
@@ -556,6 +567,18 @@ export default function SiteHeader() {
                 ))}
               </nav>
               <div className="mt-8 space-y-3 border-t pt-6">
+                <Link
+                  href="/become-a-subcontractor"
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "block rounded-md px-3 py-2.5 text-sm font-medium transition-colors hover:bg-muted",
+                    isActiveLink(pathname, "/become-a-subcontractor")
+                      ? "bg-muted text-primary"
+                      : "text-foreground",
+                  )}
+                >
+                  Become a Subcontractor
+                </Link>
                 <a
                   href={company.phoneHref}
                   className="flex items-center gap-2 font-bold text-primary"
