@@ -145,7 +145,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
             <SectionHeader
               eyebrow="Process"
               title={data.stepsTitle ?? "How It Works"}
-              subtitle="From first call to finished job — simple and transparent."
+              subtitle="From first call to finished job, simple and transparent."
             />
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {data.steps.map((step) => (

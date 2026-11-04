@@ -10,12 +10,14 @@ export const commercialData: ServicePageData = {
   heroImageFit: "cover",
   heroTitle: "Commercial HVAC & Refrigeration Services",
   heroDescription:
-    "Keep your business running with reliable commercial heating, cooling, and refrigeration. Maven services rooftop package units, walk-in coolers and freezers, and complete commercial HVAC systems — with maintenance programs designed to prevent costly downtime.",
+    "Keep your business running with reliable commercial heating, cooling, and refrigeration. Maven services rooftop package units, walk-in coolers and freezers, and complete commercial HVAC systems, with maintenance programs designed to prevent costly downtime.",
   overview: [
-    "Commercial HVAC and refrigeration equipment works harder and longer than residential systems — and when it fails, the impact on your business is immediate. Lost inventory, uncomfortable customers, and emergency repair premiums add up fast.",
-    "Maven Home Services provides commercial HVAC and refrigeration solutions for restaurants, retail spaces, offices, and light industrial properties throughout Maryland and Northern Virginia. Our experienced technicians understand the urgency of commercial service calls and work efficiently to restore your equipment.",
-    "From scheduled preventive maintenance to emergency repairs and new installations, we partner with business owners to keep equipment running reliably, energy costs manageable, and compliance requirements met.",
+    "Commercial HVAC and refrigeration equipment works harder and longer than residential systems, and when it fails, the impact on your business is immediate. Lost inventory, uncomfortable customers, and emergency repair premiums add up fast.",
+    "Maven Services provides commercial HVAC and refrigeration solutions for restaurants, retail spaces, offices, and light industrial properties throughout Maryland and Northern Virginia. Our experienced technicians understand the urgency of commercial service calls and work efficiently to restore your equipment.",
+    "From scheduled preventive maintenance to emergency repairs and new installations, we partner with business owners and property managers to keep equipment running reliably, energy costs manageable, and compliance requirements met.",
   ],
+  offeredServicesSubtitle:
+    "Comprehensive commercial solutions from experienced professionals.",
   offeredServices: [
     {
       icon: "roofing",
@@ -30,7 +32,7 @@ export const commercialData: ServicePageData = {
     {
       icon: "ac_unit",
       name: "Walk-in Freezers",
-      desc: "Refrigeration system service for walk-in freezers — protecting inventory and meeting food safety standards.",
+      desc: "Refrigeration system service for walk-in freezers, protecting inventory and meeting food safety standards.",
     },
     {
       icon: "build",
@@ -58,6 +60,7 @@ export const commercialData: ServicePageData = {
       desc: "Comprehensive equipment evaluations with written reports and prioritized upgrade recommendations.",
     },
   ],
+  benefitsTitle: "Why Businesses Choose Maven",
   benefits: [
     {
       title: "Minimized Business Downtime",
@@ -83,7 +86,7 @@ export const commercialData: ServicePageData = {
     },
     {
       title: "Multi-System Expertise",
-      desc: "One call covers rooftop HVAC, walk-in refrigeration, and temperature controls — simplifying vendor management for business owners.",
+      desc: "One call covers rooftop HVAC, walk-in refrigeration, and temperature controls, simplifying vendor management for business owners.",
     },
     {
       title: "Local Commercial Experience",
@@ -116,6 +119,7 @@ export const commercialData: ServicePageData = {
       desc: "We verify proper operation, explain maintenance recommendations, and remain available for ongoing support.",
     },
   ],
+  faqSubtitle: "Common questions from business owners and property managers.",
   faqs: [
     {
       q: "Do you offer commercial maintenance contracts?",
@@ -135,5 +139,7 @@ export const commercialData: ServicePageData = {
     },
   ],
   ctaTitle: "Keep Your Business Running Smoothly",
+  ctaDescription:
+    "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland and Virginia, subject to technician availability.",
   detailSections: commercialDetailSections,
 };

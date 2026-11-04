@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Menu, Phone, ChevronDown } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
 import {
   company,
   containerClass,
@@ -248,23 +249,43 @@ function ServiceSubNavItems({
 function MobileServiceSubNav({
   category,
   pathname,
+  hidden,
 }: {
   category: ServiceCategory;
   pathname: string;
+  /** Collapses the chip row while the user scrolls down; revealed on scroll up. */
+  hidden: boolean;
 }) {
+  const reduceMotion = useReducedMotion();
+
+  // framer-motion animates to the row's real `auto` height and, when the
+  // target flips mid-animation, continues from the current value instead of
+  // restarting, so rapid down/up flicks can't make the row stutter.
   return (
-    <nav
-      className="border-t border-white/10 pb-2 lg:hidden"
-      aria-label={`${category.label} services`}
+    <motion.div
+      className="overflow-hidden lg:hidden"
+      initial={false}
+      animate={{ height: hidden ? 0 : "auto", opacity: hidden ? 0 : 1 }}
+      transition={
+        reduceMotion
+          ? { duration: 0 }
+          : { type: "tween", duration: 0.28, ease: [0.4, 0, 0.2, 1] }
+      }
+      aria-hidden={hidden}
     >
-      <div className="flex flex-wrap items-center gap-1 py-1.5">
-        <ServiceSubNavItems
-          category={category}
-          pathname={pathname}
-          variant="mobile"
-        />
-      </div>
-    </nav>
+      <nav
+        className="border-t border-white/10 pb-2"
+        aria-label={`${category.label} services`}
+      >
+        <div className="flex flex-wrap items-center gap-1 py-1.5">
+          <ServiceSubNavItems
+            category={category}
+            pathname={pathname}
+            variant="mobile"
+          />
+        </div>
+      </nav>
+    </motion.div>
   );
 }
 
@@ -435,13 +456,61 @@ function DesktopDropdown({
 export default function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [subNavHidden, setSubNavHidden] = useState(false);
   const [open, setOpen] = useState(false);
+  // Scroll-direction tracking for the mobile sub-nav. `anchorY` is the scroll
+  // position at the last state change, not the last event, so small back-and-
+  // forth movements accumulate against a hysteresis band instead of flipping
+  // the row on every wobble. `lockUntil` ignores events for the duration of
+  // the collapse animation: shrinking the header shortens the document, which
+  // can clamp scrollY near the bottom and otherwise read as an upward scroll.
+  const anchorY = useRef(0);
+  const lockUntil = useRef(0);
+  const frame = useRef<number | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 100);
+    const HYSTERESIS = 24; // px of net travel before the row changes state
+    const MIN_COLLAPSE_Y = 80; // never collapse while the hero is in view
+    const LOCK_MS = 320; // ≈ animation duration
+
+    const update = () => {
+      frame.current = null;
+      const y = Math.max(0, window.scrollY);
+      setScrolled(y > 100);
+
+      const now = performance.now();
+      if (now < lockUntil.current) {
+        anchorY.current = y;
+        return;
+      }
+
+      const delta = y - anchorY.current;
+      if (y <= 16) {
+        setSubNavHidden(false);
+        anchorY.current = y;
+      } else if (delta > HYSTERESIS && y > MIN_COLLAPSE_Y) {
+        setSubNavHidden(true);
+        anchorY.current = y;
+        lockUntil.current = now + LOCK_MS;
+      } else if (delta < -HYSTERESIS) {
+        setSubNavHidden(false);
+        anchorY.current = y;
+        lockUntil.current = now + LOCK_MS;
+      }
+    };
+
+    const onScroll = () => {
+      if (frame.current === null) {
+        frame.current = window.requestAnimationFrame(update);
+      }
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    update();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (frame.current !== null) window.cancelAnimationFrame(frame.current);
+    };
   }, []);
 
   const activeCategory = serviceCategories.find((c) =>
@@ -625,6 +694,7 @@ export default function SiteHeader() {
             <MobileServiceSubNav
               category={activeCategory}
               pathname={pathname}
+              hidden={subNavHidden}
             />
             <DesktopServiceSubNav
               category={activeCategory}

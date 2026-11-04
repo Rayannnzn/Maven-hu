@@ -7,20 +7,20 @@ export const electricalData: ServicePageData = {
   title: "Electrical Services",
   seoTitle:
     "Electrical Services in Maryland | Panel Upgrades, EV Chargers | Maven",
-  metaDescription: `Licensed Maryland electricians — panel upgrades, wiring, outlet installation & Level 2 EV charger installation. Code-compliant, same-day service. Call ${company.phone}.`,
+  metaDescription: `Licensed Maryland electricians serving homes and businesses — panel upgrades, wiring, outlet installation & Level 2 EV charger installation. Code-compliant, same-day service. Call ${company.phone}.`,
   heroImage: "/images/electrical/electrical-hero.jpg",
   heroImageFit: "cover",
-  heroTitle: "Professional Electrical Services for Maryland Homes",
+  heroTitle: "Professional Electrical Services for Maryland Homes and Businesses",
   heroDescription:
-    "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades — safely, cleanly, and on schedule.",
+    "Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades, safely, cleanly, and on schedule, for homes and commercial properties alike.",
   overviewTitle: "About Our Electrical Services in Maryland",
   overview: [
-    "Faulty wiring isn't just inconvenient — it's a serious safety hazard. Flickering lights, warm outlets, and tripping breakers are warning signs that deserve immediate professional attention.",
-    "Maven Home Services provides full-service residential electrical work across Maryland. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland amendments.",
-    "Whether you're renovating, adding circuits for new appliances, or upgrading an outdated electrical panel, we deliver work that passes inspection and protects your family for years to come.",
+    "Faulty wiring isn't just inconvenient, it's a serious safety hazard. Flickering lights, warm outlets, and tripping breakers are warning signs that deserve immediate professional attention, whether at home or at work.",
+    "Maven Services provides full-service residential and commercial electrical work across Maryland. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland amendments.",
+    "Whether you're renovating, adding circuits for new appliances or equipment, or upgrading an outdated electrical panel, we deliver work that passes inspection and protects your family, employees, and property for years to come.",
   ],
   offeredServicesSubtitle:
-    "Comprehensive electrical solutions from experienced Maryland professionals.",
+    "Comprehensive electrical solutions for homes and businesses from experienced Maryland professionals.",
   offeredServices: [
     {
       icon: "electrical_services",
@@ -35,7 +35,7 @@ export const electricalData: ServicePageData = {
     {
       icon: "cable",
       name: "Wiring & Rewiring",
-      desc: "New circuit installation, aluminum wire remediation, knob-and-tube replacement, and whole-home rewiring for older properties.",
+      desc: "New circuit installation, aluminum wire remediation, knob-and-tube replacement, and whole-building rewiring for older properties.",
     },
     {
       icon: "lightbulb",
@@ -45,25 +45,30 @@ export const electricalData: ServicePageData = {
     {
       icon: "ev_station",
       name: "EV Charger Installation",
-      desc: "Level 2 home EV charger installation across Maryland with dedicated circuits, permit handling, and utility coordination.",
+      desc: "Level 2 EV charger installation across Maryland with dedicated circuits, permit handling, and utility coordination.",
+    },
+    {
+      icon: "apartment",
+      name: "Commercial Electrical",
+      desc: "Panel upgrades, lighting, wiring, and repair for businesses and property managers across Maryland.",
     },
     {
       icon: "bolt",
       name: "Surge Protection",
-      desc: "Whole-home surge protectors and dedicated circuits to safeguard electronics, HVAC equipment, and appliances.",
+      desc: "Whole-building surge protectors and dedicated circuits to safeguard electronics, HVAC equipment, and appliances.",
     },
     {
       icon: "fact_check",
       name: "Electrical Safety Inspections",
-      desc: "Comprehensive home electrical audits for home buyers, sellers, and insurance requirements. Detailed written reports provided.",
+      desc: "Comprehensive electrical audits for buyers, sellers, and insurance requirements. Detailed written reports provided.",
     },
     {
       icon: "emergency",
       name: "Emergency Electrical Repair",
-      desc: "Emergency response for power outages, sparking outlets, burning smells, and other urgent electrical hazards. Response times depend on technician availability and your location.",
+      desc: "Emergency response for power outages, sparking outlets, burning smells, and other urgent electrical hazards at homes and businesses. Response times depend on technician availability and your location.",
     },
   ],
-  benefitsTitle: "Why Maryland Homeowners Choose Maven",
+  benefitsTitle: "Why Homes and Businesses Choose Maven",
   benefits: [
     {
       title: "Code-Compliant Work",
@@ -71,11 +76,11 @@ export const electricalData: ServicePageData = {
     },
     {
       title: "Safety-First Approach",
-      desc: "We never cut corners on grounding, bonding, or circuit protection. Your family's safety is non-negotiable on every job.",
+      desc: "We never cut corners on grounding, bonding, or circuit protection. Your family's and employees' safety is non-negotiable on every job.",
     },
     {
-      title: "Modern Home Ready",
-      desc: "From smart home wiring to EV chargers and solar interconnection, we equip your electrical system for today's technology demands.",
+      title: "Modern Building Ready",
+      desc: "From smart wiring to EV chargers and solar interconnection, we equip your electrical system for today's technology demands.",
     },
     {
       title: "Detailed Written Estimates",
@@ -84,8 +89,8 @@ export const electricalData: ServicePageData = {
   ],
   whyChoose: [
     {
-      title: "Residential Specialists",
-      desc: "We focus exclusively on homes — not commercial jobs squeezed in between. That means faster scheduling and technicians who know residential systems inside out.",
+      title: "Residential & Commercial Experience",
+      desc: "We serve both homes and businesses, so you get technicians who understand the difference between a single-family panel and a commercial system, and who schedule the work around how you use your space.",
     },
     {
       title: "Clean Installation Standards",
@@ -93,7 +98,7 @@ export const electricalData: ServicePageData = {
     },
     {
       title: "Honest Capacity Assessments",
-      desc: "Not every home needs a panel upgrade. We evaluate your actual load requirements and recommend only what's necessary for safe, reliable power.",
+      desc: "Not every property needs a panel upgrade. We evaluate your actual load requirements and recommend only what's necessary for safe, reliable power.",
     },
   ],
   steps: [
@@ -122,6 +127,8 @@ export const electricalData: ServicePageData = {
       desc: "We verify all circuits, test GFCI/AFCI protection, label your panel, and walk you through everything before signing off.",
     },
   ],
+  faqSubtitle:
+    "Common questions from homeowners, property managers, and business owners.",
   faqs: [
     {
       q: "How do I know if my electrical panel needs upgrading?",
@@ -144,12 +151,12 @@ export const electricalData: ServicePageData = {
       a: "Yes, Maven pulls permits and coordinates inspections for panel upgrades, rewiring, and other work that requires it under Maryland electrical code.",
     },
     {
-      q: "Is aluminum wiring in my home dangerous?",
+      q: "Is aluminum wiring in my building dangerous?",
       a: "Aluminum wiring installed in the 1960s and 70s can be a fire hazard if connections loosen over time. Maven remediates aluminum wiring with COPALUM connectors or targeted rewiring to bring it up to a safe, modern standard.",
     },
   ],
-  ctaTitle: "Power Your Home Safely & Reliably",
+  ctaTitle: "Power Your Home or Business Safely & Reliably",
   ctaDescription:
-    "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland, subject to technician availability.",
+    "Schedule your service today or call our team to request an estimate. Same-day appointments available for homes and businesses across Maryland, subject to technician availability.",
   detailSections: electricalDetailSections,
 };
