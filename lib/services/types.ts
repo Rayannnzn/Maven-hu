@@ -47,6 +47,8 @@ export type ServicePageData = {
   stepsTitle?: string;
   steps: { num: string; icon: string; title: string; desc: string }[];
   faqs: { q: string; a: string }[];
+  /** FAQ subheading. Falls back to the FaqSection default when omitted. */
+  faqSubtitle?: string;
   ctaTitle: string;
   ctaDescription?: string;
   detailSections?: ServiceDetailSection[];

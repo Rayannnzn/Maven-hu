@@ -9,8 +9,8 @@ export default function WhyChooseSection() {
       <div className={containerClass}>
         <SectionHeader
           eyebrow="Why Maven"
-          title="Why Maryland & Northern Virginia Homeowners Choose Maven"
-          subtitle="We hold every job to the same standard: licensed work, honest pricing, and service you can count on every time."
+          title="Why Homes and Businesses Choose Maven"
+          subtitle="We hold every job, big or small, to the same standard: licensed work, honest pricing, and service you can count on every time."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feat) => (

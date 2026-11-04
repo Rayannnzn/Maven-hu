@@ -40,7 +40,8 @@ export default function FinancingSection() {
           </h2>
           <p className="mb-7 text-base leading-relaxed text-[#4a5568]">
             Don&apos;t let budget concerns delay critical repairs or important
-            upgrades. Maven works with third-party lending partners, and
+            upgrades, whether for your home or your business. Maven works with
+            third-party lending partners, and
             promotional financing may be available for qualified customers.
             Terms, rates, and eligibility are determined by the lender.
           </p>

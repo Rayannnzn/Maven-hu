@@ -6,7 +6,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Air Conditioning Services",
     heading: "AC Repair",
     description:
-      "When your air conditioner stops cooling on a humid Maryland afternoon, you need a fast, accurate diagnosis — not guesswork. Maven's HVAC technicians troubleshoot refrigerant leaks, compressor failures, frozen evaporator coils, capacitor burnout, and electrical faults using professional-grade diagnostic tools. We repair all major brands and explain your options clearly before any work begins.",
+      "When your air conditioner stops cooling on a humid Maryland afternoon, whether at home or in the workplace, you need a fast, accurate diagnosis, not guesswork. Maven's HVAC technicians troubleshoot refrigerant leaks, compressor failures, frozen evaporator coils, capacitor burnout, and electrical faults using professional-grade diagnostic tools. We repair all major brands and explain your options clearly before any work begins.",
     benefits: [
       "Same-day AC repair appointments available across Montgomery County and our Maryland service area",
       "Upfront written estimates with no hidden fees",
@@ -20,7 +20,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Air Conditioning Services",
     heading: "AC Maintenance",
     description:
-      "Annual air conditioning maintenance is the single best investment you can make in your cooling system's longevity and efficiency. Our comprehensive tune-ups include coil cleaning, refrigerant level checks, electrical connection tightening, condensate drain clearing, and full system performance testing — keeping your AC running efficiently through Maryland's demanding summer season.",
+      "Annual air conditioning maintenance is the single best investment you can make in your cooling system's longevity and efficiency, for homes and commercial buildings alike. Our comprehensive tune-ups include coil cleaning, refrigerant level checks, electrical connection tightening, condensate drain clearing, and full system performance testing, keeping your AC running efficiently through Maryland's demanding summer season.",
     benefits: [
       "Lower monthly energy bills through improved system efficiency",
       "Fewer emergency breakdowns during peak summer heat",
@@ -34,7 +34,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Air Conditioning Services",
     heading: "AC Installation",
     description:
-      "Replacing an aging or undersized air conditioner with a properly sized, high-efficiency unit transforms your home's comfort and energy costs. Maven handles complete HVAC installation in Maryland — from load calculations and equipment selection to ductwork assessment, permit coordination, and final commissioning. We install central air systems, ductless mini-splits, and heat pump cooling configurations tailored to your home's layout and budget.",
+      "Replacing an aging or undersized air conditioner with a properly sized, high-efficiency unit transforms your comfort and energy costs. Maven handles complete HVAC installation in Maryland, from load calculations and equipment selection to ductwork assessment, permit coordination, and final commissioning. We install central air systems, ductless mini-splits, and heat pump cooling configurations tailored to your home's or building's layout and budget.",
     benefits: [
       "Proper sizing prevents short-cycling and uneven cooling",
       "High-SEER equipment options that qualify for energy rebates",
@@ -48,7 +48,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Air Conditioning Services",
     heading: "Central Air Conditioning",
     description:
-      "Central air conditioning delivers whole-home comfort through a network of supply and return ducts connected to a single outdoor condenser unit. Maven designs, installs, and services central AC systems for homes throughout Montgomery County and Frederick, MD — including ductwork modifications, zoning solutions, and integration with existing heating equipment for year-round climate control.",
+      "Central air conditioning delivers whole-building comfort through a network of supply and return ducts connected to a single outdoor condenser unit. Maven designs, installs, and services central AC systems for homes and commercial properties throughout Montgomery County and Frederick, MD, including ductwork modifications, zoning solutions, and integration with existing heating equipment for year-round climate control.",
     benefits: [
       "Consistent temperature control in every room",
       "Improved indoor air quality with proper filtration options",
@@ -62,10 +62,10 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Air Conditioning Services",
     heading: "Thermostats",
     description:
-      "The right thermostat makes a measurable difference in comfort and energy savings. Maven installs and configures programmable, Wi-Fi, and smart thermostats — including Nest, Ecobee, and Honeywell models — with proper wiring, compatibility checks, and system integration. We also troubleshoot thermostat communication errors, inaccurate temperature readings, and short-cycling caused by improper calibration.",
+      "The right thermostat makes a measurable difference in comfort and energy savings. Maven installs and configures programmable, Wi-Fi, and smart thermostats for homes and businesses, including Nest, Ecobee, and Honeywell models, with proper wiring, compatibility checks, and system integration. We also troubleshoot thermostat communication errors, inaccurate temperature readings, and short-cycling caused by improper calibration.",
     benefits: [
       "Remote temperature control from your smartphone",
-      "Automated scheduling reduces energy waste when you're away",
+      "Automated scheduling reduces energy waste when no one is there",
       "Compatibility verification before installation",
       "Professional wiring ensures reliable system communication",
     ],
@@ -74,9 +74,9 @@ export const hvacDetailSections: ServiceDetailSection[] = [
   {
     id: "rooftop-units",
     group: "Air Conditioning Services",
-    heading: "Rooftop Units — Commercial HVAC",
+    heading: "Rooftop Units: Commercial HVAC",
     description:
-      "Rooftop HVAC units (RTUs) are the workhorses of commercial and multi-unit buildings, delivering packaged heating and cooling from a single rooftop installation. As one of the commercial HVAC contractors serving Frederick, MD and the wider Maryland area, Maven services, repairs, and replaces rooftop units for small businesses, retail spaces, and light commercial properties — handling refrigerant work, economizer repairs, belt and motor replacements, and full unit changeouts with crane coordination when needed.",
+      "Rooftop HVAC units (RTUs) are the workhorses of commercial and multi-unit buildings, delivering packaged heating and cooling from a single rooftop installation. As one of the commercial HVAC contractors serving Frederick, MD and the wider Maryland area, Maven services, repairs, and replaces rooftop units for small businesses, retail spaces, and light commercial properties, handling refrigerant work, economizer repairs, belt and motor replacements, and full unit changeouts with crane coordination when needed.",
     benefits: [
       "Minimized business downtime with efficient repair scheduling",
       "Experienced with major RTU brands including Carrier, Trane, and Lennox",
@@ -90,7 +90,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Heating Services",
     heading: "Furnace Installation",
     description:
-      "A properly installed furnace keeps your family warm through Maryland winters while operating safely and efficiently. Maven installs gas and electric furnaces with correct sizing, ductwork connections, gas line work, venting, and combustion safety testing. We help you choose between single-stage, two-stage, and modulating furnaces based on your home's heating load, budget, and efficiency goals.",
+      "A properly installed furnace keeps your home or business warm through Maryland winters while operating safely and efficiently. Maven installs gas and electric furnaces with correct sizing, ductwork connections, gas line work, venting, and combustion safety testing. We help you choose between single-stage, two-stage, and modulating furnaces based on your property's heating load, budget, and efficiency goals.",
     benefits: [
       "AFUE ratings up to 98% for maximum fuel efficiency",
       "Correct sizing eliminates short-cycling and cold spots",
@@ -104,7 +104,7 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Heating Services",
     heading: "Furnace Maintenance",
     description:
-      "Annual furnace maintenance catches worn components, dirty burners, and cracked heat exchangers before they become safety hazards or no-heat emergencies. Our heating tune-up includes combustion analysis, blower motor inspection, filter replacement, thermostat calibration, flue and vent checking, and a complete safety inspection — giving you confidence that your furnace is ready for winter.",
+      "Annual furnace maintenance catches worn components, dirty burners, and cracked heat exchangers before they become safety hazards or no-heat emergencies. Our heating tune-up includes combustion analysis, blower motor inspection, filter replacement, thermostat calibration, flue and vent checking, and a complete safety inspection, giving you confidence that your furnace is ready for winter.",
     benefits: [
       "Carbon monoxide and combustion safety verification",
       "Improved heating efficiency and lower gas bills",
@@ -118,9 +118,9 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Heating Services",
     heading: "Furnace Repair",
     description:
-      "A furnace that won't ignite, cycles constantly, or blows cold air needs professional attention — especially during freezing weather. Maven's heating technicians diagnose and repair ignition failures, blower motor problems, limit switch faults, gas valve issues, and cracked heat exchangers. We carry common replacement parts on our trucks and provide upfront pricing before starting any repair.",
+      "A furnace that won't ignite, cycles constantly, or blows cold air needs professional attention, especially during freezing weather. Maven's heating technicians diagnose and repair ignition failures, blower motor problems, limit switch faults, gas valve issues, and cracked heat exchangers. We carry common replacement parts on our trucks and provide upfront pricing before starting any repair.",
     benefits: [
-      "Emergency no-heat response available for urgent situations",
+      "Emergency no-heat response available for homes and businesses",
       "Accurate diagnosis prevents unnecessary part replacements",
       "All major furnace brands serviced by experienced technicians",
       "Safety inspection included with every repair visit",
@@ -132,11 +132,11 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Heating Services",
     heading: "Heat Pumps & Geothermal Systems",
     description:
-      "Heat pumps provide efficient heating and cooling in a single system — ideal for the Mid-Atlantic climate where winters are moderate and summers are hot. Maven installs, repairs, and maintains air-source, ductless, and geothermal heat pump systems for Maryland homeowners, handling refrigerant charging, defrost cycle troubleshooting, auxiliary heat integration, and dual-fuel configurations that pair a heat pump with a backup furnace for extreme cold. For homeowners seeking maximum efficiency, our geothermal heat pump installation uses the stable underground temperature to heat and cool your home at a fraction of the operating cost of conventional systems.",
+      "Heat pumps provide efficient heating and cooling in a single system, ideal for the Mid-Atlantic climate where winters are moderate and summers are hot. Maven installs, repairs, and maintains air-source, ductless, and geothermal heat pump systems for Maryland homes and businesses, handling refrigerant charging, defrost cycle troubleshooting, auxiliary heat integration, and dual-fuel configurations that pair a heat pump with a backup furnace for extreme cold. For property owners seeking maximum efficiency, our geothermal heat pump installation uses the stable underground temperature to heat and cool your building at a fraction of the operating cost of conventional systems.",
     benefits: [
       "Year-round comfort from a single energy-efficient system",
       "Lower heating costs compared to electric resistance heat",
-      "Ductless and geothermal options for homes without existing ductwork",
+      "Ductless and geothermal options for properties without existing ductwork",
       "Eligible for federal and utility energy efficiency incentives",
     ],
     ctaText: "Learn About Heat Pump & Geothermal Installation",
@@ -146,12 +146,12 @@ export const hvacDetailSections: ServiceDetailSection[] = [
     group: "Heating Services",
     heading: "Thermostats for Heating Systems",
     description:
-      "Heating performance depends heavily on accurate thermostat control. Maven installs smart and programmable thermostats optimized for furnace and heat pump systems — configuring heat pump balance points, auxiliary heat lockout temperatures, and multi-stage heating schedules. We also repair wiring faults, replace failing thermostats, and integrate zoning controls for multi-level homes.",
+      "Heating performance depends heavily on accurate thermostat control. Maven installs smart and programmable thermostats optimized for furnace and heat pump systems, configuring heat pump balance points, auxiliary heat lockout temperatures, and multi-stage heating schedules. We also repair wiring faults, replace failing thermostats, and integrate zoning controls for multi-level homes and commercial buildings.",
     benefits: [
       "Optimized heating schedules reduce energy consumption",
       "Heat pump-specific settings maximize efficiency",
       "Zoning controls for independent temperature management",
-      "Smart home integration with voice assistant compatibility",
+      "Smart building integration with voice assistant compatibility",
     ],
     ctaText: "Schedule Thermostat Service",
   },

@@ -9,7 +9,7 @@ export default function ServiceAreasSection() {
         <div className="min-w-0">
           <span className="eyebrow mb-5">Where We Work</span>
           <h2 className="section-heading mb-4 text-left">
-            Service Areas — Maryland &amp; Northern Virginia
+            Service Areas: Maryland &amp; Northern Virginia
           </h2>
           <p className="mb-8 text-base leading-relaxed text-muted-foreground">
             {serviceArea.description} Contact us to confirm availability in your
@@ -31,8 +31,8 @@ export default function ServiceAreasSection() {
             Cities We Serve
           </h3>
           <p className="mb-6 text-sm text-muted-foreground">
-            Within {serviceArea.radiusMiles} miles of our Rockville office —
-            Maryland and Northern Virginia communities.
+            Within {serviceArea.radiusMiles} miles of our Rockville office,
+            serving Maryland and Northern Virginia communities.
           </p>
           <div className="border-t border-border">
             <div className="grid grid-cols-2">

@@ -43,7 +43,7 @@ export const serviceArea = {
   alsoServes: "Virginia",
   radiusMiles: 30,
   description:
-    "Based in Rockville, Maryland — serving homeowners and businesses within a 30-mile radius across Maryland and Northern Virginia.",
+    "Based in Rockville, Maryland, we serve homes and businesses within a 30-mile radius across Maryland and Northern Virginia.",
   mapImage: "/images/md-va-service-map.png",
   // Google Maps embed centred on Maryland — Google draws the state boundary
   // highlight for a state-name query, which is the region we want to show.

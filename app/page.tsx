@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: {
     absolute: "HVAC, Plumbing & Electrical in Maryland & Northern VA | Maven",
   },
-  description: `Licensed HVAC, plumbing & electrical pros serving Rockville, Silver Spring, Bethesda, Frederick MD & Northern Virginia. Same-day service. Call ${company.phone}.`,
+  description: `Licensed HVAC, plumbing & electrical pros serving homes and businesses in Rockville, Silver Spring, Bethesda, Frederick MD & Northern Virginia. Same-day service. Call ${company.phone}.`,
 };
 
 export default function Home() {

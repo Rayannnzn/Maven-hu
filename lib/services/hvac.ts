@@ -6,19 +6,19 @@ export const hvacData: ServicePageData = {
   slug: "hvac",
   title: "HVAC Services",
   seoTitle: "HVAC Services in Maryland | AC & Heating Repair, Install | Maven",
-  metaDescription: `Licensed HVAC contractors serving Maryland — AC repair, furnace repair, heat pump & geothermal installation, duct cleaning. Same-day service. Call ${company.phone}.`,
+  metaDescription: `Licensed HVAC contractors serving Maryland homes and businesses — AC repair, furnace repair, heat pump & geothermal installation, duct cleaning. Same-day service. Call ${company.phone}.`,
   heroImage: "/images/hvac/hvac-hero.png",
-  heroTitle: "Professional HVAC Services in Maryland",
+  heroTitle: "Professional HVAC Services for Homes and Businesses in Maryland",
   heroDescription:
-    "From emergency AC repairs to full system replacements, Maven's experienced HVAC technicians keep your home comfortable through humid Mid-Atlantic summers and winter freezes. Upfront pricing, same-day appointments, and quality workmanship you can trust.",
+    "From emergency AC repairs to full system replacements, Maven's experienced HVAC technicians keep homes and commercial properties comfortable through humid Mid-Atlantic summers and winter freezes. Upfront pricing, same-day appointments, and quality workmanship you can trust.",
   overviewTitle: "About Our HVAC Services in Maryland",
   overview: [
-    "Your heating and cooling system is the backbone of home comfort — especially here in Maryland, where humid summers, temperature swings, and occasional winter freezes push equipment to its limits. When your HVAC system struggles, every room in your home feels it.",
-    "Maven Home Services provides complete HVAC solutions for homeowners and property managers throughout Montgomery County, Frederick, and communities within a 30-mile radius of our Rockville headquarters. Our experienced technicians diagnose problems accurately, recommend honest solutions, and complete repairs that last.",
-    "Whether you need a seasonal tune-up, emergency repair, ductwork service, or a full HVAC installation, we arrive on time with the tools and parts to deliver quality workmanship on every visit.",
+    "Your heating and cooling system is the backbone of comfort, whether in your home or your business, especially here in Maryland, where humid summers, temperature swings, and occasional winter freezes push equipment to its limits. When your HVAC system struggles, every room in your building feels it.",
+    "Maven Services provides complete HVAC solutions for homeowners, property managers, and commercial clients throughout Montgomery County, Frederick, and communities within a 30-mile radius of our Rockville headquarters. Our experienced technicians diagnose problems accurately, recommend honest solutions, and complete repairs that last.",
+    "Whether you need a seasonal tune-up, emergency repair, ductwork service, or a full HVAC installation for your home or business, we arrive on time with the tools and parts to deliver quality workmanship on every visit.",
   ],
   offeredServicesSubtitle:
-    "Comprehensive HVAC solutions from experienced Maryland technicians.",
+    "Comprehensive HVAC solutions for homes and businesses from experienced Maryland technicians.",
   offeredServices: [
     {
       icon: "ac_unit",
@@ -33,7 +33,12 @@ export const hvacData: ServicePageData = {
     {
       icon: "hvac",
       name: "HVAC Installation in Maryland",
-      desc: "Professional installation of central air, heat pumps, geothermal systems, ductless mini-splits, and complete system replacements sized for your home.",
+      desc: "Professional installation of central air, heat pumps, geothermal systems, ductless mini-splits, and complete system replacements sized for your home or building.",
+    },
+    {
+      icon: "apartment",
+      name: "Commercial HVAC & Rooftop Units",
+      desc: "Repair, replacement, and preventive maintenance programs for rooftop units serving small businesses, retail spaces, and light commercial properties.",
     },
     {
       icon: "build",
@@ -43,7 +48,7 @@ export const hvacData: ServicePageData = {
     {
       icon: "air",
       name: "Duct Cleaning & Ductwork Services",
-      desc: "Air duct cleaning, sealing, repair, and replacement to improve airflow, indoor air quality, and overall system performance for Maryland homes.",
+      desc: "Air duct cleaning, sealing, repair, and replacement to improve airflow, indoor air quality, and overall system performance for Maryland homes and businesses.",
     },
     {
       icon: "thermostat",
@@ -53,23 +58,23 @@ export const hvacData: ServicePageData = {
     {
       icon: "airware",
       name: "Indoor Air Quality",
-      desc: "Air purifiers, humidifiers, dehumidifiers, and UV light systems to reduce allergens, mold, and airborne contaminants.",
+      desc: "Air purifiers, humidifiers, dehumidifiers, and UV light systems to reduce allergens, mold, and airborne contaminants in homes and workplaces.",
     },
     {
       icon: "emergency",
       name: "Emergency HVAC Service",
-      desc: "Emergency dispatch for no-heat and no-cool situations across our Maryland service area. Response times depend on technician availability and your location.",
+      desc: "Emergency dispatch for no-heat and no-cool situations at homes and businesses across our Maryland service area. Response times depend on technician availability and your location.",
     },
   ],
-  benefitsTitle: "Why Maryland Homeowners Choose Maven",
+  benefitsTitle: "Why Homes and Businesses Choose Maven",
   benefits: [
     {
       title: "Experienced HVAC Technicians",
-      desc: "Our experienced, highly trained HVAC technicians work on residential systems of all makes and models.",
+      desc: "Our experienced, highly trained HVAC technicians work on residential and commercial systems of all makes and models.",
     },
     {
       title: "Energy-Efficient Solutions",
-      desc: "We recommend high-SEER equipment and system upgrades that lower monthly utility bills while improving whole-home comfort.",
+      desc: "We recommend high-SEER equipment and system upgrades that lower monthly utility bills while improving whole-building comfort.",
     },
     {
       title: "Upfront Written Estimates",
@@ -83,7 +88,7 @@ export const hvacData: ServicePageData = {
   whyChoose: [
     {
       title: "Mid-Atlantic Climate Expertise",
-      desc: "We understand how humid summers, winter freezes, and seasonal humidity swings affect HVAC systems in Maryland homes — and we service accordingly.",
+      desc: "We understand how humid summers, winter freezes, and seasonal humidity swings affect HVAC systems in Maryland homes and commercial buildings, and we service accordingly.",
     },
     {
       title: "Fully Stocked Service Vans",
@@ -91,7 +96,7 @@ export const hvacData: ServicePageData = {
     },
     {
       title: "Honest System Recommendations",
-      desc: "We repair when repair makes sense and recommend replacement only when it's the most cost-effective long-term solution for your home.",
+      desc: "We repair when repair makes sense and recommend replacement only when it's the most cost-effective long-term solution for your home or business.",
     },
   ],
   steps: [
@@ -105,7 +110,7 @@ export const hvacData: ServicePageData = {
       num: "02",
       icon: "manage_search",
       title: "Thorough System Diagnosis",
-      desc: "Your technician inspects the full system — indoor unit, outdoor unit, ductwork, and thermostat — before recommending any work.",
+      desc: "Your technician inspects the full system (indoor unit, outdoor unit, ductwork, and thermostat) before recommending any work.",
     },
     {
       num: "03",
@@ -120,6 +125,8 @@ export const hvacData: ServicePageData = {
       desc: "Before we leave, we test system performance, review maintenance tips, and ensure you're satisfied with the results.",
     },
   ],
+  faqSubtitle:
+    "Common questions from homeowners, property managers, and business owners.",
   faqs: [
     {
       q: "How often should I schedule HVAC maintenance in Maryland?",
@@ -134,8 +141,8 @@ export const hvacData: ServicePageData = {
       a: "Yes, Maven works with third-party lending partners who may offer promotional financing for qualified customers on HVAC installations. Terms and eligibility are set by the lender.",
     },
     {
-      q: "What size AC unit does my home need?",
-      a: "The right AC size depends on square footage, insulation, ductwork, and sun exposure. Maven performs a load calculation during your estimate to recommend the correctly sized system for your Maryland home.",
+      q: "What size AC unit does my home or building need?",
+      a: "The right AC size depends on square footage, insulation, ductwork, and sun exposure. Maven performs a load calculation during your estimate to recommend the correctly sized system for your Maryland home or building.",
     },
     {
       q: "Can you service all HVAC brands?",
@@ -148,6 +155,6 @@ export const hvacData: ServicePageData = {
   ],
   ctaTitle: "Ready for Reliable Heating & Cooling?",
   ctaDescription:
-    "Schedule your service today or call our team to request an estimate. Same-day appointments available across Maryland, subject to technician availability.",
+    "Schedule your service today or call our team to request an estimate. Same-day appointments available for homes and businesses across Maryland, subject to technician availability.",
   detailSections: hvacDetailSections,
 };

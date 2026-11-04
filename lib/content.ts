@@ -28,22 +28,22 @@ export const services: Service[] = [
   {
     icon: "hvac",
     name: "HVAC",
-    desc: "AC repair, heat pump installation, geothermal systems, and duct cleaning across Montgomery County and Frederick, MD.",
+    desc: "AC repair, heat pump installation, geothermal systems, and duct cleaning for homes and commercial properties across Montgomery County and Frederick, MD.",
   },
   {
     icon: "plumbing",
     name: "Plumbing",
-    desc: "Water heater installation, replacement and repair, drain cleaning, and leak repair in Silver Spring, Frederick, and Northern Virginia.",
+    desc: "Water heater installation, replacement and repair, drain cleaning, and leak repair for residential and commercial clients in Silver Spring, Frederick, and Northern Virginia.",
   },
   {
     icon: "electrical_services",
     name: "Electrical",
-    desc: "Panel upgrades, wiring, safety inspections, and Level 2 EV charger installation in Maryland.",
+    desc: "Panel upgrades, wiring, safety inspections, and Level 2 EV charger installation for homes and businesses in Maryland.",
   },
   {
     icon: "apartment",
     name: "Commercial",
-    desc: "Commercial HVAC and plumbing contractors serving Maryland and Northern Virginia businesses.",
+    desc: "HVAC, plumbing, and electrical service for offices, retail, restaurants, and multi-unit properties across Maryland and Northern Virginia.",
   },
 ];
 
@@ -51,7 +51,7 @@ export const features: Feature[] = [
   {
     icon: "verified",
     title: "Insured Professionals",
-    desc: "Our technicians are insured and background-checked. We carry liability coverage and treat your home with care.",
+    desc: "Our technicians are insured and background-checked. We carry liability coverage and treat your home or workplace with care.",
   },
   {
     icon: "speed",
@@ -61,17 +61,17 @@ export const features: Feature[] = [
   {
     icon: "receipt_long",
     title: "Transparent Pricing",
-    desc: "Upfront written estimates before work begins. No hidden fees — you approve every cost before we start.",
+    desc: "Upfront written estimates before work begins. No hidden fees, and you approve every cost before we start.",
   },
   {
     icon: "support_agent",
     title: "Emergency Service",
-    desc: "Emergency service is available for urgent HVAC, plumbing, and electrical issues. Response times depend on technician availability and your location.",
+    desc: "Available for urgent HVAC, plumbing, and electrical issues at homes and businesses alike. Response times depend on technician availability and your location.",
   },
   {
     icon: "engineering",
     title: "Experienced Technicians",
-    desc: "Our technicians bring years of hands-on field experience across HVAC, plumbing, and electrical trades — not call-center dispatch. Every estimate is written by the technician who will do the work.",
+    desc: "Our technicians bring years of hands-on field experience across HVAC, plumbing, and electrical trades, not call-center dispatch. Every estimate is written by the technician who will do the work.",
   },
   {
     icon: "thumb_up_alt",

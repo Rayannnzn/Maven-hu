@@ -10,7 +10,7 @@ export default function ProcessSection() {
         <SectionHeader
           eyebrow="How It Works"
           title="How Booking a Service with Maven Works"
-          subtitle="From booking to completion, we keep you informed at every step of the process."
+          subtitle="From booking to completion, we keep you informed at every step."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (

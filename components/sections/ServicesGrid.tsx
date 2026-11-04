@@ -21,8 +21,8 @@ export default function ServicesGrid() {
       <div className={containerClass}>
         <SectionHeader
           eyebrow="Our Services"
-          title="Complete Home Service Solutions for Maryland & Northern Virginia Homeowners"
-          subtitle="Maven offers HVAC, plumbing, and electrical installation, repair, and maintenance across Maryland and Northern Virginia — including AC repair, heat pump and geothermal installation, water heater replacement, drain cleaning, panel upgrades, and EV charger installation."
+          title="Complete Residential & Commercial Service Solutions"
+          subtitle="Maven offers HVAC, plumbing, and electrical installation, repair, and maintenance for homes and businesses across Maryland and Northern Virginia, including AC repair, heat pump and geothermal installation, water heater replacement, drain cleaning, panel upgrades, and EV charger installation."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-7">
           {services.map((svc) => (

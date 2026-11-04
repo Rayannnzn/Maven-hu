@@ -198,7 +198,7 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
       </section>
 
-      <FaqSection faqs={data.faqs} />
+      <FaqSection faqs={data.faqs} subtitle={data.faqSubtitle} />
 
       <section className={`${sectionClass} bg-muted`}>
         <div className={containerClass}>

@@ -24,15 +24,17 @@ export default function HeroSection() {
           <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-[3.25rem]">
             Trusted HVAC, Plumbing{" "}
             <span className="text-maven-gold">&amp; Electrical Services</span>
+            {" "}for Homes and Businesses
             <br />
             in Maryland &amp; Northern Virginia
           </h1>
 
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/72 md:text-lg">
-            {company.name} provides licensed HVAC, plumbing, and electrical
-            repair and installation for homeowners in Rockville, Bethesda,
-            Silver Spring, Gaithersburg, Frederick, and surrounding Maryland and
-            Northern Virginia communities. Same-day appointments are available,
+            Maven Services provides licensed HVAC, plumbing, and electrical
+            repair and installation for homeowners, property managers, and
+            commercial clients in Rockville, Bethesda, Silver Spring,
+            Gaithersburg, Frederick, and surrounding Maryland and Northern
+            Virginia communities. Same-day appointments are available,
             all technicians are insured and background-checked, and every job
             includes an upfront written estimate before work begins.
           </p>
@@ -91,7 +93,7 @@ export default function HeroSection() {
                 home
               </span>
               <div className="text-sm font-bold leading-tight text-primary">
-                Trusted by homeowners throughout Maryland.
+                Trusted by homeowners and businesses throughout Maryland.
               </div>
             </div>
 

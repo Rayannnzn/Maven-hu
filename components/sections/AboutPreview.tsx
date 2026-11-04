@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { company, containerClass, sectionClass, serviceArea } from "@/lib/site";
+import { containerClass, sectionClass, serviceArea } from "@/lib/site";
 
 const stats = [
   { value: "Experienced", label: "Professional field experience", highlight: false },
   { value: "Local", label: "Serving Maryland & Northern Virginia", highlight: false },
-  { value: "Trusted", label: "By homeowners throughout Maryland", highlight: false },
+  { value: "Trusted", label: "By homeowners and businesses throughout the region", highlight: false },
   { value: "Responsive", label: "Emergency service available", highlight: true },
 ];
 
@@ -17,17 +17,13 @@ export default function AboutPreview() {
           <h2 className="section-heading mb-5 text-left">
             Built on Skill, Integrity, and Results
           </h2>
-          <p className="mb-4 text-base leading-relaxed text-[#4a5568]">
-            Founded by tradespeople with direct field experience in HVAC,
-            plumbing, and electrical work, {company.name} is based in Rockville,
-            Maryland, and serves homeowners, property managers, and businesses
-            within a {serviceArea.radiusMiles}-mile service radius across
-            Maryland and Northern Virginia.
-          </p>
           <p className="mb-8 text-base leading-relaxed text-[#4a5568] md:mb-10">
-            Today, Maven serves homeowners, property managers, and businesses
-            across {company.serviceRegion} with an experienced team of HVAC,
-            plumbing, and electrical professionals.
+            Founded by tradespeople with direct field experience in HVAC,
+            plumbing, and electrical work, Maven Services is based in Rockville,
+            Maryland. We serve homeowners, property managers, and businesses
+            within a {serviceArea.radiusMiles}-mile radius across Maryland and
+            Northern Virginia, from a single-family repair to a multi-unit or
+            commercial building.
           </p>
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             {stats.map((stat) => (

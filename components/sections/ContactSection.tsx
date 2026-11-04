@@ -55,7 +55,7 @@ export default function ContactSection() {
       <div className={containerClass}>
         <SectionHeader
           eyebrow="Contact Us"
-          title="Ready to Get Started?"
+          title="Contact Maven Services"
           subtitle="Call us or fill out the form and we will contact you promptly."
         />
         <div className="grid items-start gap-10 lg:grid-cols-2 lg:gap-12">

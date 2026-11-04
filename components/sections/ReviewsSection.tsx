@@ -6,7 +6,7 @@ const trustPoints = [
   {
     icon: "engineering",
     title: "Experienced Technicians",
-    desc: "Experienced, highly trained technicians handle every HVAC, plumbing, and electrical job with care and professionalism.",
+    desc: "Highly trained technicians handle every residential and commercial HVAC, plumbing, and electrical job with care and professionalism.",
   },
   {
     icon: "receipt_long",
@@ -16,7 +16,7 @@ const trustPoints = [
   {
     icon: "home",
     title: "Local & Reliable",
-    desc: "Trusted by homeowners throughout Maryland and Northern Virginia for dependable service and quality workmanship on every visit.",
+    desc: "Trusted by homeowners, property managers, and business owners across Maryland and Northern Virginia for dependable service and quality workmanship on every visit.",
   },
 ];
 
@@ -25,8 +25,8 @@ export default function ReviewsSection() {
     <section id="reviews" className={`${sectionClass} bg-muted`}>
       <div className={containerClass}>
         <SectionHeader
-          eyebrow="Why Homeowners Choose Us"
-          title="Trusted by Homeowners Throughout Maryland"
+          eyebrow="Why Customers Choose Us"
+          title="Trusted by Homeowners and Businesses Throughout Maryland"
           subtitle="We stand behind our work with professional service and clear, honest communication."
         />
 
