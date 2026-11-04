@@ -269,7 +269,7 @@ function MobileServiceSubNav({
       transition={
         reduceMotion
           ? { duration: 0 }
-          : { type: "tween", duration: 0.28, ease: [0.4, 0, 0.2, 1] }
+          : { type: "tween", duration: 0.45, ease: [0.4, 0, 0.2, 1] }
       }
       aria-hidden={hidden}
     >
@@ -471,7 +471,7 @@ export default function SiteHeader() {
   useEffect(() => {
     const HYSTERESIS = 24; // px of net travel before the row changes state
     const MIN_COLLAPSE_Y = 80; // never collapse while the hero is in view
-    const LOCK_MS = 320; // ≈ animation duration
+    const LOCK_MS = 480; // ≈ animation duration
 
     const update = () => {
       frame.current = null;
