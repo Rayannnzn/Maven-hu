@@ -14,6 +14,13 @@ import { olneyTanklessData } from "@/lib/services/olney-tankless-water-heater";
 import { potomacTanklessData } from "@/lib/services/potomac-tankless-water-heater";
 import { rockvilleCentralAcData } from "@/lib/services/rockville-central-ac";
 import { rockvilleDrainCleaningData } from "@/lib/services/rockville-drain-cleaning";
+import { rockvilleElectricalInspectionsData } from "@/lib/services/rockville-electrical-inspections";
+import { rockvilleElectricalRepairInstallationData } from "@/lib/services/rockville-electrical-repair-installation";
+import { rockvilleElectricalServicesData } from "@/lib/services/rockville-electrical-services";
+import { rockvilleElectricalWiringData } from "@/lib/services/rockville-electrical-wiring";
+import { rockvilleOutletReplacementData } from "@/lib/services/rockville-outlet-replacement";
+import { rockvilleSecurityLightingData } from "@/lib/services/rockville-security-lighting";
+import { rockvilleSumpPumpData } from "@/lib/services/rockville-sump-pump";
 import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
 import { rockvilleBackflowData } from "@/lib/services/rockville-backflow";
 import { rockvillePlumbingRepairData } from "@/lib/services/rockville-plumbing-repair";
@@ -87,6 +94,36 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/plumbing/commercial-tankless-water-heater-service-bethesda-md",
       label: bethesdaTanklessData.title,
+    },
+    {
+      href: "/plumbing/sump-pump-repair-installation-rockville",
+      label: rockvilleSumpPumpData.title,
+    },
+  ],
+  "/electrical": [
+    {
+      href: "/electrical/commercial-residential-rockville",
+      label: rockvilleElectricalServicesData.title,
+    },
+    {
+      href: "/electrical/repair-installation-rockville",
+      label: rockvilleElectricalRepairInstallationData.title,
+    },
+    {
+      href: "/electrical/inspections-rockville",
+      label: rockvilleElectricalInspectionsData.title,
+    },
+    {
+      href: "/electrical/wiring-rewiring-rockville",
+      label: rockvilleElectricalWiringData.title,
+    },
+    {
+      href: "/electrical/outlet-replacement-rockville",
+      label: rockvilleOutletReplacementData.title,
+    },
+    {
+      href: "/electrical/security-lighting-rockville",
+      label: rockvilleSecurityLightingData.title,
     },
   ],
 };

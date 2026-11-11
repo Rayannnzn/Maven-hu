@@ -32,7 +32,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
       </div>
 
-      <PageHero title={data.heroTitle} description={data.heroDescription} />
+      <PageHero
+        title={data.heroTitle}
+        description={parseInline(data.heroDescription)}
+      />
 
       <section className={`${sectionClass} bg-background`}>
         <div className={`${containerClass} max-w-3xl`}>
@@ -59,10 +62,10 @@ export default function ServicePageLayout({ data }: { data: ServicePageData }) {
           <SectionHeader
             eyebrow="Services"
             title={data.offeredServicesTitle ?? "What We Offer"}
-            subtitle={
+            subtitle={parseInline(
               data.offeredServicesSubtitle ??
-              "Comprehensive solutions from experienced professionals."
-            }
+                "Comprehensive solutions from experienced professionals.",
+            )}
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {data.offeredServices.map((svc) => (

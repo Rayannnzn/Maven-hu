@@ -57,6 +57,39 @@ export default function ServiceDetailSections({
                   </p>
                 )}
 
+                {section.table && (
+                  <div className="mb-8 overflow-x-auto rounded-xl border border-border">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-primary text-white">
+                        <tr>
+                          {section.table.columns.map((col) => (
+                            <th key={col} className="min-w-[9rem] px-4 py-3 font-semibold">
+                              {col}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {section.table.rows.map((row, rowIndex) => (
+                          <tr
+                            key={row[0]}
+                            className={rowIndex % 2 === 0 ? "bg-background" : "bg-muted"}
+                          >
+                            {row.map((cell, cellIndex) => (
+                              <td
+                                key={cellIndex}
+                                className={`px-4 py-3 align-top leading-relaxed ${cellIndex === 0 ? "font-medium text-primary" : "text-muted-foreground"}`}
+                              >
+                                {parseInline(cell)}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
                 {section.benefits && section.benefits.length > 0 && (
                   <div className="mb-8">
                     {section.benefitsHeading !== "" && (

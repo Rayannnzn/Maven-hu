@@ -1,0 +1,623 @@
+- generic [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - generic [ref=f4e5]:
+        - link [ref=f4e6] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f4e8]
+        - navigation "Main" [ref=f4e9]:
+          - link "Home" [ref=f4e10] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f4e12]:
+            - link "HVAC" [ref=f4e13] [cursor=pointer]:
+              - /url: /hvac
+            - button "Open HVAC menu" [ref=f4e14]
+          - generic [ref=f4e18]:
+            - link "Plumbing" [ref=f4e19] [cursor=pointer]:
+              - /url: /plumbing
+            - button "Open Plumbing menu" [ref=f4e20]
+          - generic [ref=f4e24]:
+            - link "Electrical Services" [ref=f4e25] [cursor=pointer]:
+              - /url: /electrical
+            - button "Open Electrical Services menu" [ref=f4e26]
+          - generic [ref=f4e30]:
+            - link "Commercial" [ref=f4e31] [cursor=pointer]:
+              - /url: /commercial
+            - button "Open Commercial menu" [ref=f4e32]
+          - link "About" [ref=f4e35] [cursor=pointer]:
+            - /url: /about
+          - link "Blog" [ref=f4e36] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=f4e37] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=f4e38]:
+          - link "Become a Subcontractor" [ref=f4e39] [cursor=pointer]:
+            - /url: /become-a-subcontractor
+          - generic [ref=f4e40]:
+            - link "240-255-4794" [ref=f4e41] [cursor=pointer]:
+              - /url: tel:+12402554794
+            - generic [ref=f4e42]: 24/7 Emergency Service
+          - link "Book Now" [ref=f4e43] [cursor=pointer]:
+            - /url: /contact
+      - navigation "Electrical Services services" [ref=f4e44]:
+        - generic [ref=f4e45]:
+          - link "Electrical Installation/Repair" [ref=f4e46] [cursor=pointer]:
+            - /url: /electrical#electrical-installation
+          - link "EV Charger Installation" [ref=f4e47] [cursor=pointer]:
+            - /url: /electrical#ev-charger-installation
+          - link "Indoor & Outdoor Lighting Installation" [ref=f4e48] [cursor=pointer]:
+            - /url: /electrical#indoor-outdoor-lighting-installation
+          - link "Ceiling Fan Installation" [ref=f4e49] [cursor=pointer]:
+            - /url: /electrical#ceiling-fan-installation
+          - link "Electrical Panel & Circuit Breaker Services" [ref=f4e50] [cursor=pointer]:
+            - /url: /electrical#electrical-panel-circuit-breaker
+          - link "Electrical Inspections" [active] [ref=f4e51] [cursor=pointer]:
+            - /url: /electrical#electrical-inspections
+          - link "Outlet Replacement" [ref=f4e52] [cursor=pointer]:
+            - /url: /electrical#outlet-replacement
+          - link "Electrical Wiring & Rewiring" [ref=f4e53] [cursor=pointer]:
+            - /url: /electrical#electrical-wiring-rewiring
+          - link "Security Lighting" [ref=f4e54] [cursor=pointer]:
+            - /url: /electrical#security-lighting
+          - link "Repair & Installation" [ref=f4e55] [cursor=pointer]:
+            - /url: /electrical/repair-installation
+          - link "Commercial & Residential" [ref=f4e56] [cursor=pointer]:
+            - /url: /electrical/commercial-residential
+  - main [ref=f4e57]:
+    - navigation "breadcrumb" [ref=f4e59]:
+      - list [ref=f4e60]:
+        - listitem [ref=f4e61]:
+          - link "Home" [ref=f4e62] [cursor=pointer]:
+            - /url: /
+        - listitem [aria-hidden] [ref=f4e63]
+        - listitem [ref=f4e66]:
+          - link "Electrical Services" [disabled] [ref=f4e67]
+    - generic [ref=f4e71]:
+      - heading "Professional Electrical Services for Maryland Homes and Businesses" [level=1] [ref=f4e72]
+      - paragraph [ref=f4e73]: Electrical work demands precision and code compliance. Maven's experienced electricians handle everything from outlet installs to full panel upgrades, safely, cleanly, and on schedule, for homes and commercial properties alike.
+      - generic [ref=f4e74]:
+        - link "Schedule Service" [ref=f4e75] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e76] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e78]:
+      - generic [ref=f4e79]:
+        - generic [ref=f4e80]: Overview
+        - heading "About Our Electrical Services in Maryland" [level=2] [ref=f4e81]
+      - generic [ref=f4e82]:
+        - paragraph [ref=f4e83]: Faulty wiring isn't just inconvenient, it's a serious safety hazard. Flickering lights, warm outlets, and tripping breakers are warning signs that deserve immediate professional attention, whether at home or at work.
+        - paragraph [ref=f4e84]: Maven Services provides full-service residential and commercial electrical work across Maryland. Our experienced electricians handle new installations, troubleshooting, panel upgrades, and safety inspections with meticulous attention to NEC code and local Maryland amendments.
+        - paragraph [ref=f4e85]: Whether you're renovating, adding circuits for new appliances or equipment, or upgrading an outdated electrical panel, we deliver work that passes inspection and protects your family, employees, and property for years to come.
+    - generic [ref=f4e88]:
+      - generic [ref=f4e89]:
+        - generic [ref=f4e90]: Service
+        - heading "Electrical Installation" [level=2] [ref=f4e91]
+      - paragraph [ref=f4e92]: New circuits, dedicated lines, and electrical system expansions require precise planning and code-compliant execution. Maven's electricians install new wiring for kitchen remodels, home additions, business build-outs, appliance and equipment upgrades, and smart building integrations, pulling permits, coordinating inspections, and ensuring every connection meets National Electrical Code standards and local Maryland amendments.
+      - generic [ref=f4e93]:
+        - heading "Benefits" [level=3] [ref=f4e94]
+        - list [ref=f4e95]:
+          - listitem [ref=f4e96]:
+            - generic [ref=f4e97]: check_circle
+            - text: Permits pulled and inspections scheduled when required
+          - listitem [ref=f4e98]:
+            - generic [ref=f4e99]: check_circle
+            - text: Proper circuit sizing prevents overloads and breaker trips
+          - listitem [ref=f4e100]:
+            - generic [ref=f4e101]: check_circle
+            - text: Clean, organized wiring with labeled panels
+          - listitem [ref=f4e102]:
+            - generic [ref=f4e103]: check_circle
+            - text: Future-ready installations for evolving technology needs
+      - generic [ref=f4e104]:
+        - link "Request Installation Quote" [ref=f4e105] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e106] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e109]:
+      - generic [ref=f4e110]:
+        - generic [ref=f4e111]: Service
+        - heading "Electrical Repair" [level=2] [ref=f4e112]
+      - paragraph [ref=f4e113]: Flickering lights, tripping breakers, buzzing outlets, and intermittent power loss are warning signs of electrical problems that need professional diagnosis. Maven troubleshoots and repairs faulty wiring, damaged circuits, failing breakers, loose connections, and grounding issues, restoring safe, reliable power to your home or business with repairs that address root causes, not just symptoms.
+      - generic [ref=f4e114]:
+        - heading "Benefits" [level=3] [ref=f4e115]
+        - list [ref=f4e116]:
+          - listitem [ref=f4e117]:
+            - generic [ref=f4e118]: check_circle
+            - text: Accurate troubleshooting prevents repeat failures
+          - listitem [ref=f4e119]:
+            - generic [ref=f4e120]: check_circle
+            - text: Emergency response for sparking outlets and burning smells
+          - listitem [ref=f4e121]:
+            - generic [ref=f4e122]: check_circle
+            - text: All repairs meet current NEC safety standards
+          - listitem [ref=f4e123]:
+            - generic [ref=f4e124]: check_circle
+            - text: Detailed explanation of findings and repair options
+      - generic [ref=f4e125]:
+        - link "Schedule Electrical Repair" [ref=f4e126] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e127] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e130]:
+      - generic [ref=f4e131]:
+        - generic [ref=f4e132]: Service
+        - heading "EV Charger Installation in Maryland" [level=2] [ref=f4e133]
+      - paragraph [ref=f4e134]: EV charging requires a dedicated 240-volt circuit, proper wire gauge, and often a panel upgrade to handle the additional load. Maven installs Level 2 EV chargers for homeowners and businesses throughout Maryland, including Marriottsville and surrounding communities, for all major vehicle brands, handling load calculations, circuit installation, charger mounting, permit coordination, and utility notification. We ensure your EV charger installation is safe, efficient, and ready for faster charging.
+      - generic [ref=f4e135]:
+        - heading "Benefits" [level=3] [ref=f4e136]
+        - list [ref=f4e137]:
+          - listitem [ref=f4e138]:
+            - generic [ref=f4e139]: check_circle
+            - text: Dedicated circuits sized for your charger and vehicle
+          - listitem [ref=f4e140]:
+            - generic [ref=f4e141]: check_circle
+            - text: Hardwired or NEMA 14-50 outlet configurations
+          - listitem [ref=f4e142]:
+            - generic [ref=f4e143]: check_circle
+            - text: Panel capacity assessment before installation
+          - listitem [ref=f4e144]:
+            - generic [ref=f4e145]: check_circle
+            - text: Compatible with Tesla, ChargePoint, JuiceBox, and other brands
+      - generic [ref=f4e146]:
+        - link "Get EV Charger Quote" [ref=f4e147] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e148] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e151]:
+      - generic [ref=f4e152]:
+        - generic [ref=f4e153]: Service
+        - heading "Indoor & Outdoor Lighting Installation" [level=2] [ref=f4e154]
+      - paragraph [ref=f4e155]: Thoughtful lighting transforms how your home or business looks and functions. Maven installs recessed can lights, under-cabinet lighting, pendant fixtures, landscape lighting, and outdoor security illumination, with proper wiring, dimmer compatibility, weatherproof connections, and switch placement that makes sense for daily use. We handle everything from single fixture swaps to whole-room lighting redesigns.
+      - generic [ref=f4e156]:
+        - heading "Benefits" [level=3] [ref=f4e157]
+        - list [ref=f4e158]:
+          - listitem [ref=f4e159]:
+            - generic [ref=f4e160]: check_circle
+            - text: Improved ambiance and functionality in every space
+          - listitem [ref=f4e161]:
+            - generic [ref=f4e162]: check_circle
+            - text: Energy-efficient LED options reduce electricity costs
+          - listitem [ref=f4e163]:
+            - generic [ref=f4e164]: check_circle
+            - text: Weatherproof outdoor installations built to last
+          - listitem [ref=f4e165]:
+            - generic [ref=f4e166]: check_circle
+            - text: Dimmer and smart switch integration available
+      - generic [ref=f4e167]:
+        - link "Schedule Lighting Installation" [ref=f4e168] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e169] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e172]:
+      - generic [ref=f4e173]:
+        - generic [ref=f4e174]: Service
+        - heading "Ceiling Fan Installation" [level=2] [ref=f4e175]
+      - paragraph [ref=f4e176]: Ceiling fans improve comfort year-round, circulating cool air in summer and pushing warm air down in winter. Maven installs ceiling fans on existing fixtures and new locations, handling ceiling box upgrades for fan-rated support, proper wiring for fan and light controls, remote control setup, and balance testing. We ensure every fan is securely mounted and wired to code.
+      - generic [ref=f4e177]:
+        - heading "Benefits" [level=3] [ref=f4e178]
+        - list [ref=f4e179]:
+          - listitem [ref=f4e180]:
+            - generic [ref=f4e181]: check_circle
+            - text: Fan-rated ceiling box upgrades for safe mounting
+          - listitem [ref=f4e182]:
+            - generic [ref=f4e183]: check_circle
+            - text: Dual switches for independent fan and light control
+          - listitem [ref=f4e184]:
+            - generic [ref=f4e185]: check_circle
+            - text: Remote control and smart fan integration
+          - listitem [ref=f4e186]:
+            - generic [ref=f4e187]: check_circle
+            - text: Proper balancing for quiet, wobble-free operation
+      - generic [ref=f4e188]:
+        - link "Book Fan Installation" [ref=f4e189] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e190] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e193]:
+      - generic [ref=f4e194]:
+        - generic [ref=f4e195]: Service
+        - heading "Electrical Panel & Circuit Breaker Services" [level=2] [ref=f4e196]
+      - paragraph [ref=f4e197]: Your electrical panel is the heart of your building's power distribution, and outdated panels pose real safety risks. Maven upgrades fuse boxes and undersized panels to modern 200-amp service, replaces recalled breaker brands, installs AFCI and GFCI protection, and adds sub-panels for garage, basement, addition, and equipment circuits. Every panel project includes load calculations and permit coordination.
+      - generic [ref=f4e198]:
+        - heading "Benefits" [level=3] [ref=f4e199]
+        - list [ref=f4e200]:
+          - listitem [ref=f4e201]:
+            - generic [ref=f4e202]: check_circle
+            - text: 200-amp upgrades support modern appliance and EV demands
+          - listitem [ref=f4e203]:
+            - generic [ref=f4e204]: check_circle
+            - text: AFCI/GFCI breakers meet current code requirements
+          - listitem [ref=f4e205]:
+            - generic [ref=f4e206]: check_circle
+            - text: Eliminates fire risks from outdated fuse boxes and recalled panels
+          - listitem [ref=f4e207]:
+            - generic [ref=f4e208]: check_circle
+            - text: Organized, labeled panels for easy future maintenance
+      - generic [ref=f4e209]:
+        - link "Request Panel Assessment" [ref=f4e210] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e211] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e214]:
+      - generic [ref=f4e215]:
+        - generic [ref=f4e216]: Service
+        - heading "Electrical Inspections" [level=2] [ref=f4e217]
+      - paragraph [ref=f4e218]: Whether you're buying a home, selling a property, leasing a space, or updating your insurance, a professional electrical inspection provides an honest assessment of your system's safety and condition. Maven's electricians conduct comprehensive inspections covering panel condition, wiring type, grounding, outlet safety, GFCI/AFCI protection, and code compliance, delivering a detailed written report with prioritized recommendations.
+      - generic [ref=f4e219]:
+        - heading "Benefits" [level=3] [ref=f4e220]
+        - list [ref=f4e221]:
+          - listitem [ref=f4e222]:
+            - generic [ref=f4e223]: check_circle
+            - text: Detailed written reports for buyers, sellers, and insurers
+          - listitem [ref=f4e224]:
+            - generic [ref=f4e225]: check_circle
+            - text: Identification of safety hazards before they cause damage
+          - listitem [ref=f4e226]:
+            - generic [ref=f4e227]: check_circle
+            - text: Code compliance verification for renovation projects
+          - listitem [ref=f4e228]:
+            - generic [ref=f4e229]: check_circle
+            - text: Prioritized recommendations from minor to critical
+      - generic [ref=f4e230]:
+        - link "Schedule an Inspection" [ref=f4e231] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e232] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e235]:
+      - generic [ref=f4e236]:
+        - generic [ref=f4e237]: Service
+        - heading "Outlet Replacement" [level=2] [ref=f4e238]
+      - paragraph [ref=f4e239]: Worn, damaged, or outdated outlets are more than inconvenient, they're a safety hazard. Maven replaces standard, GFCI, AFCI, USB, and 240-volt outlets with code-compliant installations that include proper grounding, wire condition assessment, and tamper-resistant options for homes with children. We also add new outlets where you need them, running circuits from the panel when necessary.
+      - generic [ref=f4e240]:
+        - heading "Benefits" [level=3] [ref=f4e241]
+        - list [ref=f4e242]:
+          - listitem [ref=f4e243]:
+            - generic [ref=f4e244]: check_circle
+            - text: GFCI protection in kitchens, bathrooms, and outdoor areas
+          - listitem [ref=f4e245]:
+            - generic [ref=f4e246]: check_circle
+            - text: USB outlets eliminate cluttered charging adapters
+          - listitem [ref=f4e247]:
+            - generic [ref=f4e248]: check_circle
+            - text: Tamper-resistant outlets for child safety
+          - listitem [ref=f4e249]:
+            - generic [ref=f4e250]: check_circle
+            - text: Proper grounding verified on every replacement
+      - generic [ref=f4e251]:
+        - link "Schedule Outlet Service" [ref=f4e252] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e253] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e256]:
+      - generic [ref=f4e257]:
+        - generic [ref=f4e258]: Service
+        - heading "Electrical Wiring & Rewiring" [level=2] [ref=f4e259]
+      - paragraph [ref=f4e260]: Homes and buildings constructed before modern electrical codes may contain aluminum wiring, knob-and-tube circuits, or undersized wiring that can't safely support today's power demands. Maven performs targeted wiring repairs, aluminum wire remediation with COPALUM connectors, and whole-building rewiring projects, upgrading your electrical infrastructure with minimal disruption and full permit compliance.
+      - generic [ref=f4e261]:
+        - heading "Benefits" [level=3] [ref=f4e262]
+        - list [ref=f4e263]:
+          - listitem [ref=f4e264]:
+            - generic [ref=f4e265]: check_circle
+            - text: Eliminates fire risks from outdated wiring types
+          - listitem [ref=f4e266]:
+            - generic [ref=f4e267]: check_circle
+            - text: Supports modern appliances, HVAC, and EV charging loads
+          - listitem [ref=f4e268]:
+            - generic [ref=f4e269]: check_circle
+            - text: Strategic routing minimizes wall and ceiling access
+          - listitem [ref=f4e270]:
+            - generic [ref=f4e271]: check_circle
+            - text: Full permit and inspection coordination included
+      - generic [ref=f4e272]:
+        - link "Get a Wiring Assessment" [ref=f4e273] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e274] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e277]:
+      - generic [ref=f4e278]:
+        - generic [ref=f4e279]: Service
+        - heading "Security Lighting" [level=2] [ref=f4e280]
+      - paragraph [ref=f4e281]: Well-designed security lighting deters intruders and helps you navigate your property safely after dark. Maven installs motion-activated floodlights, dusk-to-dawn fixtures, pathway lighting, and smart-controlled security systems, with weatherproof connections, proper mounting heights, and sensor calibration for reliable activation without false triggers from passing cars or wildlife.
+      - generic [ref=f4e282]:
+        - heading "Benefits" [level=3] [ref=f4e283]
+        - list [ref=f4e284]:
+          - listitem [ref=f4e285]:
+            - generic [ref=f4e286]: check_circle
+            - text: Motion sensors calibrated to reduce false activations
+          - listitem [ref=f4e287]:
+            - generic [ref=f4e288]: check_circle
+            - text: LED fixtures for bright, energy-efficient illumination
+          - listitem [ref=f4e289]:
+            - generic [ref=f4e290]: check_circle
+            - text: Smart controls with remote monitoring and scheduling
+          - listitem [ref=f4e291]:
+            - generic [ref=f4e292]: check_circle
+            - text: Weatherproof installations rated for outdoor exposure
+      - generic [ref=f4e293]:
+        - link "Install Security Lighting" [ref=f4e294] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e295] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e297]:
+      - generic [ref=f4e298]:
+        - generic [ref=f4e299]: Services
+        - heading "What We Offer" [level=2] [ref=f4e300]
+        - paragraph [ref=f4e301]: Comprehensive electrical solutions for homes and businesses from experienced Maryland professionals.
+      - generic [ref=f4e302]:
+        - generic [ref=f4e303]:
+          - generic [ref=f4e304]: electrical_services
+          - heading "Electrical Panel Upgrades" [level=3] [ref=f4e305]
+          - paragraph [ref=f4e306]: Upgrade outdated fuse boxes and 100-amp panels to modern 200-amp service for today's power demands and EV charging needs.
+        - generic [ref=f4e307]:
+          - generic [ref=f4e308]: outlet
+          - heading "Outlet & Switch Installation" [level=3] [ref=f4e309]
+          - paragraph [ref=f4e310]: New outlets, GFCI and AFCI protection, USB outlets, dimmer switches, and three-way switch wiring installed to code.
+        - generic [ref=f4e311]:
+          - generic [ref=f4e312]: cable
+          - heading "Wiring & Rewiring" [level=3] [ref=f4e313]
+          - paragraph [ref=f4e314]: New circuit installation, aluminum wire remediation, knob-and-tube replacement, and whole-building rewiring for older properties.
+        - generic [ref=f4e315]:
+          - generic [ref=f4e316]: lightbulb
+          - heading "Lighting Installation" [level=3] [ref=f4e317]
+          - paragraph [ref=f4e318]: Recessed lighting, ceiling fans, chandeliers, under-cabinet lighting, and outdoor security lighting professionally wired.
+        - generic [ref=f4e319]:
+          - generic [ref=f4e320]: ev_station
+          - heading "EV Charger Installation" [level=3] [ref=f4e321]
+          - paragraph [ref=f4e322]: Level 2 EV charger installation across Maryland with dedicated circuits, permit handling, and utility coordination.
+        - generic [ref=f4e323]:
+          - generic [ref=f4e324]: apartment
+          - heading "Commercial Electrical" [level=3] [ref=f4e325]
+          - paragraph [ref=f4e326]: Panel upgrades, lighting, wiring, and repair for businesses and property managers across Maryland.
+        - generic [ref=f4e327]:
+          - generic [ref=f4e328]: bolt
+          - heading "Surge Protection" [level=3] [ref=f4e329]
+          - paragraph [ref=f4e330]: Whole-building surge protectors and dedicated circuits to safeguard electronics, HVAC equipment, and appliances.
+        - generic [ref=f4e331]:
+          - generic [ref=f4e332]: fact_check
+          - heading "Electrical Safety Inspections" [level=3] [ref=f4e333]
+          - paragraph [ref=f4e334]: Comprehensive electrical audits for buyers, sellers, and insurance requirements. Detailed written reports provided.
+        - generic [ref=f4e335]:
+          - generic [ref=f4e336]: emergency
+          - heading "Emergency Electrical Repair" [level=3] [ref=f4e337]
+          - paragraph [ref=f4e338]: Emergency response for power outages, sparking outlets, burning smells, and other urgent electrical hazards at homes and businesses. Response times depend on technician availability and your location.
+    - generic [ref=f4e340]:
+      - generic [ref=f4e341]:
+        - generic [ref=f4e342]: Benefits
+        - heading "Why Homes and Businesses Choose Maven" [level=2] [ref=f4e343]
+        - paragraph [ref=f4e344]: Quality workmanship and professional, reliable service.
+      - generic [ref=f4e345]:
+        - generic [ref=f4e346]:
+          - generic [ref=f4e347]: check_circle
+          - generic [ref=f4e348]:
+            - heading "Code-Compliant Work" [level=3] [ref=f4e349]
+            - paragraph [ref=f4e350]: All work meets National Electrical Code standards and local Maryland amendments. Permits pulled and inspections scheduled when required.
+        - generic [ref=f4e351]:
+          - generic [ref=f4e352]: check_circle
+          - generic [ref=f4e353]:
+            - heading "Safety-First Approach" [level=3] [ref=f4e354]
+            - paragraph [ref=f4e355]: We never cut corners on grounding, bonding, or circuit protection. Your family's and employees' safety is non-negotiable on every job.
+        - generic [ref=f4e356]:
+          - generic [ref=f4e357]: check_circle
+          - generic [ref=f4e358]:
+            - heading "Modern Building Ready" [level=3] [ref=f4e359]
+            - paragraph [ref=f4e360]: From smart wiring to EV chargers and solar interconnection, we equip your electrical system for today's technology demands.
+        - generic [ref=f4e361]:
+          - generic [ref=f4e362]: check_circle
+          - generic [ref=f4e363]:
+            - heading "Detailed Written Estimates" [level=3] [ref=f4e364]
+            - paragraph [ref=f4e365]: Every project starts with a clear scope of work and pricing breakdown. You approve the plan before we turn off a single breaker.
+    - generic [ref=f4e367]:
+      - generic [ref=f4e368]:
+        - generic [ref=f4e369]: The Maven Difference
+        - heading "Why Choose Us" [level=2] [ref=f4e370]
+        - paragraph [ref=f4e371]: Local expertise, honest service, lasting results.
+      - generic [ref=f4e372]:
+        - generic [ref=f4e373]:
+          - heading "Residential & Commercial Experience" [level=3] [ref=f4e374]
+          - paragraph [ref=f4e375]: We serve both homes and businesses, so you get technicians who understand the difference between a single-family panel and a commercial system, and who schedule the work around how you use your space.
+        - generic [ref=f4e376]:
+          - heading "Clean Installation Standards" [level=3] [ref=f4e377]
+          - paragraph [ref=f4e378]: Neat wire routing, properly labeled panels, and protected work areas. Our electricians take pride in work that's as clean as it is safe.
+        - generic [ref=f4e379]:
+          - heading "Honest Capacity Assessments" [level=3] [ref=f4e380]
+          - paragraph [ref=f4e381]: Not every property needs a panel upgrade. We evaluate your actual load requirements and recommend only what's necessary for safe, reliable power.
+    - generic [ref=f4e383]:
+      - generic [ref=f4e384]:
+        - generic [ref=f4e385]: Process
+        - heading "How It Works" [level=2] [ref=f4e386]
+        - paragraph [ref=f4e387]: From first call to finished job, simple and transparent.
+      - generic [ref=f4e388]:
+        - generic [ref=f4e389]:
+          - generic [ref=f4e390]: "01"
+          - generic [ref=f4e391]: event_available
+          - heading "Request an Estimate" [level=3] [ref=f4e392]
+          - paragraph [ref=f4e393]: Describe your project online or by phone. We schedule a convenient time for an on-site evaluation with an experienced electrician.
+        - generic [ref=f4e394]:
+          - generic [ref=f4e395]: "02"
+          - generic [ref=f4e396]: electrical_services
+          - heading "On-Site Evaluation" [level=3] [ref=f4e397]
+          - paragraph [ref=f4e398]: Your electrician assesses your panel, wiring, and load requirements, then provides a detailed written estimate and timeline.
+        - generic [ref=f4e399]:
+          - generic [ref=f4e400]: "03"
+          - generic [ref=f4e401]: engineering
+          - heading "Professional Installation" [level=3] [ref=f4e402]
+          - paragraph [ref=f4e403]: Work is completed to NEC code with quality materials. Permits are filed and inspections coordinated when applicable.
+        - generic [ref=f4e404]:
+          - generic [ref=f4e405]: "04"
+          - generic [ref=f4e406]: assignment_turned_in
+          - heading "Inspection & Walkthrough" [level=3] [ref=f4e407]
+          - paragraph [ref=f4e408]: We verify all circuits, test GFCI/AFCI protection, label your panel, and walk you through everything before signing off.
+    - generic [ref=f4e410]:
+      - heading "Power Your Home or Business Safely & Reliably" [level=2] [ref=f4e411]
+      - paragraph [ref=f4e412]: Schedule your service today or call our team to request an estimate. Same-day appointments available for homes and businesses across Maryland, subject to technician availability.
+      - generic [ref=f4e413]:
+        - link "Schedule Service" [ref=f4e414] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f4e415] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f4e417]:
+      - generic [ref=f4e418]:
+        - generic [ref=f4e419]: FAQ
+        - heading "Frequently Asked Questions" [level=2] [ref=f4e420]
+        - paragraph [ref=f4e421]: Common questions from homeowners, property managers, and business owners.
+      - generic [ref=f4e422]:
+        - heading [level=3] [ref=f4e424]:
+          - button "How do I know if my electrical panel needs upgrading?" [ref=f4e425]
+        - heading [level=3] [ref=f4e427]:
+          - button "What is GFCI protection and do I need it?" [ref=f4e428]
+        - heading [level=3] [ref=f4e430]:
+          - button "Can I install an EV charger with my current electrical panel?" [ref=f4e431]
+        - heading [level=3] [ref=f4e433]:
+          - button "Why does my circuit breaker keep tripping?" [ref=f4e434]
+        - heading [level=3] [ref=f4e436]:
+          - button "Do you handle permits and inspections?" [ref=f4e437]
+        - heading [level=3] [ref=f4e439]:
+          - button "Is aluminum wiring in my building dangerous?" [ref=f4e440]
+    - generic [ref=f4e443]:
+      - generic [ref=f4e444]:
+        - generic [ref=f4e445]:
+          - generic [ref=f4e446]: Get Started
+          - heading "Request Service Today" [level=2] [ref=f4e447]
+          - paragraph [ref=f4e448]: Fill out the form and we will contact you promptly to confirm your appointment.
+        - generic [ref=f4e449]:
+          - paragraph [ref=f4e450]:
+            - generic [ref=f4e451]: phone
+            - link "240-255-4794" [ref=f4e452] [cursor=pointer]:
+              - /url: tel:+12402554794
+          - paragraph [ref=f4e453]:
+            - generic [ref=f4e454]: email
+            - link "service@mavenhomeservices.com" [ref=f4e455] [cursor=pointer]:
+              - /url: mailto:service@mavenhomeservices.com
+          - paragraph [ref=f4e456]:
+            - generic [ref=f4e457]: emergency
+            - text: Emergency service available for urgent issues
+      - generic [ref=f4e459]:
+        - generic [ref=f4e460]:
+          - generic [ref=f4e461]:
+            - generic [ref=f4e462]: First Name
+            - textbox "First Name" [ref=f4e463]:
+              - /placeholder: Enter your first name
+          - generic [ref=f4e464]:
+            - generic [ref=f4e465]: Last Name
+            - textbox "Last Name" [ref=f4e466]:
+              - /placeholder: Enter your last name
+        - generic [ref=f4e467]:
+          - generic [ref=f4e468]: Email Address
+          - textbox "Email Address" [ref=f4e469]:
+            - /placeholder: Enter your email address
+        - generic [ref=f4e470]:
+          - generic [ref=f4e471]: Phone Number
+          - textbox "Phone Number" [ref=f4e472]:
+            - /placeholder: Enter your phone number
+        - generic [ref=f4e473]:
+          - generic [ref=f4e474]: Service Needed
+          - combobox "Service Needed" [ref=f4e475]:
+            - generic: Select a service...
+          - combobox [aria-hidden] [ref=f4e476]
+        - generic [ref=f4e477]:
+          - generic [ref=f4e478]: Message (Optional)
+          - textbox "Message (Optional)" [ref=f4e479]:
+            - /placeholder: Describe the issue or what you need...
+        - text: Company website
+        - textbox [ref=f4e480]
+        - button "Request Service Appointment →" [ref=f4e481]
+        - paragraph [ref=f4e482]:
+          - text: We will contact you promptly regarding your request. By submitting, you agree to our
+          - link "Privacy Policy" [ref=f4e483] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+  - contentinfo [ref=f4e484]:
+    - generic [ref=f4e486]:
+      - generic [ref=f4e487]:
+        - link [ref=f4e488] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f4e490]
+        - paragraph [ref=f4e491]: Insured HVAC/R, plumbing, electrical, and roofing professionals based in Rockville, Maryland, serving commercial and residential clients across Maryland and Northern Virginia. Emergency service is available for urgent issues.
+        - link "240-255-4794" [ref=f4e492] [cursor=pointer]:
+          - /url: tel:+12402554794
+        - paragraph [ref=f4e493]: service@mavenhomeservices.com
+        - generic [ref=f4e494]:
+          - generic [ref=f4e495]: Suite 470
+          - generic [ref=f4e496]: 9200 Corporate Blvd
+          - generic [ref=f4e497]: Rockville, MD 20850
+        - link "Google Business Profile" [ref=f4e498] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+      - generic [ref=f4e499]:
+        - heading "Services" [level=3] [ref=f4e500]
+        - list [ref=f4e501]:
+          - listitem [ref=f4e502]:
+            - link "HVAC" [ref=f4e503] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f4e504]:
+            - link "Plumbing" [ref=f4e505] [cursor=pointer]:
+              - /url: /plumbing
+          - listitem [ref=f4e506]:
+            - link "Electrical" [ref=f4e507] [cursor=pointer]:
+              - /url: /electrical
+          - listitem [ref=f4e508]:
+            - link "Commercial" [ref=f4e509] [cursor=pointer]:
+              - /url: /commercial
+          - listitem [ref=f4e510]:
+            - link "Air Conditioning" [ref=f4e511] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f4e512]:
+            - link "Emergency Service" [ref=f4e513] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=f4e514]:
+        - heading "Company" [level=3] [ref=f4e515]
+        - list [ref=f4e516]:
+          - listitem [ref=f4e517]:
+            - link "Home" [ref=f4e518] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f4e519]:
+            - link "About Us" [ref=f4e520] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=f4e521]:
+            - link "Blog" [ref=f4e522] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f4e523]:
+            - link "Contact" [ref=f4e524] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=f4e525]:
+            - link "Become a Subcontractor" [ref=f4e526] [cursor=pointer]:
+              - /url: /become-a-subcontractor
+          - listitem [ref=f4e527]:
+            - link "Privacy Policy" [ref=f4e528] [cursor=pointer]:
+              - /url: /privacy-policy
+      - generic [ref=f4e529]:
+        - heading "Business Hours" [level=3] [ref=f4e530]
+        - generic [ref=f4e531]:
+          - generic [ref=f4e532]:
+            - paragraph [ref=f4e533]: Every Day
+            - paragraph [ref=f4e534]: Open 24/7
+          - generic [ref=f4e535]:
+            - paragraph [ref=f4e536]: Emergency Service
+            - paragraph [ref=f4e537]: Available 24/7 for urgent issues
+            - link "240-255-4794" [ref=f4e538] [cursor=pointer]:
+              - /url: tel:+12402554794
+    - generic [ref=f4e539]:
+      - paragraph [ref=f4e540]: Licensed & Certified
+      - generic [ref=f4e541]:
+        - generic "MHIC Licensed" [ref=f4e542]:
+          - img "MHIC Licensed contractor — Maryland Home Improvement Commission" [ref=f4e544]
+        - generic "General Contractors" [ref=f4e546]:
+          - img "Maryland General Contractors license" [ref=f4e548]
+        - generic "EPA 608 Certified" [ref=f4e550]:
+          - img "EPA Section 608 Universal certification" [ref=f4e552]
+        - generic "OSHA Certified" [ref=f4e554]:
+          - img "OSHA safety certification" [ref=f4e556]
+        - generic "Haag Certified Inspector" [ref=f4e558]:
+          - img "Haag certified residential roof inspector" [ref=f4e560]
+    - generic [ref=f4e562]: 10% Off All Services for Veterans, Active Military & First Responders — valid ID required.
+    - generic [ref=f4e563]:
+      - paragraph [ref=f4e564]: © 2026 Maven Home Services. All rights reserved.
+      - generic [ref=f4e565]:
+        - link "Privacy Policy" [ref=f4e566] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=f4e567] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Sitemap" [ref=f4e568] [cursor=pointer]:
+          - /url: /site-map
+  - alert [ref=f4e569]

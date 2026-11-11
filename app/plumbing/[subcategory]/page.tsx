@@ -9,7 +9,8 @@ type Props = { params: Promise<{ subcategory: string }> };
 // "plumbing-repair-rockville-md", "water-main-repair", "backflow",
 // "water-heaters-rockville-md", "tankless-water-heater-service-montgomery-village-md",
 // "tankless-water-heater-service-olney-md", "tankless-water-heater-repair-potomac-md"
-// or "commercial-tankless-water-heater-service-bethesda-md" to subcategoryData — each has its own static route
+// "commercial-tankless-water-heater-service-bethesda-md" or
+// "sump-pump-repair-installation-rockville" to subcategoryData — each has its own static route
 // under app/plumbing/, and returning a path here that already exists as a static
 // page aborts `next build`.
 export async function generateStaticParams() {

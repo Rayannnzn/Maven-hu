@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { company, containerClass, sectionClass } from "@/lib/site";
 import { Button } from "@/components/ui/button";
@@ -5,7 +6,7 @@ import { Button } from "@/components/ui/button";
 type PageHeroProps = {
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: ReactNode;
   dark?: boolean;
 };
 
@@ -26,7 +27,7 @@ export function PageHero({
         </h1>
         {description && (
           <p
-            className={`mt-4 text-base leading-relaxed md:text-lg ${dark ? "text-white/72" : "text-muted-foreground"}`}
+            className={`mt-4 text-base leading-relaxed md:text-lg ${dark ? "text-white/72 [&_a]:text-white [&_a]:decoration-maven-gold/70 hover:[&_a]:text-maven-gold" : "text-muted-foreground"}`}
           >
             {description}
           </p>
@@ -64,7 +65,7 @@ export function SectionHeader({
 }: {
   eyebrow: string;
   title: string;
-  subtitle?: string;
+  subtitle?: ReactNode;
   centered?: boolean;
   className?: string;
 }) {

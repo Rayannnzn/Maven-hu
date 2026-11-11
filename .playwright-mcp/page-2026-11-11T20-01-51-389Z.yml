@@ -1,0 +1,522 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - link [ref=f1e6] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f1e8]
+        - button "Open menu" [ref=f1e9]
+      - navigation "Service categories" [ref=f1e10]:
+        - generic [ref=f1e11]:
+          - link "HVAC" [ref=f1e12] [cursor=pointer]:
+            - /url: /hvac
+          - link "Plumbing" [ref=f1e13] [cursor=pointer]:
+            - /url: /plumbing
+          - link "Electrical" [ref=f1e14] [cursor=pointer]:
+            - /url: /electrical
+          - link "Commercial" [ref=f1e16] [cursor=pointer]:
+            - /url: /commercial
+      - navigation "Electrical Services services" [ref=f1e18]:
+        - generic [ref=f1e19]:
+          - link "Electrical Installation/Repair" [ref=f1e20] [cursor=pointer]:
+            - /url: /electrical#electrical-installation
+          - link "EV Charger Installation" [ref=f1e21] [cursor=pointer]:
+            - /url: /electrical#ev-charger-installation
+          - link "Indoor & Outdoor Lighting Installation" [ref=f1e22] [cursor=pointer]:
+            - /url: /electrical#indoor-outdoor-lighting-installation
+          - link "Ceiling Fan Installation" [ref=f1e23] [cursor=pointer]:
+            - /url: /electrical#ceiling-fan-installation
+          - link "Electrical Panel & Circuit Breaker Services" [ref=f1e24] [cursor=pointer]:
+            - /url: /electrical#electrical-panel-circuit-breaker
+          - link "Electrical Inspections" [ref=f1e25] [cursor=pointer]:
+            - /url: /electrical#electrical-inspections
+          - link "Outlet Replacement" [ref=f1e26] [cursor=pointer]:
+            - /url: /electrical#outlet-replacement
+          - link "Electrical Wiring & Rewiring" [ref=f1e27] [cursor=pointer]:
+            - /url: /electrical#electrical-wiring-rewiring
+          - link "Security Lighting" [ref=f1e28] [cursor=pointer]:
+            - /url: /electrical#security-lighting
+          - link "Repair & Installation" [ref=f1e29] [cursor=pointer]:
+            - /url: /electrical/repair-installation
+          - link "Commercial & Residential" [ref=f1e30] [cursor=pointer]:
+            - /url: /electrical/commercial-residential
+  - main [ref=f1e31]:
+    - navigation "breadcrumb" [ref=f1e33]:
+      - list [ref=f1e34]:
+        - listitem [ref=f1e35]:
+          - link "Home" [ref=f1e36] [cursor=pointer]:
+            - /url: /
+        - listitem [aria-hidden] [ref=f1e37]
+        - listitem [ref=f1e40]:
+          - link "Outlet Replacement in Rockville, MD" [disabled] [ref=f1e41]
+    - generic [ref=f1e45]:
+      - heading "Outlet Replacement in Rockville, MD" [level=1] [ref=f1e46]
+      - paragraph [ref=f1e47]: An outlet that is cracked, loose, warm, or dead is more than an inconvenience. Worn outlets can arc, overheat, and damage plugs and devices. Maven DMV replaces and upgrades outlets for homes and businesses in Rockville, MD and across Montgomery County, Maryland. Our licensed electricians find out why the outlet failed, replace it correctly, and test the circuit before we leave.
+      - generic [ref=f1e48]:
+        - link "Schedule Service" [ref=f1e49] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e50] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e52]:
+      - generic [ref=f1e53]:
+        - generic [ref=f1e54]: Overview
+        - heading "Quick Answer" [level=2] [ref=f1e55]
+      - paragraph [ref=f1e57]: Replace an outlet when it is cracked, loose, discolored, warm, sparking, or no longer holds a plug firmly. A licensed electrician should do the work, because the wiring behind the outlet can be damaged or overloaded, and replacing only the outlet may not fix the real problem.
+    - generic [ref=f1e60]:
+      - generic [ref=f1e61]:
+        - generic [ref=f1e62]: Service
+        - heading "Signs You Need Outlet Replacement" [level=2] [ref=f1e63]
+      - table [ref=f1e65]:
+        - rowgroup [ref=f1e66]:
+          - row [ref=f1e67]:
+            - columnheader "What You Notice" [ref=f1e68]
+            - columnheader "Likely Cause" [ref=f1e69]
+            - columnheader "Next Step" [ref=f1e70]
+        - rowgroup [ref=f1e71]:
+          - row [ref=f1e72]:
+            - cell "Plugs fall out or fit loosely" [ref=f1e73]
+            - cell "Worn contacts inside the outlet" [ref=f1e74]
+            - cell "Replace the outlet" [ref=f1e75]
+          - row [ref=f1e76]:
+            - cell "Cracked, chipped, or burned faceplate" [ref=f1e77]
+            - cell "Physical damage or overheating" [ref=f1e78]
+            - cell "Replace right away and check the circuit" [ref=f1e79]
+          - row [ref=f1e80]:
+            - cell "Outlet feels warm or hot" [ref=f1e81]
+            - cell "Loose wiring or overload" [ref=f1e82]
+            - cell "Stop using it and call for service" [ref=f1e83]
+          - row [ref=f1e84]:
+            - cell "Sparks or a popping sound when plugging in" [ref=f1e85]
+            - cell "Arcing at worn contacts" [ref=f1e86]
+            - cell "Stop using it and call promptly" [ref=f1e87]
+          - row [ref=f1e88]:
+            - cell "Brown or black marks around the slots" [ref=f1e89]
+            - cell "Heat damage" [ref=f1e90]
+            - cell "Inspect wiring and replace" [ref=f1e91]
+          - row [ref=f1e92]:
+            - cell "Outlet works only sometimes" [ref=f1e93]
+            - cell "Loose connection or failing device" [ref=f1e94]
+            - cell "Test the circuit and replace" [ref=f1e95]
+          - row [ref=f1e96]:
+            - cell "No power at all" [ref=f1e97]
+            - cell "Tripped GFCI, tripped breaker, or failed outlet" [ref=f1e98]
+            - cell "Reset, test, and repair as needed" [ref=f1e99]
+      - paragraph [ref=f1e100]: If you smell burning or see smoke or flames, leave the area and call 911. If an outlet is hot or sparking, stop using it and, if you can reach the breaker safely, turn off that circuit until we arrive.
+      - generic [ref=f1e101]:
+        - link "Schedule Outlet Replacement" [ref=f1e102] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e103] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e106]:
+      - generic [ref=f1e107]:
+        - generic [ref=f1e108]: Service
+        - heading "Types of Outlets We Install" [level=2] [ref=f1e109]
+      - table [ref=f1e111]:
+        - rowgroup [ref=f1e112]:
+          - row [ref=f1e113]:
+            - columnheader "Outlet Type" [ref=f1e114]
+            - columnheader "Common Locations" [ref=f1e115]
+            - columnheader "Why It Helps" [ref=f1e116]
+        - rowgroup [ref=f1e117]:
+          - row [ref=f1e118]:
+            - cell "Standard 15 amp outlet" [ref=f1e119]
+            - cell "Bedrooms, living areas, offices" [ref=f1e120]
+            - cell "Basic power for lamps and electronics" [ref=f1e121]
+          - row [ref=f1e122]:
+            - cell "20 amp outlet" [ref=f1e123]
+            - cell "Kitchens, garages, workshops" [ref=f1e124]
+            - cell "Supports heavier loads on suitable circuits" [ref=f1e125]
+          - row [ref=f1e126]:
+            - cell "GFCI outlet" [ref=f1e127]
+            - cell "Kitchens, bathrooms, garages, basements, and outdoors" [ref=f1e128]
+            - cell "Shuts off power quickly if it senses a ground fault" [ref=f1e129]
+          - row [ref=f1e130]:
+            - cell "Tamper resistant outlet" [ref=f1e131]
+            - cell "Homes with children and common living areas" [ref=f1e132]
+            - cell "Shutters block objects from the slots" [ref=f1e133]
+          - row [ref=f1e134]:
+            - cell "Weather resistant outlet" [ref=f1e135]
+            - cell "Porches, patios, and exterior walls" [ref=f1e136]
+            - cell "Built to handle moisture and temperature changes" [ref=f1e137]
+          - row [ref=f1e138]:
+            - cell "USB outlet" [ref=f1e139]
+            - cell "Kitchens, bedrooms, and home offices" [ref=f1e140]
+            - cell "Charges phones and tablets without adapters" [ref=f1e141]
+      - paragraph [ref=f1e142]: Which type you need depends on the room, the circuit, and local code. We recommend only what fits your space.
+      - generic [ref=f1e143]:
+        - link "Ask Which Outlet Fits" [ref=f1e144] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e145] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e148]:
+      - generic [ref=f1e149]:
+        - generic [ref=f1e150]: Service
+        - heading "Why GFCI Outlets Matter" [level=2] [ref=f1e151]
+      - paragraph [ref=f1e152]: A ground fault circuit interrupter, or GFCI, watches the flow of electricity and cuts power in a fraction of a second if it senses leakage, such as current traveling through water or a person. GFCI protection is commonly required in wet areas like kitchens, bathrooms, garages, basements, and outdoors. If your older home has regular outlets in these areas, adding GFCI protection is one of the most useful and affordable safety upgrades you can make. Test your GFCI outlets monthly using the built in test and reset buttons.
+      - generic [ref=f1e153]:
+        - link "Add GFCI Protection" [ref=f1e154] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e155] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e158]:
+      - generic [ref=f1e159]:
+        - generic [ref=f1e160]: Service
+        - heading "Replacing Two Prong Outlets" [level=2] [ref=f1e161]
+      - paragraph [ref=f1e162]:
+        - text: Many older homes still have two prong outlets, which have no ground connection. Simply swapping in a three prong outlet without a ground wire can give a false sense of safety. Depending on your wiring, the safe options may include running a ground wire, using a GFCI outlet labeled for use without an equipment ground, or rewiring the circuit. We inspect the wiring first and explain which option fits. If your home has widespread older wiring, see our page on
+        - link "electrical wiring and rewiring" [ref=f1e163] [cursor=pointer]:
+          - /url: /electrical/wiring-rewiring-rockville
+        - text: .
+      - generic [ref=f1e164]:
+        - link "Upgrade Two Prong Outlets" [ref=f1e165] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e166] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e169]:
+      - generic [ref=f1e170]:
+        - generic [ref=f1e171]: Service
+        - heading "Why Professional Replacement Matters" [level=2] [ref=f1e172]
+      - paragraph [ref=f1e173]:
+        - text: Replacing an outlet can look simple, but the risks are real. Old wiring may be brittle, aluminum, or unmarked. A wrong connection can leave the outlet looking normal while creating a shock or fire hazard. Back stabbed connections, loose terminals, and wrong wire sizes are common causes of overheating. A licensed electrician checks the whole circuit, uses the right device for the location, and tests the result. For independent safety guidance, visit the
+        - link "Electrical Safety Foundation International" [ref=f1e174] [cursor=pointer]:
+          - /url: https://www.esfi.org/
+        - text: or the
+        - link "National Fire Protection Association" [ref=f1e175] [cursor=pointer]:
+          - /url: https://www.nfpa.org/
+        - text: .
+      - generic [ref=f1e176]:
+        - link "Schedule a Licensed Electrician" [ref=f1e177] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e178] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e181]:
+      - generic [ref=f1e182]:
+        - generic [ref=f1e183]: Service
+        - heading "Outlet Replacement for Businesses" [level=2] [ref=f1e184]
+      - paragraph [ref=f1e185]:
+        - text: Restaurants, offices, and retail stores rely on outlets that handle constant use. We replace worn outlets, add dedicated outlets for equipment, and install GFCI protection in kitchens and wet areas. Because our team also services HVAC and commercial equipment, we can tell when a power problem comes from the outlet and when it comes from the equipment. You can explore related work on our
+        - link "electrical services page" [ref=f1e186] [cursor=pointer]:
+          - /url: /electrical
+        - text: .
+      - generic [ref=f1e187]:
+        - link "Schedule Commercial Service" [ref=f1e188] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e189] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e192]:
+      - generic [ref=f1e193]:
+        - generic [ref=f1e194]: Service
+        - heading "How to Prevent Outlet Problems" [level=2] [ref=f1e195]
+      - paragraph [ref=f1e196]:
+        - text: A few habits reduce wear and risk. Avoid plugging several high power devices, such as space heaters, into one outlet or power strip. Do not run cords under rugs, and replace damaged cords right away. Use outlet covers or tamper resistant outlets if small children are in the home. Schedule an
+        - link "electrical inspection" [ref=f1e197] [cursor=pointer]:
+          - /url: /electrical/inspections-rockville
+        - text: if your home is more than 30 years old or if outlets have never been checked. Catching worn outlets early costs far less than repairing heat damage later.
+      - generic [ref=f1e198]:
+        - link "Schedule an Inspection" [ref=f1e199] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e200] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e203]:
+      - generic [ref=f1e204]:
+        - generic [ref=f1e205]: Service
+        - heading "Why Choose Maven DMV" [level=2] [ref=f1e206]
+      - list [ref=f1e208]:
+        - listitem [ref=f1e209]:
+          - generic [ref=f1e210]: check_circle
+          - text: Licensed technicians for residential and commercial electrical work
+        - listitem [ref=f1e211]:
+          - generic [ref=f1e212]: check_circle
+          - text: Plain language advice and no unnecessary upsells
+        - listitem [ref=f1e213]:
+          - generic [ref=f1e214]: check_circle
+          - text: Tested and documented work on every job
+        - listitem [ref=f1e215]:
+          - generic [ref=f1e216]: check_circle
+          - text: 24/7 availability for urgent issues
+        - listitem [ref=f1e217]:
+          - generic [ref=f1e218]: check_circle
+          - text: Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850
+      - paragraph [ref=f1e219]:
+        - text: Read customer feedback on our
+        - link "Google Business Profile" [ref=f1e220] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+        - text: ", or visit our"
+        - link "home page" [ref=f1e221] [cursor=pointer]:
+          - /url: /
+        - text: . Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.
+      - generic [ref=f1e222]:
+        - link "Schedule Service" [ref=f1e223] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e224] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e227]:
+      - generic [ref=f1e228]:
+        - generic [ref=f1e229]: Service
+        - heading "Contact Maven DMV" [level=2] [ref=f1e230]
+      - list [ref=f1e232]:
+        - listitem [ref=f1e233]:
+          - generic [ref=f1e234]: check_circle
+          - text: "Address: 9200 Corporate Blvd, Suite 470, Rockville, MD 20850"
+        - listitem [ref=f1e235]:
+          - generic [ref=f1e236]: check_circle
+          - text: "Phone:"
+          - link "(240) 255 4794" [ref=f1e237] [cursor=pointer]:
+            - /url: tel:+12402554794
+        - listitem [ref=f1e238]:
+          - generic [ref=f1e239]: check_circle
+          - text: "Email:"
+          - link "service@mavenhomeservices.com" [ref=f1e240] [cursor=pointer]:
+            - /url: mailto:service@mavenhomeservices.com
+        - listitem [ref=f1e241]:
+          - generic [ref=f1e242]: check_circle
+          - text: "Hours: Open 24 hours a day, 7 days a week, with 24/7 emergency service"
+        - listitem [ref=f1e243]:
+          - generic [ref=f1e244]: check_circle
+          - text: "Service area: Within 30 miles of Rockville, across Maryland and Northern Virginia"
+        - listitem [ref=f1e245]:
+          - generic [ref=f1e246]: check_circle
+          - text: "Schedule: Visit our"
+          - link "contact page" [ref=f1e247] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=f1e248]:
+        - link "Schedule Service" [ref=f1e249] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e250] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e252]:
+      - generic [ref=f1e253]:
+        - generic [ref=f1e254]: Services
+        - heading "Common Add Ons During an Outlet Visit" [level=2] [ref=f1e255]
+        - paragraph [ref=f1e256]: Bundling small jobs into one visit is often more convenient and keeps your electrical system consistent.
+      - generic [ref=f1e257]:
+        - generic [ref=f1e258]:
+          - generic [ref=f1e259]: add_circle
+          - heading "Adding outlets" [level=3] [ref=f1e260]
+          - paragraph [ref=f1e261]: Adding outlets in kitchens, garages, or home offices.
+        - generic [ref=f1e262]:
+          - generic [ref=f1e263]: toggle_on
+          - heading "Switches and dimmers" [level=3] [ref=f1e264]
+          - paragraph [ref=f1e265]: Replacing worn switches and dimmers.
+        - generic [ref=f1e266]:
+          - generic [ref=f1e267]: deck
+          - heading "Outdoor outlets" [level=3] [ref=f1e268]
+          - paragraph [ref=f1e269]: Installing outdoor outlets and weather covers.
+        - generic [ref=f1e270]:
+          - generic [ref=f1e271]: label
+          - heading "Panel labeling" [level=3] [ref=f1e272]
+          - paragraph [ref=f1e273]: Labeling the panel so each circuit is clear.
+        - generic [ref=f1e274]:
+          - generic [ref=f1e275]: search
+          - heading "Nearby outlet checks" [level=3] [ref=f1e276]
+          - paragraph [ref=f1e277]: Inspecting nearby outlets for the same wear.
+    - generic [ref=f1e279]:
+      - generic [ref=f1e280]:
+        - generic [ref=f1e281]: Process
+        - heading "Our Outlet Replacement Process" [level=2] [ref=f1e282]
+        - paragraph [ref=f1e283]: From first call to finished job, simple and transparent.
+      - generic [ref=f1e284]:
+        - generic [ref=f1e285]:
+          - generic [ref=f1e286]: "01"
+          - generic [ref=f1e287]: manage_search
+          - heading "Inspect" [level=3] [ref=f1e288]
+          - paragraph [ref=f1e289]: We check the outlet, the wiring behind it, and other outlets on the same circuit.
+        - generic [ref=f1e290]:
+          - generic [ref=f1e291]: "02"
+          - generic [ref=f1e292]: speed
+          - heading "Test" [level=3] [ref=f1e293]
+          - paragraph [ref=f1e294]: We measure voltage, grounding, and load to find the real cause.
+        - generic [ref=f1e295]:
+          - generic [ref=f1e296]: "03"
+          - generic [ref=f1e297]: record_voice_over
+          - heading "Explain" [level=3] [ref=f1e298]
+          - paragraph [ref=f1e299]: You hear what we found and what we recommend, in plain language.
+        - generic [ref=f1e300]:
+          - generic [ref=f1e301]: "04"
+          - generic [ref=f1e302]: task_alt
+          - heading "Approve" [level=3] [ref=f1e303]
+          - paragraph [ref=f1e304]: We start work only after you agree to the plan.
+        - generic [ref=f1e305]:
+          - generic [ref=f1e306]: "05"
+          - generic [ref=f1e307]: outlet
+          - heading "Replace safely" [level=3] [ref=f1e308]
+          - paragraph [ref=f1e309]: We shut off the circuit, install the new outlet, and secure the connections.
+        - generic [ref=f1e310]:
+          - generic [ref=f1e311]: "06"
+          - generic [ref=f1e312]: description
+          - heading "Retest and document" [level=3] [ref=f1e313]
+          - paragraph [ref=f1e314]: We confirm that the outlet works properly and record what we did.
+    - generic [ref=f1e316]:
+      - heading "Schedule Outlet Replacement in Rockville" [level=2] [ref=f1e317]
+      - paragraph [ref=f1e318]: Call (240) 255 4794 or visit our contact page. We find out why the outlet failed, replace it correctly, and test the circuit before we leave.
+      - generic [ref=f1e319]:
+        - link "Schedule Service" [ref=f1e320] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f1e321] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f1e323]:
+      - generic [ref=f1e324]:
+        - generic [ref=f1e325]: FAQ
+        - heading "Frequently Asked Questions" [level=2] [ref=f1e326]
+        - paragraph [ref=f1e327]: Common questions from homeowners and property managers.
+      - generic [ref=f1e328]:
+        - heading [level=3] [ref=f1e330]:
+          - button "How do I know if an outlet needs to be replaced?" [ref=f1e331]
+        - heading [level=3] [ref=f1e333]:
+          - button "Can I replace an outlet myself?" [ref=f1e334]
+        - heading [level=3] [ref=f1e336]:
+          - button "Why does my GFCI outlet keep tripping?" [ref=f1e337]
+        - heading [level=3] [ref=f1e339]:
+          - button "Why is only one outlet dead?" [ref=f1e340]
+        - heading [level=3] [ref=f1e342]:
+          - button "Can you add more outlets to a room?" [ref=f1e343]
+        - heading [level=3] [ref=f1e345]:
+          - button "Do you offer emergency outlet repair?" [ref=f1e346]
+    - generic [ref=f1e349]:
+      - generic [ref=f1e350]:
+        - generic [ref=f1e351]:
+          - generic [ref=f1e352]: Get Started
+          - heading "Request Service Today" [level=2] [ref=f1e353]
+          - paragraph [ref=f1e354]: Fill out the form and we will contact you promptly to confirm your appointment.
+        - generic [ref=f1e355]:
+          - paragraph [ref=f1e356]:
+            - generic [ref=f1e357]: phone
+            - link "240-255-4794" [ref=f1e358] [cursor=pointer]:
+              - /url: tel:+12402554794
+          - paragraph [ref=f1e359]:
+            - generic [ref=f1e360]: email
+            - link "service@mavenhomeservices.com" [ref=f1e361] [cursor=pointer]:
+              - /url: mailto:service@mavenhomeservices.com
+          - paragraph [ref=f1e362]:
+            - generic [ref=f1e363]: emergency
+            - text: Emergency service available for urgent issues
+      - generic [ref=f1e365]:
+        - generic [ref=f1e366]:
+          - generic [ref=f1e367]:
+            - generic [ref=f1e368]: First Name
+            - textbox "First Name" [ref=f1e369]:
+              - /placeholder: Enter your first name
+          - generic [ref=f1e370]:
+            - generic [ref=f1e371]: Last Name
+            - textbox "Last Name" [ref=f1e372]:
+              - /placeholder: Enter your last name
+        - generic [ref=f1e373]:
+          - generic [ref=f1e374]: Email Address
+          - textbox "Email Address" [ref=f1e375]:
+            - /placeholder: Enter your email address
+        - generic [ref=f1e376]:
+          - generic [ref=f1e377]: Phone Number
+          - textbox "Phone Number" [ref=f1e378]:
+            - /placeholder: Enter your phone number
+        - generic [ref=f1e379]:
+          - generic [ref=f1e380]: Service Needed
+          - combobox "Service Needed" [ref=f1e381]:
+            - generic: Select a service...
+          - combobox [aria-hidden] [ref=f1e382]
+        - generic [ref=f1e383]:
+          - generic [ref=f1e384]: Message (Optional)
+          - textbox "Message (Optional)" [ref=f1e385]:
+            - /placeholder: Describe the issue or what you need...
+        - text: Company website
+        - textbox [ref=f1e386]
+        - button "Request Service Appointment →" [ref=f1e387]
+        - paragraph [ref=f1e388]:
+          - text: We will contact you promptly regarding your request. By submitting, you agree to our
+          - link "Privacy Policy" [ref=f1e389] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+  - contentinfo [ref=f1e390]:
+    - generic [ref=f1e392]:
+      - generic [ref=f1e393]:
+        - link [ref=f1e394] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f1e396]
+        - paragraph [ref=f1e397]: Insured HVAC/R, plumbing, electrical, and roofing professionals based in Rockville, Maryland, serving commercial and residential clients across Maryland and Northern Virginia. Emergency service is available for urgent issues.
+        - link "240-255-4794" [ref=f1e398] [cursor=pointer]:
+          - /url: tel:+12402554794
+        - paragraph [ref=f1e399]: service@mavenhomeservices.com
+        - generic [ref=f1e400]:
+          - generic [ref=f1e401]: Suite 470
+          - generic [ref=f1e402]: 9200 Corporate Blvd
+          - generic [ref=f1e403]: Rockville, MD 20850
+        - link "Google Business Profile" [ref=f1e404] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+      - generic [ref=f1e405]:
+        - heading "Services" [level=3] [ref=f1e406]
+        - list [ref=f1e407]:
+          - listitem [ref=f1e408]:
+            - link "HVAC" [ref=f1e409] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f1e410]:
+            - link "Plumbing" [ref=f1e411] [cursor=pointer]:
+              - /url: /plumbing
+          - listitem [ref=f1e412]:
+            - link "Electrical" [ref=f1e413] [cursor=pointer]:
+              - /url: /electrical
+          - listitem [ref=f1e414]:
+            - link "Commercial" [ref=f1e415] [cursor=pointer]:
+              - /url: /commercial
+          - listitem [ref=f1e416]:
+            - link "Air Conditioning" [ref=f1e417] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f1e418]:
+            - link "Emergency Service" [ref=f1e419] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=f1e420]:
+        - heading "Company" [level=3] [ref=f1e421]
+        - list [ref=f1e422]:
+          - listitem [ref=f1e423]:
+            - link "Home" [ref=f1e424] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f1e425]:
+            - link "About Us" [ref=f1e426] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=f1e427]:
+            - link "Blog" [ref=f1e428] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f1e429]:
+            - link "Contact" [ref=f1e430] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=f1e431]:
+            - link "Become a Subcontractor" [ref=f1e432] [cursor=pointer]:
+              - /url: /become-a-subcontractor
+          - listitem [ref=f1e433]:
+            - link "Privacy Policy" [ref=f1e434] [cursor=pointer]:
+              - /url: /privacy-policy
+      - generic [ref=f1e435]:
+        - heading "Business Hours" [level=3] [ref=f1e436]
+        - generic [ref=f1e437]:
+          - generic [ref=f1e438]:
+            - paragraph [ref=f1e439]: Every Day
+            - paragraph [ref=f1e440]: Open 24/7
+          - generic [ref=f1e441]:
+            - paragraph [ref=f1e442]: Emergency Service
+            - paragraph [ref=f1e443]: Available 24/7 for urgent issues
+            - link "240-255-4794" [ref=f1e444] [cursor=pointer]:
+              - /url: tel:+12402554794
+    - generic [ref=f1e445]:
+      - paragraph [ref=f1e446]: Licensed & Certified
+      - generic [ref=f1e447]:
+        - generic "MHIC Licensed" [ref=f1e448]:
+          - img "MHIC Licensed contractor — Maryland Home Improvement Commission" [ref=f1e450]
+        - generic "General Contractors" [ref=f1e452]:
+          - img "Maryland General Contractors license" [ref=f1e454]
+        - generic "EPA 608 Certified" [ref=f1e456]:
+          - img "EPA Section 608 Universal certification" [ref=f1e458]
+        - generic "OSHA Certified" [ref=f1e460]:
+          - img "OSHA safety certification" [ref=f1e462]
+        - generic "Haag Certified Inspector" [ref=f1e464]:
+          - img "Haag certified residential roof inspector" [ref=f1e466]
+    - generic [ref=f1e468]: 10% Off All Services for Veterans, Active Military & First Responders — valid ID required.
+    - generic [ref=f1e469]:
+      - paragraph [ref=f1e470]: © 2026 Maven Home Services. All rights reserved.
+      - generic [ref=f1e471]:
+        - link "Privacy Policy" [ref=f1e472] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=f1e473] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Sitemap" [ref=f1e474] [cursor=pointer]:
+          - /url: /site-map
+  - alert [ref=f1e475]

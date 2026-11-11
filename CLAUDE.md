@@ -14,12 +14,13 @@ npm run lint    # eslint (flat config, next/core-web-vitals + next/typescript)
 **Never start a second dev server.** Before running `npm run dev`, check whether this project is already serving on port 3000 — if it is, use that instance (open `http://localhost:3000`, rely on hot reload to pick up your edits) instead of launching another one. Next.js silently falls back to 3001/3002 when 3000 is taken, which leaves stale duplicate servers running and means you may be checking a port the user isn't looking at.
 
 ```bash
+lsof -nP -iTCP:3000 -sTCP:LISTEN    # macOS/Linux — any output means a server is up
 netstat -ano | findstr :3000        # PowerShell/cmd — any LISTENING line means a server is up
 ```
 
 Only start a server if nothing is listening, and don't kill the user's running one without asking.
 
-There is no test suite, no test runner, and no CI config. `npm run build` is what catches breakage: TypeScript is `strict`, and every dynamic route is statically generated at build time, so a bad data key or a `ServicePageData` field mismatch fails the build rather than showing up at runtime.
+There is no test suite, no test runner, and no CI config. `npm run build` (which runs `next build --webpack`) is what catches breakage: TypeScript is `strict`, and every dynamic route is statically generated at build time, so a bad data key or a `ServicePageData` field mismatch fails the build rather than showing up at runtime.
 
 ## What this is
 
@@ -68,6 +69,18 @@ Adding a section to a service page means changing `ServicePageData` + `ServicePa
 
 Subcategory routes call `getSubcategorySlugs(parent)` in `generateStaticParams` and `getSubcategoryData(parent, slug)` in the page; both derive purely from the `"parent/slug"` key prefix, so **adding a subcategory page = adding one entry to the record** — no new route file. `/commercial` deliberately has no `[subcategory]` route.
 
+### Third tier: standalone SEO landing pages
+
+Client-supplied content packages (one docx per page, e.g. "Drain Cleaning in Rockville, MD", the tankless water heater city pages, the Rockville electrical pages) become **static routes that sit beside the `[subcategory]` folder**: `app/plumbing/drain-cleaning-rockville-md/page.tsx`, `app/electrical/inspections-rockville/page.tsx`, `app/walk-in-cooler-freezer-service-rockville-md/page.tsx`. Each one is three pieces:
+
+1. A data file `lib/services/rockville-*.ts` (or `<city>-*.ts`) exporting one `ServicePageData`, copy kept verbatim from the package. Rockville pages share `rockvilleAreaServed` from `lib/services/rockville-plumbing.ts`.
+2. A `page.tsx` copied from an existing one: `generateMetadata` with `title: { absolute }`, `alternates.canonical`, and `openGraph`, plus `<LocalServiceJsonLd businessType="Plumber" | "Electrician" | "LocalBusiness" …>` (`components/service/LocalServiceJsonLd.tsx` emits LocalBusiness + Service + FAQPage from `data.faqs`) above `<ServicePageLayout>`.
+3. An entry in `lib/sitemap.ts` `extraServicePages` keyed by category href.
+
+**The static slug must never also be a key in `subcategories.ts`** — `generateStaticParams` would emit a path that already exists as a static page and `next build` aborts. Each `[subcategory]/page.tsx` carries a comment listing the reserved slugs; extend it when adding a page. Slugs follow whatever URL the package specifies (`-rockville-md` and `-rockville` both exist), not an internal convention.
+
+Package tables map to `ServiceDetailSection.table` (`{ columns, rows }`), rendered by `components/service/ServiceDetailSections.tsx` with horizontal scroll at phone width. Their "Contact" tables are flattened to a `benefits` list with `tel:`/`mailto:`/`/contact` links instead; the layout's CTA and `ScheduleForm` already carry contact info.
+
 ### Navigation and anchors are separately maintained — keep them in sync
 
 `lib/site.ts` `serviceCategories` drives the header mega-menu, the mobile sheet, and `/services`. Its `anchorLinks` / `groups` entries are built with `serviceAnchor("/plumbing", "water-heaters")` → `/plumbing#water-heaters`. **The fragment must match a `ServiceDetailSection.id` in the corresponding `*-sections.ts` file**; nothing validates this, so a typo silently produces a link that scrolls nowhere. `subcategories` entries in the same object point at real `[subcategory]` routes and must match keys in `subcategories.ts`.
@@ -76,7 +89,15 @@ Anchor scrolling is handled in two places: `SiteHeader` intercepts same-page anc
 
 ### Blog
 
-`lib/blog.ts` is a single `posts: BlogPost[]` array plus `getAllPosts` / `getPostBySlug` / `getRecentPosts` / `getRelatedPosts`. Post bodies are **structured blocks**, not markdown: `{type: "p" | "h2" | "h3" | "ul" | "cta"}`. `components/blog/BlogPostBody.tsx` renders them and additionally parses markdown-style inline links inside `p` and `ul` text — but only internal paths (`[text](/hvac/air-conditioners)`); the regex requires a leading `/`, so external URLs will render as literal text.
+`lib/blog.ts` is a single `posts: BlogPost[]` array plus `getAllPosts` / `getPostBySlug` / `getRecentPosts` / `getRelatedPosts`. Post bodies are **structured blocks**, not markdown: `{type: "p" | "h2" | "h3" | "ul" | "cta"}`. `components/blog/BlogPostBody.tsx` renders them through `parseInline`.
+
+### Inline markdown in content strings
+
+`components/shared/inlineText.tsx` `parseInline` is the one place content strings get `**bold**` and `[label](href)` support. `href` may be an internal path (rendered with `next/link`), an absolute `http(s)://` URL (opens in a new tab with `rel="noopener noreferrer"`), `tel:`, `mailto:`, or a `#anchor`. It is applied to blog bodies, `ServicePageLayout` overview paragraphs, offered-service descriptions and subtitle, and every `ServiceDetailSection` text field including table cells. Fields that bypass it (hero copy, FAQ answers, step descriptions) render markdown syntax literally.
+
+### Sitemap and legal pages
+
+`lib/sitemap.ts` `getSitemapGroups()` is the single source for both `app/sitemap.ts` (sitemap.xml) and the human-readable `/site-map`. Subcategory and blog entries derive from their data modules; **every hand-made static route must be added there by hand** or it is simply absent from the sitemap. `/privacy-policy` and `/terms-of-service` follow the same data/renderer split: `lib/legal.ts` documents rendered by `components/legal/LegalDocumentView.tsx`.
 
 ### Shared layout primitives
 

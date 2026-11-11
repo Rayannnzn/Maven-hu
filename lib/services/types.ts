@@ -13,6 +13,8 @@ export type ServiceDetailSection = {
   problemsHeading?: string;
   /** Paragraph rendered after the lists, for copy that follows a bullet list. */
   closing?: string;
+  /** Rendered between `description` and the lists. Cells accept inline markdown. */
+  table?: { columns: string[]; rows: string[][] };
   group?: string;
   ctaText?: string;
 };

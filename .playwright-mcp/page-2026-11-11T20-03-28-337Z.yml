@@ -1,0 +1,515 @@
+- generic [active] [ref=f3e1]:
+  - link "Skip to content" [ref=f3e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f3e3]:
+    - generic [ref=f3e4]:
+      - generic [ref=f3e5]:
+        - link [ref=f3e6] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f3e8]
+        - navigation "Main" [ref=f3e9]:
+          - link "Home" [ref=f3e10] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f3e12]:
+            - link "HVAC" [ref=f3e13] [cursor=pointer]:
+              - /url: /hvac
+            - button "Open HVAC menu" [ref=f3e14]
+          - generic [ref=f3e18]:
+            - link "Plumbing" [ref=f3e19] [cursor=pointer]:
+              - /url: /plumbing
+            - button "Open Plumbing menu" [ref=f3e20]
+          - generic [ref=f3e24]:
+            - link "Electrical Services" [ref=f3e25] [cursor=pointer]:
+              - /url: /electrical
+            - button "Open Electrical Services menu" [ref=f3e26]
+          - generic [ref=f3e30]:
+            - link "Commercial" [ref=f3e31] [cursor=pointer]:
+              - /url: /commercial
+            - button "Open Commercial menu" [ref=f3e32]
+          - link "About" [ref=f3e35] [cursor=pointer]:
+            - /url: /about
+          - link "Blog" [ref=f3e36] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=f3e37] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=f3e38]:
+          - link "Become a Subcontractor" [ref=f3e39] [cursor=pointer]:
+            - /url: /become-a-subcontractor
+          - generic [ref=f3e40]:
+            - link "240-255-4794" [ref=f3e41] [cursor=pointer]:
+              - /url: tel:+12402554794
+            - generic [ref=f3e42]: 24/7 Emergency Service
+          - link "Book Now" [ref=f3e43] [cursor=pointer]:
+            - /url: /contact
+      - navigation "Electrical Services services" [ref=f3e44]:
+        - generic [ref=f3e45]:
+          - link "Electrical Installation/Repair" [ref=f3e46] [cursor=pointer]:
+            - /url: /electrical#electrical-installation
+          - link "EV Charger Installation" [ref=f3e47] [cursor=pointer]:
+            - /url: /electrical#ev-charger-installation
+          - link "Indoor & Outdoor Lighting Installation" [ref=f3e48] [cursor=pointer]:
+            - /url: /electrical#indoor-outdoor-lighting-installation
+          - link "Ceiling Fan Installation" [ref=f3e49] [cursor=pointer]:
+            - /url: /electrical#ceiling-fan-installation
+          - link "Electrical Panel & Circuit Breaker Services" [ref=f3e50] [cursor=pointer]:
+            - /url: /electrical#electrical-panel-circuit-breaker
+          - link "Electrical Inspections" [ref=f3e51] [cursor=pointer]:
+            - /url: /electrical#electrical-inspections
+          - link "Outlet Replacement" [ref=f3e52] [cursor=pointer]:
+            - /url: /electrical#outlet-replacement
+          - link "Electrical Wiring & Rewiring" [ref=f3e53] [cursor=pointer]:
+            - /url: /electrical#electrical-wiring-rewiring
+          - link "Security Lighting" [ref=f3e54] [cursor=pointer]:
+            - /url: /electrical#security-lighting
+          - link "Repair & Installation" [ref=f3e55] [cursor=pointer]:
+            - /url: /electrical/repair-installation
+          - link "Commercial & Residential" [ref=f3e56] [cursor=pointer]:
+            - /url: /electrical/commercial-residential
+  - main [ref=f3e57]:
+    - navigation "breadcrumb" [ref=f3e59]:
+      - list [ref=f3e60]:
+        - listitem [ref=f3e61]:
+          - link "Home" [ref=f3e62] [cursor=pointer]:
+            - /url: /
+        - listitem [aria-hidden] [ref=f3e63]
+        - listitem [ref=f3e66]:
+          - link "Electrical Repair and Installation in Rockville, MD" [disabled] [ref=f3e67]
+    - generic [ref=f3e71]:
+      - heading "Electrical Repair and Installation in Rockville, MD" [level=1] [ref=f3e72]
+      - paragraph [ref=f3e73]:
+        - text: When an outlet stops working, a breaker keeps tripping, or you need a new fixture or fan installed, you want a licensed electrician who does the job safely and explains it clearly. Maven DMV provides electrical repair and installation for homes and businesses in Rockville, MD and across Montgomery County, Maryland. This page covers what we repair, what we install, and how we work. For the full list of what we offer, visit our
+        - link "main electrical services page" [ref=f3e74] [cursor=pointer]:
+          - /url: /electrical
+        - text: .
+      - generic [ref=f3e75]:
+        - link "Schedule Service" [ref=f3e76] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e77] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e79]:
+      - generic [ref=f3e80]:
+        - generic [ref=f3e81]: Overview
+        - heading "What Is Included in Electrical Repair and Installation?" [level=2] [ref=f3e82]
+      - paragraph [ref=f3e84]: Electrical repair means finding and fixing a fault in existing wiring, devices, or equipment, such as a dead outlet, a failed switch, or a breaker that will not stay on. Electrical installation means adding new wiring, devices, or fixtures, such as a ceiling fan, new lighting, or an upgraded panel. Both types of work must meet electrical code, and both should end with testing so you know the circuit is safe to use.
+    - generic [ref=f3e87]:
+      - generic [ref=f3e88]:
+        - generic [ref=f3e89]: Service
+        - heading "Electrical Repair Services" [level=2] [ref=f3e90]
+      - paragraph [ref=f3e91]: "Most electrical problems start small. A warm outlet or a light that flickers can point to a loose connection, a worn device, or an overloaded circuit. We diagnose and repair:"
+      - list [ref=f3e93]:
+        - listitem [ref=f3e94]:
+          - generic [ref=f3e95]: check_circle
+          - text: Outlets and switches that are dead, loose, cracked, or hot to the touch
+        - listitem [ref=f3e96]:
+          - generic [ref=f3e97]: check_circle
+          - text: Circuit breakers that trip or will not reset
+        - listitem [ref=f3e98]:
+          - generic [ref=f3e99]: check_circle
+          - text: Flickering, dimming, or buzzing lights
+        - listitem [ref=f3e100]:
+          - generic [ref=f3e101]: check_circle
+          - text: Ceiling lights that have come loose or fallen
+        - listitem [ref=f3e102]:
+          - generic [ref=f3e103]: check_circle
+          - text: Partial power loss in one room or one side of a building
+        - listitem [ref=f3e104]:
+          - generic [ref=f3e105]: check_circle
+          - text: Damaged wiring and loose connections
+        - listitem [ref=f3e106]:
+          - generic [ref=f3e107]: check_circle
+          - text: Power supply faults on commercial and HVAC equipment
+      - paragraph [ref=f3e108]: We trace the cause first and do not replace parts by guesswork. That saves you money and prevents the same problem from coming back. If you have a project that is not listed here, call us and describe it. We will tell you honestly whether we can handle it and what it will involve.
+      - generic [ref=f3e109]:
+        - link "Schedule a Repair" [ref=f3e110] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e111] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e114]:
+      - generic [ref=f3e115]:
+        - generic [ref=f3e116]: Service
+        - heading "Repair or Replace? How We Decide" [level=2] [ref=f3e117]
+      - paragraph [ref=f3e118]: Not every electrical problem needs a big project. A single failed switch is a simple replacement. Repeated breaker trips across several rooms may mean overloaded circuits or an aging panel, which calls for a deeper look. In older homes, brittle insulation or outdated devices can make repeated spot repairs a poor use of your money. We will tell you when a small repair is enough and when replacement is the safer and more economical choice.
+      - generic [ref=f3e119]:
+        - link "Get an Honest Assessment" [ref=f3e120] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e121] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e124]:
+      - generic [ref=f3e125]:
+        - generic [ref=f3e126]: Service
+        - 'heading "Installation Done Safely: Permits, Code, and Testing" [level=2] [ref=f3e127]'
+      - paragraph [ref=f3e128]:
+        - text: Many electrical installations in Maryland require permits and inspections, and local rules can vary by project and jurisdiction. We explain what applies to your job before work starts. Every installation is tested before we leave, and we show you how the new fixture or device works. For general homeowner guidance, the
+        - link "Electrical Safety Foundation International" [ref=f3e129] [cursor=pointer]:
+          - /url: https://www.esfi.org/
+        - text: and the
+        - link "National Fire Protection Association" [ref=f3e130] [cursor=pointer]:
+          - /url: https://www.nfpa.org/
+        - text: offer trusted safety resources. Working on live circuits without training is dangerous, so we recommend leaving panel, wiring, and fixture work to licensed professionals.
+      - generic [ref=f3e131]:
+        - link "Plan an Installation" [ref=f3e132] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e133] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e136]:
+      - generic [ref=f3e137]:
+        - generic [ref=f3e138]: Service
+        - heading "Repair and Installation for Businesses" [level=2] [ref=f3e139]
+      - paragraph [ref=f3e140]:
+        - text: Restaurants, offices, and retail stores cannot afford long outages. We repair lighting, outlets, and equipment power supply issues, and we install new connections for kitchen equipment, refrigeration, and workspace lighting. Because our technicians also service HVAC and commercial equipment, we can tell whether a failing unit has an electrical cause or a mechanical one. You can read how that works in our guide to
+        - link "24 hour AC repair in Rockville" [ref=f3e141] [cursor=pointer]:
+          - /url: /blog/24-hour-ac-repair-rockville
+        - text: .
+      - generic [ref=f3e142]:
+        - link "Schedule Commercial Service" [ref=f3e143] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e144] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e147]:
+      - generic [ref=f3e148]:
+        - generic [ref=f3e149]: Service
+        - heading "Signs You Need Electrical Repair Now" [level=2] [ref=f3e150]
+      - list [ref=f3e152]:
+        - listitem [ref=f3e153]:
+          - generic [ref=f3e154]: check_circle
+          - text: A burning smell near an outlet, panel, or appliance
+        - listitem [ref=f3e155]:
+          - generic [ref=f3e156]: check_circle
+          - text: Sparks, crackling, or buzzing sounds
+        - listitem [ref=f3e157]:
+          - generic [ref=f3e158]: check_circle
+          - text: Outlets or switch plates that feel warm or hot
+        - listitem [ref=f3e159]:
+          - generic [ref=f3e160]: check_circle
+          - text: Breakers that trip often or will not reset
+        - listitem [ref=f3e161]:
+          - generic [ref=f3e162]: check_circle
+          - text: Lights that dim when a large appliance starts
+      - paragraph [ref=f3e163]: If you see smoke or flames, or someone has been shocked, call 911 first. For other urgent electrical problems, our emergency line is available 24 hours a day, 7 days a week.
+      - generic [ref=f3e164]:
+        - link "Get Urgent Help" [ref=f3e165] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e166] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e169]:
+      - generic [ref=f3e170]:
+        - generic [ref=f3e171]: Service
+        - heading "Why Homeowners and Businesses Choose Maven DMV" [level=2] [ref=f3e172]
+      - list [ref=f3e174]:
+        - listitem [ref=f3e175]:
+          - generic [ref=f3e176]: check_circle
+          - text: Licensed technicians who work on both residential and commercial systems
+        - listitem [ref=f3e177]:
+          - generic [ref=f3e178]: check_circle
+          - text: Plain language explanations before and after every job
+        - listitem [ref=f3e179]:
+          - generic [ref=f3e180]: check_circle
+          - text: Honest recommendations with no unnecessary upsells
+        - listitem [ref=f3e181]:
+          - generic [ref=f3e182]: check_circle
+          - text: Tested and documented work on every repair and installation
+        - listitem [ref=f3e183]:
+          - generic [ref=f3e184]: check_circle
+          - text: 24/7 availability for urgent issues
+        - listitem [ref=f3e185]:
+          - generic [ref=f3e186]: check_circle
+          - text: Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850
+      - paragraph [ref=f3e187]:
+        - text: You can read feedback from customers on our
+        - link "Google Business Profile" [ref=f3e188] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+        - text: ", or return to our"
+        - link "home page" [ref=f3e189] [cursor=pointer]:
+          - /url: /
+        - text: to see our other services.
+      - generic [ref=f3e190]:
+        - link "Schedule Service" [ref=f3e191] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e192] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e195]:
+      - generic [ref=f3e196]:
+        - generic [ref=f3e197]: Service
+        - heading "Veterans, Military, and First Responder Discount" [level=2] [ref=f3e198]
+      - paragraph [ref=f3e199]: Maven Home Services offers 10% off all HVAC, plumbing, and electrical services for veterans, active duty military, and first responders. Mention your eligibility when you schedule. A valid military or first responder ID is required at the time of service.
+      - generic [ref=f3e200]:
+        - link "Schedule and Mention Your Discount" [ref=f3e201] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e202] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e205]:
+      - generic [ref=f3e206]:
+        - generic [ref=f3e207]: Service
+        - heading "Schedule Electrical Repair or Installation" [level=2] [ref=f3e208]
+      - paragraph [ref=f3e209]:
+        - text: Ready to get started? Visit our
+        - link "contact page" [ref=f3e210] [cursor=pointer]:
+          - /url: /contact
+        - text: "or reach us directly:"
+      - list [ref=f3e212]:
+        - listitem [ref=f3e213]:
+          - generic [ref=f3e214]: check_circle
+          - text: "Address: 9200 Corporate Blvd, Suite 470, Rockville, MD 20850"
+        - listitem [ref=f3e215]:
+          - generic [ref=f3e216]: check_circle
+          - text: "Phone:"
+          - link "(240) 255 4794" [ref=f3e217] [cursor=pointer]:
+            - /url: tel:+12402554794
+        - listitem [ref=f3e218]:
+          - generic [ref=f3e219]: check_circle
+          - text: "Email:"
+          - link "service@mavenhomeservices.com" [ref=f3e220] [cursor=pointer]:
+            - /url: mailto:service@mavenhomeservices.com
+        - listitem [ref=f3e221]:
+          - generic [ref=f3e222]: check_circle
+          - text: "Hours: Open 24 hours a day, 7 days a week, with 24/7 emergency service for urgent issues"
+        - listitem [ref=f3e223]:
+          - generic [ref=f3e224]: check_circle
+          - text: "Service area: Within 30 miles of Rockville, across Maryland and Northern Virginia"
+      - generic [ref=f3e225]:
+        - link "Schedule Service" [ref=f3e226] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e227] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e229]:
+      - generic [ref=f3e230]:
+        - generic [ref=f3e231]: Services
+        - heading "Electrical Installation Services" [level=2] [ref=f3e232]
+        - paragraph [ref=f3e233]: "New installations should match your electrical load, your space, and your safety needs. Our team installs:"
+      - generic [ref=f3e234]:
+        - generic [ref=f3e235]:
+          - generic [ref=f3e236]: mode_fan
+          - heading "Ceiling fans and ceiling lights" [level=3] [ref=f3e237]
+          - paragraph [ref=f3e238]: Ceiling fans and ceiling lights, with the box and wiring checked first.
+        - generic [ref=f3e239]:
+          - generic [ref=f3e240]: lightbulb
+          - heading "Indoor and outdoor lighting" [level=3] [ref=f3e241]
+          - paragraph [ref=f3e242]: Indoor and outdoor lighting for homes and commercial spaces.
+        - generic [ref=f3e243]:
+          - generic [ref=f3e244]: outlet
+          - heading "Outlets, switches, and dimmers" [level=3] [ref=f3e245]
+          - paragraph [ref=f3e246]: Outlets, switches, and dimmers installed to code.
+        - generic [ref=f3e247]:
+          - generic [ref=f3e248]: electrical_services
+          - heading "GFCI outlets" [level=3] [ref=f3e249]
+          - paragraph [ref=f3e250]: GFCI outlets for kitchens, bathrooms, garages, and outdoor areas.
+        - generic [ref=f3e251]:
+          - generic [ref=f3e252]: thermostat
+          - heading "Thermostat wiring" [level=3] [ref=f3e253]
+          - paragraph [ref=f3e254]: Thermostat wiring and related control connections.
+        - generic [ref=f3e255]:
+          - generic [ref=f3e256]: restaurant
+          - heading "Commercial equipment power" [level=3] [ref=f3e257]
+          - paragraph [ref=f3e258]: Power connections for commercial and kitchen equipment.
+        - generic [ref=f3e259]:
+          - generic [ref=f3e260]: power
+          - heading "Electrical panel upgrades" [level=3] [ref=f3e261]
+          - paragraph [ref=f3e262]: Electrical panel upgrades, when an inspection shows your panel cannot support your needs.
+    - generic [ref=f3e264]:
+      - generic [ref=f3e265]:
+        - generic [ref=f3e266]: Process
+        - heading "How Our Repair Process Works" [level=2] [ref=f3e267]
+        - paragraph [ref=f3e268]: From first call to finished job, simple and transparent.
+      - generic [ref=f3e269]:
+        - generic [ref=f3e270]:
+          - generic [ref=f3e271]: "01"
+          - generic [ref=f3e272]: hearing
+          - heading "Listen and ask" [level=3] [ref=f3e273]
+          - paragraph [ref=f3e274]: We start with what you saw, heard, or smelled, and when the problem began.
+        - generic [ref=f3e275]:
+          - generic [ref=f3e276]: "02"
+          - generic [ref=f3e277]: manage_search
+          - heading "Inspect and test" [level=3] [ref=f3e278]
+          - paragraph [ref=f3e279]: We check the device, the circuit, and the panel, and we measure instead of assuming.
+        - generic [ref=f3e280]:
+          - generic [ref=f3e281]: "03"
+          - generic [ref=f3e282]: record_voice_over
+          - heading "Explain the findings" [level=3] [ref=f3e283]
+          - paragraph [ref=f3e284]: You hear what we found, why it happened, and what your options are, in plain language.
+        - generic [ref=f3e285]:
+          - generic [ref=f3e286]: "04"
+          - generic [ref=f3e287]: task_alt
+          - heading "Approve before work starts" [level=3] [ref=f3e288]
+          - paragraph [ref=f3e289]: We begin only after you agree to the plan and the price.
+        - generic [ref=f3e290]:
+          - generic [ref=f3e291]: "05"
+          - generic [ref=f3e292]: build
+          - heading "Repair and test" [level=3] [ref=f3e293]
+          - paragraph [ref=f3e294]: We fix the problem, then test the circuit and the device under normal use.
+        - generic [ref=f3e295]:
+          - generic [ref=f3e296]: "06"
+          - generic [ref=f3e297]: description
+          - heading "Document the work" [level=3] [ref=f3e298]
+          - paragraph [ref=f3e299]: We record what we found and what we changed, so you have a clear service history.
+    - generic [ref=f3e301]:
+      - heading "Schedule Electrical Repair or Installation in Rockville" [level=2] [ref=f3e302]
+      - paragraph [ref=f3e303]: Call (240) 255 4794 or visit our contact page. You approve the plan and the price before any work begins.
+      - generic [ref=f3e304]:
+        - link "Schedule Service" [ref=f3e305] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=f3e306] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=f3e308]:
+      - generic [ref=f3e309]:
+        - generic [ref=f3e310]: FAQ
+        - heading "Frequently Asked Questions" [level=2] [ref=f3e311]
+        - paragraph [ref=f3e312]: Common questions from homeowners and property managers.
+      - generic [ref=f3e313]:
+        - heading [level=3] [ref=f3e315]:
+          - button "What is the difference between electrical repair and electrical installation?" [ref=f3e316]
+        - heading [level=3] [ref=f3e318]:
+          - button "Can you install a ceiling fan where there is only a light?" [ref=f3e319]
+        - heading [level=3] [ref=f3e321]:
+          - button "Why does my breaker keep tripping?" [ref=f3e322]
+        - heading [level=3] [ref=f3e324]:
+          - button "Do I need a permit for electrical work?" [ref=f3e325]
+        - heading [level=3] [ref=f3e327]:
+          - button "Do you serve businesses as well as homes?" [ref=f3e328]
+        - heading [level=3] [ref=f3e330]:
+          - button "Will I know the cost before you start?" [ref=f3e331]
+    - generic [ref=f3e334]:
+      - generic [ref=f3e335]:
+        - generic [ref=f3e336]:
+          - generic [ref=f3e337]: Get Started
+          - heading "Request Service Today" [level=2] [ref=f3e338]
+          - paragraph [ref=f3e339]: Fill out the form and we will contact you promptly to confirm your appointment.
+        - generic [ref=f3e340]:
+          - paragraph [ref=f3e341]:
+            - generic [ref=f3e342]: phone
+            - link "240-255-4794" [ref=f3e343] [cursor=pointer]:
+              - /url: tel:+12402554794
+          - paragraph [ref=f3e344]:
+            - generic [ref=f3e345]: email
+            - link "service@mavenhomeservices.com" [ref=f3e346] [cursor=pointer]:
+              - /url: mailto:service@mavenhomeservices.com
+          - paragraph [ref=f3e347]:
+            - generic [ref=f3e348]: emergency
+            - text: Emergency service available for urgent issues
+      - generic [ref=f3e350]:
+        - generic [ref=f3e351]:
+          - generic [ref=f3e352]:
+            - generic [ref=f3e353]: First Name
+            - textbox "First Name" [ref=f3e354]:
+              - /placeholder: Enter your first name
+          - generic [ref=f3e355]:
+            - generic [ref=f3e356]: Last Name
+            - textbox "Last Name" [ref=f3e357]:
+              - /placeholder: Enter your last name
+        - generic [ref=f3e358]:
+          - generic [ref=f3e359]: Email Address
+          - textbox "Email Address" [ref=f3e360]:
+            - /placeholder: Enter your email address
+        - generic [ref=f3e361]:
+          - generic [ref=f3e362]: Phone Number
+          - textbox "Phone Number" [ref=f3e363]:
+            - /placeholder: Enter your phone number
+        - generic [ref=f3e364]:
+          - generic [ref=f3e365]: Service Needed
+          - combobox "Service Needed" [ref=f3e366]:
+            - generic: Select a service...
+          - combobox [aria-hidden] [ref=f3e367]
+        - generic [ref=f3e368]:
+          - generic [ref=f3e369]: Message (Optional)
+          - textbox "Message (Optional)" [ref=f3e370]:
+            - /placeholder: Describe the issue or what you need...
+        - text: Company website
+        - textbox [ref=f3e371]
+        - button "Request Service Appointment →" [ref=f3e372]
+        - paragraph [ref=f3e373]:
+          - text: We will contact you promptly regarding your request. By submitting, you agree to our
+          - link "Privacy Policy" [ref=f3e374] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+  - contentinfo [ref=f3e375]:
+    - generic [ref=f3e377]:
+      - generic [ref=f3e378]:
+        - link [ref=f3e379] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=f3e381]
+        - paragraph [ref=f3e382]: Insured HVAC/R, plumbing, electrical, and roofing professionals based in Rockville, Maryland, serving commercial and residential clients across Maryland and Northern Virginia. Emergency service is available for urgent issues.
+        - link "240-255-4794" [ref=f3e383] [cursor=pointer]:
+          - /url: tel:+12402554794
+        - paragraph [ref=f3e384]: service@mavenhomeservices.com
+        - generic [ref=f3e385]:
+          - generic [ref=f3e386]: Suite 470
+          - generic [ref=f3e387]: 9200 Corporate Blvd
+          - generic [ref=f3e388]: Rockville, MD 20850
+        - link "Google Business Profile" [ref=f3e389] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+      - generic [ref=f3e390]:
+        - heading "Services" [level=3] [ref=f3e391]
+        - list [ref=f3e392]:
+          - listitem [ref=f3e393]:
+            - link "HVAC" [ref=f3e394] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f3e395]:
+            - link "Plumbing" [ref=f3e396] [cursor=pointer]:
+              - /url: /plumbing
+          - listitem [ref=f3e397]:
+            - link "Electrical" [ref=f3e398] [cursor=pointer]:
+              - /url: /electrical
+          - listitem [ref=f3e399]:
+            - link "Commercial" [ref=f3e400] [cursor=pointer]:
+              - /url: /commercial
+          - listitem [ref=f3e401]:
+            - link "Air Conditioning" [ref=f3e402] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=f3e403]:
+            - link "Emergency Service" [ref=f3e404] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=f3e405]:
+        - heading "Company" [level=3] [ref=f3e406]
+        - list [ref=f3e407]:
+          - listitem [ref=f3e408]:
+            - link "Home" [ref=f3e409] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f3e410]:
+            - link "About Us" [ref=f3e411] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=f3e412]:
+            - link "Blog" [ref=f3e413] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=f3e414]:
+            - link "Contact" [ref=f3e415] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=f3e416]:
+            - link "Become a Subcontractor" [ref=f3e417] [cursor=pointer]:
+              - /url: /become-a-subcontractor
+          - listitem [ref=f3e418]:
+            - link "Privacy Policy" [ref=f3e419] [cursor=pointer]:
+              - /url: /privacy-policy
+      - generic [ref=f3e420]:
+        - heading "Business Hours" [level=3] [ref=f3e421]
+        - generic [ref=f3e422]:
+          - generic [ref=f3e423]:
+            - paragraph [ref=f3e424]: Every Day
+            - paragraph [ref=f3e425]: Open 24/7
+          - generic [ref=f3e426]:
+            - paragraph [ref=f3e427]: Emergency Service
+            - paragraph [ref=f3e428]: Available 24/7 for urgent issues
+            - link "240-255-4794" [ref=f3e429] [cursor=pointer]:
+              - /url: tel:+12402554794
+    - generic [ref=f3e430]:
+      - paragraph [ref=f3e431]: Licensed & Certified
+      - generic [ref=f3e432]:
+        - generic "MHIC Licensed" [ref=f3e433]:
+          - img "MHIC Licensed contractor — Maryland Home Improvement Commission" [ref=f3e435]
+        - generic "General Contractors" [ref=f3e437]:
+          - img "Maryland General Contractors license" [ref=f3e439]
+        - generic "EPA 608 Certified" [ref=f3e441]:
+          - img "EPA Section 608 Universal certification" [ref=f3e443]
+        - generic "OSHA Certified" [ref=f3e445]:
+          - img "OSHA safety certification" [ref=f3e447]
+        - generic "Haag Certified Inspector" [ref=f3e449]:
+          - img "Haag certified residential roof inspector" [ref=f3e451]
+    - generic [ref=f3e453]: 10% Off All Services for Veterans, Active Military & First Responders — valid ID required.
+    - generic [ref=f3e454]:
+      - paragraph [ref=f3e455]: © 2026 Maven Home Services. All rights reserved.
+      - generic [ref=f3e456]:
+        - link "Privacy Policy" [ref=f3e457] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=f3e458] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Sitemap" [ref=f3e459] [cursor=pointer]:
+          - /url: /site-map
+  - alert [ref=f3e460]

@@ -1,0 +1,569 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=e8]
+        - navigation "Main" [ref=e9]:
+          - link "Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e12]:
+            - link "HVAC" [ref=e13] [cursor=pointer]:
+              - /url: /hvac
+            - button "Open HVAC menu" [ref=e14]
+          - generic [ref=e18]:
+            - link "Plumbing" [ref=e19] [cursor=pointer]:
+              - /url: /plumbing
+            - button "Open Plumbing menu" [ref=e20]
+          - generic [ref=e24]:
+            - link "Electrical Services" [ref=e25] [cursor=pointer]:
+              - /url: /electrical
+            - button "Open Electrical Services menu" [ref=e26]
+          - generic [ref=e30]:
+            - link "Commercial" [ref=e31] [cursor=pointer]:
+              - /url: /commercial
+            - button "Open Commercial menu" [ref=e32]
+          - link "About" [ref=e35] [cursor=pointer]:
+            - /url: /about
+          - link "Blog" [ref=e36] [cursor=pointer]:
+            - /url: /blog
+          - link "Contact" [ref=e37] [cursor=pointer]:
+            - /url: /contact
+        - generic [ref=e38]:
+          - link "Become a Subcontractor" [ref=e39] [cursor=pointer]:
+            - /url: /become-a-subcontractor
+          - generic [ref=e40]:
+            - link "240-255-4794" [ref=e41] [cursor=pointer]:
+              - /url: tel:+12402554794
+            - generic [ref=e42]: 24/7 Emergency Service
+          - link "Book Now" [ref=e43] [cursor=pointer]:
+            - /url: /contact
+      - navigation "Electrical Services services" [ref=e44]:
+        - generic [ref=e45]:
+          - link "Electrical Installation/Repair" [ref=e46] [cursor=pointer]:
+            - /url: /electrical#electrical-installation
+          - link "EV Charger Installation" [ref=e47] [cursor=pointer]:
+            - /url: /electrical#ev-charger-installation
+          - link "Indoor & Outdoor Lighting Installation" [ref=e48] [cursor=pointer]:
+            - /url: /electrical#indoor-outdoor-lighting-installation
+          - link "Ceiling Fan Installation" [ref=e49] [cursor=pointer]:
+            - /url: /electrical#ceiling-fan-installation
+          - link "Electrical Panel & Circuit Breaker Services" [ref=e50] [cursor=pointer]:
+            - /url: /electrical#electrical-panel-circuit-breaker
+          - link "Electrical Inspections" [ref=e51] [cursor=pointer]:
+            - /url: /electrical#electrical-inspections
+          - link "Outlet Replacement" [ref=e52] [cursor=pointer]:
+            - /url: /electrical#outlet-replacement
+          - link "Electrical Wiring & Rewiring" [ref=e53] [cursor=pointer]:
+            - /url: /electrical#electrical-wiring-rewiring
+          - link "Security Lighting" [ref=e54] [cursor=pointer]:
+            - /url: /electrical#security-lighting
+          - link "Repair & Installation" [ref=e55] [cursor=pointer]:
+            - /url: /electrical/repair-installation
+          - link "Commercial & Residential" [ref=e56] [cursor=pointer]:
+            - /url: /electrical/commercial-residential
+  - main [ref=e57]:
+    - navigation "breadcrumb" [ref=e59]:
+      - list [ref=e60]:
+        - listitem [ref=e61]:
+          - link "Home" [ref=e62] [cursor=pointer]:
+            - /url: /
+        - listitem [aria-hidden] [ref=e63]
+        - listitem [ref=e66]:
+          - link "Electrical Wiring and Rewiring in Rockville, MD" [disabled] [ref=e67]
+    - generic [ref=e71]:
+      - heading "Electrical Wiring and Rewiring in Rockville, MD" [level=1] [ref=e72]
+      - paragraph [ref=e73]: The wiring inside your walls carries every bit of power your home or business uses. When it is damaged, outdated, or overloaded, it can cause tripping breakers, dead outlets, and in serious cases a fire. Maven DMV provides new wiring, partial rewiring, and whole building rewiring for homes and businesses in Rockville, MD and across Montgomery County, Maryland. Our licensed electricians inspect first, explain what they find, and recommend only the work your property needs.
+      - generic [ref=e74]:
+        - link "Schedule Service" [ref=e75] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e76] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - generic [ref=e80]: Overview
+        - heading "Quick Answer" [level=2] [ref=e81]
+      - paragraph [ref=e83]: Rewiring means replacing old or unsafe electrical wiring with new wiring that meets current code. You may need it if your home has knob and tube or aluminum branch wiring, frequent breaker trips, two prong outlets, burning smells, or wiring that has been damaged by pests, water, or age.
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]: Service
+        - heading "Signs Your Wiring May Need Attention" [level=2] [ref=e89]
+      - paragraph [ref=e90]: Wiring problems often show up as small annoyances before they become serious. Use this table to match what you notice with what it may mean.
+      - table [ref=e92]:
+        - rowgroup [ref=e93]:
+          - row [ref=e94]:
+            - columnheader "What You Notice" [ref=e95]
+            - columnheader "What It May Mean" [ref=e96]
+            - columnheader "Recommended Step" [ref=e97]
+        - rowgroup [ref=e98]:
+          - row [ref=e99]:
+            - cell "Breakers trip often" [ref=e100]
+            - cell "Overloaded circuit, loose connection, or worn wiring" [ref=e101]
+            - cell "Inspection and circuit testing" [ref=e102]
+          - row [ref=e103]:
+            - cell "Flickering or dimming lights" [ref=e104]
+            - cell "Loose connection or voltage problem" [ref=e105]
+            - cell "Tighten or replace connections, test the circuit" [ref=e106]
+          - row [ref=e107]:
+            - cell "Warm outlets or switch plates" [ref=e108]
+            - cell "Loose terminals or overheating wire" [ref=e109]
+            - cell "Call promptly for repair" [ref=e110]
+          - row [ref=e111]:
+            - cell "Burning smell or discolored outlets" [ref=e112]
+            - cell "Arcing or overheated wiring" [ref=e113]
+            - cell "Turn off the circuit and call us right away" [ref=e114]
+          - row [ref=e115]:
+            - cell "Only two prong outlets" [ref=e116]
+            - cell "Older wiring with no ground wire" [ref=e117]
+            - cell "Grounding upgrade or rewiring" [ref=e118]
+          - row [ref=e119]:
+            - cell "Buzzing or crackling sounds" [ref=e120]
+            - cell "Arcing at a connection" [ref=e121]
+            - cell "Urgent inspection" [ref=e122]
+          - row [ref=e123]:
+            - cell "Rodent or water damage" [ref=e124]
+            - cell "Damaged insulation or exposed conductors" [ref=e125]
+            - cell "Repair or replace affected wiring" [ref=e126]
+      - paragraph [ref=e127]: If you see smoke or flames, or someone has been shocked, call 911 first. For other urgent wiring problems, our emergency line is open 24 hours a day, 7 days a week.
+      - generic [ref=e128]:
+        - link "Schedule a Wiring Inspection" [ref=e129] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e130] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]: Service
+        - heading "Older Wiring Types and Their Concerns" [level=2] [ref=e136]
+      - paragraph [ref=e137]: Wiring materials and methods have changed over the decades. Many older homes in the Rockville area still have some original wiring, and not all of it meets modern needs.
+      - table [ref=e139]:
+        - rowgroup [ref=e140]:
+          - row [ref=e141]:
+            - columnheader "Wiring Type" [ref=e142]
+            - columnheader "Typical Era" [ref=e143]
+            - columnheader "Main Concern" [ref=e144]
+            - columnheader "Common Solution" [ref=e145]
+        - rowgroup [ref=e146]:
+          - row [ref=e147]:
+            - cell "Knob and tube" [ref=e148]
+            - cell "Before the 1950s" [ref=e149]
+            - cell "Cloth covered wires that become brittle, with no ground wire, and often buried in insulation" [ref=e150]
+            - cell "Replace with modern cable" [ref=e151]
+          - row [ref=e152]:
+            - cell "Cloth or rubber covered cable" [ref=e153]
+            - cell "Early to mid 1900s" [ref=e154]
+            - cell "Insulation cracks and crumbles with age" [ref=e155]
+            - cell "Replace affected runs" [ref=e156]
+          - row [ref=e157]:
+            - cell "Aluminum branch wiring" [ref=e158]
+            - cell "Mid 1960s to mid 1970s" [ref=e159]
+            - cell "Connections can loosen and overheat over time" [ref=e160]
+            - cell "Approved repair methods or replacement" [ref=e161]
+          - row [ref=e162]:
+            - cell "Ungrounded two wire cable" [ref=e163]
+            - cell "Mid 1900s" [ref=e164]
+            - cell "No equipment ground, so surge and shock protection is limited" [ref=e165]
+            - cell "Add grounding or rewire" [ref=e166]
+          - row [ref=e167]:
+            - cell "Overloaded older circuits" [ref=e168]
+            - cell "Any era" [ref=e169]
+            - cell "Too few circuits for modern appliances and electronics" [ref=e170]
+            - cell "Add circuits or upgrade the panel" [ref=e171]
+      - paragraph [ref=e172]: An age range does not mean your wiring is unsafe. We confirm the actual condition by inspecting it, so you do not pay for work you do not need.
+      - generic [ref=e173]:
+        - link "Check My Wiring" [ref=e174] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e175] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e178]:
+      - generic [ref=e179]:
+        - generic [ref=e180]: Service
+        - heading "Partial Rewiring or Whole Building Rewiring?" [level=2] [ref=e181]
+      - table [ref=e183]:
+        - rowgroup [ref=e184]:
+          - row [ref=e185]:
+            - columnheader "Factor" [ref=e186]
+            - columnheader "Partial Rewiring" [ref=e187]
+            - columnheader "Whole Building Rewiring" [ref=e188]
+        - rowgroup [ref=e189]:
+          - row [ref=e190]:
+            - cell "Best for" [ref=e191]
+            - cell "One room, one floor, or a few bad circuits" [ref=e192]
+            - cell "Homes with widespread old or unsafe wiring" [ref=e193]
+          - row [ref=e194]:
+            - cell "Walls and ceilings" [ref=e195]
+            - cell "Limited access and patching" [ref=e196]
+            - cell "More access and patching needed" [ref=e197]
+          - row [ref=e198]:
+            - cell "Disruption" [ref=e199]
+            - cell "Lower" [ref=e200]
+            - cell "Higher, often done in phases" [ref=e201]
+          - row [ref=e202]:
+            - cell "Long term value" [ref=e203]
+            - cell "Fixes a known problem" [ref=e204]
+            - cell "Brings the entire system up to current standards" [ref=e205]
+      - paragraph [ref=e206]: We often recommend a phased approach, such as the kitchen and panel first, then bedrooms and living areas. That lets you spread out the work while keeping your highest risks under control. Rewiring can involve opening walls or ceilings. We protect your space, keep the work area as clean as we can, and explain what patching or finishing will remain for you or another trade.
+      - generic [ref=e207]:
+        - link "Plan a Rewiring Project" [ref=e208] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e209] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e212]:
+      - generic [ref=e213]:
+        - generic [ref=e214]: Service
+        - heading "Safety Standards and Trusted Resources" [level=2] [ref=e215]
+      - paragraph [ref=e216]:
+        - text: Electrical work must follow the code adopted in your area, and many projects require permits and inspections. We explain what applies before work begins. For independent safety information, the
+        - link "Electrical Safety Foundation International" [ref=e217] [cursor=pointer]:
+          - /url: https://www.esfi.org/
+        - text: and the
+        - link "National Fire Protection Association" [ref=e218] [cursor=pointer]:
+          - /url: https://www.nfpa.org/
+        - text: offer helpful consumer guidance. Some insurance companies also ask about older wiring types, so ask your insurer if you are unsure about your policy.
+      - generic [ref=e219]:
+        - link "Ask About Permits" [ref=e220] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e221] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e224]:
+      - generic [ref=e225]:
+        - generic [ref=e226]: Service
+        - heading "Planning Wiring Before a Remodel" [level=2] [ref=e227]
+      - paragraph [ref=e228]: Remodels are the best time to update wiring, because the walls are already open. If you are finishing a basement, renovating a kitchen, or adding a room, tell us early. We can plan circuits for appliances, lighting, and future needs, so you avoid opening finished walls again later. Good planning also helps you stay within what your panel can safely support, and it keeps the project schedule predictable for everyone involved.
+      - generic [ref=e229]:
+        - link "Plan Remodel Wiring" [ref=e230] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e231] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e234]:
+      - generic [ref=e235]:
+        - generic [ref=e236]: Service
+        - heading "Wiring for Businesses" [level=2] [ref=e237]
+      - paragraph [ref=e238]:
+        - text: Restaurants, offices, and retail stores often need new circuits for equipment, lighting, and refrigeration. Because our team also works on HVAC and commercial equipment, we plan wiring that fits real equipment loads. You can learn more about our related work on our
+        - link "electrical services page" [ref=e239] [cursor=pointer]:
+          - /url: /electrical
+        - text: ", or read how electrical issues affect cooling in our guide to"
+        - link "24 hour AC repair in Rockville" [ref=e240] [cursor=pointer]:
+          - /url: /blog/24-hour-ac-repair-rockville
+        - text: .
+      - generic [ref=e241]:
+        - link "Schedule Commercial Wiring" [ref=e242] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e243] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e246]:
+      - generic [ref=e247]:
+        - generic [ref=e248]: Service
+        - heading "Why Choose Maven DMV" [level=2] [ref=e249]
+      - list [ref=e251]:
+        - listitem [ref=e252]:
+          - generic [ref=e253]: check_circle
+          - text: Licensed technicians for residential and commercial electrical work
+        - listitem [ref=e254]:
+          - generic [ref=e255]: check_circle
+          - text: Plain language advice and no unnecessary upsells
+        - listitem [ref=e256]:
+          - generic [ref=e257]: check_circle
+          - text: Tested and documented work on every circuit we touch
+        - listitem [ref=e258]:
+          - generic [ref=e259]: check_circle
+          - text: 24/7 availability for urgent issues
+        - listitem [ref=e260]:
+          - generic [ref=e261]: check_circle
+          - text: Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850
+      - paragraph [ref=e262]:
+        - text: Read customer feedback on our
+        - link "Google Business Profile" [ref=e263] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+        - text: ", or visit our"
+        - link "home page" [ref=e264] [cursor=pointer]:
+          - /url: /
+        - text: to see our other services. Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.
+      - generic [ref=e265]:
+        - link "Schedule Service" [ref=e266] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e267] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e270]:
+      - generic [ref=e271]:
+        - generic [ref=e272]: Service
+        - heading "Contact Maven DMV" [level=2] [ref=e273]
+      - list [ref=e275]:
+        - listitem [ref=e276]:
+          - generic [ref=e277]: check_circle
+          - text: "Address: 9200 Corporate Blvd, Suite 470, Rockville, MD 20850"
+        - listitem [ref=e278]:
+          - generic [ref=e279]: check_circle
+          - text: "Phone:"
+          - link "(240) 255 4794" [ref=e280] [cursor=pointer]:
+            - /url: tel:+12402554794
+        - listitem [ref=e281]:
+          - generic [ref=e282]: check_circle
+          - text: "Email:"
+          - link "service@mavenhomeservices.com" [ref=e283] [cursor=pointer]:
+            - /url: mailto:service@mavenhomeservices.com
+        - listitem [ref=e284]:
+          - generic [ref=e285]: check_circle
+          - text: "Hours: Open 24 hours a day, 7 days a week, with 24/7 emergency service"
+        - listitem [ref=e286]:
+          - generic [ref=e287]: check_circle
+          - text: "Service area: Within 30 miles of Rockville, across Maryland and Northern Virginia"
+        - listitem [ref=e288]:
+          - generic [ref=e289]: check_circle
+          - text: "Schedule: Visit our"
+          - link "contact page" [ref=e290] [cursor=pointer]:
+            - /url: /contact
+      - generic [ref=e291]:
+        - link "Schedule Service" [ref=e292] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e293] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e295]:
+      - generic [ref=e296]:
+        - generic [ref=e297]: Services
+        - heading "Electrical Wiring Services We Provide" [level=2] [ref=e298]
+        - paragraph [ref=e299]: Comprehensive solutions from experienced professionals.
+      - generic [ref=e300]:
+        - generic [ref=e301]:
+          - generic [ref=e302]: add_home
+          - heading "New wiring" [level=3] [ref=e303]
+          - paragraph [ref=e304]: New wiring for additions, finished basements, garages, and remodels.
+        - generic [ref=e305]:
+          - generic [ref=e306]: cable
+          - heading "Partial rewiring" [level=3] [ref=e307]
+          - paragraph [ref=e308]: Partial rewiring of rooms or circuits with known problems.
+        - generic [ref=e309]:
+          - generic [ref=e310]: apartment
+          - heading "Whole home and whole building rewiring" [level=3] [ref=e311]
+          - paragraph [ref=e312]: Whole home and whole building rewiring brought up to current standards.
+        - generic [ref=e313]:
+          - generic [ref=e314]: autorenew
+          - heading "Replacement of outdated or damaged wiring" [level=3] [ref=e315]
+          - paragraph [ref=e316]: Replacement of outdated or damaged wiring runs.
+        - generic [ref=e317]:
+          - generic [ref=e318]: electrical_services
+          - heading "Grounding upgrades and added circuits" [level=3] [ref=e319]
+          - paragraph [ref=e320]: Grounding upgrades and added circuits for kitchens, offices, and equipment.
+        - generic [ref=e321]:
+          - generic [ref=e322]: outlet
+          - heading "Outlet, switch, and lighting circuit wiring" [level=3] [ref=e323]
+          - paragraph [ref=e324]: Outlet, switch, and lighting circuit wiring.
+        - generic [ref=e325]:
+          - generic [ref=e326]: power
+          - heading "Electrical panel upgrades" [level=3] [ref=e327]
+          - paragraph [ref=e328]: Electrical panel upgrades when the load requires it.
+        - generic [ref=e329]:
+          - generic [ref=e330]: storefront
+          - heading "Commercial wiring" [level=3] [ref=e331]
+          - paragraph [ref=e332]: Commercial wiring for restaurants, offices, and retail spaces.
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - generic [ref=e336]: Process
+        - heading "What Happens During a Rewiring Project" [level=2] [ref=e337]
+        - paragraph [ref=e338]: From first call to finished job, simple and transparent.
+      - generic [ref=e339]:
+        - generic [ref=e340]:
+          - generic [ref=e341]: "01"
+          - generic [ref=e342]: manage_search
+          - heading "Inspect and test" [level=3] [ref=e343]
+          - paragraph [ref=e344]: We examine the panel, circuits, outlets, and accessible wiring, and test for faults.
+        - generic [ref=e345]:
+          - generic [ref=e346]: "02"
+          - generic [ref=e347]: record_voice_over
+          - heading "Explain the findings" [level=3] [ref=e348]
+          - paragraph [ref=e349]: You see what we found and why, in plain language.
+        - generic [ref=e350]:
+          - generic [ref=e351]: "03"
+          - generic [ref=e352]: architecture
+          - heading "Plan the scope" [level=3] [ref=e353]
+          - paragraph [ref=e354]: We agree on what to replace, in what order, and how to limit disruption.
+        - generic [ref=e355]:
+          - generic [ref=e356]: "04"
+          - generic [ref=e357]: fact_check
+          - heading "Handle permits and inspections" [level=3] [ref=e358]
+          - paragraph [ref=e359]: We explain the permit and inspection steps that apply to your project.
+        - generic [ref=e360]:
+          - generic [ref=e361]: "05"
+          - generic [ref=e362]: cable
+          - heading "Install new wiring" [level=3] [ref=e363]
+          - paragraph [ref=e364]: We run new cable, make secure connections, and protect it properly.
+        - generic [ref=e365]:
+          - generic [ref=e366]: "06"
+          - generic [ref=e367]: description
+          - heading "Test and document" [level=3] [ref=e368]
+          - paragraph [ref=e369]: We test every circuit, label the panel, and record the work completed.
+    - generic [ref=e371]:
+      - heading "Schedule Wiring or Rewiring Service in Rockville" [level=2] [ref=e372]
+      - paragraph [ref=e373]: Call (240) 255 4794 or visit our contact page. We inspect first and recommend only the work your property needs.
+      - generic [ref=e374]:
+        - link "Schedule Service" [ref=e375] [cursor=pointer]:
+          - /url: /contact
+        - link "Call 240-255-4794" [ref=e376] [cursor=pointer]:
+          - /url: tel:+12402554794
+    - generic [ref=e378]:
+      - generic [ref=e379]:
+        - generic [ref=e380]: FAQ
+        - heading "Frequently Asked Questions" [level=2] [ref=e381]
+        - paragraph [ref=e382]: Common questions from homeowners and property managers.
+      - generic [ref=e383]:
+        - heading [level=3] [ref=e385]:
+          - button "How do I know if my house needs rewiring?" [ref=e386]
+        - heading [level=3] [ref=e388]:
+          - button "Is knob and tube wiring dangerous?" [ref=e389]
+        - heading [level=3] [ref=e391]:
+          - button "How long does rewiring take?" [ref=e392]
+        - heading [level=3] [ref=e394]:
+          - button "Do I need permits for rewiring?" [ref=e395]
+        - heading [level=3] [ref=e397]:
+          - button "Can you rewire only part of my home?" [ref=e398]
+        - heading [level=3] [ref=e400]:
+          - button "Will you have to cut into my walls?" [ref=e401]
+    - generic [ref=e404]:
+      - generic [ref=e405]:
+        - generic [ref=e406]:
+          - generic [ref=e407]: Get Started
+          - heading "Request Service Today" [level=2] [ref=e408]
+          - paragraph [ref=e409]: Fill out the form and we will contact you promptly to confirm your appointment.
+        - generic [ref=e410]:
+          - paragraph [ref=e411]:
+            - generic [ref=e412]: phone
+            - link "240-255-4794" [ref=e413] [cursor=pointer]:
+              - /url: tel:+12402554794
+          - paragraph [ref=e414]:
+            - generic [ref=e415]: email
+            - link "service@mavenhomeservices.com" [ref=e416] [cursor=pointer]:
+              - /url: mailto:service@mavenhomeservices.com
+          - paragraph [ref=e417]:
+            - generic [ref=e418]: emergency
+            - text: Emergency service available for urgent issues
+      - generic [ref=e420]:
+        - generic [ref=e421]:
+          - generic [ref=e422]:
+            - generic [ref=e423]: First Name
+            - textbox "First Name" [ref=e424]:
+              - /placeholder: Enter your first name
+          - generic [ref=e425]:
+            - generic [ref=e426]: Last Name
+            - textbox "Last Name" [ref=e427]:
+              - /placeholder: Enter your last name
+        - generic [ref=e428]:
+          - generic [ref=e429]: Email Address
+          - textbox "Email Address" [ref=e430]:
+            - /placeholder: Enter your email address
+        - generic [ref=e431]:
+          - generic [ref=e432]: Phone Number
+          - textbox "Phone Number" [ref=e433]:
+            - /placeholder: Enter your phone number
+        - generic [ref=e434]:
+          - generic [ref=e435]: Service Needed
+          - combobox "Service Needed" [ref=e436]:
+            - generic: Select a service...
+          - combobox [aria-hidden] [ref=e437]
+        - generic [ref=e438]:
+          - generic [ref=e439]: Message (Optional)
+          - textbox "Message (Optional)" [ref=e440]:
+            - /placeholder: Describe the issue or what you need...
+        - text: Company website
+        - textbox [ref=e441]
+        - button "Request Service Appointment →" [ref=e442]
+        - paragraph [ref=e443]:
+          - text: We will contact you promptly regarding your request. By submitting, you agree to our
+          - link "Privacy Policy" [ref=e444] [cursor=pointer]:
+            - /url: /privacy-policy
+          - text: .
+  - contentinfo [ref=e445]:
+    - generic [ref=e447]:
+      - generic [ref=e448]:
+        - link [ref=e449] [cursor=pointer]:
+          - /url: /
+          - img "Maven Home Services logo" [ref=e451]
+        - paragraph [ref=e452]: Insured HVAC/R, plumbing, electrical, and roofing professionals based in Rockville, Maryland, serving commercial and residential clients across Maryland and Northern Virginia. Emergency service is available for urgent issues.
+        - link "240-255-4794" [ref=e453] [cursor=pointer]:
+          - /url: tel:+12402554794
+        - paragraph [ref=e454]: service@mavenhomeservices.com
+        - generic [ref=e455]:
+          - generic [ref=e456]: Suite 470
+          - generic [ref=e457]: 9200 Corporate Blvd
+          - generic [ref=e458]: Rockville, MD 20850
+        - link "Google Business Profile" [ref=e459] [cursor=pointer]:
+          - /url: https://share.google/KJudab7Ho272ukUML
+      - generic [ref=e460]:
+        - heading "Services" [level=3] [ref=e461]
+        - list [ref=e462]:
+          - listitem [ref=e463]:
+            - link "HVAC" [ref=e464] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=e465]:
+            - link "Plumbing" [ref=e466] [cursor=pointer]:
+              - /url: /plumbing
+          - listitem [ref=e467]:
+            - link "Electrical" [ref=e468] [cursor=pointer]:
+              - /url: /electrical
+          - listitem [ref=e469]:
+            - link "Commercial" [ref=e470] [cursor=pointer]:
+              - /url: /commercial
+          - listitem [ref=e471]:
+            - link "Air Conditioning" [ref=e472] [cursor=pointer]:
+              - /url: /hvac
+          - listitem [ref=e473]:
+            - link "Emergency Service" [ref=e474] [cursor=pointer]:
+              - /url: /contact
+      - generic [ref=e475]:
+        - heading "Company" [level=3] [ref=e476]
+        - list [ref=e477]:
+          - listitem [ref=e478]:
+            - link "Home" [ref=e479] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e480]:
+            - link "About Us" [ref=e481] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e482]:
+            - link "Blog" [ref=e483] [cursor=pointer]:
+              - /url: /blog
+          - listitem [ref=e484]:
+            - link "Contact" [ref=e485] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e486]:
+            - link "Become a Subcontractor" [ref=e487] [cursor=pointer]:
+              - /url: /become-a-subcontractor
+          - listitem [ref=e488]:
+            - link "Privacy Policy" [ref=e489] [cursor=pointer]:
+              - /url: /privacy-policy
+      - generic [ref=e490]:
+        - heading "Business Hours" [level=3] [ref=e491]
+        - generic [ref=e492]:
+          - generic [ref=e493]:
+            - paragraph [ref=e494]: Every Day
+            - paragraph [ref=e495]: Open 24/7
+          - generic [ref=e496]:
+            - paragraph [ref=e497]: Emergency Service
+            - paragraph [ref=e498]: Available 24/7 for urgent issues
+            - link "240-255-4794" [ref=e499] [cursor=pointer]:
+              - /url: tel:+12402554794
+    - generic [ref=e500]:
+      - paragraph [ref=e501]: Licensed & Certified
+      - generic [ref=e502]:
+        - generic "MHIC Licensed" [ref=e503]:
+          - img "MHIC Licensed contractor — Maryland Home Improvement Commission" [ref=e505]
+        - generic "General Contractors" [ref=e507]:
+          - img "Maryland General Contractors license" [ref=e509]
+        - generic "EPA 608 Certified" [ref=e511]:
+          - img "EPA Section 608 Universal certification" [ref=e513]
+        - generic "OSHA Certified" [ref=e515]:
+          - img "OSHA safety certification" [ref=e517]
+        - generic "Haag Certified Inspector" [ref=e519]:
+          - img "Haag certified residential roof inspector" [ref=e521]
+    - generic [ref=e523]: 10% Off All Services for Veterans, Active Military & First Responders — valid ID required.
+    - generic [ref=e524]:
+      - paragraph [ref=e525]: © 2026 Maven Home Services. All rights reserved.
+      - generic [ref=e526]:
+        - link "Privacy Policy" [ref=e527] [cursor=pointer]:
+          - /url: /privacy-policy
+        - link "Terms of Service" [ref=e528] [cursor=pointer]:
+          - /url: /terms-of-service
+        - link "Sitemap" [ref=e529] [cursor=pointer]:
+          - /url: /site-map
+  - alert [ref=e530]
