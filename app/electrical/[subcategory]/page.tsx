@@ -7,7 +7,9 @@ type Props = { params: Promise<{ subcategory: string }> };
 
 // Never add "inspections-rockville", "repair-installation-rockville",
 // "commercial-residential-rockville", "wiring-rewiring-rockville",
-// "outlet-replacement-rockville" or "security-lighting-rockville" to subcategoryData —
+// "outlet-replacement-rockville", "security-lighting-rockville",
+// "lighting-installation-rockville", "panel-circuit-breaker-rockville" or
+// "ceiling-fan-installation-rockville" to subcategoryData —
 // each has its own static route beside this one, and returning a path here that
 // already exists as a static page aborts `next build`.
 export async function generateStaticParams() {

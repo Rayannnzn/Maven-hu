@@ -20,6 +20,9 @@ import { rockvilleElectricalServicesData } from "@/lib/services/rockville-electr
 import { rockvilleElectricalWiringData } from "@/lib/services/rockville-electrical-wiring";
 import { rockvilleOutletReplacementData } from "@/lib/services/rockville-outlet-replacement";
 import { rockvilleSecurityLightingData } from "@/lib/services/rockville-security-lighting";
+import { rockvilleLightingInstallationData } from "@/lib/services/rockville-lighting-installation";
+import { rockvillePanelCircuitBreakerData } from "@/lib/services/rockville-panel-circuit-breaker";
+import { rockvilleCeilingFanInstallationData } from "@/lib/services/rockville-ceiling-fan-installation";
 import { rockvilleSumpPumpData } from "@/lib/services/rockville-sump-pump";
 import { rockvilleEmergencyPlumbingData } from "@/lib/services/rockville-emergency-plumbing";
 import { rockvilleBackflowData } from "@/lib/services/rockville-backflow";
@@ -124,6 +127,18 @@ const extraServicePages: Record<string, SitemapLink[]> = {
     {
       href: "/electrical/security-lighting-rockville",
       label: rockvilleSecurityLightingData.title,
+    },
+    {
+      href: "/electrical/lighting-installation-rockville",
+      label: rockvilleLightingInstallationData.title,
+    },
+    {
+      href: "/electrical/panel-circuit-breaker-rockville",
+      label: rockvillePanelCircuitBreakerData.title,
+    },
+    {
+      href: "/electrical/ceiling-fan-installation-rockville",
+      label: rockvilleCeilingFanInstallationData.title,
     },
   ],
 };
