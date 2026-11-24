@@ -1,3 +1,5 @@
+import { company } from "@/lib/site";
+
 export type BlogTocItem = { label: string; href: string };
 export type BlogFaqItem = { question: string; answer: string };
 
@@ -9,6 +11,7 @@ export type BlogBodyBlock =
   | { type: "lines"; content: string[] }
   | { type: "toc"; title: string; items: BlogTocItem[] }
   | { type: "faq"; items: BlogFaqItem[] }
+  | { type: "table"; columns: string[]; rows: string[][] }
   | { type: "cta"; text: string; href: string };
 
 export type BlogPost = {
@@ -22,7 +25,13 @@ export type BlogPost = {
   seoTitle?: string;
   keywords?: string[];
   excerpt: string;
-  category: "HVAC" | "Plumbing" | "Electrical" | "Seasonal" | "Energy";
+  category:
+    | "HVAC"
+    | "Plumbing"
+    | "Electrical"
+    | "Commercial"
+    | "Seasonal"
+    | "Energy";
   date: string;
   author: { name: string; role?: string };
   featuredImage: string;
@@ -38,7 +47,637 @@ export type BlogPost = {
   customRoute?: true;
 };
 
+const GBP = company.googleBusinessProfile;
+const FDA_FOOD_CODE = "https://www.fda.gov/food/retail-food-protection/fda-food-code";
+
+/** Closing contact block shared by the November 2026 client posts. */
+function contactBlocks(heading: string, id = "contact"): BlogBodyBlock[] {
+  return [
+    { type: "h2", id, content: heading },
+    {
+      type: "lines",
+      content: [
+        "**Phone:** [(240) 255 4794](tel:+12402554794)",
+        "**Email:** [service@mavenhomeservices.com](mailto:service@mavenhomeservices.com)",
+        "**Address:** 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
+        "**Hours:** Open 24 hours a day, 7 days a week, with 24/7 emergency service",
+        "**Service area:** Within 30 miles of Rockville, across Maryland and Northern Virginia",
+      ],
+    },
+    { type: "cta", text: "Visit our contact page", href: "/contact" },
+  ];
+}
+
 const posts: BlogPost[] = [
+  {
+    slug: "ac-not-cooling-rockville-md",
+    title: "AC Not Cooling in Rockville, MD? Common Causes and What to Do",
+    seoTitle: "AC Not Cooling in Rockville, MD? 8 Causes | Maven DMV",
+    excerpt:
+      "AC not cooling in Rockville, MD? Learn the common causes, quick checks you can try safely, and when to call a licensed HVAC technician. Call (240) 255 4794.",
+    keywords: [
+      "ac not cooling rockville md",
+      "ac not cooling",
+      "ac repair rockville",
+      "air conditioner troubleshooting",
+      "frozen evaporator coil",
+      "hvac",
+      "maven dmv",
+    ],
+    category: "HVAC",
+    date: "2026-11-24T12:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/hvac/air-conditioner.jpeg",
+    readTime: 6,
+    body: [
+      { type: "p", content: "When your air conditioner runs but the house stays warm, it is easy to feel stuck. Many cooling problems have simple causes you can check safely in a few minutes, and others need a licensed technician. This guide from Maven DMV explains the most common reasons an AC stops cooling in Rockville, MD, what you can check yourself, and when it is time to call for help." },
+      { type: "p", content: "**Quick answer:** If your AC is not cooling, first check the thermostat settings, the circuit breaker, the air filter, and the outdoor unit for blockage. If those are fine, the cause is often a frozen coil, a failed capacitor, a refrigerant leak, or a dirty condenser. Those need a licensed HVAC technician." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "Start With These Safe Quick Checks", href: "#quick-checks" },
+          { label: "Common Reasons an AC Stops Cooling", href: "#common-reasons" },
+          { label: "Why Rockville Homes and Businesses See These Problems", href: "#why-rockville" },
+          { label: "Signs You Should Stop and Call a Technician", href: "#call-a-technician" },
+          { label: "What a Technician Does During an AC Repair Visit", href: "#repair-visit" },
+          { label: "What Affects the Cost of AC Repair", href: "#cost" },
+          { label: "Repair or Replace Your AC?", href: "#repair-or-replace" },
+          { label: "How to Keep Your AC Cooling All Summer", href: "#prevention" },
+          { label: "Why Rockville Customers Call Maven DMV", href: "#why-maven" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "quick-checks", content: "Start With These Safe Quick Checks" },
+      { type: "p", content: "Spend five minutes on these checks before you call anyone. They are safe for any homeowner." },
+      {
+        type: "table",
+        columns: ["Check", "What to Look For", "What to Do"],
+        rows: [
+          ["Thermostat", "Set to Cool, with a temperature below the room temperature, and fresh batteries", "Correct the settings or replace batteries"],
+          ["Circuit breaker", "A tripped breaker for the indoor or outdoor unit", "Reset once only, and call us if it trips again"],
+          ["Air filter", "A dirty, clogged filter that blocks airflow", "Replace the filter"],
+          ["Outdoor unit", "Leaves, grass, or objects blocking the unit", "Clear about two feet around the unit"],
+          ["Vents and registers", "Closed or blocked vents and furniture in the way", "Open and clear them"],
+          ["Ice or water", "Ice on the pipes or water near the indoor unit", "Turn the AC off and call us"],
+        ],
+      },
+      { type: "p", content: "If the system still is not cooling after these checks, do not keep running it, because that can turn a small problem into a costly one." },
+      { type: "h2", id: "common-reasons", content: "Common Reasons an AC Stops Cooling" },
+      {
+        type: "ul",
+        content: [
+          "**1. Dirty or clogged air filter.** A dirty filter restricts airflow, so the system cannot move cooled air through the house. Restricted airflow can also cause the coil to freeze. Most filters need replacing every one to three months.",
+          "**2. Frozen evaporator coil.** If you see ice on the indoor unit or refrigerant lines, the coil is frozen. Causes include poor airflow, a dirty coil, or low refrigerant. Turn the system off and let it thaw, but the problem will return until the cause is fixed.",
+          "**3. Low refrigerant or a leak.** Refrigerant is not used up like fuel. If the level is low, there is a leak. Handling refrigerant legally requires certification, so this is not a do it yourself job.",
+          "**4. Failed capacitor or contactor.** The fan and compressor in the outdoor unit depend on electrical parts that wear out. If the outdoor unit hums but the fan does not spin, or the unit will not start, a failed capacitor is a common cause.",
+          "**5. Dirty condenser coil.** The outdoor coil releases heat from your home. When it is covered in dirt, cottonwood, or debris, the system struggles and may shut off to protect itself.",
+          "**6. Thermostat or control problems.** A faulty thermostat or dead batteries can stop the AC from getting the call to cool.",
+          "**7. Clogged condensate drain.** AC systems remove moisture from the air, and a clogged drain can trigger a safety switch that shuts the system down.",
+          "**8. Aging or undersized equipment.** Systems more than 10 to 15 years old lose capacity and efficiency.",
+        ],
+      },
+      { type: "h2", id: "why-rockville", content: "Why Rockville Homes and Businesses See These Problems" },
+      { type: "p", content: "Rockville has long, humid summers, and air conditioners often run for months with little rest. Humidity forces the system to remove moisture as well as heat, which stresses coils, drains, and electrical parts. Trees near outdoor units drop debris that clogs coils, and restaurants and other commercial spaces add heat from kitchens and equipment. Maintenance before summer catches many of these issues early." },
+      { type: "h2", id: "call-a-technician", content: "Signs You Should Stop and Call a Technician" },
+      {
+        type: "ul",
+        content: [
+          "Ice on the refrigerant lines or indoor unit",
+          "A burning smell, smoke, or sparks",
+          "The breaker trips again right after you reset it",
+          "The outdoor unit hums but the fan does not spin",
+          "Water leaking around the indoor unit",
+          "Warm air from the vents while the system runs for hours",
+        ],
+      },
+      { type: "p", content: "If you see smoke or flames, leave the building and call 911 first. For other urgent cooling problems, read our guide to [24 hour AC repair in Rockville](/blog/24-hour-ac-repair-rockville), or call us any time, day or night." },
+      { type: "h2", id: "repair-visit", content: "What a Technician Does During an AC Repair Visit" },
+      {
+        type: "ul",
+        content: [
+          "**Listens first:** We ask when the problem started, what you have noticed, and what you have already tried.",
+          "**Inspects the system:** We check the thermostat, filter, indoor unit, outdoor unit, and electrical connections.",
+          "**Finds the root cause:** We identify the real fault instead of guessing or replacing parts.",
+          "**Explains your options:** You hear the findings, the repair choices, and the price before work starts.",
+          "**Repairs and tests:** We fix the issue and confirm the system cools properly.",
+        ],
+      },
+      { type: "h2", id: "cost", content: "What Affects the Cost of AC Repair" },
+      { type: "p", content: "A dirty filter or clogged drain is a small repair, a failed capacitor is usually moderate, and a refrigerant leak, compressor, or blower motor costs more. The total also depends on the age and brand of the system, how hard the part is to reach, and whether the visit is after hours. You get a clear quote before work begins." },
+      { type: "h2", id: "repair-or-replace", content: "Repair or Replace Your AC?" },
+      { type: "p", content: "Repair usually makes sense when the system is under about 10 years old and the problem is a single part. Replacement becomes worth discussing when the system is 12 to 15 years old, needs frequent repairs, has a major failure such as the compressor, or uses an older refrigerant that is harder to source. Older systems that use R-22 refrigerant are an example, because R-22 production ended in the United States in 2020. We explain your options honestly. For general guidance on air conditioner care, see the [U.S. Department of Energy](https://www.energy.gov/energysaver/air-conditioning) and the [EPA refrigerant rules](https://www.epa.gov/section608)." },
+      { type: "h2", id: "prevention", content: "How to Keep Your AC Cooling All Summer" },
+      {
+        type: "ul",
+        content: [
+          "Replace or clean the filter on schedule",
+          "Keep two feet of clear space around the outdoor unit",
+          "Schedule professional maintenance before the cooling season",
+          "Keep vents open and unblocked",
+          "Do not ignore small changes in sound, smell, or airflow",
+        ],
+      },
+      { type: "p", content: "If breakers trip often, your panel or wiring may be part of the cause, and our [electrical panel and circuit breaker services](/electrical/panel-circuit-breaker-rockville) can help. Visit our [electrical services](/electrical) page for more." },
+      { type: "h2", id: "why-maven", content: "Why Rockville Customers Call Maven DMV" },
+      {
+        type: "ul",
+        content: [
+          "Licensed technicians for heating, cooling, and electrical work",
+          "Plain language explanations with no unnecessary upsells",
+          "24/7 availability for urgent issues",
+          "Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
+        ],
+      },
+      { type: "p", content: `Read feedback from our customers on our [Google Business Profile](${GBP}), or visit our [home page](/). Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.` },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "Why is my AC running but not cooling?",
+            answer: "The most common causes are a dirty filter, a frozen coil, low refrigerant, a failed capacitor, or a dirty outdoor coil.",
+          },
+          {
+            question: "Should I keep running my AC if it is not cooling?",
+            answer: "No. If you see ice, hear unusual noises, or notice a burning smell, turn it off and call a technician.",
+          },
+          {
+            question: "Can I add refrigerant myself?",
+            answer: "No. Handling refrigerant requires certification, and low refrigerant means there is a leak that needs repair.",
+          },
+          {
+            question: "Do you offer emergency AC repair in Rockville?",
+            answer: "Yes. Our emergency line is available 24/7 for urgent cooling problems.",
+          },
+        ],
+      },
+      ...contactBlocks("AC Not Cooling? Call Maven DMV"),
+    ],
+  },
+  {
+    slug: "emergency-hvac-for-restaurants-rockville",
+    title: "Emergency HVAC for Restaurants in Rockville, MD",
+    seoTitle: "Emergency HVAC for Restaurants in Rockville, MD | Maven DMV",
+    excerpt:
+      "Restaurant AC or heat down? Learn what counts as an HVAC emergency, what to do in the first 15 minutes, and who to call in Rockville, MD. Call (240) 255 4794.",
+    keywords: [
+      "emergency hvac for restaurants",
+      "restaurant hvac repair",
+      "commercial hvac rockville",
+      "rooftop unit repair",
+      "24/7 hvac",
+      "rockville md",
+      "maven dmv",
+    ],
+    category: "Commercial",
+    date: "2026-11-24T11:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/hvac-residential-commercial.jpg",
+    readTime: 7,
+    body: [
+      { type: "p", content: "**What to do in the first 15 minutes when your AC or heat fails.** Emergency line: [(240) 255 4794](tel:+12402554794)" },
+      { type: "p", content: "A restaurant cannot pause when the HVAC system fails. Dining rooms get hot or cold, kitchens become unsafe for staff, and customers leave. Kitchen heat, grease, constant door traffic, and long operating hours put restaurant systems under far more stress than a typical home. This guide from Maven DMV explains what counts as an HVAC emergency, what to do in the first 15 minutes, and how to reduce the chance of a breakdown during your busiest service." },
+      { type: "p", content: "**Quick answer:** If your restaurant loses heating or cooling during service, make sure people are safe, check the thermostat and breaker, and call a 24/7 commercial HVAC technician right away. Do not keep running a system that smells like burning, makes loud noises, or leaks water. Write down when the problem began and what you saw." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "What Counts as a Restaurant HVAC Emergency?", href: "#what-counts" },
+          { label: "Your First 15 Minutes", href: "#first-15-minutes" },
+          { label: "Common Restaurant HVAC Emergencies", href: "#common-emergencies" },
+          { label: "What Happens When Our Technician Arrives", href: "#technician-arrives" },
+          { label: "What to Have Ready Before We Arrive", href: "#have-ready" },
+          { label: "How to Prevent the Next Emergency", href: "#prevention" },
+          { label: "What Affects Emergency Repair Cost", href: "#cost" },
+          { label: "Why Restaurants Call Maven DMV", href: "#why-maven" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "what-counts", content: "What Counts as a Restaurant HVAC Emergency?" },
+      {
+        type: "table",
+        columns: ["Level", "What It Looks Like", "What To Do"],
+        rows: [
+          ["Emergency", "No cooling or heating in a full dining room or kitchen, burning smell, smoke, sparks, gas smell, water pouring from a unit, or a failed rooftop unit during service", "Act now. Call our 24/7 line. Leave the area if you smell gas or see smoke."],
+          ["Urgent", "Weak cooling or heat, short cycling, odd noises, a unit that keeps tripping the breaker", "Call the same day. Running the system can make damage worse."],
+          ["Can wait", "Minor temperature drift, a dirty filter, a thermostat display issue", "Schedule a visit. Replace the filter if it is dirty."],
+        ],
+      },
+      { type: "p", content: "If you smell gas, leave the building and call 911 and your gas utility from outside. Do not turn lights or equipment on or off. If you see smoke or flames, evacuate and call 911 first." },
+      { type: "h2", id: "first-15-minutes", content: "Your First 15 Minutes" },
+      {
+        type: "ul",
+        content: [
+          "**1. Protect people first.** Check that staff and guests are safe. In extreme heat, give staff breaks and water. The [OSHA heat exposure guidance](https://www.osha.gov/heat-exposure) explains warning signs of heat illness.",
+          "**2. Do the safe quick checks.** Look at the thermostat mode and setpoint, check the breaker for the unit, and confirm the rooftop or outdoor unit is not blocked. Reset a tripped breaker only once. If it trips again, stop.",
+          "**3. Call the emergency line.** Call [(240) 255 4794](tel:+12402554794). Tell us the symptoms, where the unit is, when it stopped, and whether you smelled burning, gas, or smoke.",
+          "**4. Protect your food.** Keep walk in cooler and freezer doors closed, since a closed box holds cold for a while. If the failure is in the refrigeration system itself, read our [commercial refrigeration maintenance checklist](/blog/commercial-refrigeration-maintenance-checklist-rockville).",
+          `**5. Decide how to operate.** Check your local health department rules before deciding whether to stay open. If your kitchen or dining room cannot be kept safe and comfortable, closing early may be the right call. See the [FDA Food Code](${FDA_FOOD_CODE}) for food safety basics.`,
+          "**6. Document and prepare access.** Note the time, symptoms, and any error codes. Make sure someone can give the technician roof access and show us the unit.",
+        ],
+      },
+      { type: "h2", id: "common-emergencies", content: "Common Restaurant HVAC Emergencies" },
+      {
+        type: "ul",
+        content: [
+          "**Dining room AC failure:** Hot dining rooms drive guests away and make staff work in unsafe conditions.",
+          "**Heating failure in winter:** Cold rooms, frozen pipes near exterior walls, and unhappy guests.",
+          "**Rooftop unit failure:** Compressors, fans, and electrical parts wear out under constant use.",
+          "**Frozen evaporator coil:** Often caused by dirty filters, low airflow, or low refrigerant.",
+          "**Makeup air and exhaust problems:** Kitchens need balanced airflow. A failed fan can fill the space with heat and smoke.",
+          "**Electrical faults:** Tripped breakers, failed capacitors, and loose connections can shut down a unit instantly.",
+          "**Thermostat and control failures:** The system may be fine but not getting the right signal.",
+        ],
+      },
+      { type: "p", content: "Many failures start with an electrical cause. If breakers keep tripping, our [electrical services](/electrical) can check the panel and wiring too." },
+      { type: "h2", id: "technician-arrives", content: "What Happens When Our Technician Arrives" },
+      { type: "p", content: "We start by asking what you noticed and what you tried. Then we inspect the thermostat, filters, indoor and outdoor units, electrical connections, and controls. We find the root cause, explain the repair options and price in plain language, and start work only after you approve. When possible, we complete the repair on the same visit. If a part has to be ordered, we discuss a temporary plan so you can keep operating safely. You also receive clear notes on what we found and what we did. For a similar approach on a typical home or small business system, see our guide to [24 hour AC repair in Rockville](/blog/24-hour-ac-repair-rockville)." },
+      { type: "h2", id: "have-ready", content: "What to Have Ready Before We Arrive" },
+      {
+        type: "ul",
+        content: [
+          "Unit location and roof access",
+          "Brand and model, if you can read the label",
+          "What you saw, heard, or smelled",
+          "When the problem began",
+          "Whether the breaker tripped",
+          "Name and phone number of the on site contact",
+        ],
+      },
+      { type: "h2", id: "prevention", content: "How to Prevent the Next Emergency" },
+      { type: "p", content: "Most restaurant HVAC emergencies do not appear out of nowhere. They build over time. Schedule professional maintenance before the heating and cooling seasons, replace filters on a regular basis, and keep rooftop units clear of debris. Have exhaust and makeup air equipment checked, and ask your technician to look at belts, motors, capacitors, and electrical connections. Listen for new noises and watch for uneven temperatures, because small changes often come before large failures. A written maintenance record also helps you plan repairs and budget replacements, instead of reacting under pressure." },
+      { type: "h2", id: "cost", content: "What Affects Emergency Repair Cost" },
+      { type: "p", content: "Costs depend on the part that failed, the type and age of the equipment, how hard the unit is to reach, and whether the visit takes place after hours. We explain the problem and give you a clear quote before work begins. A repair that keeps you open is often worth more than the repair bill alone, because lost sales and spoiled inventory add up quickly." },
+      { type: "h2", id: "why-maven", content: "Why Restaurants Call Maven DMV" },
+      {
+        type: "ul",
+        content: [
+          "Licensed technicians for HVAC, refrigeration, and electrical work",
+          "Restaurant experience, including [walk in coolers](/walk-in-cooler-freezer-service-rockville-md) and kitchen equipment",
+          "24/7 availability for urgent issues",
+          "Plain language explanations with no unnecessary upsells",
+          "Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
+        ],
+      },
+      { type: "p", content: `Read customer feedback on our [Google Business Profile](${GBP}), or visit our [home page](/). Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.` },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "Do you offer 24/7 emergency HVAC for restaurants in Rockville?",
+            answer: "Yes. Our emergency line is available 24 hours a day, 7 days a week for urgent issues.",
+          },
+          {
+            question: "Should I close my restaurant if the AC fails?",
+            answer: "It depends on conditions and local health rules. If staff or guests are at risk, or food safety is affected, closing is the safer choice.",
+          },
+          {
+            question: "Can you repair rooftop HVAC units?",
+            answer: "Yes. We work on commercial rooftop units, along with other HVAC and related equipment.",
+          },
+          {
+            question: "How fast can a technician arrive?",
+            answer: "Arrival depends on location and demand. Call the emergency line and we will give you a clear timeframe.",
+          },
+          {
+            question: "Can you help with walk in coolers during an HVAC emergency?",
+            answer: "Yes. We service commercial refrigeration and can check whether the problem is HVAC, refrigeration, or electrical.",
+          },
+        ],
+      },
+      ...contactBlocks("Restaurant HVAC Down? Call Now"),
+    ],
+  },
+  {
+    slug: "commercial-refrigeration-maintenance-checklist-rockville",
+    title: "Commercial Refrigeration Maintenance Checklist",
+    seoTitle: "Commercial Refrigeration Maintenance Checklist | Maven DMV",
+    excerpt:
+      "A practical commercial refrigeration maintenance checklist with daily, weekly, monthly, and annual tasks for walk in coolers and freezers. Call (240) 255 4794.",
+    keywords: [
+      "commercial refrigeration maintenance checklist",
+      "walk in cooler maintenance",
+      "walk in freezer maintenance",
+      "restaurant refrigeration",
+      "commercial refrigeration rockville",
+      "maven dmv",
+    ],
+    category: "Commercial",
+    date: "2026-11-24T10:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/hvac-walk-in-coolers.jpg",
+    readTime: 8,
+    body: [
+      { type: "p", content: "**A printable schedule for walk in coolers, freezers, and reach in units in Rockville, MD.**" },
+      { type: "p", content: "When a walk in cooler fails, the cost is not only the repair. You can lose inventory, miss service, and risk food safety problems in a matter of hours. Most breakdowns do not happen without warning. They build slowly from dirty coils, worn door gaskets, loose electrical connections, and blocked airflow. A simple maintenance routine catches these problems early. This checklist from Maven DMV covers what your staff can do each day and week, and what a licensed technician should check each quarter and each year." },
+      { type: "p", content: "**Quick answer:** A commercial refrigeration maintenance checklist is a schedule of daily, weekly, monthly, quarterly, and annual tasks that keep coolers and freezers cold, safe, and efficient. Staff handle temperature logs, cleaning, and visual checks. A licensed technician handles coils, refrigerant, electrical parts, and defrost systems." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "Target Temperatures to Know", href: "#target-temperatures" },
+          { label: "Daily Checklist for Your Staff", href: "#daily" },
+          { label: "Weekly Checklist", href: "#weekly" },
+          { label: "Monthly Checklist", href: "#monthly" },
+          { label: "Quarterly and Annual Tasks for a Licensed Technician", href: "#quarterly-annual" },
+          { label: "Red Flags: Call a Technician Now", href: "#red-flags" },
+          { label: "What a Professional Diagnostic Looks Like", href: "#diagnostic" },
+          { label: "Common Mistakes That Shorten Equipment Life", href: "#mistakes" },
+          { label: "When Electrical and HVAC Problems Look Like Refrigeration Problems", href: "#electrical-hvac" },
+          { label: "Why Rockville Businesses Call Maven DMV", href: "#why-maven" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "target-temperatures", content: "Target Temperatures to Know" },
+      { type: "p", content: "These general targets help you spot a problem early. Always follow your local health department rules, which take priority." },
+      {
+        type: "table",
+        columns: ["Equipment", "Target Temperature", "Note"],
+        rows: [
+          ["Walk in cooler and reach in cooler", "41°F or below", "Matches the common cold holding limit in the FDA Food Code"],
+          ["Walk in freezer and reach in freezer", "0°F or below", "Keeps frozen food solid and stable"],
+          ["Prep table cold rail", "41°F or below", "Check with a thermometer in the food, not only the display"],
+        ],
+      },
+      { type: "h2", id: "daily", content: "Daily Checklist for Your Staff" },
+      {
+        type: "table",
+        columns: ["Task", "Why It Matters"],
+        rows: [
+          ["Read and log the temperature of every unit", "A written log shows trends and proves food safety checks"],
+          ["Confirm doors close and latch fully", "Doors left ajar raise temperatures and cause ice buildup"],
+          ["Look for ice on the floor, walls, or evaporator", "Ice can signal a defrost or door seal problem"],
+          ["Listen for new or unusual noises", "Grinding, rattling, or buzzing often comes before a failure"],
+          ["Wipe up spills and clear the floor", "Spills freeze, block drains, and create slip hazards"],
+          ["Keep product away from fan and vent openings", "Blocked airflow causes warm spots"],
+        ],
+      },
+      { type: "h2", id: "weekly", content: "Weekly Checklist" },
+      {
+        type: "table",
+        columns: ["Task", "Why It Matters"],
+        rows: [
+          ["Clean door gaskets with mild soap and water", "Dirty or torn gaskets leak cold air and waste energy"],
+          ["Check that door hardware, hinges, and closers work", "A door that does not shut on its own is a common cause of warm boxes"],
+          ["Inspect strip curtains and door sweeps", "Damaged curtains let warm air in"],
+          ["Check drain pans and lines for clogs", "Clogged drains cause water leaks and ice"],
+          ["Wipe shelves, floors, and fan guards", "Clean surfaces improve airflow and food safety"],
+        ],
+      },
+      { type: "h2", id: "monthly", content: "Monthly Checklist" },
+      {
+        type: "table",
+        columns: ["Task", "Why It Matters"],
+        rows: [
+          ["Clean the condenser coil, if accessible and safe", "A dirty condenser is one of the most common causes of cooling failure"],
+          ["Look at the evaporator coil and fan blades", "Ice, dust, or bent blades reduce airflow"],
+          ["Check thermometers against a known accurate reference", "A wrong display hides a real problem"],
+          ["Inspect visible refrigerant lines for oil stains", "Oil residue can point to a leak"],
+          ["Look for frayed wires or burn marks at disconnects", "Loose or damaged wiring is a safety risk"],
+        ],
+      },
+      { type: "p", content: "Staff should only clean coils when the equipment is powered off and the area is safe. If a condenser is on a roof or hard to reach, leave it to a technician." },
+      { type: "h2", id: "quarterly-annual", content: "Quarterly and Annual Tasks for a Licensed Technician" },
+      {
+        type: "table",
+        columns: ["Task", "Why It Matters"],
+        rows: [
+          ["Test electrical connections, contactors, capacitors, and amp draw", "Worn electrical parts are a leading cause of compressor and fan failure"],
+          ["Check refrigerant pressures and test for leaks", "Low refrigerant means a leak that must be repaired"],
+          ["Clean condenser and evaporator coils thoroughly", "Restores cooling capacity and lowers energy use"],
+          ["Test defrost heaters, timers, and drain heaters", "A failed defrost system leads to iced coils"],
+          ["Inspect fan motors, bearings, and mounts", "Weak fans cause warm spots and short cycling"],
+          ["Check door heaters, lights, and controls", "Prevents frozen doors and control faults"],
+          ["Inspect rooftop or remote condensing units, mounts, and line insulation", "Weather, vibration, and wear affect outdoor components"],
+          ["Record findings and give a written report", "Gives you a service history for planning and budgeting"],
+        ],
+      },
+      { type: "p", content: "Refrigerant work requires certification under federal rules. See the [EPA Section 608 information](https://www.epa.gov/section608) for details. Do not add refrigerant yourself." },
+      { type: "h2", id: "red-flags", content: "Red Flags: Call a Technician Now" },
+      {
+        type: "ul",
+        content: [
+          "Box temperature rising above target for more than a short time.",
+          "Ice building on coils or walls.",
+          "Compressor short cycling or running nonstop.",
+          "Burning smell, smoke, or sparks near the unit.",
+          "Water pooling inside or outside the box.",
+          "Breaker tripping repeatedly.",
+          "Loud grinding or squealing.",
+        ],
+      },
+      { type: "p", content: "If you see smoke or flames, leave the area and call 911 first. For other urgent refrigeration problems, our emergency line is open 24 hours a day, 7 days a week." },
+      { type: "h2", id: "diagnostic", content: "What a Professional Diagnostic Looks Like" },
+      { type: "p", content: "A Rockville business recently asked us to inspect and start up a walk in cooler served by a rooftop condensing unit. Our technician checked the electrical supply, refrigeration controls, compressor, condenser fan, evaporator fans, and defrost system. After starting the unit, we watched how the box temperature responded and evaluated overall performance. The cooler was working properly at the time of the visit, and the owner received clear findings with no unnecessary repairs. This is the value of routine checks: sometimes the answer is that everything is fine, and that peace of mind protects your inventory." },
+      { type: "h2", id: "mistakes", content: "Common Mistakes That Shorten Equipment Life" },
+      {
+        type: "ul",
+        content: [
+          "Overloading shelves so air cannot circulate",
+          "Propping doors open during deliveries",
+          "Ignoring small temperature drifts",
+          "Using a pressure washer on electrical parts or condenser fins",
+          "Skipping professional service until something breaks",
+          "Not keeping a written maintenance log",
+        ],
+      },
+      { type: "h2", id: "electrical-hvac", content: "When Electrical and HVAC Problems Look Like Refrigeration Problems" },
+      { type: "p", content: `A box that will not hold temperature is sometimes a power or control issue, not a refrigeration issue. A tripped breaker, a worn contactor, or a loose connection can look like a failed compressor. Because Maven DMV handles HVAC, refrigeration, and electrical work, we can find the true cause without sending you to a second company. Learn more about our [electrical services](/electrical), or read how we approach [24 hour AC repair in Rockville](/blog/24-hour-ac-repair-rockville). For food safety rules, see the [FDA Food Code](${FDA_FOOD_CODE}).` },
+      { type: "h2", id: "why-maven", content: "Why Rockville Businesses Call Maven DMV" },
+      {
+        type: "ul",
+        content: [
+          "Licensed technicians for refrigeration, HVAC, and electrical work",
+          "Plain language reports and no unnecessary upsells",
+          "Documented findings you can keep for your records",
+          "24/7 availability for urgent issues",
+          "Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
+        ],
+      },
+      { type: "p", content: `Read customer feedback on our [Google Business Profile](${GBP}), or visit our [home page](/). Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.` },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "How often should commercial refrigeration be serviced?",
+            answer: "Most businesses benefit from professional service at least twice a year, and busy kitchens often schedule quarterly visits. Your equipment age and usage matter.",
+          },
+          {
+            question: "What is the most common cause of walk in cooler failure?",
+            answer: "Dirty condenser coils, failed electrical parts, and door seal problems are among the most common causes.",
+          },
+          {
+            question: "Can my staff clean the condenser coil?",
+            answer: "Sometimes, if it is accessible, powered off, and safe to reach. Rooftop or remote units should be left to a technician.",
+          },
+          {
+            question: "How do I know if my cooler needs repair or replacement?",
+            answer: "Frequent repairs, rising energy costs, and a failing compressor on older equipment are signs to discuss replacement.",
+          },
+          {
+            question: "Do you offer emergency refrigeration service in Rockville?",
+            answer: "Yes. Our emergency line is available 24/7 for urgent issues.",
+          },
+        ],
+      },
+      ...contactBlocks("Need a Refrigeration Check? Call Maven DMV"),
+    ],
+  },
+  {
+    slug: "commercial-food-warmer-not-heating-rockville",
+    title: "Commercial Food Warmer Not Heating? Causes and Fixes",
+    seoTitle: "Commercial Food Warmer Not Heating? 7 Causes | Maven DMV",
+    excerpt:
+      "Commercial food warmer not heating? Learn the common causes, safe quick checks, and when to call a licensed technician in Rockville, MD. Call (240) 255 4794.",
+    keywords: [
+      "commercial food warmer not heating",
+      "food warmer repair",
+      "steam table not heating",
+      "restaurant equipment repair rockville",
+      "commercial kitchen equipment",
+      "maven dmv",
+    ],
+    category: "Commercial",
+    date: "2026-11-24T09:00:00.000Z",
+    author: { name: "Maven Home Services" },
+    featuredImage: "/images/commercial/commercial-hero.jpg",
+    readTime: 7,
+    body: [
+      { type: "p", content: "**Safe checks you can do now, and what needs a licensed technician in Rockville, MD.**" },
+      { type: "p", content: "When a food warmer stops heating, hot food drops out of the safe temperature range and service slows down. Countertop warmers, steam tables, holding cabinets, and soup wells all work hard in busy kitchens, and they face grease, moisture, heat, and daily cleaning. This guide from Maven DMV explains why a commercial food warmer may not heat, which checks are safe for staff, and when a licensed technician should take over." },
+      { type: "p", content: "**Quick answer:** A commercial food warmer usually stops heating because of a power problem, a tripped safety limit, a failed thermostat or control, a burned out heating element, low water in a wet unit, or grease and moisture damage to electrical parts. Check power, settings, and water level first. If it still will not heat, stop using it and call a technician." },
+      { type: "p", content: "**Safety first:** Unplug or switch off the unit before cleaning or inspecting it. Never open electrical panels on a plugged in unit, never spray water on controls, and never bypass a thermostat or safety switch. If you smell gas, leave the building and call 911 and your gas utility from outside." },
+      {
+        type: "toc",
+        title: "Table of Contents",
+        items: [
+          { label: "Symptoms and Likely Causes", href: "#symptoms" },
+          { label: "What Staff Can Check Safely", href: "#staff-checks" },
+          { label: "Common Causes Explained", href: "#common-causes" },
+          { label: "Hot Holding and Food Safety", href: "#food-safety" },
+          { label: "What a Technician Checks", href: "#technician-checks" },
+          { label: "How to Prevent Heating Problems", href: "#prevention" },
+          { label: "Repair or Replace?", href: "#repair-or-replace" },
+          { label: "Why Restaurants Call Maven DMV", href: "#why-maven" },
+          { label: "Frequently Asked Questions", href: "#faqs" },
+        ],
+      },
+      { type: "h2", id: "symptoms", content: "Symptoms and Likely Causes" },
+      {
+        type: "table",
+        columns: ["What You See", "Likely Cause", "Who Fixes It"],
+        rows: [
+          ["No heat, no lights", "No power: tripped breaker, GFCI, loose plug, or failed switch", "Staff check, then technician"],
+          ["Lights on, no heat", "Failed element, thermostat, relay, or tripped high limit", "Technician"],
+          ["Heats slowly or unevenly", "Scale, failing element, or a weak thermostat", "Technician"],
+          ["Heats, then shuts off", "High limit tripping from overheating or a bad control", "Technician"],
+          ["Wet unit not heating, low water", "Low water level or a low water cutoff problem", "Staff check, then technician"],
+          ["Breaker trips when turned on", "Electrical fault or damaged wiring", "Technician right away"],
+          ["Gas model will not light", "Pilot, thermocouple, or gas valve problem", "Technician only"],
+        ],
+      },
+      { type: "h2", id: "staff-checks", content: "What Staff Can Check Safely" },
+      { type: "p", content: "These checks take a few minutes and often explain a problem. Follow the equipment manual for your model." },
+      {
+        type: "table",
+        columns: ["Safe for Staff", "Leave to a Technician"],
+        rows: [
+          ["Confirm the unit is plugged in firmly and the cord is not damaged", "Open the control panel or remove covers"],
+          ["Check the breaker and any GFCI outlet, and reset once only", "Replace elements, thermostats, or relays"],
+          ["Make sure the controls are set to a heating temperature", "Reset a breaker again and again"],
+          ["Fill a wet unit to the correct water level, and use the fill line", "Bypass a safety switch or limit"],
+          ["Let the unit cool, then press the reset button if your model has one", "Relight gas pilots after a gas smell"],
+          ["Wipe away grease and food residue from the outside and controls", "Use the unit when wiring looks burned or wet"],
+        ],
+      },
+      { type: "h2", id: "common-causes", content: "Common Causes Explained" },
+      {
+        type: "ul",
+        content: [
+          "**1. No power.** A tripped breaker, a loose plug, or a damaged cord is the simplest cause. If the breaker trips again, there is an electrical fault.",
+          "**2. Failed thermostat or control.** The thermostat tells the heating element when to turn on. If it fails, the unit may not heat at all, or it may heat without stopping.",
+          "**3. Burned out heating element.** Elements wear out with age and thermal stress. Scale and moisture shorten their life.",
+          "**4. Tripped high limit switch.** This safety device shuts the heater off if the unit overheats. A repeated trip means the root cause still needs repair.",
+          "**5. Low water in wet units.** Steam tables and bain maries need the right water level. Low water can shut off heating to protect the element, and dry running can damage it.",
+          "**6. Scale buildup.** Hard water leaves mineral deposits that insulate the element and slow heating. Regular delime cleaning helps.",
+          "**7. Grease and moisture around electrical parts.** In a recent Rockville restaurant inspection, we found heavy grease, food residue, and moisture around the wiring, controls, and valves of a commercial food warmer. That kind of buildup can cause poor heating, uneven temperatures, early part failure, and safety concerns near wiring.",
+        ],
+      },
+      { type: "h2", id: "food-safety", content: "Hot Holding and Food Safety" },
+      { type: "p", content: `Hot food should generally be held at 135°F or above under the FDA Food Code. A warmer that is not heating can put food below that range, so use a probe thermometer in the food and follow your local health department rules about what to do with food that has cooled. See the [FDA Food Code](${FDA_FOOD_CODE}) for general guidance. Do not use a warmer to reheat cold food unless it is designed for that purpose.` },
+      { type: "h2", id: "technician-checks", content: "What a Technician Checks" },
+      {
+        type: "ul",
+        content: [
+          "Power supply, plug, cord, and breaker",
+          "Wiring, terminals, and signs of heat or moisture damage",
+          "Thermostat, control board, switches, and relays",
+          "Heating element continuity and condition",
+          "High limit and safety devices",
+          "Water level controls, valves, and fill components on wet units",
+          "Gas supply, pilot, thermocouple, and valve on gas models",
+          "Overall cleanliness and condition of the unit",
+        ],
+      },
+      { type: "p", content: "We explain what we found in plain language, give you repair options and a clear price, and start work only after you approve it. If your problem may be electrical, see our [electrical services](/electrical). If other equipment is also failing, read our guides on [emergency HVAC for restaurants](/blog/emergency-hvac-for-restaurants-rockville) and our [commercial refrigeration maintenance checklist](/blog/commercial-refrigeration-maintenance-checklist-rockville)." },
+      { type: "h2", id: "prevention", content: "How to Prevent Heating Problems" },
+      {
+        type: "ul",
+        content: [
+          "Wipe the exterior and controls daily with a damp cloth, with the unit off and cool",
+          "Deep clean on a regular schedule, so grease does not build up inside",
+          "Delime wet units on a regular schedule, especially in hard water areas",
+          "Keep wet units filled to the correct level",
+          "Inspect cords and plugs and replace damaged ones",
+          "Schedule professional inspection of heavily used equipment",
+        ],
+      },
+      { type: "h2", id: "repair-or-replace", content: "Repair or Replace?" },
+      { type: "p", content: "Repair usually makes sense when a single part has failed and the unit is otherwise sound. Replacement is worth discussing when the unit is very old, the body is corroded, repairs keep repeating, or parts are hard to find. We tell you honestly which option fits your budget and your kitchen." },
+      { type: "h2", id: "why-maven", content: "Why Restaurants Call Maven DMV" },
+      {
+        type: "ul",
+        content: [
+          "Licensed technicians for HVAC, refrigeration, electrical, and equipment work",
+          "Restaurant experience, including [walk in coolers](/walk-in-cooler-freezer-service-rockville-md) and kitchen equipment",
+          "24/7 availability for urgent issues",
+          "Plain language reports with no unnecessary upsells",
+          "Local office at 9200 Corporate Blvd, Suite 470, Rockville, MD 20850",
+        ],
+      },
+      { type: "p", content: `Read customer feedback on our [Google Business Profile](${GBP}), or visit our [home page](/). Veterans, active duty military, and first responders receive 10% off all HVAC, plumbing, and electrical services with valid ID at the time of service.` },
+      { type: "h2", id: "faqs", content: "Frequently Asked Questions" },
+      {
+        type: "faq",
+        items: [
+          {
+            question: "Why is my food warmer on but not heating?",
+            answer: "The usual causes are a failed heating element, thermostat or relay, or a tripped high limit switch.",
+          },
+          {
+            question: "Why does my steam table not heat?",
+            answer: "Check the water level first. If the water is correct, the element, thermostat, or controls may have failed.",
+          },
+          {
+            question: "Can I reset a high limit switch myself?",
+            answer: "Some models have a reset button. If it trips again, stop using the unit and call a technician.",
+          },
+          {
+            question: "Is it safe to use a warmer that trips the breaker?",
+            answer: "No. Repeated breaker trips point to an electrical fault that should be repaired first.",
+          },
+          {
+            question: "Do you repair commercial kitchen equipment in Rockville?",
+            answer: "Yes. We service commercial food warmers and related equipment, and our emergency line is available 24/7.",
+          },
+        ],
+      },
+      ...contactBlocks("Food Warmer Down? Call Maven DMV"),
+    ],
+  },
   {
     slug: "water-conditioner-rockville-md",
     title: "Water Conditioner in Rockville, MD: Do You Need One?",

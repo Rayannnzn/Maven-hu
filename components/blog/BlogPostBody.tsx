@@ -98,6 +98,44 @@ export default function BlogPostBody({ body }: { body: BlogBodyBlock[] }) {
                 ))}
               </div>
             );
+          // Same look as the service-page tables (ServiceDetailSections);
+          // scrolls sideways at phone width instead of squeezing columns.
+          case "table":
+            return (
+              <div
+                key={i}
+                className="not-prose my-8 overflow-x-auto rounded-xl border border-border"
+              >
+                <table className="w-full text-left text-sm">
+                  <thead className="bg-primary text-white">
+                    <tr>
+                      {block.columns.map((col) => (
+                        <th key={col} className="min-w-[9rem] px-4 py-3 font-semibold">
+                          {col}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {block.rows.map((row, rowIndex) => (
+                      <tr
+                        key={rowIndex}
+                        className={rowIndex % 2 === 0 ? "bg-background" : "bg-muted"}
+                      >
+                        {row.map((cell, cellIndex) => (
+                          <td
+                            key={cellIndex}
+                            className={`px-4 py-3 align-top leading-relaxed ${cellIndex === 0 ? "font-medium text-primary" : "text-muted-foreground"}`}
+                          >
+                            {parseInline(cell)}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
           case "cta":
             return (
               <p key={i} className="not-prose mt-6">
